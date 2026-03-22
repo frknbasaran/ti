@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anvil Survivors - Press Kit</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a26;
+            --bg-highlight: #222233;
+            --text-primary: #f0f0f5;
+            --text-secondary: #a0a0b8;
+            --text-muted: #6a6a82;
+            --accent: #ff6b35;
+            --accent-light: #ff8c5a;
+            --accent-dark: #d45520;
+            --accent-glow: rgba(255, 107, 53, 0.15);
+            --cat-purple: #9b6dff;
+            --cat-purple-glow: rgba(155, 109, 255, 0.15);
+            --border: #2a2a3a;
+            --border-light: #3a3a4e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 520px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1a0a20 0%, #0a0a1a 50%, #0a1520 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(155, 109, 255, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 30%, rgba(255, 107, 53, 0.06) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/0e99a42f723dce9bfb0ad98499973d16da110f05/header.jpg?t=1773861806');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.25;
+            filter: blur(2px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px 50px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 56px;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #fff 0%, #ccc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-tagline {
+            font-size: 20px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+
+        .hero-tagline em {
+            color: var(--accent-light);
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        /* Nav bar */
+        .nav-bar {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+        }
+
+        .nav-bar a {
+            display: block;
+            padding: 14px 20px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .nav-bar a:hover {
+            color: var(--text-primary);
+            border-bottom-color: var(--accent);
+        }
+
+        /* Main content */
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+        }
+
+        h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        /* Fact Sheet Grid */
+        .fact-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 50px;
+        }
+
+        .fact-sheet {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .fact-sheet h3 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .fact-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .fact-row:last-child {
+            border-bottom: none;
+        }
+
+        .fact-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            flex-shrink: 0;
+        }
+
+        .fact-value {
+            text-align: right;
+            font-size: 14px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .fact-value a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+
+        .fact-value a:hover {
+            text-decoration: underline;
+        }
+
+        .description-text {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .description-text strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            transition: border-color 0.2s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--border-light);
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .feature-icon.anvil { background: var(--accent-glow); }
+        .feature-icon.pixel { background: rgba(100, 200, 255, 0.12); }
+        .feature-icon.cat { background: var(--cat-purple-glow); }
+        .feature-icon.combat { background: rgba(255, 80, 80, 0.12); }
+        .feature-icon.replay { background: rgba(80, 255, 120, 0.12); }
+        .feature-icon.controller { background: rgba(255, 220, 80, 0.12); }
+
+        .feature-card h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            margin-bottom: 0;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Cat companions section */
+        .cats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .cat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+        }
+
+        .cat-card.pati::before { background: linear-gradient(90deg, #6dffb8, #3dcf8a); }
+        .cat-card.severus::before { background: linear-gradient(90deg, #9b6dff, #6d3dcf); }
+        .cat-card.biber::before { background: linear-gradient(90deg, #ff8c35, #ff5722); }
+        .cat-card.pillow::before { background: linear-gradient(90deg, #ffb6c1, #ff91a4); }
+
+        .cat-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .cat-role {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--accent-light);
+            margin-bottom: 10px;
+        }
+
+        .cat-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        /* Media Section */
+        .media-section {
+            margin-top: 10px;
+        }
+
+        .media-subsection {
+            margin-bottom: 40px;
+        }
+
+        .media-subsection h3 {
+            margin-bottom: 16px;
+        }
+
+        .header-image-container {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+
+        .header-image-container img {
+            width: 100%;
+            display: block;
+        }
+
+        .media-note {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .screenshot-item {
+            display: block;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .screenshot-item:hover {
+            border-color: var(--accent);
+            transform: scale(1.02);
+        }
+
+        .screenshot-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .video-card {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card .video-wrapper {
+            aspect-ratio: 16 / 9;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .video-card video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .video-card .video-label {
+            padding: 12px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        /* Tags */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background: var(--bg-highlight);
+            color: var(--text-secondary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+
+        /* System requirements */
+        .req-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .req-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .req-card h3 {
+            font-size: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .req-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .req-row:last-child { border-bottom: none; }
+
+        .req-key {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .req-val {
+            color: var(--text-secondary);
+            text-align: right;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            text-decoration: none;
+            display: block;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .contact-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .contact-icon {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .contact-card h3 {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .contact-card p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .hero-content { padding: 40px 20px 30px; }
+            .main { padding: 0 20px; }
+            .fact-grid { grid-template-columns: 1fr; }
+            .cats-grid { grid-template-columns: 1fr; }
+            .req-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+            .nav-inner { padding: 0 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <div class="hero-badge">Press Kit</div>
+        <h1>Anvil Survivors</h1>
+        <p class="hero-tagline">A bullet heaven where your best friend is a cat. Fight hordes, forge your gear at the <em>Anvil</em>, and let your fluffy companion handle the looting.</p>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="nav-bar">
+    <div class="nav-inner">
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#cats">Cat Companions</a>
+        <a href="#media">Media</a>
+        <a href="#tech">Technical</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+
+<div class="main">
+
+    <!-- Overview -->
+    <section id="overview">
+        <div class="section-label">Overview</div>
+        <h2>About the Game</h2>
+        <div class="fact-grid">
+            <div class="fact-sheet">
+                <h3>Fact Sheet</h3>
+                <div class="fact-row">
+                    <span class="fact-label">Title</span>
+                    <span class="fact-value">Anvil Survivors</span>
+                </div>
+                <div class="fact-row">
+                    <span class="fact-label">Developer</span>
+                    <span class="fact-value"><a href="https://trinainteractive.com" target="_blank">Trina Interactive</a></span>
+                </div>
+                <div class="fact-row">
+                    <span class="fact-label">Publisher</span>
+                    <span class="fact-value">Trina Interactive</span>
+                </div>
+                <div class="fact-row">
+                    <span class="fact-label">Genre</span>
+                    <span class="fact-value">Action Rogue-lite<br>Bullet Heaven</span>
+                </div>
+                <div class="fact-row">
+                    <span class="fact-label">Platforms</span>
+                    <span class="fact-value">Windows, macOS</span>
+                </div>
+                <div class="fact-row">
+                    <span class="fact-label">Release Date</span>
+                    <span class="fact-value">TBA</span>
+                </div>
+                <div class="fact-row">
+                    <span class="fact-label">Price</span>
+                    <span class="fact-value">TBA</span>
+                </div>
+                <div class="fact-row">
+                    <span class="fact-label">Players</span>
+                    <span class="fact-value">Single Player</span>
+                </div>
+                <div class="fact-row">
+                    <span class="fact-label">Language</span>
+                    <span class="fact-value">English</span>
+                </div>
+                <div class="fact-row">
+                    <span class="fact-label">Input</span>
+                    <span class="fact-value">Keyboard + Mouse<br>Full Controller Support<br>Steam Deck Support</span>
+                </div>
+                <div class="fact-row">
+                    <span class="fact-label">Steam</span>
+                    <span class="fact-value"><a href="https://store.steampowered.com/app/4428910/Anvil_Survivors/" target="_blank">Store Page</a></span>
+                </div>
+            </div>
+            <div>
+                <div class="description-text">
+                    <p><strong>Anvil Survivors</strong> is an action rogue-lite that injects the high-risk anxiety of classic MMORPG (Knight Online) blacksmithing into the bullet heaven formula.</p>
+
+                    <p>Unlike other survivor games, your true power doesn't stop at choosing an upgrade card. When it comes to your weapons and gear, you must fight your way to the Anvil, place your item on it, and make a choice: <strong>Do you play it safe? Or do you risk destroying your gear for god-like power?</strong></p>
+
+                    <p>Collect Upgrade Scrolls and magical Trina items to boost your upgrade success rates, creating unique and unpredictable builds every run. Kill bosses to loot unique weapons and unlock meta-progression that entirely changes the gameplay.</p>
+
+                    <p>Oh, and you have a <strong>cat companion</strong>. Each one has its own personality and gameplay effect, from the loot-collecting Pati to the chaotic orange cat Biber, who might accidentally attack you.</p>
+                </div>
+
+                <div class="section-label" style="margin-top:30px">Tags</div>
+                <div class="tags">
+                    <span class="tag">Action Roguelike</span>
+                    <span class="tag">Bullet Hell</span>
+                    <span class="tag">Rogue-lite</span>
+                    <span class="tag">Pixel Art</span>
+                    <span class="tag">Crafting</span>
+                    <span class="tag">Cats</span>
+                    <span class="tag">Permadeath</span>
+                    <span class="tag">Survival</span>
+                    <span class="tag">Magic</span>
+                    <span class="tag">2D</span>
+                    <span class="tag">Single Player</span>
+                    <span class="tag">Meaningful Choices</span>
+                    <span class="tag">Top-Down</span>
+                    <span class="tag">PvE</span>
+                    <span class="tag">Arcade</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+        <div class="section-label">Key Features</div>
+        <h2>Forge, Risk, Survive</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon anvil">&#9876;</div>
+                <h3>The Anvil - Risk vs. Reward</h3>
+                <p>The core mechanic that defines every run. Fight to reach the Anvil, place your gear on it, and gamble. Play it safe with small buffs, or risk total destruction for god-like power. Inspired by the nerve-wracking upgrade systems of classic MMORPGs like Knight Online.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon pixel">&#9726;</div>
+                <h3>Crispy Pixel Art</h3>
+                <p>A visual recipe that blends nostalgic pixel aesthetics with modern lighting effects and massive enemy counts on screen. Early development visuals already showcase the distinctive art direction.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon cat">&#128049;</div>
+                <h3>Cat Companions</h3>
+                <p>Every run is accompanied by a feline friend with its own personality and gameplay impact. From auto-looting to boosting luck to pure chaotic attacks, your cat choice shapes your strategy.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon combat">&#9889;</div>
+                <h3>Satisfying Combat</h3>
+                <p>Feel the weight of every blow and the crushing pain of every failed upgrade. Short, intense runs are perfect for a quick dopamine rush or that "just one more try" feeling.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon replay">&#8635;</div>
+                <h3>Endless Replayability</h3>
+                <p>RNG forging and build combinations ensure no two runs are ever the same. Upgrade Scrolls and magical Trina items create unique build paths every time you play.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon controller">&#127918;</div>
+                <h3>Full Controller Support</h3>
+                <p>Dodge, forge, and survive from your couch. Fully playable with a controller and ready for handheld consoles. Because a failed +10 upgrade hurts just as much on a handheld.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cat Companions -->
+    <section id="cats">
+        <div class="section-label">Companions</div>
+        <h2>Meet the Cats</h2>
+        <p style="margin-bottom: 24px;">A cat companion accompanies every run. Each cat is different, and true to reality, they all have their own attitude.</p>
+        <div class="cats-grid">
+            <div class="cat-card pati">
+                <div class="cat-name">Pati</div>
+                <div class="cat-role">The Reluctant Looter</div>
+                <p>She automatically collects XP stones and loot, but she isn't very enthusiastic about it. You might need to persuade her to work harder during the run.</p>
+            </div>
+            <div class="cat-card severus">
+                <div class="cat-name">Severus</div>
+                <div class="cat-role">The Vibes Cat</div>
+                <p>He doesn't bother with grunt work like looting. He's here for the vibes. With him by your side, your luck increases drastically. Expect higher drop rates and better Anvil success rates.</p>
+            </div>
+            <div class="cat-card biber">
+                <div class="cat-name">Biber</div>
+                <div class="cat-role">The Orange Chaos</div>
+                <p>Every cat lover knows orange cats are pure chaos. He helps by attacking enemies, but watch out, he might occasionally attack you too. No guarantees!</p>
+            </div>
+            <div class="cat-card pillow">
+                <div class="cat-name">Pillow</div>
+                <div class="cat-role">The Emotional Support Cat</div>
+                <p>His only characteristic is that he is fat and soft. He rarely leaves your side and offers absolutely no special perks. He's just here so he wouldn't feel sad. (He is doing his best.)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media -->
+    <section id="media">
+        <div class="section-label">Media</div>
+        <h2>Screenshots &amp; Videos</h2>
+        <p class="media-note">All images and videos are from an early stage of development and do not represent the final quality of the game.</p>
+
+        <div class="media-section">
+            <div class="media-subsection">
+                <h3>Header Art</h3>
+                <div class="header-image-container">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/0e99a42f723dce9bfb0ad98499973d16da110f05/header.jpg?t=1773861806" alt="Anvil Survivors Header Art">
+                </div>
+            </div>
+
+            <div class="media-subsection">
+                <h3>Screenshots</h3>
+                <div class="screenshot-grid">
+                    <a class="screenshot-item" href="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/38bf08ae36ecaa81d3052b8ec0aa6f825f863417/ss_38bf08ae36ecaa81d3052b8ec0aa6f825f863417.1920x1080.jpg?t=1773861806" target="_blank">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/38bf08ae36ecaa81d3052b8ec0aa6f825f863417/ss_38bf08ae36ecaa81d3052b8ec0aa6f825f863417.1920x1080.jpg?t=1773861806" alt="Screenshot 1" loading="lazy">
+                    </a>
+                    <a class="screenshot-item" href="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/78ef7618e5f494fa79eb41caff0f5a60df0183ef/ss_78ef7618e5f494fa79eb41caff0f5a60df0183ef.1920x1080.jpg?t=1773861806" target="_blank">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/78ef7618e5f494fa79eb41caff0f5a60df0183ef/ss_78ef7618e5f494fa79eb41caff0f5a60df0183ef.1920x1080.jpg?t=1773861806" alt="Screenshot 2" loading="lazy">
+                    </a>
+                    <a class="screenshot-item" href="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/5ea53d34e63db89732c2591b37eb842b9d57e4d7/ss_5ea53d34e63db89732c2591b37eb842b9d57e4d7.1920x1080.jpg?t=1773861806" target="_blank">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/5ea53d34e63db89732c2591b37eb842b9d57e4d7/ss_5ea53d34e63db89732c2591b37eb842b9d57e4d7.1920x1080.jpg?t=1773861806" alt="Screenshot 3" loading="lazy">
+                    </a>
+                    <a class="screenshot-item" href="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/bd38218cb4dbb9615b184b13d1c5a339f35e26ad/ss_bd38218cb4dbb9615b184b13d1c5a339f35e26ad.1920x1080.jpg?t=1773861806" target="_blank">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/bd38218cb4dbb9615b184b13d1c5a339f35e26ad/ss_bd38218cb4dbb9615b184b13d1c5a339f35e26ad.1920x1080.jpg?t=1773861806" alt="Screenshot 4" loading="lazy">
+                    </a>
+                    <a class="screenshot-item" href="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/c06380af7f564a20f78ed73f8d240d17bdb1e77f/ss_c06380af7f564a20f78ed73f8d240d17bdb1e77f.1920x1080.jpg?t=1773861806" target="_blank">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/c06380af7f564a20f78ed73f8d240d17bdb1e77f/ss_c06380af7f564a20f78ed73f8d240d17bdb1e77f.1920x1080.jpg?t=1773861806" alt="Screenshot 5" loading="lazy">
+                    </a>
+                    <a class="screenshot-item" href="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/194f3dc079795e793ebb5c4db723472f614eb3f4/ss_194f3dc079795e793ebb5c4db723472f614eb3f4.1920x1080.jpg?t=1773861806" target="_blank">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/194f3dc079795e793ebb5c4db723472f614eb3f4/ss_194f3dc079795e793ebb5c4db723472f614eb3f4.1920x1080.jpg?t=1773861806" alt="Screenshot 6" loading="lazy">
+                    </a>
+                    <a class="screenshot-item" href="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/5c59286ac5fec7eaa61dfb57cc7896db6c7673c4/ss_5c59286ac5fec7eaa61dfb57cc7896db6c7673c4.1920x1080.jpg?t=1773861806" target="_blank">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/5c59286ac5fec7eaa61dfb57cc7896db6c7673c4/ss_5c59286ac5fec7eaa61dfb57cc7896db6c7673c4.1920x1080.jpg?t=1773861806" alt="Screenshot 7" loading="lazy">
+                    </a>
+                    <a class="screenshot-item" href="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/c226e4b1145e46eb87f0481c2f748c60e43c1f25/ss_c226e4b1145e46eb87f0481c2f748c60e43c1f25.1920x1080.jpg?t=1773861806" target="_blank">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/c226e4b1145e46eb87f0481c2f748c60e43c1f25/ss_c226e4b1145e46eb87f0481c2f748c60e43c1f25.1920x1080.jpg?t=1773861806" alt="Screenshot 8" loading="lazy">
+                    </a>
+                    <a class="screenshot-item" href="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/f4626a0ce6dc0e0d235d2403c7f7c51d8c4a36d1/ss_f4626a0ce6dc0e0d235d2403c7f7c51d8c4a36d1.1920x1080.jpg?t=1773861806" target="_blank">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/f4626a0ce6dc0e0d235d2403c7f7c51d8c4a36d1/ss_f4626a0ce6dc0e0d235d2403c7f7c51d8c4a36d1.1920x1080.jpg?t=1773861806" alt="Screenshot 9" loading="lazy">
+                    </a>
+                </div>
+                <p class="media-note" style="margin-top: 12px;">Click any image to open full resolution (1920x1080). All screenshots are from early development.</p>
+            </div>
+
+            <div class="media-subsection">
+                <h3>Gameplay Videos</h3>
+                <div class="video-grid">
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls preload="metadata">
+                                <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/extras/32811ddde37aff5ffacf4a61a1a962e6.mp4?t=1773861806" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-label">Gameplay Clip 1 - Combat &amp; Forging</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls preload="metadata">
+                                <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/extras/c9787890fba72e24c4e2f03af496f68b.mp4?t=1773861806" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-label">Gameplay Clip 2 - The Anvil System</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls preload="metadata">
+                                <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/extras/fdcf746ae992993519d34344f732eacd.mp4?t=1773861806" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-label">Gameplay Clip 3 - Boss Encounter</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls preload="metadata">
+                                <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/extras/330571f881f93f001ad23fad826bb3a2.mp4?t=1773861806" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-label">Gameplay Clip 4 - Cat Companions</div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls preload="metadata">
+                                <source src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4428910/extras/81a00dff492e155bacf6da0c5f1c2359.mp4?t=1773861806" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="video-label">Gameplay Clip 5 - Horde Survival</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-subsection">
+                <h3>Trailer</h3>
+                <p>The Announcement Trailer is available on the <a href="https://store.steampowered.com/app/4428910/Anvil_Survivors/" target="_blank" style="color: var(--accent-light);">Steam Store Page</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical -->
+    <section id="tech">
+        <div class="section-label">Technical</div>
+        <h2>System Requirements</h2>
+        <div class="req-grid">
+            <div class="req-card">
+                <h3>&#128187; Windows (Minimum)</h3>
+                <div class="req-row">
+                    <span class="req-key">OS</span>
+                    <span class="req-val">Windows 10 (64-bit)</span>
+                </div>
+                <div class="req-row">
+                    <span class="req-key">CPU</span>
+                    <span class="req-val">2.0 GHz Dual Core</span>
+                </div>
+                <div class="req-row">
+                    <span class="req-key">RAM</span>
+                    <span class="req-val">4 GB</span>
+                </div>
+                <div class="req-row">
+                    <span class="req-key">GPU</span>
+                    <span class="req-val">DirectX 11, 1 GB VRAM</span>
+                </div>
+                <div class="req-row">
+                    <span class="req-key">Storage</span>
+                    <span class="req-val">1 GB</span>
+                </div>
+            </div>
+            <div class="req-card">
+                <h3>&#63743; macOS (Minimum)</h3>
+                <div class="req-row">
+                    <span class="req-key">OS</span>
+                    <span class="req-val">macOS 10.13 High Sierra+</span>
+                </div>
+                <div class="req-row">
+                    <span class="req-key">CPU</span>
+                    <span class="req-val">2.0 GHz Dual Core / Apple Silicon</span>
+                </div>
+                <div class="req-row">
+                    <span class="req-key">RAM</span>
+                    <span class="req-val">4 GB</span>
+                </div>
+                <div class="req-row">
+                    <span class="req-key">GPU</span>
+                    <span class="req-val">Metal compatible</span>
+                </div>
+                <div class="req-row">
+                    <span class="req-key">Storage</span>
+                    <span class="req-val">1 GB</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="section-label">Contact</div>
+        <h2>Get in Touch</h2>
+        <p style="margin-bottom: 24px;">For press inquiries, review copies, and interview requests:</p>
+        <div class="contact-grid">
+            <a class="contact-card" href="https://store.steampowered.com/app/4428910/Anvil_Survivors/" target="_blank">
+                <div class="contact-icon">&#127918;</div>
+                <h3>Steam Store Page</h3>
+                <p>Wishlist now - store.steampowered.com/app/4428910</p>
+            </a>
+            <a class="contact-card" href="https://x.com/anvilsurvivors" target="_blank">
+                <div class="contact-icon">&#120143;</div>
+                <h3>X (Twitter)</h3>
+                <p>@anvilsurvivors - Latest news &amp; dev updates</p>
+            </a>
+            <a class="contact-card" href="https://trinainteractive.com" target="_blank">
+                <div class="contact-icon">&#127760;</div>
+                <h3>Trina Interactive</h3>
+                <p>trinainteractive.com - Official website</p>
+            </a>
+            <a class="contact-card" href="mailto:hi@trinainteractive.com">
+                <div class="contact-icon">&#9993;</div>
+                <h3>Press Contact</h3>
+                <p>hi@trinainteractive.com</p>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+<div class="footer">
+    <p><strong>Anvil Survivors</strong> &copy; 2026 Trina Interactive. All rights reserved.</p>
+    <p style="margin-top: 8px;">This press kit was last updated on March 22, 2026.</p>
+</div>
+
+</body>
+</html>

@@ -6,7 +6,7 @@
     <title>Trina Interactive</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,156 +16,535 @@
 
         html {
             height: 100%;
+            scroll-behavior: smooth;
         }
 
         body {
             background: #000;
             color: #fff;
             min-height: 100%;
-            font-family: 'Geist Pixel', monospace;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 24px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+        }
+
+        .nav-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-logo img {
+            height: 32px;
+            width: auto;
+            image-rendering: pixelated;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 120px 48px 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(255,255,255,0.02) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 32px;
+        }
+
+        .hero-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(48px, 10vw, 120px);
+            font-weight: 700;
+            letter-spacing: -3px;
+            line-height: 0.95;
+            margin-bottom: 32px;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.6);
+            max-width: 480px;
+            line-height: 1.7;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 48px;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-
-        /* Brand */
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 0;
-            margin-top: 96px;
-            margin-bottom: 120px;
-        }
-
-        .brand img.gem {
-            height: 90px;
-            width: auto;
-            display: block;
-            image-rendering: pixelated;
-            margin-right: -112px;
-            margin-top: -48px;
-        }
-
-        .brand .name {
-            font-size: 48px;
-            line-height: 1;
-            white-space: nowrap;
-        }
-
-        /* Games */
-        .games {
-            width: 100%;
-            max-width: 640px;
-            padding: 0 24px 120px;
-        }
-
-        .games-label {
-            font-size: 13px;
-            letter-spacing: 4px;
+            gap: 8px;
+            color: rgba(255,255,255,0.3);
+            font-size: 11px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            color: #555;
-            margin-bottom: 40px;
         }
 
-        .game-title {
-            font-size: 28px;
-            line-height: 1.1;
-            margin-bottom: 18px;
+        .scroll-indicator::after {
+            content: '';
+            width: 1px;
+            height: 48px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
         }
 
-        .game-desc {
-            font-size: 15px;
-            line-height: 1.7;
-            color: #b0b0b0;
-            margin-bottom: 28px;
+        /* Games Section */
+        .games-section {
+            padding: 120px 48px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        .game-video {
-            width: 100%;
-            display: block;
-            border-radius: 6px;
-            margin-bottom: 28px;
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 80px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .section-count {
+            font-size: 13px;
+            color: rgba(255,255,255,0.3);
+        }
+
+        /* Game Card */
+        .game-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 160px;
+        }
+
+        .game-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .game-media {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
             background: #0a0a0a;
         }
 
+        .game-media::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 4px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .game-media img,
+        .game-media video {
+            width: 100%;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .game-card:hover .game-media img,
+        .game-card:hover .game-media video {
+            transform: scale(1.02);
+        }
+
+        .game-content {
+            padding: 24px 0;
+        }
+
+        .game-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.25);
+            margin-bottom: 24px;
+        }
+
+        .game-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 42px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .game-desc {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 40px;
+            max-width: 420px;
+        }
+
         .game-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .game-meta-item {
+            display: flex;
+            align-items: center;
             font-size: 13px;
-            line-height: 2;
-            color: #888;
         }
 
-        .game-meta .k {
-            display: inline-block;
-            width: 110px;
-            color: #555;
-            letter-spacing: 1px;
+        .game-meta-label {
+            width: 100px;
+            color: rgba(255,255,255,0.35);
+            font-weight: 500;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
+            font-size: 11px;
         }
 
-        .game-meta a {
+        .game-meta-value a {
             color: #fff;
             text-decoration: none;
-            border-bottom: 1px solid #444;
+            position: relative;
+            transition: opacity 0.3s ease;
         }
 
-        .game-meta a:hover {
-            border-bottom-color: #fff;
+        .game-meta-value a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: rgba(255,255,255,0.3);
+            transition: background 0.3s ease;
+        }
+
+        .game-meta-value a:hover {
+            opacity: 0.8;
+        }
+
+        .game-meta-value a:hover::after {
+            background: #fff;
+        }
+
+        /* CTA Button */
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: #fff;
+            color: #000;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            margin-top: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateY(-2px);
+        }
+
+        .cta-btn svg {
+            width: 16px;
+            height: 16px;
         }
 
         /* Footer */
         .footer {
-            margin-top: auto;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 80px 48px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-content {
             display: flex;
-            gap: 28px;
-            padding: 48px 24px;
+            justify-content: space-between;
+            align-items: flex-start;
         }
 
-        .footer a {
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-logo img {
+            height: 40px;
+            width: auto;
+            image-rendering: pixelated;
+        }
+
+        .footer-tagline {
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+            max-width: 280px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 48px;
+        }
+
+        .footer-link {
             font-size: 13px;
-            letter-spacing: 2px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
-            color: #666;
+            color: rgba(255,255,255,0.5);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        .footer a:hover {
+        .footer-link:hover {
             color: #fff;
         }
 
-        @media (max-width: 600px) {
-            .brand { margin-top: 64px; margin-bottom: 80px; }
-            .brand img.gem { height: 60px; margin-right: -75px; margin-top: -32px; }
-            .brand .name { font-size: 32px; }
-            .games { padding-bottom: 80px; }
-            .game-title { font-size: 22px; }
+        .footer-bottom {
+            margin-top: 80px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copyright {
+            font-size: 12px;
+            color: rgba(255,255,255,0.25);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .game-card {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .game-content {
+                order: 2;
+            }
+
+            .game-media {
+                order: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 20px 24px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 100px 24px 60px;
+            }
+
+            .hero-title {
+                letter-spacing: -1px;
+            }
+
+            .games-section {
+                padding: 80px 24px;
+            }
+
+            .section-header {
+                margin-bottom: 48px;
+            }
+
+            .game-card {
+                margin-bottom: 100px;
+            }
+
+            .game-title {
+                font-size: 32px;
+            }
+
+            .footer {
+                padding: 60px 24px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 48px;
+            }
+
+            .footer-links {
+                gap: 24px;
+                flex-wrap: wrap;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="brand">
-        <img class="gem" src="Pati-idle.gif" alt="Trina Interactive">
-        <span class="name">Trina Interactive</span>
-    </div>
+    <nav class="nav">
+        <a href="#" class="nav-logo">
+            <img src="Pati-idle.gif" alt="">
+            Trina Interactive
+        </a>
+        <div class="nav-links">
+            <a href="#games">Games</a>
+            <a href="https://x.com/slotsandskulls" target="_blank" rel="noopener">Twitter</a>
+            <a href="mailto:hi@trinainteractive.com">Contact</a>
+        </div>
+    </nav>
 
-    <section class="games">
-        <div class="games-label">Games</div>
+    <section class="hero">
+        <div class="hero-badge">Independent Game Studio</div>
+        <h1 class="hero-title">Trina<br>Interactive</h1>
+        <p class="hero-subtitle">Crafting unique gaming experiences that blend innovative mechanics with bold artistic vision.</p>
+        <div class="scroll-indicator">Scroll</div>
+    </section>
 
-        <article class="game">
-            <h2 class="game-title">Slots &amp; Skulls</h2>
-            <p class="game-desc">A turn-based roguelite built on a slot machine. Spin to attack, open chests for new symbols, strike deals with cats, and risk your symbols at the anvil.</p>
+    <section class="games-section" id="games">
+        <div class="section-header">
+            <h2 class="section-title">Our Games</h2>
+            <span class="section-count">01</span>
+        </div>
 
-            <img src="fight.gif" style="width: 100%;" />
-
-            <div class="game-meta">
-                <div><span class="k">Platforms</span> <a href="https://store.steampowered.com/app/4428910/Slots__Skulls/" target="_blank" rel="noopener">Steam</a></div>
-                <div><span class="k">Press Kit</span> <a href="https://drive.google.com/drive/folders/1GrIPkeUNpGxxJZ_NxcIazyq4cZ637Iu0?usp=sharing" target="_blank" rel="noopener">Press Kit</a></div>
+        <article class="game-card">
+            <div class="game-media">
+                <img src="fight.gif" alt="Slots & Skulls gameplay">
+            </div>
+            <div class="game-content">
+                <div class="game-number">001</div>
+                <h3 class="game-title">Slots & Skulls</h3>
+                <p class="game-desc">A turn-based roguelite built on a slot machine. Spin to attack, open chests for new symbols, strike deals with cats, and risk your symbols at the anvil.</p>
+                <div class="game-meta">
+                    <div class="game-meta-item">
+                        <span class="game-meta-label">Platform</span>
+                        <span class="game-meta-value"><a href="https://store.steampowered.com/app/4428910/Slots__Skulls/" target="_blank" rel="noopener">Steam</a></span>
+                    </div>
+                    <div class="game-meta-item">
+                        <span class="game-meta-label">Press</span>
+                        <span class="game-meta-value"><a href="https://drive.google.com/drive/folders/1GrIPkeUNpGxxJZ_NxcIazyq4cZ637Iu0?usp=sharing" target="_blank" rel="noopener">Press Kit</a></span>
+                    </div>
+                </div>
+                <a href="https://store.steampowered.com/app/4428910/Slots__Skulls/" target="_blank" rel="noopener" class="cta-btn">
+                    View on Steam
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
             </div>
         </article>
     </section>
 
     <footer class="footer">
-        <a href="https://x.com/slotsandskulls" target="_blank" rel="noopener">Twitter</a>
-        <a href="mailto:hi@trinainteractive.com">Email</a>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="Pati-idle.gif" alt="">
+                    Trina Interactive
+                </div>
+                <p class="footer-tagline">Independent game development studio creating unique experiences.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://x.com/slotsandskulls" target="_blank" rel="noopener" class="footer-link">Twitter</a>
+                <a href="mailto:hi@trinainteractive.com" class="footer-link">Email</a>
+                <a href="https://store.steampowered.com/app/4428910/Slots__Skulls/" target="_blank" rel="noopener" class="footer-link">Steam</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-copyright">© 2024 Trina Interactive. All rights reserved.</span>
+        </div>
     </footer>
 </body>
 </html>

@@ -5,7 +5,11 @@
    "slug": "mod-phys-resist",
    "name": "Iron Skin",
    "text": "+5% resistance to physical attacks per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-phys-resist.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 4,
    "levelCosts": [
     63,
@@ -29,7 +33,11 @@
    "slug": "mod-magic-resist",
    "name": "Warded Cloak",
    "text": "+10% resistance to magical attacks per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-magic-resist.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 4,
    "levelCosts": [
     63,
@@ -53,7 +61,11 @@
    "slug": "mod-regen",
    "name": "Troll Blood",
    "text": "Heal 4% of max health every turn per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-regen.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 4,
    "levelCosts": [
     63,
@@ -77,7 +89,11 @@
    "slug": "mod-phys-attack",
    "name": "Sharpened Edge",
    "text": "+25% physical damage per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-phys-attack.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 4,
    "levelCosts": [
     63,
@@ -101,7 +117,11 @@
    "slug": "mod-powerup-cost",
    "name": "Efficient Fuses",
    "text": "Using powerups costs 10% less gold per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-powerup-cost.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 4,
    "levelCosts": [
     63,
@@ -125,7 +145,11 @@
    "slug": "mod-gold-gain",
    "name": "Golden Touch",
    "text": "Gain 20% more gold per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-gold-gain.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 4,
    "levelCosts": [
     63,
@@ -149,7 +173,11 @@
    "slug": "mod-shop-discount",
    "name": "Haggler",
    "text": "Shop prices are 10% lower per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-shop-discount.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 4,
    "levelCosts": [
     63,
@@ -173,7 +201,11 @@
    "slug": "mod-crit-chance",
    "name": "Killer Instinct",
    "text": "+5% chance to roll critical hits per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-crit-chance.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 4,
    "levelCosts": [
     63,
@@ -197,7 +229,11 @@
    "slug": "mod-magic-attack",
    "name": "Arcane Focus",
    "text": "+25% magical damage per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-magic-attack.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 4,
    "levelCosts": [
     63,
@@ -221,7 +257,11 @@
    "slug": "mod-starting-hp",
    "name": "Vitality",
    "text": "+25 starting max health per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-starting-hp.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 4,
    "levelCosts": [
     63,
@@ -245,7 +285,11 @@
    "slug": "mod-revive",
    "name": "Phoenix Ember",
    "text": "Revives you once per run at half health when you die.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-revive.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 1,
    "levelCosts": [
     375
@@ -260,7 +304,11 @@
    "slug": "mod-extra-reel",
    "name": "Extra Wheel",
    "text": "Start with 1 additional slot wheel per level (max 2).",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-extra-reel.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 2,
    "levelCosts": [
     2000,
@@ -276,7 +324,11 @@
    "slug": "mod-max-shield",
    "name": "Bulwark",
    "text": "+25 max shield per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-max-shield.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 4,
    "levelCosts": [
     63,
@@ -300,7 +352,11 @@
    "slug": "mod-quick-fingers",
    "name": "Quick Fingers",
    "text": "Skillcheck perfect zone is 20% wider per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-quick-fingers.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 2,
    "levelCosts": [
     188,
@@ -322,7 +378,11 @@
    "slug": "mod-scavenger",
    "name": "Scavenger",
    "text": "Each kill drops 1 extra Skull per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-scavenger.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 2,
    "levelCosts": [
     250,
@@ -338,7 +398,11 @@
    "slug": "mod-treasure-hunter",
    "name": "Treasure Hunter",
    "text": "All drop chances are 10% higher per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-treasure-hunter.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 2,
    "levelCosts": [
     375,
@@ -354,7 +418,11 @@
    "slug": "mod-anvil-blessing",
    "name": "Anvil Blessing",
    "text": "Anvil upgrade success is 2% higher per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-anvil-blessing.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 2,
    "levelCosts": [
     500,
@@ -370,7 +438,11 @@
    "slug": "mod-last-word",
    "name": "Last Word",
    "text": "Once per run lethal damage grants one more spin instead. Kill everything with it and you survive.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-last-word.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 1,
    "levelCosts": [
     438
@@ -385,7 +457,11 @@
    "slug": "mod-momentum",
    "name": "Momentum",
    "text": "Each consecutive perfect skill check adds 15% to all damage. Max stacks equal the level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-momentum.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 3,
    "levelCosts": [
     188,
@@ -402,7 +478,11 @@
    "slug": "mod-salvage-rights",
    "name": "Salvage Rights",
    "text": "A burned instance leaves a green gem 25% of the time per level.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-salvage-rights.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 4,
    "levelCosts": [
     125,
@@ -420,7 +500,11 @@
    "slug": "mod-blood-money",
    "name": "Blood Money",
    "text": "When you die, 25% of your gold per level is exchanged for skulls (4 gold = 1 skull).",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/mod-blood-money.png",
+    "width": 32,
+    "height": 32
+   },
    "maxLevel": 2,
    "levelCosts": [
     250,
@@ -438,7 +522,11 @@
    "slug": "ab-nudge",
    "name": "Nudge",
    "text": "Shift one landed reel a single step: the symbol above or below takes the win row. Once per fight.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/ab-nudge.png",
+    "width": 32,
+    "height": 32
+   },
    "ability": "Nudge",
    "cost": 150,
    "ladderIndex": 0,
@@ -450,7 +538,11 @@
    "slug": "ab-mirror",
    "name": "Mirror",
    "text": "The enemy next attack deals nothing to you and hits them instead. Once per fight.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/ab-mirror.png",
+    "width": 32,
+    "height": 32
+   },
    "ability": "Mirror",
    "cost": 200,
    "ladderIndex": 1,
@@ -462,7 +554,11 @@
    "slug": "ab-double-down",
    "name": "Double Down",
    "text": "Skip this spin and let the enemy strike. The next spin is worth double. Once per fight.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/ab-double-down.png",
+    "width": 32,
+    "height": 32
+   },
    "ability": "DoubleDown",
    "cost": 250,
    "ladderIndex": 2,
@@ -474,7 +570,11 @@
    "slug": "ab-encore",
    "name": "Encore",
    "text": "One landed symbol acts a second time. Once per fight.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/ab-encore.png",
+    "width": 32,
+    "height": 32
+   },
    "ability": "Encore",
    "cost": 300,
    "ladderIndex": 3,
@@ -486,7 +586,11 @@
    "slug": "ab-hold",
    "name": "Hold",
    "text": "Keep one landed reel and send the rest back into the spin. Once per fight.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/ab-hold.png",
+    "width": 32,
+    "height": 32
+   },
    "ability": "Hold",
    "cost": 350,
    "ladderIndex": 4,
@@ -498,7 +602,11 @@
    "slug": "ab-joker",
    "name": "Joker",
    "text": "One landed reel counts as wild, so the others only have to match each other. Once per fight.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/ab-joker.png",
+    "width": 32,
+    "height": 32
+   },
    "ability": "Joker",
    "cost": 400,
    "ladderIndex": 5,
@@ -512,7 +620,11 @@
    "slug": "pact-glass-cannon",
    "name": "Glass Cannon",
    "text": "Damage dealt +75%. Max health cut by 40%.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/pact-glass-cannon.png",
+    "width": 32,
+    "height": 32
+   },
    "rule": "None",
    "cost": 200,
    "stats": [
@@ -540,7 +652,11 @@
    "slug": "pact-blood",
    "name": "Blood Pact",
    "text": "Every spin burns 5 health. Every symbol acts as if it were +2.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/pact-blood.png",
+    "width": 32,
+    "height": 32
+   },
    "rule": "BloodPact",
    "cost": 200,
    "stats": [],
@@ -555,7 +671,11 @@
    "slug": "pact-usurer",
    "name": "Usurer",
    "text": "Your gold earns 5% interest after every fight. Every enemy steals gold.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/pact-usurer.png",
+    "width": 32,
+    "height": 32
+   },
    "rule": "Usury",
    "cost": 250,
    "stats": [],
@@ -573,7 +693,11 @@
    "slug": "pact-dead-man",
    "name": "Dead Man Walking",
    "text": "No healing between fights. Skull rewards are doubled.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/pact-dead-man.png",
+    "width": 32,
+    "height": 32
+   },
    "rule": "NoHeal",
    "cost": 250,
    "stats": [],

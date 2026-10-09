@@ -1,5 +1,6 @@
 ---
 import WikiPage from '../../../../components/wiki/WikiPage.astro';
+import WikiIcon from '../../../../components/wiki/WikiIcon.astro';
 import { duels, paths, pct, symbolLink } from '../../../../lib/wiki';
 
 const d = duels.rules;
@@ -56,7 +57,7 @@ const description = `How 1v1 duels work in Slots & Skulls: the Classic and Duel 
     rank, a win can only raise it.
   </p>
   <div class="table-scroll">
-    <table class="specs">
+    <table class="specs wiki-ranks">
       <thead>
         <tr>
           <th scope="col">Rank</th>
@@ -67,7 +68,12 @@ const description = `How 1v1 duels work in Slots & Skulls: the Classic and Duel 
       <tbody>
         {duels.ranks.map((r) => (
           <tr id={`rank-${r.rank}`}>
-            <th scope="row">{r.tier} {r.step}</th>
+            <th scope="row">
+              <span class="wiki-rank">
+                <WikiIcon icon={r.icon} alt="" max={24} />
+                {r.tier} {r.step}
+              </span>
+            </th>
             <td class="num">{r.scoreFloor.toFixed(2)}</td>
             <td class="num">{r.winsFloor}</td>
           </tr>

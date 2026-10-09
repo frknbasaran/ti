@@ -30,7 +30,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/rusty-dagger.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_rusty_dagger",
    "symbol": "rusty_dagger",
@@ -73,7 +77,11 @@
    "Phys"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/wooden-shield.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_wooden_shield",
    "symbol": "wooden_shield",
@@ -113,7 +121,11 @@
   "damageTypes": [],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/coin.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_coin",
    "symbol": "coin",
@@ -157,7 +169,11 @@
   "firstClearOfLevels": [
    6
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/massive-blade.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_massive_blade",
    "symbol": "massive_blade",
@@ -203,7 +219,11 @@
   "firstClearOfLevels": [
    5
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/blood-spell.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_blood_spell",
    "symbol": "blood_spell",
@@ -249,7 +269,11 @@
   "firstClearOfLevels": [
    7
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/ancestral-axe.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_ancestral_axe",
    "symbol": "ancestral_axe",
@@ -293,7 +317,11 @@
   "firstClearOfLevels": [
    5
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/hammer.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_hammer",
    "symbol": "hammer",
@@ -337,7 +365,11 @@
   "firstClearOfLevels": [
    2
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/poison-blade.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_poison_blade",
    "symbol": "poison_blade",
@@ -382,7 +414,11 @@
   "firstClearOfLevels": [
    1
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/warriors-draught.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_warriors_draught",
    "symbol": "warriors_draught",
@@ -428,7 +464,11 @@
   "firstClearOfLevels": [
    6
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/wizards-shield.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_wizards_shield",
    "symbol": "wizards_shield",
@@ -474,7 +514,11 @@
   "firstClearOfLevels": [
    1
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/wood-staff.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_wood_staff",
    "symbol": "wood_staff",
@@ -518,7 +562,11 @@
   "firstClearOfLevels": [
    3
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/twin-fangs.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_twin_fangs",
    "symbol": "twin_fangs",
@@ -565,7 +613,11 @@
   "firstClearOfLevels": [
    3
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/spiked-bulwark.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_spiked_bulwark",
    "symbol": "spiked_bulwark",
@@ -607,7 +659,11 @@
   "firstClearOfLevels": [
    4
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/venom-vial.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_venom_vial",
    "symbol": "venom_vial",
@@ -651,7 +707,11 @@
   "firstClearOfLevels": [
    2
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/war-horn.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_war_horn",
    "symbol": "war_horn",
@@ -698,7 +758,11 @@
   "firstClearOfLevels": [
    7
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/soul-ember.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_soul_ember",
    "symbol": "soul_ember",
@@ -742,7 +806,11 @@
   "firstClearOfLevels": [
    8
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/plague-fang.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_plague_fang",
    "symbol": "plague_fang",
@@ -784,7 +852,11 @@
   "firstClearOfLevels": [
    9
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/tithe.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_tithe",
    "symbol": "tithe",
@@ -830,7 +902,11 @@
   "firstClearOfLevels": [
    7
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/executioner.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_executioner",
    "symbol": "executioner",
@@ -876,7 +952,11 @@
   "firstClearOfLevels": [
    9
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/chain-lightning.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_chain_lightning",
    "symbol": "chain_lightning",
@@ -924,7 +1004,11 @@
   "firstClearOfLevels": [
    10
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/mirror-ward.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_mirror_ward",
    "symbol": "mirror_ward",
@@ -966,7 +1050,11 @@
   "firstClearOfLevels": [
    10
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/pandemic.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_pandemic",
    "symbol": "pandemic",
@@ -1012,7 +1100,11 @@
   "firstClearOfLevels": [
    10
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/midas-hand.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_midas_hand",
    "symbol": "midas_hand",
@@ -1054,7 +1146,11 @@
   "damageTypes": [],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/lucky-doll.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_lucky_doll",
    "symbol": "lucky_doll",
@@ -1098,7 +1194,11 @@
   "firstClearOfLevels": [
    5
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/ember-heart.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_ember_heart",
    "symbol": "ember_heart",
@@ -1142,7 +1242,11 @@
   "firstClearOfLevels": [
    8
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/duelists-edge.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_duelists_edge",
    "symbol": "duelists_edge",
@@ -1187,7 +1291,11 @@
   "firstClearOfLevels": [
    7
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/bastion.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_bastion",
    "symbol": "bastion",
@@ -1234,7 +1342,11 @@
   "firstClearOfLevels": [
    2
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/torch.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_torch",
    "symbol": "torch",
@@ -1280,7 +1392,11 @@
   "firstClearOfLevels": [
    8
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/pike.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_pike",
    "symbol": "pike",
@@ -1326,7 +1442,11 @@
   "firstClearOfLevels": [
    5
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/warding-sigil.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_warding_sigil",
    "symbol": "warding_sigil",
@@ -1368,7 +1488,11 @@
   "firstClearOfLevels": [
    6
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/executioners-coin.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_executioners_coin",
    "symbol": "executioners_coin",
@@ -1413,7 +1537,11 @@
   "firstClearOfLevels": [
    4
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/thorn-mail.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_thorn_mail",
    "symbol": "thorn_mail",
@@ -1457,7 +1585,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/erenion.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_erenion",
    "symbol": "erenion",
@@ -1499,7 +1631,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/war-banner.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_war_banner",
    "symbol": "war_banner",
@@ -1543,7 +1679,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/fester.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_fester",
    "symbol": "fester",
@@ -1587,7 +1727,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/sellsword.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_sellsword",
    "symbol": "sellsword",
@@ -1633,7 +1777,11 @@
   "firstClearOfLevels": [
    8
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/shard.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_shard",
    "symbol": "shard",
@@ -1678,7 +1826,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/apprentice-notes.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_apprentice_notes",
    "symbol": "apprentice_notes",
@@ -1721,7 +1873,11 @@
    "Phys"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/stone-skin.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_stone_skin",
    "symbol": "stone_skin",
@@ -1761,7 +1917,11 @@
   "damageTypes": [],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/gilded-ledger.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_gilded_ledger",
    "symbol": "gilded_ledger",
@@ -1805,7 +1965,11 @@
   "firstClearOfLevels": [
    9
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/martyrs-vow.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_martyrs_vow",
    "symbol": "martyrs_vow",
@@ -1845,7 +2009,11 @@
   "damageTypes": [],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/treasure-map.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_treasure_map",
    "symbol": "treasure_map",
@@ -1889,7 +2057,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/focus-lens.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_focus_lens",
    "symbol": "focus_lens",
@@ -1932,7 +2104,11 @@
    "Phys"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/parry.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_parry",
    "symbol": "parry",
@@ -1974,7 +2150,11 @@
    "Burn"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/field-dressing.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_field_dressing",
    "symbol": "field_dressing",
@@ -2016,7 +2196,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/hail-of-blades.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_hail_of_blades",
    "symbol": "hail_of_blades",
@@ -2060,7 +2244,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/arc-bolt.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_arc_bolt",
    "symbol": "arc_bolt",
@@ -2102,7 +2290,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/bandit-knife.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_bandit_knife",
    "symbol": "bandit_knife",
@@ -2146,7 +2338,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/serpent-kiss.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_serpent_kiss",
    "symbol": "serpent_kiss",
@@ -2186,7 +2382,11 @@
   "damageTypes": [],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/wretched-toxin.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_wretched_toxin",
    "symbol": "wretched_toxin",
@@ -2228,7 +2428,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/pickpocket.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_pickpocket",
    "symbol": "pickpocket",
@@ -2274,7 +2478,11 @@
   "firstClearOfLevels": [
    1
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/second-wind.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_second_wind",
    "symbol": "second_wind",
@@ -2316,7 +2524,11 @@
    "SelfHeal"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/zealots-chant.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_zealots_chant",
    "symbol": "zealots_chant",
@@ -2360,7 +2572,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/blood-bargain.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_blood_bargain",
    "symbol": "blood_bargain",
@@ -2402,7 +2618,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/bribe.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_bribe",
    "symbol": "bribe",
@@ -2444,7 +2664,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/bulwark-breaker.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_bulwark_breaker",
    "symbol": "bulwark_breaker",
@@ -2486,7 +2710,11 @@
    "SelfHeal"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/sacrifice.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_sacrifice",
    "symbol": "sacrifice",
@@ -2530,7 +2758,11 @@
    "Phys"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/pawnbroker.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_pawnbroker",
    "symbol": "pawnbroker",
@@ -2572,7 +2804,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/detonate.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_detonate",
    "symbol": "detonate",
@@ -2614,7 +2850,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/gravekeeper.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_gravekeeper",
    "symbol": "gravekeeper",
@@ -2656,7 +2896,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/flanker.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_flanker",
    "symbol": "flanker",
@@ -2699,7 +2943,11 @@
    "Phys"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/keystone.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_keystone",
    "symbol": "keystone",
@@ -2741,7 +2989,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/vanguard.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_vanguard",
    "symbol": "vanguard",
@@ -2785,7 +3037,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/conduit.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_conduit",
    "symbol": "conduit",
@@ -2825,7 +3081,11 @@
   "damageTypes": [],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/echo.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_echo",
    "symbol": "echo",
@@ -2867,7 +3127,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/swarm.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_swarm",
    "symbol": "swarm",
@@ -2911,7 +3175,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/choir.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_choir",
    "symbol": "choir",
@@ -2951,7 +3219,11 @@
   "damageTypes": [],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/jackpot-bell.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_jackpot_bell",
    "symbol": "jackpot_bell",
@@ -2995,7 +3267,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/can-opener.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_can_opener",
    "symbol": "can_opener",
@@ -3037,7 +3313,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/coup.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_coup",
    "symbol": "coup",
@@ -3079,7 +3359,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/giant-slayer.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_giant_slayer",
    "symbol": "giant_slayer",
@@ -3121,7 +3405,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/momentum.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_momentum",
    "symbol": "momentum",
@@ -3164,7 +3452,11 @@
    "Phys"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/patience.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_patience",
    "symbol": "patience",
@@ -3209,7 +3501,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/icebreaker.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_icebreaker",
    "symbol": "icebreaker",
@@ -3249,7 +3545,11 @@
   "damageTypes": [],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/snake-oil.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_snake_oil",
    "symbol": "snake_oil",
@@ -3295,7 +3595,11 @@
   "firstClearOfLevels": [
    8
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/iron-nail.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_iron_nail",
    "symbol": "iron_nail",
@@ -3337,7 +3641,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/sling-stones.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_sling_stones",
    "symbol": "sling_stones",
@@ -3384,7 +3692,11 @@
   "firstClearOfLevels": [
    9
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/candle.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_candle",
    "symbol": "candle",
@@ -3429,7 +3741,11 @@
   "firstClearOfLevels": [
    3
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/bandage.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_bandage",
    "symbol": "bandage",
@@ -3472,7 +3788,11 @@
    "Phys"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/buckler.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_buckler",
    "symbol": "buckler",
@@ -3512,7 +3832,11 @@
   "damageTypes": [],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/tin-coin.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_tin_coin",
    "symbol": "tin_coin",
@@ -3554,7 +3878,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/splinter.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_splinter",
    "symbol": "splinter",
@@ -3596,7 +3924,11 @@
    "SelfHeal"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/war-paint.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_war_paint",
    "symbol": "war_paint",
@@ -3640,7 +3972,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/oil-flask.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_oil_flask",
    "symbol": "oil_flask",
@@ -3684,7 +4020,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/kindling.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_kindling",
    "symbol": "kindling",
@@ -3728,7 +4068,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/dragon-lance.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_dragon_lance",
    "symbol": "dragon_lance",
@@ -3772,7 +4116,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/rust-bomb.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_rust_bomb",
    "symbol": "rust_bomb",
@@ -3814,7 +4162,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/pillar.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_pillar",
    "symbol": "pillar",
@@ -3858,7 +4210,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/outrider.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_outrider",
    "symbol": "outrider",
@@ -3901,7 +4257,11 @@
    "Phys"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/phalanx.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_phalanx",
    "symbol": "phalanx",
@@ -3943,7 +4303,11 @@
    "Burn"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/plague-doctor.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_plague_doctor",
    "symbol": "plague_doctor",
@@ -3983,7 +4347,11 @@
   "damageTypes": [],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/vulture.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_vulture",
    "symbol": "vulture",
@@ -4023,7 +4391,11 @@
   "damageTypes": [],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/blight.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_blight",
    "symbol": "blight",
@@ -4065,7 +4437,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/desperado.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_desperado",
    "symbol": "desperado",
@@ -4108,7 +4484,11 @@
    "Phys"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/last-stand.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_last_stand",
    "symbol": "last_stand",
@@ -4150,7 +4530,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/opening-gambit.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_opening_gambit",
    "symbol": "opening_gambit",
@@ -4192,7 +4576,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/turtle.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_turtle",
    "symbol": "turtle",
@@ -4234,7 +4622,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/berserker.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_berserker",
    "symbol": "berserker",
@@ -4278,7 +4670,11 @@
   "firstClearOfLevels": [
    4
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/riposte.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_riposte",
    "symbol": "riposte",
@@ -4320,7 +4716,11 @@
    "Phys"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/brace.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_brace",
    "symbol": "brace",
@@ -4364,7 +4764,11 @@
   "firstClearOfLevels": [
    6
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/ward.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_ward",
    "symbol": "ward",
@@ -4408,7 +4812,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/hush.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_hush",
    "symbol": "hush",
@@ -4450,7 +4858,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/shackle.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_shackle",
    "symbol": "shackle",
@@ -4492,7 +4904,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/duelists-code.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_duelists_code",
    "symbol": "duelists_code",
@@ -4532,7 +4948,11 @@
   "damageTypes": [],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/hoarder.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_hoarder",
    "symbol": "hoarder",
@@ -4574,7 +4994,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/sniper.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_sniper",
    "symbol": "sniper",
@@ -4618,7 +5042,11 @@
    "Armor"
   ],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/spread-shot.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_spread_shot",
    "symbol": "spread_shot",
@@ -4660,7 +5088,11 @@
   ],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/heirloom.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_heirloom",
    "symbol": "heirloom",
@@ -4700,7 +5132,11 @@
   "damageTypes": [],
   "answers": [],
   "firstClearOfLevels": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/ledger-of-deeds.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_ledger_of_deeds",
    "symbol": "ledger_of_deeds",
@@ -4746,7 +5182,11 @@
   "firstClearOfLevels": [
    8
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/symbols/armor-breaker.png",
+   "width": 32,
+   "height": 32
+  },
   "task": {
    "id": "ch_sym_armor_breaker",
    "symbol": "armor_breaker",

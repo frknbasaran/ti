@@ -36,11 +36,12 @@ _spec = importlib.util.spec_from_file_location('wiki_aseprite', os.path.join(HER
 aseprite = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(aseprite)
 
-# Art the studio drew itself: the Aseprite sources. Icons whose texture lives
-# anywhere else are not exported; the page shows a neutral placeholder instead.
-# Assets/Icons and Assets/_Project/Art both hold copies of third-party pack art
-# (RPG Icons Pixel Art, Rank Emblems 48x48), so neither counts as own art.
-OWN_ART_DIRS = ('Assets/Aseprite/',)
+# Where icons may come from. Assets/Aseprite is the studio's own art. Assets/Icons
+# and Assets/_Project/Art hold the licensed pack art the game shows (RPG Icons Pixel
+# Art, Rank Emblems 48x48); the studio chose on 2026-10-09 to show it on the wiki too.
+# Each icon is published as the single image the game uses, never as a pack.
+# Textures anywhere else are not exported; the page shows a neutral placeholder.
+ICON_DIRS = ('Assets/Aseprite/', 'Assets/Icons/', 'Assets/_Project/Art/')
 
 # In-game strings the studio no longer wants repeated outside the game. "No hidden
 # RNG" was retired on 2026-07-16 (docs/devlog/plan.md): the reel stop follows the
@@ -56,6 +57,15 @@ class DataError(Exception):
 
 def slugify(value):
     return re.sub(r'[^a-z0-9]+', '-', value.lower()).strip('-')
+
+
+def export_png(path, out_png):
+    """Re-save a PNG sprite at its own size, without the source file's metadata."""
+    with aseprite.Image.open(path) as src:
+        image = src.convert('RGBA')
+    image.info.pop('icc_profile', None)
+    image.save(out_png, optimize=True)
+    return image.size
 
 
 def f32(x):
@@ -713,14 +723,14 @@ class Extractor:
 
     # -- icons
     def icon(self, ref, kind, slug, phase=1):
-        """Export an entity's sprite when it is the studio's own art; else None."""
+        """Export an entity's sprite when it lives in ICON_DIRS; else None."""
         path = self.p.ref_path(ref)
         rel = self.p.rel(path)
         info = {'source': rel, 'exported': False}
         if not path:
             return None, info
-        if not any(rel.startswith(d) for d in OWN_ART_DIRS):
-            info['reason'] = 'third-party or unverified source'
+        if not any(rel.startswith(d) for d in ICON_DIRS):
+            info['reason'] = 'unverified source'
             self.icon_report.append((kind, slug, rel))
             return None, info
         out_dir = os.path.join(self.out_icons, kind)
@@ -728,8 +738,10 @@ class Extractor:
         out = os.path.join(out_dir, slug + '.png')
         if path.endswith('.aseprite'):
             w, h = aseprite.export(path, out, phase=phase)
+        elif path.endswith('.png'):
+            w, h = export_png(path, out)
         else:
-            raise DataError(f'unsupported own-art texture {rel}')
+            raise DataError(f'unsupported icon texture {rel}')
         info['exported'] = True
         return {'src': f'/wiki/icons/{kind}/{slug}.png', 'width': w, 'height': h}, info
 
@@ -1198,8 +1210,9 @@ class Extractor:
             ranks.append({'rank': i + 1, 'tier': self.loc.t('rank.tier.' + tier), 'step': numerals[i % steps],
                           'scoreFloor': score, 'winsFloor': won})
         icons = self.p.load(os.path.join(self.p.data, 'DuelRanks.asset')).get('icons') or []
-        for i, ref in enumerate(icons):
-            self.icon(ref, 'ranks', f'rank-{i + 1}')
+        for r in ranks:
+            ref = icons[r['rank'] - 1] if r['rank'] <= len(icons) else None
+            r['icon'] = self.icon(ref, 'ranks', f"rank-{r['rank']}")[0]
         pvp = 'Core/Pvp/PvpRuleset.cs'
         rules = {
             'placementDuels': self.p.const(rel, 'PlacementDuels', int), 'z': self.p.const(rel, 'Z'),
@@ -1412,7 +1425,7 @@ def main(argv=None):
     print('wrote', ', '.join(f'{k} {v}' for k, v in meta['counts'].items()))
     for note in meta['notes']:
         print('note:', note)
-    print(f"icons not exported (not studio art): {len(meta['iconsNotExported'])}")
+    print(f"icons not exported (outside ICON_DIRS): {len(meta['iconsNotExported'])}")
 
 
 if __name__ == '__main__':

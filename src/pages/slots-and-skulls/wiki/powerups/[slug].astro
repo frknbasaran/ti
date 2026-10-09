@@ -38,7 +38,7 @@ const description = `${p.name} is ${active ? 'an active' : 'a passive'} powerup 
   next={next && { name: next.name, href: paths.powerup(next.slug) }}
 >
   <div class="wiki-entry-head">
-    <WikiIcon icon={p.icon} alt={p.name} eager />
+    <WikiIcon icon={p.icon} alt="" eager />
     <div>
       <h1 class="page-title" style="margin-bottom: 4px;">{p.name}</h1>
       <p class="wiki-sub">{active ? 'Active powerup' : 'Passive powerup'}</p>

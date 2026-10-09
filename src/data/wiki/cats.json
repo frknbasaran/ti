@@ -12,7 +12,11 @@
    "slug": "pact-usurer",
    "name": "Usurer",
    "text": "Your gold earns 5% interest after every fight. Every enemy steals gold.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/pact-usurer.png",
+    "width": 32,
+    "height": 32
+   },
    "rule": "Usury",
    "cost": 250,
    "stats": [],
@@ -45,7 +49,11 @@
    "slug": "pact-dead-man",
    "name": "Dead Man Walking",
    "text": "No healing between fights. Skull rewards are doubled.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/pact-dead-man.png",
+    "width": 32,
+    "height": 32
+   },
    "rule": "NoHeal",
    "cost": 250,
    "stats": [],
@@ -75,7 +83,11 @@
    "slug": "pact-glass-cannon",
    "name": "Glass Cannon",
    "text": "Damage dealt +75%. Max health cut by 40%.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/pact-glass-cannon.png",
+    "width": 32,
+    "height": 32
+   },
    "rule": "None",
    "cost": 200,
    "stats": [
@@ -121,7 +133,11 @@
    "slug": "pact-blood",
    "name": "Blood Pact",
    "text": "Every spin burns 5 health. Every symbol acts as if it were +2.",
-   "icon": null,
+   "icon": {
+    "src": "/wiki/icons/modifiers/pact-blood.png",
+    "width": 32,
+    "height": 32
+   },
    "rule": "BloodPact",
    "cost": 200,
    "stats": [],

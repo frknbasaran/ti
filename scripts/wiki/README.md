@@ -42,15 +42,16 @@ symbol where the two differ.
 
 - `src/data/wiki/*.json`: one file per category, plus `rules.json` (config tables,
   odds, in-game hints) and `meta.json` (counts and a hash of the source data).
-- `public/wiki/icons/`: pixel art at its original size, rendered from the studio's
-  own Aseprite files (enemies, cats, gems). The folder is recreated on every run.
+- `public/wiki/icons/`: pixel art at its original size. Enemies, cats and gems are
+  rendered from the studio's own Aseprite files. Symbols, powerups, modifiers,
+  reinforcements and duel ranks are the game's sprites from `Assets/Icons` and
+  `Assets/_Project/Art`, which come from licensed packs (RPG Icons Pixel Art, Rank
+  Emblems 48x48); the studio chose on 2026-10-09 to show them on the wiki. Each is
+  one image the game uses, never the pack. Icons anywhere else get a neutral
+  placeholder (`ICON_DIRS` in `extract.py`). The folder is recreated on every run.
 
 ## Left out on purpose
 
-- Icons from third-party packs. `Assets/Icons` and `Assets/_Project/Art` hold copies
-  of pack art (for example RPG Icons Pixel Art, Rank Emblems 48x48), so symbols,
-  powerups, modifiers, reinforcements and duel ranks show a neutral placeholder.
-  Only `Assets/Aseprite` counts as own art (`OWN_ART_DIRS` in `extract.py`).
 - The final boss and its phases (spoiler), achievements the game marks as hidden,
   pacts no cat offers, assets not registered in `GameDatabase`, and in-game tips that
   use wording the studio retired (`RETIRED_PHRASES`).

@@ -474,6 +474,17 @@ main {
   border-bottom-color: #222;
 }
 
+.wiki-ranks tbody th,
+.wiki-ranks tbody td {
+  vertical-align: middle;
+}
+
+.wiki-rank {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .table-scroll {
   overflow-x: auto;
 }

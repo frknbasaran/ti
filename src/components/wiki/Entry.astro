@@ -1,5 +1,10 @@
 ---
-/** One anchored entry on a category page: icon, name, a sub line, then the slot. */
+/**
+ * One anchored entry on a category page: icon, name, a sub line, then the slot.
+ * Leave `icon` out for kinds the game draws no icon for (challenges); pass null
+ * for a missing icon, which shows the placeholder. The name sits right beside the
+ * icon, so its alt is empty unless `iconAlt` adds something (cats, enemies).
+ */
 import WikiIcon from './WikiIcon.astro';
 import type { WikiIcon as Icon } from '../../lib/wiki';
 
@@ -14,13 +19,13 @@ interface Props {
   search?: string;
 }
 
-const { id, name, sub, icon = null, iconAlt, href, level = 3, search } = Astro.props;
+const { id, name, sub, icon, iconAlt, href, level = 3, search } = Astro.props;
 const H = level === 2 ? 'h2' : 'h3';
 ---
 
 <section class="wiki-entry" id={id} data-search={search}>
   <div class="wiki-entry-head">
-    <WikiIcon icon={icon} alt={iconAlt ?? name} />
+    {icon !== undefined && <WikiIcon icon={icon} alt={iconAlt ?? ''} />}
     <div>
       <H>{href ? <a href={href}>{name}</a> : name}</H>
       {sub && <p class="wiki-sub">{sub}</p>}

@@ -5,112 +5,192 @@
    "tier": "Bronze",
    "step": "I",
    "scoreFloor": 0.0,
-   "winsFloor": 0
+   "winsFloor": 0,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-1.png",
+    "width": 48,
+    "height": 48
+   }
   },
   {
    "rank": 2,
    "tier": "Bronze",
    "step": "II",
    "scoreFloor": 0.15,
-   "winsFloor": 1
+   "winsFloor": 1,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-2.png",
+    "width": 48,
+    "height": 48
+   }
   },
   {
    "rank": 3,
    "tier": "Bronze",
    "step": "III",
    "scoreFloor": 0.25,
-   "winsFloor": 2
+   "winsFloor": 2,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-3.png",
+    "width": 48,
+    "height": 48
+   }
   },
   {
    "rank": 4,
    "tier": "Bronze",
    "step": "IV",
    "scoreFloor": 0.35,
-   "winsFloor": 3
+   "winsFloor": 3,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-4.png",
+    "width": 48,
+    "height": 48
+   }
   },
   {
    "rank": 5,
    "tier": "Silver",
    "step": "I",
    "scoreFloor": 0.42,
-   "winsFloor": 5
+   "winsFloor": 5,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-5.png",
+    "width": 48,
+    "height": 48
+   }
   },
   {
    "rank": 6,
    "tier": "Silver",
    "step": "II",
    "scoreFloor": 0.5,
-   "winsFloor": 8
+   "winsFloor": 8,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-6.png",
+    "width": 48,
+    "height": 48
+   }
   },
   {
    "rank": 7,
    "tier": "Silver",
    "step": "III",
    "scoreFloor": 0.57,
-   "winsFloor": 12
+   "winsFloor": 12,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-7.png",
+    "width": 48,
+    "height": 48
+   }
   },
   {
    "rank": 8,
    "tier": "Silver",
    "step": "IV",
    "scoreFloor": 0.63,
-   "winsFloor": 16
+   "winsFloor": 16,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-8.png",
+    "width": 48,
+    "height": 48
+   }
   },
   {
    "rank": 9,
    "tier": "Gold",
    "step": "I",
    "scoreFloor": 0.68,
-   "winsFloor": 22
+   "winsFloor": 22,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-9.png",
+    "width": 48,
+    "height": 48
+   }
   },
   {
    "rank": 10,
    "tier": "Gold",
    "step": "II",
    "scoreFloor": 0.73,
-   "winsFloor": 30
+   "winsFloor": 30,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-10.png",
+    "width": 48,
+    "height": 48
+   }
   },
   {
    "rank": 11,
    "tier": "Gold",
    "step": "III",
    "scoreFloor": 0.78,
-   "winsFloor": 40
+   "winsFloor": 40,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-11.png",
+    "width": 48,
+    "height": 48
+   }
   },
   {
    "rank": 12,
    "tier": "Gold",
    "step": "IV",
    "scoreFloor": 0.82,
-   "winsFloor": 55
+   "winsFloor": 55,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-12.png",
+    "width": 48,
+    "height": 48
+   }
   },
   {
    "rank": 13,
    "tier": "Obsidian",
    "step": "I",
    "scoreFloor": 0.86,
-   "winsFloor": 75
+   "winsFloor": 75,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-13.png",
+    "width": 48,
+    "height": 48
+   }
   },
   {
    "rank": 14,
    "tier": "Obsidian",
    "step": "II",
    "scoreFloor": 0.89,
-   "winsFloor": 100
+   "winsFloor": 100,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-14.png",
+    "width": 48,
+    "height": 48
+   }
   },
   {
    "rank": 15,
    "tier": "Obsidian",
    "step": "III",
    "scoreFloor": 0.92,
-   "winsFloor": 140
+   "winsFloor": 140,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-15.png",
+    "width": 48,
+    "height": 48
+   }
   },
   {
    "rank": 16,
    "tier": "Obsidian",
    "step": "IV",
    "scoreFloor": 0.94,
-   "winsFloor": 190
+   "winsFloor": 190,
+   "icon": {
+    "src": "/wiki/icons/ranks/rank-16.png",
+    "width": 48,
+    "height": 48
+   }
   }
  ],
  "rules": {

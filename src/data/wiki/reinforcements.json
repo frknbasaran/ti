@@ -8,7 +8,11 @@
   "value": 5.0,
   "text": "+5 max HP for the rest of the run",
   "basePrice": 20,
-  "icon": null
+  "icon": {
+   "src": "/wiki/icons/reinforcements/reinforce-hp.png",
+   "width": 32,
+   "height": 32
+  }
  },
  {
   "id": "reinforce_shield",
@@ -19,7 +23,11 @@
   "value": 5.0,
   "text": "+5 max shield for the rest of the run",
   "basePrice": 20,
-  "icon": null
+  "icon": {
+   "src": "/wiki/icons/reinforcements/reinforce-shield.png",
+   "width": 32,
+   "height": 32
+  }
  },
  {
   "id": "reinforce_phys",
@@ -30,7 +38,11 @@
   "value": 0.04,
   "text": "+4% physical damage for the rest of the run",
   "basePrice": 30,
-  "icon": null
+  "icon": {
+   "src": "/wiki/icons/reinforcements/reinforce-phys.png",
+   "width": 32,
+   "height": 32
+  }
  },
  {
   "id": "reinforce_magic",
@@ -41,7 +53,11 @@
   "value": 0.04,
   "text": "+4% magical damage for the rest of the run",
   "basePrice": 30,
-  "icon": null
+  "icon": {
+   "src": "/wiki/icons/reinforcements/reinforce-magic.png",
+   "width": 32,
+   "height": 32
+  }
  },
  {
   "id": "reinforce_crit",
@@ -52,7 +68,11 @@
   "value": 0.02,
   "text": "+2% crit chance for the rest of the run",
   "basePrice": 30,
-  "icon": null
+  "icon": {
+   "src": "/wiki/icons/reinforcements/reinforce-crit.png",
+   "width": 32,
+   "height": 32
+  }
  },
  {
   "id": "reinforce_physres",
@@ -63,7 +83,11 @@
   "value": 0.04,
   "text": "+4% physical resist for the rest of the run",
   "basePrice": 25,
-  "icon": null
+  "icon": {
+   "src": "/wiki/icons/reinforcements/reinforce-physres.png",
+   "width": 32,
+   "height": 32
+  }
  },
  {
   "id": "reinforce_magicres",
@@ -74,7 +98,11 @@
   "value": 0.04,
   "text": "+4% magical resist for the rest of the run",
   "basePrice": 25,
-  "icon": null
+  "icon": {
+   "src": "/wiki/icons/reinforcements/reinforce-magicres.png",
+   "width": 32,
+   "height": 32
+  }
  },
  {
   "id": "reinforce_regen",
@@ -85,6 +113,10 @@
   "value": 0.01,
   "text": "+1% HP regen for the rest of the run",
   "basePrice": 25,
-  "icon": null
+  "icon": {
+   "src": "/wiki/icons/reinforcements/reinforce-regen.png",
+   "width": 32,
+   "height": 32
+  }
  }
 ]

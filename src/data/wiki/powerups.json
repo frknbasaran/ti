@@ -22,7 +22,11 @@
   "answers": [
    "Armor"
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/explosion.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": [
    "knight"
   ]
@@ -48,7 +52,11 @@
    }
   ],
   "answers": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/iron-ration.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": []
  },
  {
@@ -72,7 +80,11 @@
    }
   ],
   "answers": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/loaded-dice.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": []
  },
  {
@@ -98,7 +110,11 @@
   "answers": [
    "SelfHeal"
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/whetstone-kit.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": [
    "ghost",
    "witch",
@@ -128,7 +144,11 @@
   "answers": [
    "SelfHeal"
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/grimoire-page.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": [
    "ghost",
    "witch",
@@ -156,7 +176,11 @@
    }
   ],
   "answers": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/merchants-seal.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": []
  },
  {
@@ -182,7 +206,11 @@
   "answers": [
    "SelfHeal"
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/war-drum.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": [
    "ghost",
    "witch",
@@ -215,7 +243,11 @@
    "MultiHit",
    "Phys"
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/adrenaline.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": [
    "skeleton_leader",
    "ghost",
@@ -245,7 +277,11 @@
    }
   ],
   "answers": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/life-elixir.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": []
  },
  {
@@ -271,7 +307,11 @@
   "answers": [
    "Burn"
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/healing-potion.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": [
    "witch"
   ]
@@ -297,7 +337,11 @@
    }
   ],
   "answers": [],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/steady-hands.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": []
  },
  {
@@ -329,7 +373,11 @@
    "Magic",
    "Phys"
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/runed-bracers.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": []
  },
  {
@@ -357,7 +405,11 @@
    "Chill",
    "Burn"
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/cure.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": [
    "archer",
    "witch"
@@ -386,7 +438,11 @@
   "answers": [
    "Magic"
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/grounding-rod.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": []
  },
  {
@@ -412,7 +468,11 @@
   "answers": [
    "Burn"
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/troll-salve.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": [
    "witch"
   ]
@@ -440,7 +500,11 @@
   "answers": [
    "Stun"
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/anchor-boots.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": [
    "skeleton_highmage",
    "ogre",
@@ -470,7 +534,11 @@
   "answers": [
    "Chill"
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/frost-flask.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": []
  },
  {
@@ -496,7 +564,11 @@
   "answers": [
    "Theft"
   ],
-  "icon": null,
+  "icon": {
+   "src": "/wiki/icons/powerups/golden-padlock.png",
+   "width": 32,
+   "height": 32
+  },
   "answersBosses": [
    "ghost"
   ]

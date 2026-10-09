@@ -79,7 +79,8 @@ main {
   width: calc(68px * var(--k));
   height: calc(29px * var(--k));
   left: calc(46px * var(--k));
-  top: calc(-21px * var(--k));
+  /* Pati's feet (the GIF's last row) stand on the n's top edge, wordmark row 9. */
+  top: calc(-20px * var(--k));
   pointer-events: none;
 }
 

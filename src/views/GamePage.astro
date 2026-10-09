@@ -56,6 +56,7 @@ const shotUrls = (
     <div class="cta">
       <a class="button" href={game.steamUrl} rel="noopener">{ui.wishlist}</a>
       <a class="button button--ghost" href={game.demoUrl} rel="noopener">{ui.playDemo}</a>
+      <a class="button button--ghost" href={game.wikiPath}>{ui.wiki}</a>
     </div>
 
     <DemoReviews />
@@ -79,7 +80,7 @@ const shotUrls = (
           <span class="k">{text.demo}</span> <a href={game.demoUrl} rel="noopener">{text.demoText}</a>
         </div>
         <div>
-          <span class="k">{ui.wiki}</span> <a href={`/${game.slug}/wiki/`}>{ui.wikiText}</a>
+          <span class="k">{ui.wiki}</span> <a href={game.wikiPath}>{ui.wikiText}</a>
         </div>
         <div><span class="k">{ui.pressKit}</span> <a href="/presskit/">{ui.pressKit}</a></div>
         <div><span class="k">X</span> <a href={studio.x} rel="noopener">{studio.xHandle}</a></div>

@@ -9,6 +9,7 @@
  */
 export const game = {
   slug: 'slots-and-skulls',
+  wikiPath: '/slots-and-skulls/wiki/',
   name: 'Slots & Skulls',
   steamUrl: 'https://store.steampowered.com/app/4428910/Slots__Skulls/',
   steamAppId: 4428910,

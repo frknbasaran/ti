@@ -389,7 +389,7 @@ main {
 }
 
 .footer a:hover,
-.footer a[aria-current='page'] {
+.footer a[aria-current] {
   color: #fff;
 }
 

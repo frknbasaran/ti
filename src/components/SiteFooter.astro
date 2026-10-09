@@ -10,17 +10,25 @@ const hasPosts = (await getPublishedPosts()).length > 0;
 const current = Astro.url.pathname;
 const navItems = [
   { href: `/${game.slug}/`, label: game.name },
-  { href: `/${game.slug}/wiki/`, label: ui.wiki },
+  { href: game.wikiPath, label: ui.wiki },
   { href: '/presskit/', label: ui.pressKit },
   ...(hasPosts ? [{ href: '/devlog/', label: ui.devlog }] : []),
 ];
+// The longest link that prefixes the page is current, so Wiki stays marked on
+// every wiki page while the game link only marks the game page itself.
+const active = navItems
+  .filter((item) => current.startsWith(item.href))
+  .sort((a, b) => b.href.length - a.href.length)[0]?.href;
 ---
 
 <footer class="footer">
   <nav aria-label={ui.mainNav}>
     {
       navItems.map((item) => (
-        <a href={item.href} aria-current={current === item.href ? 'page' : undefined}>
+        <a
+          href={item.href}
+          aria-current={item.href === active ? (current === item.href ? 'page' : 'true') : undefined}
+        >
           {item.label}
         </a>
       ))

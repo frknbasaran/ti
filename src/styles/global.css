@@ -394,10 +394,11 @@ main {
 }
 
 @media (max-width: 600px) {
+  /* On a phone the home logo is the same size as on every other page. */
   .brand {
-    --k: 3;
-    margin-top: 88px;
-    margin-bottom: 80px;
+    --k: 2;
+    margin-top: 64px;
+    margin-bottom: 56px;
   }
   .brand--small {
     --k: 2;
@@ -686,5 +687,9 @@ main {
   .wiki-meta div {
     flex-direction: column;
     gap: 0;
+  }
+  /* In a column the 120px label basis would become 120px of height. */
+  .wiki-meta .k {
+    flex-basis: auto;
   }
 }

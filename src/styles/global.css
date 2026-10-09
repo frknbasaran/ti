@@ -1,0 +1,440 @@
+/* Visual language carried over from the original single-page site:
+   black background, Geist Pixel, grey uppercase labels, minimal layout. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  background: #000;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  min-height: 100%;
+  font-family: 'Geist Pixel', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 1px dashed #fff;
+  outline-offset: 3px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  margin-top: 96px;
+  margin-bottom: 120px;
+}
+
+.brand img.gem {
+  height: 90px;
+  width: auto;
+  display: block;
+  image-rendering: pixelated;
+  margin-right: -112px;
+  margin-top: -48px;
+}
+
+.brand .name {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.brand--small {
+  margin-top: 56px;
+  margin-bottom: 72px;
+}
+
+.brand--small a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.brand--small img.gem {
+  height: 54px;
+  margin-right: -67px;
+  margin-top: -29px;
+}
+
+.brand--small .name {
+  font-size: 28px;
+}
+
+/* Content column */
+.section {
+  width: 100%;
+  max-width: 640px;
+  padding: 0 24px 96px;
+}
+
+.section--wide {
+  max-width: 960px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.game-title {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.game-title a {
+  text-decoration: none;
+}
+
+.lead,
+.game-desc,
+.prose p,
+.prose li {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #b0b0b0;
+}
+
+.lead,
+.game-desc {
+  margin-bottom: 28px;
+}
+
+.prose h2 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #fff;
+  margin: 48px 0 14px;
+}
+
+.prose h3 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  margin: 28px 0 10px;
+}
+
+.prose p + p {
+  margin-top: 14px;
+}
+
+.prose ul {
+  padding-left: 1.2em;
+}
+
+.prose a {
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+}
+
+.prose a:hover {
+  border-bottom-color: #fff;
+}
+
+.game-video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1280 / 832;
+  display: block;
+  border-radius: 6px;
+  margin-bottom: 28px;
+  background: #0a0a0a;
+}
+
+.game-meta {
+  font-size: 13px;
+  line-height: 2;
+  color: #888;
+}
+
+.game-meta div {
+  display: flex;
+  gap: 8px;
+}
+
+.game-meta div > a {
+  align-self: flex-start;
+}
+
+.game-meta .k {
+  flex: 0 0 110px;
+  color: #555;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.game-meta a,
+.link {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+}
+
+.game-meta a:hover,
+.link:hover {
+  border-bottom-color: #fff;
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 36px;
+}
+
+.button {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000;
+  background: #fff;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 4px;
+}
+
+.button--ghost {
+  color: #fff;
+  background: transparent;
+  border: 1px solid #444;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+.tags {
+  list-style: none;
+  padding: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags li {
+  font-size: 12px;
+  line-height: 1;
+  color: #888;
+  border: 1px solid #222;
+  border-radius: 3px;
+  padding: 6px 8px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.gallery figure {
+  background: #0a0a0a;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gallery--contain img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  padding: 16px;
+  image-rendering: pixelated;
+}
+
+.gallery figcaption {
+  font-size: 12px;
+  color: #777;
+  padding: 8px 10px;
+}
+
+.gallery figcaption a {
+  color: #aaa;
+}
+
+.specs {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+.specs th,
+.specs td {
+  text-align: left;
+  vertical-align: top;
+  padding: 4px 0;
+  border-bottom: 1px solid #161616;
+  font-weight: 400;
+}
+
+.specs th {
+  width: 130px;
+  color: #555;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-right: 12px;
+}
+
+.specs td {
+  color: #b0b0b0;
+}
+
+.faq dt {
+  font-size: 15px;
+  color: #fff;
+  margin-top: 22px;
+}
+
+.faq dd {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #b0b0b0;
+  margin-top: 6px;
+}
+
+.posts {
+  list-style: none;
+}
+
+.posts li {
+  padding: 18px 0;
+  border-bottom: 1px solid #161616;
+}
+
+.posts a {
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.posts time,
+.muted {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 48px 24px;
+}
+
+.footer nav,
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 28px;
+}
+
+.footer a {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #666;
+  text-decoration: none;
+}
+
+.footer a:hover,
+.footer a[aria-current='page'] {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .brand {
+    margin-top: 64px;
+    margin-bottom: 80px;
+  }
+  .brand img.gem {
+    height: 60px;
+    margin-right: -75px;
+    margin-top: -32px;
+  }
+  .brand .name {
+    font-size: 32px;
+  }
+  .brand--small {
+    margin-top: 40px;
+    margin-bottom: 56px;
+  }
+  .brand--small img.gem {
+    height: 42px;
+    margin-right: -52px;
+    margin-top: -22px;
+  }
+  .brand--small .name {
+    font-size: 22px;
+  }
+  .section {
+    padding-bottom: 80px;
+  }
+  .page-title {
+    font-size: 28px;
+  }
+  .game-title {
+    font-size: 22px;
+  }
+  .game-meta div {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 6px;
+  }
+  .game-meta .k {
+    flex-basis: auto;
+  }
+}

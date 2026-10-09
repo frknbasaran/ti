@@ -1,0 +1,184 @@
+---
+import { Image, getImage } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GameVideo from '../components/GameVideo.astro';
+import { game, gameCopy } from '../data/slots-and-skulls';
+import { screenshots } from '../data/media';
+import { localizePath, t, type Lang } from '../i18n/ui';
+import { videoGameLd } from '../lib/jsonld';
+import { DEFAULT_OG_IMAGE, studio } from '../data/site';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const s = t(lang);
+const copy = gameCopy[lang];
+const path = localizePath(`/${game.slug}/`, lang);
+
+const text = {
+  en: {
+    title: 'Slots & Skulls: a slot machine roguelite | Trina Interactive',
+    about: 'About the game',
+    details: 'Details',
+    developer: 'Developer',
+    publisher: 'Publisher',
+    release: 'Release date',
+    platforms: 'Platforms',
+    genre: 'Genre',
+    modes: 'Modes',
+    controller: 'Controller',
+    languages: 'Languages',
+    steamFeatures: 'Steam',
+    demo: 'Demo',
+    demoText: 'Free demo on Steam',
+    screenshots: 'Screenshots',
+    tags: 'Steam tags',
+    requirements: 'System requirements',
+    faq: 'FAQ',
+    allLanguages: 'Supported languages',
+  },
+  tr: {
+    title: 'Slots & Skulls: slot makinesi roguelite’ı | Trina Interactive',
+    about: 'Oyun hakkında',
+    details: 'Bilgiler',
+    developer: 'Geliştirici',
+    publisher: 'Yayıncı',
+    release: 'Çıkış tarihi',
+    platforms: 'Platformlar',
+    genre: 'Tür',
+    modes: 'Modlar',
+    controller: 'Kontrolcü',
+    languages: 'Diller',
+    steamFeatures: 'Steam',
+    demo: 'Demo',
+    demoText: 'Steam’de ücretsiz demo',
+    screenshots: 'Ekran görüntüleri',
+    tags: 'Steam etiketleri',
+    requirements: 'Sistem gereksinimleri',
+    faq: 'Sıkça sorulan sorular',
+    allLanguages: 'Desteklenen diller',
+  },
+}[lang];
+
+const shotAlt = (sh: (typeof screenshots)[number]) => sh.alt[lang];
+// Stable, crawlable image URLs for structured data.
+const shotUrls = (
+  await Promise.all(screenshots.map((sh) => getImage({ src: sh.src, width: 1280, format: 'jpg' })))
+).map((img) => img.src);
+---
+
+<BaseLayout
+  lang={lang}
+  title={text.title}
+  description={copy.metaDescription}
+  path={path}
+  alternates={{ en: `/${game.slug}/`, tr: `/tr/${game.slug}/` }}
+  jsonLd={[
+    videoGameLd(lang, path, [DEFAULT_OG_IMAGE.url, ...shotUrls]),
+  ]}
+>
+  <article class="section">
+    <h1 class="page-title">{game.name}</h1>
+    <p class="lead">{copy.short}</p>
+
+    <GameVideo lang={lang} />
+
+    <div class="cta">
+      <a class="button" href={game.steamUrl} rel="noopener">{s.wishlist}</a>
+      <a class="button button--ghost" href={game.demoUrl} rel="noopener">{s.playDemo}</a>
+    </div>
+
+    <section aria-labelledby="details" class="prose">
+      <h2 id="details">{text.details}</h2>
+      <div class="game-meta">
+        <div><span class="k">{text.developer}</span> <span>{game.developer}</span></div>
+        <div><span class="k">{text.publisher}</span> <span>{game.publisher}</span></div>
+        <div><span class="k">{text.release}</span> <span>{copy.releaseLabel}</span></div>
+        <div>
+          <span class="k">{text.platforms}</span>
+          <span><a href={game.steamUrl} rel="noopener">Steam</a>: {game.operatingSystems.join(', ')}</span>
+        </div>
+        <div><span class="k">{text.genre}</span> <span>{game.genres.join(', ')}</span></div>
+        <div><span class="k">{text.modes}</span> <span>{copy.facts.modes}</span></div>
+        <div><span class="k">{text.controller}</span> <span>{copy.facts.controller}</span></div>
+        <div><span class="k">{text.languages}</span> <span>{copy.facts.languages}</span></div>
+        <div><span class="k">{text.steamFeatures}</span> <span>{copy.facts.steamFeatures}</span></div>
+        <div>
+          <span class="k">{text.demo}</span> <a href={game.demoUrl} rel="noopener">{text.demoText}</a>
+        </div>
+        <div><span class="k">{s.pressKit}</span> <a href="/presskit/">{s.pressKit}</a></div>
+        <div><span class="k">X</span> <a href={studio.x} rel="noopener">{studio.xHandle}</a></div>
+      </div>
+    </section>
+
+    <section class="prose" aria-label={text.about}>
+      {
+        copy.sections.map((sec) => (
+          <>
+            <h2>{sec.heading}</h2>
+            {sec.paragraphs.map((p) => <p>{p}</p>)}
+          </>
+        ))
+      }
+    </section>
+
+    <section class="prose" aria-labelledby="screenshots">
+      <h2 id="screenshots">{text.screenshots}</h2>
+      <div class="gallery">
+        {
+          screenshots.map((sh) => (
+            <figure>
+              <Image src={sh.src} alt={shotAlt(sh)} widths={[640, 960]} sizes="(max-width: 640px) 100vw, 296px" loading="lazy" />
+            </figure>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="prose" aria-labelledby="tags">
+      <h2 id="tags">{text.tags}</h2>
+      <ul class="tags">
+        {game.steamTags.map((tag) => <li>{tag}</li>)}
+      </ul>
+    </section>
+
+    <section class="prose" aria-labelledby="requirements">
+      <h2 id="requirements">{text.requirements}</h2>
+      {
+        copy.requirements.map((req) => (
+          <>
+            <h3>{req.os}</h3>
+            <table class="specs">
+              <tbody>
+                {req.rows.map((r) => (
+                  <tr>
+                    <th scope="row">{r.label}</th>
+                    <td>{r.value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </>
+        ))
+      }
+      <h3>{text.allLanguages}</h3>
+      <p>{copy.facts.languageList}</p>
+    </section>
+
+    <section class="prose" aria-labelledby="faq">
+      <h2 id="faq">{text.faq}</h2>
+      <dl class="faq">
+        {
+          copy.faq.map((item) => (
+            <>
+              <dt>{item.q}</dt>
+              <dd>{item.a}</dd>
+            </>
+          ))
+        }
+      </dl>
+    </section>
+  </article>
+</BaseLayout>

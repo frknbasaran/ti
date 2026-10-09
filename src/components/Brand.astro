@@ -1,0 +1,30 @@
+---
+import pati from '../assets/brand/pati-idle.gif';
+import { studio } from '../data/site';
+import { localizePath, t, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  isHome: boolean;
+}
+
+const { lang, isHome } = Astro.props;
+const s = t(lang);
+// The animated GIF is served as-is (16 KB); converting it would drop the animation.
+---
+
+{
+  isHome ? (
+    <header class="brand">
+      <img class="gem" src={pati.src} width={pati.width} height={pati.height} alt={s.logoAlt} />
+      <h1 class="name">{studio.name}</h1>
+    </header>
+  ) : (
+    <header class="brand brand--small">
+      <a href={localizePath('/', lang)} title={s.homeLink}>
+        <img class="gem" src={pati.src} width={pati.width} height={pati.height} alt={s.logoAlt} />
+        <span class="name">{studio.name}</span>
+      </a>
+    </header>
+  )
+}

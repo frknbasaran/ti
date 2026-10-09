@@ -1,0 +1,44 @@
+---
+import { studio } from '../data/site';
+import { game } from '../data/slots-and-skulls';
+import { localizePath, t, LANGS, type Lang } from '../i18n/ui';
+import { getPublishedPosts } from '../lib/devlog';
+
+interface Props {
+  lang: Lang;
+  alternates?: Partial<Record<Lang, string>>;
+}
+
+const { lang, alternates = {} } = Astro.props;
+const s = t(lang);
+
+// The devlog link stays hidden until there is at least one published post in this language.
+const hasPosts = (await getPublishedPosts(lang)).length > 0;
+
+// Language switch: the translation of this page if it exists, otherwise the other home page.
+const other = LANGS.find((l) => l !== lang)!;
+const switchHref = alternates[other] ?? localizePath('/', other);
+const current = Astro.url.pathname;
+const navItems = [
+  { href: localizePath(`/${game.slug}/`, lang), label: game.name },
+  { href: '/presskit/', label: s.pressKit },
+  ...(hasPosts ? [{ href: localizePath('/devlog/', lang), label: s.devlog }] : []),
+];
+---
+
+<footer class="footer">
+  <nav aria-label={s.mainNav}>
+    {
+      navItems.map((item) => (
+        <a href={item.href} aria-current={current === item.href ? 'page' : undefined}>
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+  <div class="footer-row">
+    <a href={studio.x} rel="noopener">{s.twitter}</a>
+    <a href={`mailto:${studio.email}`}>{s.email}</a>
+    <a href={switchHref} hreflang={other} lang={other} title={s.languageLabel}>{s.language}</a>
+  </div>
+</footer>

@@ -1,0 +1,147 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { studio } from '../../data/site';
+import { game, gameCopy } from '../../data/slots-and-skulls';
+import { art, characters, screenshots } from '../../data/media';
+
+const copy = gameCopy.en;
+
+// Each thumbnail links to the original, untouched file.
+const shots = screenshots.map((s) => ({ ...s, href: s.file }));
+const artItems = art.map((a) => ({ ...a, href: a.file }));
+const charItems = characters.map((c) => ({ ...c, href: c.file }));
+
+const facts: [string, string, string?][] = [
+  ['Developer', game.developer],
+  ['Publisher', game.publisher],
+  ['Release date', copy.releaseLabel],
+  ['Platforms', `${game.operatingSystems.join(', ')} (Steam)`],
+  ['Genre', game.genres.join(', ')],
+  ['Modes', copy.facts.modes],
+  ['Controller', copy.facts.controller],
+  ['Languages', copy.facts.languages],
+  ['Steam', 'Store page', game.steamUrl],
+  ['Demo', 'Free demo on Steam', game.demoUrl],
+  ['Website', 'trinainteractive.com', '/'],
+  ['X', studio.xHandle, studio.x],
+  ['Contact', studio.email, `mailto:${studio.email}`],
+];
+---
+
+<BaseLayout
+  lang="en"
+  title="Slots & Skulls Press Kit | Trina Interactive"
+  description="Press kit for Slots & Skulls by Trina Interactive: fact sheet, description, features, screenshots, key art, logo, characters and contact details."
+  path="/presskit/"
+>
+  <article class="section section--wide prose">
+    <h1 class="page-title">Slots &amp; Skulls press kit</h1>
+    <p class="lead">{copy.tagline}</p>
+
+    <div class="cta">
+      <a class="button" href={studio.pressKitDrive} rel="noopener">Download all (Google Drive)</a>
+      <a class="button button--ghost" href={`mailto:${studio.email}`}>{studio.email}</a>
+    </div>
+
+    <section aria-labelledby="factsheet">
+      <h2 id="factsheet">Fact sheet</h2>
+      <table class="specs">
+        <tbody>
+          {
+            facts.map(([k, v, href]) => (
+              <tr>
+                <th scope="row">{k}</th>
+                <td>{href ? <a href={href} rel={href.startsWith('http') ? 'noopener' : undefined}>{v}</a> : v}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="description">
+      <h2 id="description">Description</h2>
+      <p>{copy.short}</p>
+      {
+        copy.sections.map((sec) => (
+          <>
+            <h3>{sec.heading}</h3>
+            {sec.paragraphs.map((p) => <p>{p}</p>)}
+          </>
+        ))
+      }
+    </section>
+
+    <section aria-labelledby="videos">
+      <h2 id="videos">Videos</h2>
+      <p>
+        The gameplay trailer is on the <a href={game.steamUrl} rel="noopener">Steam store page</a>. The trailer
+        file and the gameplay GIFs are in the <a href={studio.pressKitDrive} rel="noopener">press kit folder</a>.
+        Short gameplay clip: <a href="/media/slots-and-skulls-fight.mp4">MP4</a>,
+        <a href="/media/slots-and-skulls-fight.webm">WebM (AV1)</a>.
+      </p>
+    </section>
+
+    <section aria-labelledby="screenshots">
+      <h2 id="screenshots">Screenshots</h2>
+      <p class="muted">Select an image for the full-size file.</p>
+      <div class="gallery">
+        {
+          shots.map((s) => (
+            <figure>
+              <a href={s.href}>
+                <Image src={s.src} alt={s.alt.en} widths={[480, 960]} sizes="(max-width: 600px) 100vw, 300px" loading="lazy" />
+              </a>
+              <figcaption>{s.src.width}×{s.src.height} JPG</figcaption>
+            </figure>
+          ))
+        }
+      </div>
+    </section>
+
+    <section aria-labelledby="art">
+      <h2 id="art">Key art and logo</h2>
+      <div class="gallery gallery--contain">
+        {
+          artItems.map((a) => (
+            <figure>
+              <a href={a.href}>
+                <Image src={a.src} alt={a.alt} widths={[480, 960]} sizes="(max-width: 600px) 100vw, 300px" loading="lazy" />
+              </a>
+              <figcaption>
+                {a.name}, {a.src.width}×{a.src.height} PNG
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+    </section>
+
+    <section aria-labelledby="characters">
+      <h2 id="characters">Characters</h2>
+      <div class="gallery gallery--contain">
+        {
+          charItems.map((c) => (
+            <figure>
+              <a href={c.href}>
+                <Image src={c.src} alt={c.alt} widths={[480, 960]} sizes="(max-width: 600px) 100vw, 300px" loading="lazy" />
+              </a>
+              <figcaption>
+                {c.name}, {c.src.width}×{c.src.height} PNG
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+    </section>
+
+    <section aria-labelledby="studio">
+      <h2 id="studio">About Trina Interactive</h2>
+      <p>
+        Trina Interactive is a small independent game studio and the developer and publisher of Slots &amp; Skulls.
+        Website: <a href="/">trinainteractive.com</a>. Contact: <a href={`mailto:${studio.email}`}>{studio.email}</a>.
+      </p>
+    </section>
+  </article>
+</BaseLayout>

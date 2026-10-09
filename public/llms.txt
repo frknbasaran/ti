@@ -1,0 +1,34 @@
+# Trina Interactive
+
+> Trina Interactive is a small independent game studio. It develops and publishes Slots & Skulls, a turn-based roguelite built on a slot machine, for Windows, macOS and Linux on Steam.
+
+Facts on this site come from the Steam store page and the studio's press kit. Contact: hi@trinainteractive.com
+
+## Games
+
+- [Slots & Skulls](https://trinainteractive.com/slots-and-skulls/): A turn-based roguelite built on a slot machine. Stop the machine to attack, win fights for chests, and upgrade what drops at the forge (if you dare). Or invite a friend and fight them. Steam lists the release date as November 4, 2026. A free demo is available on Steam.
+- [Slots & Skulls on Steam](https://store.steampowered.com/app/4428910/Slots__Skulls/): store page (app 4428910), Windows, macOS, Linux.
+- [Slots & Skulls Demo on Steam](https://store.steampowered.com/app/4988090/Slots__Skulls_Demo/): free demo.
+
+## Key facts about Slots & Skulls
+
+- Developer and publisher: Trina Interactive
+- Genre: Roguelite, Turn-Based Strategy
+- 112 symbols, 33 enemies, ten levels with five fights each
+- Forge: upgrade symbols from +0 to +10; a failed upgrade destroys the symbol unless a blue gem is used
+- Cats with run-long pacts (one advantage, one disadvantage), six abilities, 21 modifiers
+- Online 1v1 with a Steam friend, including a Duel Only mode
+- Auto Mode, Auto 2X Mode, and Full Auto Mode in Endless Mode
+- Full controller support; 27 supported languages including English and Turkish
+
+## Press
+
+- [Press kit](https://trinainteractive.com/presskit/): fact sheet, description, screenshots, key art, logo, characters
+- [Press kit download (Google Drive)](https://drive.google.com/drive/folders/1GrIPkeUNpGxxJZ_NxcIazyq4cZ637Iu0?usp=sharing)
+
+## Links
+
+- [Home](https://trinainteractive.com/)
+- [Türkçe](https://trinainteractive.com/tr/)
+- [Steam developer page](https://store.steampowered.com/developer/trinainteractive)
+- [X: @slotsandskulls](https://x.com/slotsandskulls)

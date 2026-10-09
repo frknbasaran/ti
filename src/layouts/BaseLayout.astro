@@ -1,0 +1,36 @@
+---
+import Seo from '../components/Seo.astro';
+import Brand from '../components/Brand.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { htmlLang, type Lang } from '../i18n/ui';
+import '../styles/global.css';
+
+type SeoProps = import('../components/Seo.astro').Props;
+
+export interface Props extends SeoProps {
+  /** Home pages render the big brand block as the page's <h1>. */
+  isHome?: boolean;
+}
+
+const { isHome = false, ...seo } = Astro.props;
+const lang: Lang = seo.lang;
+---
+
+<!doctype html>
+<html lang={htmlLang[lang]}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap" rel="stylesheet" />
+    <Seo {...seo} />
+  </head>
+  <body>
+    <Brand lang={lang} isHome={isHome} />
+    <main>
+      <slot />
+    </main>
+    <SiteFooter lang={lang} alternates={seo.alternates} />
+  </body>
+</html>

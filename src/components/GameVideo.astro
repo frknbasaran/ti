@@ -1,0 +1,27 @@
+---
+import { t, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+// Poster = first frame of the clip (palette PNG, ~90 KB), so it blends into playback.
+const poster = '/media/slots-and-skulls-fight-poster.png';
+---
+
+<video
+  class="game-video"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="metadata"
+  poster={poster}
+  width="1280"
+  height="832"
+  aria-label={t(lang).videoLabel}
+>
+  <source src="/media/slots-and-skulls-fight.webm" type='video/webm; codecs="av01.0.05M.08"' />
+  <source src="/media/slots-and-skulls-fight.mp4" type='video/mp4; codecs="avc1.640028"' />
+</video>

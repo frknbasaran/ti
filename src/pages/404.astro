@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { game } from '../data/slots-and-skulls';
+---
+
+<BaseLayout
+  lang="en"
+  title="Page not found | Trina Interactive"
+  description="This page does not exist. Go back to the Trina Interactive home page or the Slots & Skulls page."
+  noindex
+>
+  <section class="section prose">
+    <h1 class="page-title">404: page not found</h1>
+    <p class="lead">This page does not exist, or it moved.</p>
+    <p lang="tr">Aradığınız sayfa bulunamadı.</p>
+    <ul style="margin-top: 24px;">
+      <li><a href="/">Trina Interactive home</a></li>
+      <li><a href={`/${game.slug}/`}>{game.name}</a></li>
+      <li><a href="/presskit/">Press kit</a></li>
+      <li lang="tr"><a href="/tr/">Türkçe ana sayfa</a></li>
+    </ul>
+  </section>
+</BaseLayout>

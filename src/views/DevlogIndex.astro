@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { formatDate, localizePath, t, type Lang } from '../i18n/ui';
+import { getPublishedPosts, postPath } from '../lib/devlog';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const s = t(lang);
+const posts = await getPublishedPosts(lang);
+
+const text = {
+  en: {
+    title: 'Devlog | Trina Interactive',
+    description: 'Development notes from Trina Interactive, the indie studio making Slots & Skulls.',
+    heading: 'Devlog',
+  },
+  tr: {
+    title: 'Geliştirici Günlüğü | Trina Interactive',
+    description: 'Slots & Skulls’ı geliştiren bağımsız stüdyo Trina Interactive’ten geliştirme notları.',
+    heading: 'Geliştirici Günlüğü',
+  },
+}[lang];
+
+const rssHref = localizePath('/devlog/rss.xml', lang);
+---
+
+<BaseLayout
+  lang={lang}
+  title={text.title}
+  description={text.description}
+  path={localizePath('/devlog/', lang)}
+  alternates={{ en: '/devlog/', tr: '/tr/devlog/' }}
+  noindex={posts.length === 0}
+  rss={{ title: text.heading, href: rssHref }}
+>
+  <section class="section">
+    <h1 class="page-title">{text.heading}</h1>
+    {
+      posts.length === 0 ? (
+        <p class="lead">{s.noPosts}</p>
+      ) : (
+        <ul class="posts">
+          {posts.map((post) => (
+            <li>
+              <a href={postPath(post)}>{post.data.title}</a>
+              <br />
+              <time datetime={post.data.date.toISOString().slice(0, 10)}>{formatDate(post.data.date, lang)}</time>
+              <p class="muted">{post.data.description}</p>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+    <p class="muted" style="margin-top: 32px;"><a class="link" href={rssHref}>{s.rss}</a></p>
+  </section>
+</BaseLayout>

@@ -1,0 +1,66 @@
+---
+import { Image, getImage } from 'astro:assets';
+import { render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { DEFAULT_OG_IMAGE, ORG_ID, SITE_URL, studio } from '../data/site';
+import { formatDate, localizePath, t } from '../i18n/ui';
+import { postAlternates, postPath, type DevlogPost } from '../lib/devlog';
+
+interface Props {
+  post: DevlogPost;
+}
+
+const { post } = Astro.props;
+const { data } = post;
+const lang = data.lang;
+const s = t(lang);
+const { Content } = await render(post);
+const path = postPath(post);
+const alternates = await postAlternates(post);
+
+const hero = data.heroImage
+  ? await getImage({ src: data.heroImage, width: 1200, height: 630, fit: 'cover', format: 'jpg' })
+  : undefined;
+const ogImage = hero
+  ? { url: hero.src, width: 1200, height: 630, alt: data.heroImageAlt ?? data.title }
+  : DEFAULT_OG_IMAGE;
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: data.title,
+  description: data.description,
+  datePublished: data.date.toISOString(),
+  inLanguage: lang,
+  mainEntityOfPage: new URL(path, SITE_URL).href,
+  image: new URL(ogImage.url, SITE_URL).href,
+  author: { '@type': 'Organization', '@id': ORG_ID, name: studio.name, url: studio.url },
+  publisher: { '@type': 'Organization', '@id': ORG_ID, name: studio.name, url: studio.url },
+};
+---
+
+<BaseLayout
+  lang={lang}
+  title={`${data.title} | ${studio.name}`}
+  description={data.description}
+  path={path}
+  alternates={alternates}
+  ogType="article"
+  ogImage={ogImage}
+  publishedTime={data.date}
+  jsonLd={[articleLd]}
+>
+  <article class="section prose">
+    <h1 class="page-title">{data.title}</h1>
+    <p class="muted">
+      {s.published}: <time datetime={data.date.toISOString().slice(0, 10)}>{formatDate(data.date, lang)}</time>
+    </p>
+    {
+      data.heroImage && (
+        <Image src={data.heroImage} alt={data.heroImageAlt ?? data.title} widths={[640, 1280]} sizes="(max-width: 640px) 100vw, 592px" style="margin: 28px 0; border-radius: 4px;" />
+      )
+    }
+    <Content />
+    <p style="margin-top: 48px;"><a href={localizePath('/devlog/', lang)}>{s.backToDevlog}</a></p>
+  </article>
+</BaseLayout>

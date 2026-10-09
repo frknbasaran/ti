@@ -52,26 +52,6 @@ export const demoReviews: DemoReview[] = [
       "plays brilliantly on steam deck, like it's made for controller play. … what's here already is a tonne of fun and I'm really looking forward to seeing how it develops.",
     playtimeMin: 84,
   },
-  {
-    id: '231879826',
-    steamId: '76561198835278243',
-    quote:
-      'Absolutely loved the demo! It takes some thought when building your reels but its not hard to get the hang of and so much fun!',
-    playtimeMin: 181,
-  },
-  {
-    id: '231578693',
-    steamId: '76561198764851578',
-    quote:
-      'You took a simple concept, something I’d normally never go near like gambling, and turned it into an absolute blast.',
-    playtimeMin: 93,
-  },
-  {
-    id: '235548604',
-    steamId: '76561198097861891',
-    quote: 'the game is fun until you watch your favorite symbol burn while trying to upgrade it to +8',
-    playtimeMin: 404,
-  },
 ];
 
 /** The short quote shown on the home page. */

@@ -4,6 +4,8 @@ export const ui = {
   studio: 'Studio',
   pressKit: 'Press Kit',
   devlog: 'Devlog',
+  wiki: 'Wiki',
+  wikiText: 'Symbols, enemies and rules',
   email: 'Email',
   twitter: 'X / Twitter',
   steam: 'Steam',

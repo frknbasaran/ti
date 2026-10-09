@@ -22,7 +22,7 @@ const { title, description, path, crumbs = [], section, jsonLd = [], prev, next 
 const trail: Crumb[] = crumbs.length ? [...baseCrumbs, ...crumbs] : [baseCrumbs[0], { name: 'Wiki', href: path }];
 ---
 
-<BaseLayout lang="en" title={title} description={description} path={path} jsonLd={[breadcrumbLd(trail), ...jsonLd]}>
+<BaseLayout title={title} description={description} path={path} jsonLd={[breadcrumbLd(trail), ...jsonLd]}>
   <article class="section prose wiki">
     <nav class="wiki-crumbs" aria-label="Breadcrumb">
       <ol>

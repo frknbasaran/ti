@@ -7,14 +7,13 @@ import { join } from 'node:path';
 const SITE = 'https://trinainteractive.com';
 
 /**
- * Count published (non-draft) devlog posts per language by reading the
- * frontmatter directly. Used to keep empty devlog index pages out of the
- * sitemap until the first post is published.
- * @returns {Record<string, number>}
+ * Count published (non-draft) devlog posts by reading the frontmatter
+ * directly. Used to keep the empty devlog index page out of the sitemap
+ * until the first post is published.
+ * @returns {number}
  */
-function publishedDevlogCounts() {
-  /** @type {Record<string, number>} */
-  const counts = { en: 0, tr: 0 };
+function publishedDevlogCount() {
+  let count = 0;
   const root = new URL('./src/content/devlog/', import.meta.url).pathname;
   /** @param {string} dir */
   const walk = (dir) => {
@@ -23,9 +22,7 @@ function publishedDevlogCounts() {
       if (entry.isDirectory()) walk(full);
       else if (/\.mdx?$/.test(entry.name)) {
         const fm = readFileSync(full, 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1] ?? '';
-        if (/^draft:\s*true\s*$/m.test(fm)) continue;
-        const lang = fm.match(/^lang:\s*['"]?(\w+)/m)?.[1] ?? 'en';
-        counts[lang] = (counts[lang] ?? 0) + 1;
+        if (!/^draft:\s*true\s*$/m.test(fm)) count++;
       }
     }
   };
@@ -34,10 +31,10 @@ function publishedDevlogCounts() {
   } catch {
     /* no devlog folder */
   }
-  return counts;
+  return count;
 }
 
-const devlogCounts = publishedDevlogCounts();
+const devlogCount = publishedDevlogCount();
 
 export default defineConfig({
   site: SITE,
@@ -47,15 +44,10 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      i18n: {
-        defaultLocale: 'en',
-        locales: { en: 'en', tr: 'tr' },
-      },
       filter: (page) => {
         const path = new URL(page).pathname;
         if (path.startsWith('/404')) return false;
-        if (path === '/devlog/' && devlogCounts.en === 0) return false;
-        if (path === '/tr/devlog/' && devlogCounts.tr === 0) return false;
+        if (path === '/devlog/' && devlogCount === 0) return false;
         return true;
       },
     }),

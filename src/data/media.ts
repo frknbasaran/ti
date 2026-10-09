@@ -35,40 +35,26 @@ import ogreFile from '../assets/slots-and-skulls/characters/character_ogre.png?u
 import mageFile from '../assets/slots-and-skulls/characters/character_skeleton_high_mage.png?url';
 import knightFile from '../assets/slots-and-skulls/characters/character_trina_s_knight.png?url';
 
-type Alt = { en: string; tr: string };
-
-export const screenshots: { src: ImageMetadata; file: string; alt: Alt; name: string }[] = [
+export const screenshots: { src: ImageMetadata; file: string; alt: string; name: string }[] = [
   {
     src: fightView, file: fightViewFile,
     name: 'fight_view',
-    alt: {
-      en: 'Slots & Skulls boss fight: the slot machine grid with HP and shield bars on the left, the mounted Knight of Trina on the right.',
-      tr: 'Slots & Skulls boss dövüşü: solda can ve kalkan çubuklarıyla slot makinesi, sağda atlı Knight of Trina.',
-    },
+    alt: 'Slots & Skulls boss fight: the slot machine grid with HP and shield bars on the left, the mounted Knight of Trina on the right.',
   },
   {
     src: lootView, file: lootViewFile,
     name: 'loot_view',
-    alt: {
-      en: 'Slots & Skulls loot screen: a 56 gold reward that buys symbols and power-ups in the shop between fights.',
-      tr: 'Slots & Skulls ganimet ekranı: dövüşler arasında dükkânda sembol ve güçlendirme almaya yarayan 56 altın ödülü.',
-    },
+    alt: 'Slots & Skulls loot screen: a 56 gold reward that buys symbols and power-ups in the shop between fights.',
   },
   {
     src: upgradeView, file: upgradeViewFile,
     name: 'upgrade_view',
-    alt: {
-      en: 'Slots & Skulls anvil screen: upgrading the Executioner’s Coin symbol from +0 to +1 with gems, or smelting it into skulls.',
-      tr: 'Slots & Skulls demirci ekranı: Executioner’s Coin sembolünü cevherlerle +0’dan +1’e yükseltme ya da kurukafaya eritme.',
-    },
+    alt: 'Slots & Skulls anvil screen: upgrading the Executioner’s Coin symbol from +0 to +1 with gems, or smelting it into skulls.',
   },
   {
     src: modifiersView, file: modifiersViewFile,
     name: 'modifiers_view',
-    alt: {
-      en: 'Slots & Skulls modifiers screen: a grid of permanent powers bought with skulls, such as Iron Skin, Vitality and Extra Wheel.',
-      tr: 'Slots & Skulls geliştirmeler ekranı: Iron Skin, Vitality ve Extra Wheel gibi kurukafayla alınan kalıcı güçler.',
-    },
+    alt: 'Slots & Skulls modifiers screen: a grid of permanent powers bought with skulls, such as Iron Skin, Vitality and Extra Wheel.',
   },
 ];
 

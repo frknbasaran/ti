@@ -30,6 +30,5 @@ Facts on this site come from the Steam store page and the studio's press kit. Co
 ## Links
 
 - [Home](https://trinainteractive.com/)
-- [Türkçe](https://trinainteractive.com/tr/)
 - [Steam developer page](https://store.steampowered.com/developer/trinainteractive)
 - [X: @slotsandskulls](https://x.com/slotsandskulls)

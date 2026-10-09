@@ -3,67 +3,36 @@ import { Image, getImage } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import GameVideo from '../components/GameVideo.astro';
 import DemoReviews from '../components/DemoReviews.astro';
-import { game, gameCopy } from '../data/slots-and-skulls';
+import { game, gameCopy as copy } from '../data/slots-and-skulls';
 import { screenshots } from '../data/media';
-import { localizePath, t, type Lang } from '../i18n/ui';
+import { ui } from '../i18n/ui';
 import { videoGameLd } from '../lib/jsonld';
 import { DEFAULT_OG_IMAGE, studio } from '../data/site';
 
-interface Props {
-  lang: Lang;
-}
-
-const { lang } = Astro.props;
-const s = t(lang);
-const copy = gameCopy[lang];
-const path = localizePath(`/${game.slug}/`, lang);
+const path = `/${game.slug}/`;
 
 const text = {
-  en: {
-    title: 'Slots & Skulls: a slot machine roguelite | Trina Interactive',
-    about: 'About the game',
-    details: 'Details',
-    developer: 'Developer',
-    publisher: 'Publisher',
-    release: 'Release date',
-    platforms: 'Platforms',
-    genre: 'Genre',
-    modes: 'Modes',
-    controller: 'Controller',
-    languages: 'Languages',
-    steamFeatures: 'Steam',
-    demo: 'Demo',
-    demoText: 'Free demo on Steam',
-    screenshots: 'Screenshots',
-    tags: 'Steam tags',
-    requirements: 'System requirements',
-    faq: 'FAQ',
-    allLanguages: 'Supported languages',
-  },
-  tr: {
-    title: 'Slots & Skulls: slot makinesi roguelite’ı | Trina Interactive',
-    about: 'Oyun hakkında',
-    details: 'Bilgiler',
-    developer: 'Geliştirici',
-    publisher: 'Yayıncı',
-    release: 'Çıkış tarihi',
-    platforms: 'Platformlar',
-    genre: 'Tür',
-    modes: 'Modlar',
-    controller: 'Kontrolcü',
-    languages: 'Diller',
-    steamFeatures: 'Steam',
-    demo: 'Demo',
-    demoText: 'Steam’de ücretsiz demo',
-    screenshots: 'Ekran görüntüleri',
-    tags: 'Steam etiketleri',
-    requirements: 'Sistem gereksinimleri',
-    faq: 'Sıkça sorulan sorular',
-    allLanguages: 'Desteklenen diller',
-  },
-}[lang];
+  title: 'Slots & Skulls: a slot machine roguelite | Trina Interactive',
+  about: 'About the game',
+  details: 'Details',
+  developer: 'Developer',
+  publisher: 'Publisher',
+  release: 'Release date',
+  platforms: 'Platforms',
+  genre: 'Genre',
+  modes: 'Modes',
+  controller: 'Controller',
+  languages: 'Languages',
+  steamFeatures: 'Steam',
+  demo: 'Demo',
+  demoText: 'Free demo on Steam',
+  screenshots: 'Screenshots',
+  tags: 'Steam tags',
+  requirements: 'System requirements',
+  faq: 'FAQ',
+  allLanguages: 'Supported languages',
+};
 
-const shotAlt = (sh: (typeof screenshots)[number]) => sh.alt[lang];
 // Stable, crawlable image URLs for structured data.
 const shotUrls = (
   await Promise.all(screenshots.map((sh) => getImage({ src: sh.src, width: 1280, format: 'jpg' })))
@@ -71,27 +40,25 @@ const shotUrls = (
 ---
 
 <BaseLayout
-  lang={lang}
   title={text.title}
   description={copy.metaDescription}
   path={path}
-  alternates={{ en: `/${game.slug}/`, tr: `/tr/${game.slug}/` }}
   jsonLd={[
-    videoGameLd(lang, path, [DEFAULT_OG_IMAGE.url, ...shotUrls]),
+    videoGameLd(path, [DEFAULT_OG_IMAGE.url, ...shotUrls]),
   ]}
 >
   <article class="section">
     <h1 class="page-title">{game.name}</h1>
     <p class="lead">{copy.short}</p>
 
-    <GameVideo lang={lang} />
+    <GameVideo />
 
     <div class="cta">
-      <a class="button" href={game.steamUrl} rel="noopener">{s.wishlist}</a>
-      <a class="button button--ghost" href={game.demoUrl} rel="noopener">{s.playDemo}</a>
+      <a class="button" href={game.steamUrl} rel="noopener">{ui.wishlist}</a>
+      <a class="button button--ghost" href={game.demoUrl} rel="noopener">{ui.playDemo}</a>
     </div>
 
-    <DemoReviews lang={lang} />
+    <DemoReviews />
 
     <section aria-labelledby="details" class="prose">
       <h2 id="details">{text.details}</h2>
@@ -111,14 +78,10 @@ const shotUrls = (
         <div>
           <span class="k">{text.demo}</span> <a href={game.demoUrl} rel="noopener">{text.demoText}</a>
         </div>
-        {
-          lang === 'en' && (
-            <div>
-              <span class="k">Wiki</span> <a href="/slots-and-skulls/wiki/">Symbols, enemies and rules</a>
-            </div>
-          )
-        }
-        <div><span class="k">{s.pressKit}</span> <a href="/presskit/">{s.pressKit}</a></div>
+        <div>
+          <span class="k">Wiki</span> <a href="/slots-and-skulls/wiki/">Symbols, enemies and rules</a>
+        </div>
+        <div><span class="k">{ui.pressKit}</span> <a href="/presskit/">{ui.pressKit}</a></div>
         <div><span class="k">X</span> <a href={studio.x} rel="noopener">{studio.xHandle}</a></div>
       </div>
     </section>
@@ -140,7 +103,7 @@ const shotUrls = (
         {
           screenshots.map((sh) => (
             <figure>
-              <Image src={sh.src} alt={shotAlt(sh)} widths={[640, 960]} sizes="(max-width: 640px) 100vw, 296px" loading="lazy" />
+              <Image src={sh.src} alt={sh.alt} widths={[640, 960]} sizes="(max-width: 640px) 100vw, 296px" loading="lazy" />
             </figure>
           ))
         }

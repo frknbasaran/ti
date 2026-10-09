@@ -1,6 +1,5 @@
 import { ORG_ID, SITE_URL, studio } from '../data/site';
 import { game, gameCopy } from '../data/slots-and-skulls';
-import type { Lang } from '../i18n/ui';
 
 const abs = (p: string) => new URL(p, SITE_URL).href;
 
@@ -34,7 +33,7 @@ export function websiteLd() {
     '@id': `${SITE_URL}/#website`,
     name: studio.name,
     url: studio.url,
-    inLanguage: ['en', 'tr'],
+    inLanguage: 'en',
     publisher: { '@id': ORG_ID },
   };
 }
@@ -42,14 +41,13 @@ export function websiteLd() {
 /** Organization reference that still makes sense on its own page. */
 const orgRef = { '@type': 'Organization', '@id': ORG_ID, name: studio.name, url: studio.url };
 
-export function videoGameLd(lang: Lang, pagePath: string, images: string[]) {
-  const copy = gameCopy[lang];
+export function videoGameLd(pagePath: string, images: string[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'VideoGame',
     '@id': `${SITE_URL}/${game.slug}/#game`,
     name: game.name,
-    description: copy.short,
+    description: gameCopy.short,
     url: abs(pagePath),
     image: images.map(abs),
     genre: [...game.genres],

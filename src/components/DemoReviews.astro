@@ -1,29 +1,13 @@
 ---
-import type { Lang } from '../i18n/ui';
 import { demoReviews, demoReviewsUrl, reviewUrl, summary } from '../data/reviews';
 
-interface Props {
-  lang: Lang;
-}
-
-const { lang } = Astro.props;
-
 const text = {
-  en: {
-    heading: 'What demo players say',
-    summary: `${summary.positive} of ${summary.total} Steam reviews of the demo are positive (${summary.asOf.en}).`,
-    all: 'Read all demo reviews on Steam',
-    played: (min: number) => `${min} min in the demo`,
-    source: 'Steam review',
-  },
-  tr: {
-    heading: 'Demo oyuncuları ne diyor',
-    summary: `Demonun Steam'deki ${summary.total} yorumundan ${summary.positive}'i olumlu (${summary.asOf.tr}). Yorumlar oyuncuların yazdığı gibi, İngilizce.`,
-    all: "Tüm demo yorumlarını Steam'de oku",
-    played: (min: number) => `demoda ${min} dk`,
-    source: 'Steam yorumu',
-  },
-}[lang];
+  heading: 'What demo players say',
+  summary: `${summary.positive} of ${summary.total} Steam reviews of the demo are positive (${summary.asOf}).`,
+  all: 'Read all demo reviews on Steam',
+  played: (min: number) => `${min} min in the demo`,
+  source: 'Steam review',
+};
 ---
 
 <section class="prose" aria-labelledby="demo-reviews">
@@ -33,7 +17,7 @@ const text = {
     {
       demoReviews.map((r) => (
         <figure class="review">
-          <blockquote lang="en" cite={reviewUrl(r)}>
+          <blockquote cite={reviewUrl(r)}>
             <p>“{r.quote}”</p>
           </blockquote>
           <figcaption>

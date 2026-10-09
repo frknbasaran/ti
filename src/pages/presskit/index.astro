@@ -2,10 +2,8 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { studio } from '../../data/site';
-import { game, gameCopy } from '../../data/slots-and-skulls';
+import { game, gameCopy as copy } from '../../data/slots-and-skulls';
 import { art, characters, screenshots } from '../../data/media';
-
-const copy = gameCopy.en;
 
 // Each thumbnail links to the original, untouched file.
 const shots = screenshots.map((s) => ({ ...s, href: s.file }));
@@ -30,7 +28,6 @@ const facts: [string, string, string?][] = [
 ---
 
 <BaseLayout
-  lang="en"
   title="Slots & Skulls Press Kit | Trina Interactive"
   description="Press kit for Slots & Skulls by Trina Interactive: fact sheet, description, features, screenshots, key art, logo, characters and contact details."
   path="/presskit/"
@@ -91,7 +88,7 @@ const facts: [string, string, string?][] = [
           shots.map((s) => (
             <figure>
               <a href={s.href}>
-                <Image src={s.src} alt={s.alt.en} widths={[480, 960]} sizes="(max-width: 600px) 100vw, 300px" loading="lazy" />
+                <Image src={s.src} alt={s.alt} widths={[480, 960]} sizes="(max-width: 600px) 100vw, 300px" loading="lazy" />
               </a>
               <figcaption>{s.src.width}×{s.src.height} JPG</figcaption>
             </figure>

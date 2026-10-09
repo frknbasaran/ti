@@ -7,8 +7,6 @@
  * add review/rating structured data for these (self-serving reviews), and
  * refresh `summary` when you add or change quotes.
  */
-import type { Lang } from '../i18n/ui';
-
 const DEMO_APP_ID = 4988090;
 
 export interface DemoReview {
@@ -27,7 +25,7 @@ export const demoReviewsUrl = `https://steamcommunity.com/app/${DEMO_APP_ID}/rev
 export const summary = {
   positive: 18,
   total: 18,
-  asOf: { en: 'October 2026', tr: 'Ekim 2026' } satisfies Record<Lang, string>,
+  asOf: 'October 2026',
 };
 
 export const demoReviews: DemoReview[] = [

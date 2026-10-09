@@ -3,16 +3,12 @@
  * Shared <head> SEO tags. Every page goes through BaseLayout, which renders this.
  */
 import { DEFAULT_OG_IMAGE, studio } from '../data/site';
-import { ogLocale, type Lang } from '../i18n/ui';
 
 export interface Props {
   title: string;
   description: string;
-  lang: Lang;
   /** Root-relative canonical path, e.g. `/slots-and-skulls/`. Omit for noindex pages. */
   path?: string;
-  /** Root-relative paths of this page in each language (only real translations). */
-  alternates?: Partial<Record<Lang, string>>;
   ogType?: 'website' | 'article';
   ogImage?: { url: string; width: number; height: number; alt: string };
   noindex?: boolean;
@@ -24,9 +20,7 @@ export interface Props {
 const {
   title,
   description,
-  lang,
   path,
-  alternates = {},
   ogType = 'website',
   ogImage = DEFAULT_OG_IMAGE,
   noindex = false,
@@ -40,11 +34,6 @@ const abs = (p: string) => new URL(p, site).href;
 const canonical = path ? abs(path) : undefined;
 const image = abs(ogImage.url);
 
-const altEntries = Object.entries(alternates) as [Lang, string][];
-const hasTranslations = altEntries.length > 1;
-const xDefault = alternates.en;
-const otherLocales = altEntries.filter(([l]) => l !== lang).map(([l]) => ogLocale[l]);
-
 /** Escape `<` so JSON-LD can never close the script tag early. */
 const ld = (obj: unknown) => JSON.stringify(obj).replace(/</g, '\\u003c');
 ---
@@ -54,16 +43,12 @@ const ld = (obj: unknown) => JSON.stringify(obj).replace(/</g, '\\u003c');
 {canonical && <link rel="canonical" href={canonical} />}
 {noindex && <meta name="robots" content="noindex" />}
 
-{hasTranslations && altEntries.map(([l, p]) => <link rel="alternate" hreflang={l} href={abs(p)} />)}
-{hasTranslations && xDefault && <link rel="alternate" hreflang="x-default" href={abs(xDefault)} />}
-
 <meta property="og:site_name" content={studio.name} />
 <meta property="og:type" content={ogType} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 {canonical && <meta property="og:url" content={canonical} />}
-<meta property="og:locale" content={ogLocale[lang]} />
-{otherLocales.map((l) => <meta property="og:locale:alternate" content={l} />)}
+<meta property="og:locale" content="en_US" />
 <meta property="og:image" content={image} />
 <meta property="og:image:width" content={String(ogImage.width)} />
 <meta property="og:image:height" content={String(ogImage.height)} />

@@ -2,68 +2,45 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import GameVideo from '../components/GameVideo.astro';
 import { studio } from '../data/site';
-import { game, gameCopy } from '../data/slots-and-skulls';
+import { game, gameCopy as copy } from '../data/slots-and-skulls';
 import { homeQuote, reviewUrl } from '../data/reviews';
-import { localizePath, t, type Lang } from '../i18n/ui';
+import { ui } from '../i18n/ui';
 import { organizationLd, websiteLd } from '../lib/jsonld';
 
-interface Props {
-  lang: Lang;
-}
-
-const { lang } = Astro.props;
-const s = t(lang);
-const copy = gameCopy[lang];
-const gamePath = localizePath(`/${game.slug}/`, lang);
+const gamePath = `/${game.slug}/`;
 
 const text = {
-  en: {
-    title: 'Trina Interactive | Indie game studio behind Slots & Skulls',
-    description:
-      'Trina Interactive is a small indie game studio making Slots & Skulls, a turn-based roguelite built on a slot machine, for Windows, macOS and Linux on Steam.',
-    intro: [
-      'Trina Interactive is a small independent game studio.',
-      'We are making Slots & Skulls, a turn-based roguelite built on a slot machine, coming to Steam for Windows, macOS and Linux.',
-    ],
-    contact: 'Say hi:',
-    quoteSource: 'Steam review of the demo',
-    release: 'Release',
-  },
-  tr: {
-    title: 'Trina Interactive | Slots & Skulls’ın bağımsız oyun stüdyosu',
-    description:
-      'Trina Interactive, slot makinesi üzerine kurulu sıra tabanlı roguelite Slots & Skulls’ı geliştiren küçük bir bağımsız oyun stüdyosu. Windows, macOS, Linux; Steam.',
-    intro: [
-      'Trina Interactive küçük, bağımsız bir oyun stüdyosu.',
-      'Slot makinesi üzerine kurulu sıra tabanlı bir roguelite olan Slots & Skulls’ı geliştiriyoruz; oyun Steam’de Windows, macOS ve Linux için çıkıyor.',
-    ],
-    contact: 'Bize yazın:',
-    quoteSource: 'Demo için Steam yorumu',
-    release: 'Çıkış',
-  },
-}[lang];
+  title: 'Trina Interactive | Indie game studio behind Slots & Skulls',
+  description:
+    'Trina Interactive is a small indie game studio making Slots & Skulls, a turn-based roguelite built on a slot machine, for Windows, macOS and Linux on Steam.',
+  intro: [
+    'Trina Interactive is a small independent game studio.',
+    'We are making Slots & Skulls, a turn-based roguelite built on a slot machine, coming to Steam for Windows, macOS and Linux.',
+  ],
+  contact: 'Say hi:',
+  quoteSource: 'Steam review of the demo',
+  release: 'Release',
+};
 ---
 
 <BaseLayout
   isHome
-  lang={lang}
   title={text.title}
   description={text.description}
-  path={localizePath('/', lang)}
-  alternates={{ en: '/', tr: '/tr/' }}
+  path="/"
   jsonLd={[organizationLd(), websiteLd()]}
 >
   <section class="section" aria-labelledby="games-label">
-    <h2 class="label" id="games-label">{s.games}</h2>
+    <h2 class="label" id="games-label">{ui.games}</h2>
 
     <article class="game">
       <h3 class="game-title"><a href={gamePath}>{game.name}</a></h3>
       <p class="game-desc">{copy.tagline}</p>
 
-      <GameVideo lang={lang} />
+      <GameVideo />
 
       <figure class="home-quote">
-        <blockquote lang="en" cite={reviewUrl(homeQuote.review)}>
+        <blockquote cite={reviewUrl(homeQuote.review)}>
           <p>“{homeQuote.text}”</p>
         </blockquote>
         <figcaption><a href={reviewUrl(homeQuote.review)} rel="noopener">{text.quoteSource}</a></figcaption>
@@ -71,18 +48,18 @@ const text = {
 
       <div class="game-meta">
         <div>
-          <span class="k">{s.platforms}</span>
+          <span class="k">{ui.platforms}</span>
           <span><a href={game.steamUrl} rel="noopener">Steam</a> (Windows, macOS, Linux)</span>
         </div>
         <div><span class="k">{text.release}</span> <span>{copy.releaseLabel}</span></div>
-        <div><span class="k">{s.game}</span> <a href={gamePath}>{s.moreAbout}</a></div>
-        <div><span class="k">{s.pressKit}</span> <a href="/presskit/">{s.pressKit}</a></div>
+        <div><span class="k">{ui.game}</span> <a href={gamePath}>{ui.moreAbout}</a></div>
+        <div><span class="k">{ui.pressKit}</span> <a href="/presskit/">{ui.pressKit}</a></div>
       </div>
     </article>
   </section>
 
   <section class="section" aria-labelledby="studio-label">
-    <h2 class="label" id="studio-label">{s.studio}</h2>
+    <h2 class="label" id="studio-label">{ui.studio}</h2>
     <div class="prose">
       {text.intro.map((p) => <p>{p}</p>)}
       <p>

@@ -1,0 +1,404 @@
+{
+ "player": {
+  "maxHP": 150,
+  "maxShield": 75,
+  "reels": 3,
+  "fightsPerLevel": 5
+ },
+ "rarity": {
+  "order": [
+   "common",
+   "rare",
+   "epic",
+   "legendary"
+  ],
+  "weights": {
+   "common": 100,
+   "rare": 40,
+   "epic": 15,
+   "legendary": 5
+  },
+  "unlockLevel": {
+   "rare": 3,
+   "epic": 6,
+   "legendary": 9
+  },
+  "shopPriceGrowth": {
+   "common": 1.5,
+   "rare": 1.75,
+   "epic": 2.0,
+   "legendary": 2.5
+  },
+  "salvage": {
+   "common": 2,
+   "rare": 4,
+   "epic": 8,
+   "legendary": 15
+  }
+ },
+ "groups": {
+  "physical": "Physical",
+  "magical": "Magical",
+  "rot": "Poison & burn",
+  "shield": "Shield",
+  "heal": "Healing",
+  "gold": "Gold",
+  "control": "Control",
+  "support": "Support"
+ },
+ "statNames": {
+  "PhysicalDamageDealt": "physical damage",
+  "MagicalDamageDealt": "magical damage",
+  "PhysicalResist": "physical resist",
+  "MagicalResist": "magical resist",
+  "CritChance": "crit chance",
+  "HPRegenPerTurn": "HP regen",
+  "MaxShield": "max shield",
+  "MaxHP": "max HP",
+  "GoldGain": "gold gain",
+  "SpinSpeed": "spin speed",
+  "PowerupUseCost": "powerup cost",
+  "ShopPrice": "shop prices",
+  "SkillCheckZone": "perfect zone",
+  "Thorns": "thorns",
+  "StunResist": "stun resist",
+  "GoldTheftResist": "theft resist"
+ },
+ "rarityNames": {
+  "common": "Common",
+  "rare": "Rare",
+  "epic": "Epic",
+  "legendary": "Legendary"
+ },
+ "anvil": {
+  "steps": [
+   {
+    "from": 0,
+    "to": 1,
+    "success": 1.0,
+    "skulls": 3,
+    "burnPity": 0.0,
+    "reachFromZero": 1.0
+   },
+   {
+    "from": 1,
+    "to": 2,
+    "success": 0.95,
+    "skulls": 5,
+    "burnPity": 0.01,
+    "reachFromZero": 0.95
+   },
+   {
+    "from": 2,
+    "to": 3,
+    "success": 0.85,
+    "skulls": 8,
+    "burnPity": 0.03,
+    "reachFromZero": 0.8075
+   },
+   {
+    "from": 3,
+    "to": 4,
+    "success": 0.75,
+    "skulls": 12,
+    "burnPity": 0.04,
+    "reachFromZero": 0.605625
+   },
+   {
+    "from": 4,
+    "to": 5,
+    "success": 0.65,
+    "skulls": 16,
+    "burnPity": 0.05,
+    "reachFromZero": 0.393656
+   },
+   {
+    "from": 5,
+    "to": 6,
+    "success": 0.55,
+    "skulls": 20,
+    "burnPity": 0.06,
+    "reachFromZero": 0.216511
+   },
+   {
+    "from": 6,
+    "to": 7,
+    "success": 0.45,
+    "skulls": 25,
+    "burnPity": 0.07,
+    "reachFromZero": 0.09743
+   },
+   {
+    "from": 7,
+    "to": 8,
+    "success": 0.35,
+    "skulls": 30,
+    "burnPity": 0.08,
+    "reachFromZero": 0.0341
+   },
+   {
+    "from": 8,
+    "to": 9,
+    "success": 0.25,
+    "skulls": 40,
+    "burnPity": 0.1,
+    "reachFromZero": 0.008525
+   },
+   {
+    "from": 9,
+    "to": 10,
+    "success": 0.15,
+    "skulls": 50,
+    "burnPity": 0.15,
+    "reachFromZero": 0.001279
+   }
+  ],
+  "burnPityMax": 0.25,
+  "gainPerPlusByRarity": {
+   "common": 0.18000000715255737,
+   "rare": 0.18000000715255737,
+   "epic": 0.1899999976158142,
+   "legendary": 0.20000000298023224
+  },
+  "maxPlus": 10,
+  "critBonusAtMax": 1.0,
+  "effectArtFromPlus": 7,
+  "salvagePerPlus": 2,
+  "gemGreenBonus": 0.08,
+  "gemYellowHeatBossChance": 0.03,
+  "gemYellowHeatMinimum": 4,
+  "salvageRightsPerLevel": 0.25,
+  "gems": {
+   "green": {
+    "name": "Green Gem",
+    "text": "Slot it at the Anvil: +8% success on one upgrade. Consumed with the strike.",
+    "icon": {
+     "src": "/wiki/icons/gems/green.png",
+     "width": 14,
+     "height": 18
+    }
+   },
+   "blue": {
+    "name": "Blue Gem",
+    "text": "Slot it at the Anvil: a failed upgrade no longer destroys the symbol, it only drops one level.",
+    "icon": {
+     "src": "/wiki/icons/gems/blue.png",
+     "width": 14,
+     "height": 18
+    }
+   },
+   "yellow": {
+    "name": "Yellow Gem",
+    "text": "Slot it at the Anvil: the upgrade is guaranteed. No roll, no risk. It comes from the first clear of the hardest levels and from bosses at Heat 4 or higher.",
+    "icon": {
+     "src": "/wiki/icons/gems/yellow.png",
+     "width": 14,
+     "height": 18
+    }
+   }
+  }
+ },
+ "combat": {
+  "reelAutoStopSeconds": 9.0,
+  "maxResist": 0.75,
+  "maxCritChance": 0.6,
+  "critRaise": 25,
+  "critRaisesPerRun": 12,
+  "lowHpFraction": 0.5,
+  "burnMinTick": 15,
+  "maxRegenPerTurn": 0.1,
+  "runBuffMaxStacks": 25,
+  "symbolMemoryCap": 40,
+  "freeAtCopies": 3,
+  "thinPoolLine": 8,
+  "perfectZone": 0.05,
+  "skillMinMultiplier": 0.2,
+  "earlyKillFirst": 0.3,
+  "earlyKillSecond": 0.15
+ },
+ "economy": {
+  "shopSymbolOffers": 3,
+  "shopPowerupOffers": 2,
+  "rerollBase": 10,
+  "rerollIncrement": 5,
+  "lockCost": 10,
+  "removePrice": 50,
+  "upgradeOfferMultiplier": 2.0,
+  "maxShopDiscount": 0.75,
+  "runEndBonusPerKill": 2,
+  "runEndVictoryBonus": 10,
+  "boxGold": [
+   5,
+   12
+  ],
+  "boxSkulls": [
+   2,
+   5
+  ],
+  "boxTierMultiplier": {
+   "common": 1,
+   "rare": 2.0,
+   "epic": 3.5,
+   "legendary": 6.0
+  },
+  "boxSymbolTierShare": 0.8571,
+  "stealPercent": 0.05,
+  "stealMinimum": 6,
+  "goldScalingCap": 300,
+  "damageToGoldCap": 100,
+  "missingHpCap": 1000,
+  "pactRewardCap": 4.0,
+  "interestCapFightsEndless": 2.0
+ },
+ "heat": {
+  "max": 5,
+  "enemyMultiplier": [
+   1.5,
+   2.5,
+   4.0,
+   5.0,
+   10.0
+  ],
+  "rewardBonus": [
+   0.5,
+   1.5,
+   3.0,
+   4.0,
+   9.0
+  ],
+  "dropBonusPerHeat": 0.1,
+  "rarityBonusPerHeat": 0.15,
+  "riderChanceFromHeat3": 1.5,
+  "rampFromHeat4": 1.1,
+  "armorAtHeat5": 0.25
+ },
+ "endless": {
+  "poolSize": 35,
+  "goldPerKill": 14.0,
+  "goldPerKillGrowth": 0.2,
+  "duoStartFight": 6,
+  "duoChance": 0.15,
+  "duoChanceRamp": 0.02,
+  "duoChanceMax": 0.6,
+  "reinforcementOffers": 1,
+  "reinforcementGrowth": 0.1,
+  "reinforcementPriceGrowth": 0.2,
+  "reinforcementBuysPerShop": 0,
+  "boxChanceScale": 0.4,
+  "freshnessWindow": 3,
+  "calibrationStartFight": 8,
+  "calibrationFullFight": 40,
+  "rewardGrowth": 0.05,
+  "rewardCap": 3.0
+ },
+ "meta": {
+  "momentumPerStack": 0.15,
+  "reviveHealth": 0.5,
+  "bloodMoneyGoldPerSkull": 4,
+  "bloodMoneySkullCap": 100,
+  "demoImportSkullCap": 500
+ },
+ "demo": {
+  "maxLevel": 3,
+  "maxHeat": 0,
+  "maxPlus": 3,
+  "maxModifierLevel": 1,
+  "maxCats": 1,
+  "maxAbilities": 1,
+  "lockedSpecials": [
+   "BloodMoney",
+   "LastWord",
+   "ExtraReel",
+   "Revive",
+   "AnvilBlessing",
+   "TreasureHunter",
+   "Scavenger",
+   "SalvageRights",
+   "Momentum",
+   "HeadStart"
+  ],
+  "lockedModifierIds": [
+   "mod_quick_fingers"
+  ],
+  "reels": 3
+ },
+ "texts": {
+  "tut.stop_reel": "YOUR TURN\nThe reels are spinning. Each press of the button stops ONE reel, left to right.\nWhere the reels land is what you attack with: timing is everything.",
+  "tut.resolve": "SYMBOLS RESOLVE\nResolving is NOT left to right every time, it may change order to create best benefit for you. \nThe gold frame marks the one acting.",
+  "tut.crit": "CRITICAL HIT!\nA crit multiplies EVERY value of a symbol. Two ways to trigger it, same payoff: all reels match (always crits), or a random roll from your Crit Chance (raised by items and modifiers).",
+  "tut.skillcheck": "SKILL CHECK\nThis symbol tests your timing: a bar will rise beside the reels. Press the button below when it's FULL.\nCatch the very top for a PERFECT hit.",
+  "tut.skillcheck_drain": "REVERSED BAR\nThis symbol works the other way: the bar starts FULL and drains. Catch it as close to EMPTY as you dare. Nothing happens until you press.",
+  "tut.skillcheck_double": "DOUBLE CATCH\nThis symbol asks for TWO presses: catch the rising bar near the top, then catch it again. The reward is the average of both catches.",
+  "tut.vitals": "YOUR VITALS\nIf your HP reaches 0, the run is over.\nSHIELD absorbs PHYSICAL damage before HP; magic cuts straight through it. Refill it with shield symbols.",
+  "tut.enemy_armor": "ENEMY ARMOR\nIts ARMOR absorbs your PHYSICAL damage before its health. Break it first, or pierce it with MAGIC.",
+  "tut.telegraph": "THE ENEMY STRIKES BACK\nNEXT: shows its incoming attack. \nEnemy damage RAMPS UP with every attack. The longer the fight, the harder it hits.",
+  "tut.status_burn": "BURNED\nDamage at your turn start AND every 5 real seconds while it lasts, and it BYPASSES shield.\nDon't stall: heal, or CURE it away.",
+  "tut.status_chill": "FROZEN\nOne of your reels is FROZEN next turn. It won't spin and gives you nothing.\nCURE thaws it.",
+  "tut.status_stun_player": "STUNNED!\nThe hit rattled you. Your NEXT SPIN IS LOST and the enemy attacks unopposed.\nSome enemies gamble for this with their attacks.",
+  "tut.status_stun_enemy": "STUNNED\nThe enemy is stunned. It skips its next attack.",
+  "tut.status_poison": "POISONED\nDamage every turn. A third of the poison fades each turn.",
+  "tut.shop": "THE SHOP\nBuy symbols to add them to YOUR reels. Buy powerups for passive boosts or actives you fire from the d-pad in a fight.\nREROLL redraws the offers for gold.",
+  "tut.shop_lock": "LOCK AN OFFER\nCannot afford the symbol you want? Lock it for 10 gold and it holds its place through every reroll and into the next shop. A short purse pays what it has.\nUnlocking gives the deposit back; buying the symbol clears the lock.",
+  "tut.equipment": "CHOOSE YOUR SYMBOLS\nPick 3. They become the symbols on your slot reels.\nNew symbols drop directly from enemies as you go deeper.",
+  "tut.shards": "SKULLS\nSkulls are PERMANENT: you keep every one of them when you die. Spend them on MODIFIERS in the main menu, on upgrades at the ANVIL, and on the CATS and ABILITIES you choose before a run.\nDeath is never wasted.",
+  "tut.drops": "LOOT DROP\nDrops are PERMANENT, kept even if you die.\nForge and smelt your symbols at the ANVIL in the main menu.",
+  "tut.anvil": "THE ANVIL\nUpgrade symbols up to +10. Every attempt costs SKULLS and FAILURE DESTROYS THE SYMBOL.\nSmelt symbols you don't need back into skulls. Forge carefully.",
+  "tut.burn_pity": "CONSOLATION BONUS\nYour symbol burned, but the forge remembers. Every burn raises the next upgrade's success chance, and higher pluses add more. The bonus stacks until an upgrade succeeds, then it resets. Closing the game clears it.",
+  "tut.anvil_gems": "GEMS\nSlot a gem before you strike. Green raises the success chance, Blue protects the symbol from burning, Yellow guarantees the upgrade. Switch gems with the GEM control, one is consumed per strike.",
+  "tut.modifiers": "MODIFIERS\nPermanent powers bought with SKULLS. They apply to every future run.\nDied to a wall? Farm skulls here, upgrade, return stronger.",
+  "tut.runsetup": "CATS\nEvery cat comes with a rule that holds for the whole run and always takes something back in return.\nCats are bought here with skulls, one rung at a time. Press a row to take a cat, press it again to give it up. Starting without one is a real choice.",
+  "tut.terms_abilities": "ABILITIES\nAn ABILITY is a single move you can make once per fight: hold a wheel, nudge a symbol, force a match.\nThey unlock here with skulls, one rung at a time, just like the cats. Equip at most one per run.",
+  "tut.heat": "HEAT\nBeaten levels can be replayed HARDER with the buttons below: enemies grow stronger, but rewards and drops grow richer.\nClear EVERY level at a heat tier to unlock the next one.",
+  "tut.endless_mode": "ENDLESS MODE\nThere is no last fight here. Every win leads straight to the next enemy, and each one comes in with more health and a heavier hit than the last. The shop and the full heal between fights stay exactly as you know them.\nYour score is how many fights you survive, and your best streak is kept.",
+  "tut.early_kill": "EARLY KILL\nFinish the fight on the FIRST TURN to earn extra gold and skulls. The earlier the kill lands in that turn's symbol order, the bigger the bonus; later turns pay none.\nExtra reels divide the same maximum bonus into smaller steps.",
+  "tut.crit_max_hp": "MAX HP UP\nA heal that CRITS while your health is already full is not wasted: it raises your MAX HP and fills the new room on the spot. The bonus lasts the whole run. Once per turn.",
+  "tut.crit_max_shield": "MAX SHIELD UP\nA shield gain that CRITS raises your MAX SHIELD and fills the bar to the new ceiling. The bonus lasts the whole run. Once per turn.",
+  "tut.symbol_position": "WHERE IT LANDS\nSome symbols care about their reel. The outer two and the middle one pay extra, and a few read the symbols next to them. You cannot aim a reel, but you can choose what fills your pool: the more of one kind you carry, the more often they land side by side.",
+  "tut.symbol_cost": "SYMBOLS WITH A PRICE\nSome symbols charge before they pay: health or gold, taken the moment they land. If you cannot afford the price, the symbol does nothing at all and says so. A price never kills you, and it never grows when you upgrade the symbol.",
+  "tut.run_buff": "IT KEEPS GROWING\nThat bonus does not end with the fight. It is banked for the REST OF THE RUN, and it stacks again every time the symbol lands.\nA symbol like this is worth more the earlier you find it.",
+  "tut.growth_cap": "THE GROWTH STOPPED\nSymbols that strengthen you for the rest of the run stack up to a ceiling. You just reached it for this stat, so landing it again still helps this fight but no longer carries into the next one.",
+  "tut.last_word": "LAST WORD\nThat blow should have finished you. Instead you get ONE more spin at a single point of health.\nKill everything with it and you walk away. Fail and the run is over. Once per run.",
+  "tut.momentum": "MOMENTUM\nA perfect catch just stacked your damage, and every perfect in a row adds another stack.\nOne miss wipes the streak, so a clean run of catches is worth real damage.",
+  "tut.stun_fatigue": "STUN FATIGUE\nEvery stun that lands on you halves this enemy's next stun chance for the rest of the fight. The NEXT line already shows the real number.",
+  "tut.powerup_use": "ACTIVE POWERUPS\nYour actives sit on this d-pad cross. Press a d-pad direction while the reels spin to use one.\nEach use costs gold; a GOLD frame means it's ready to fire.",
+  "tut.auto_mode": "AUTO MODE\nAuto stops the reels for you. Switch to AUTO 2X to run the fight at double speed. Skill checks and powerups stay in your hands: catch the bar yourself and fire actives with the d-pad.",
+  "tut.challenges": "CHALLENGES\nEvery challenge counts in every run, there is nothing to take. Press OK on a row to TRACK it: tracked ones show in the corner of the fight. You can track 2 at once; finishing one pays the reward on the spot.",
+  "tut.symbol_challenge": "SYMBOL CHALLENGE COMPLETE\nEvery symbol has its own task, and it progresses on its own in every run: there is nothing to take. Completing one pays skulls, then the task starts again with a bigger target. See them all on the CHALLENGES screen.",
+  "tut.intro_fight": "PATI\nHello! I'm Pati. I'm here to teach you the game.",
+  "tut.intro_anvil": "GARRICK\nGreetings! I'm Garrick the blacksmith. I'm here to teach you how to work the anvil.",
+  "tut.intro_modifier": "BENEDICT\nHello! I'm Benedict. I'll teach you how to turn the skulls you collect into permanent powers."
+ },
+ "tips": [
+  "Gems change the Anvil: a Green Gem raises upgrade success, a Blue Gem keeps your symbol alive on a fail, a Yellow Gem guarantees the upgrade.",
+  "Every Anvil upgrade costs skulls, and a fail DESTROYS the symbol. The higher the +, the bigger the risk.",
+  "Beaten levels can be replayed at higher HEAT: enemies grow stronger, but rewards, drops and rarities grow with them.",
+  "Every kill drops a BOX. Its prize can be a symbol, gold, skulls or an anvil gem.",
+  "Want the tutorial hints again? Reset them from the TUTORIAL HINTS row in Settings.",
+  "Each STOP press stops ONE reel, left to right.",
+  "All reels matching the same symbol is a CRITICAL. Every symbol has its own crit multiplier, huge on economy symbols.",
+  "Symbols do not resolve left to right. They act by TYPE: buffs first, then shields and healing, executes always last.",
+  "Catch the skill check bar at the top. It feints: watch the bar, not the rhythm.",
+  "Shields absorb only PHYSICAL damage. MAGIC cuts straight to health, so stack magic resist against casters.",
+  "Burn ignores shields and keeps ticking in real time. Do not stall: heal it off or end the fight.",
+  "Chill freezes one of your reels. Cure or a Frost Flask thaws it, even mid-spin.",
+  "Getting stunned costs your WHOLE spin. Stun resist is the antidote.",
+  "Active powerups bind to the d-pad directions and work while the reels spin. An Explosion can end a fight mid-spin.",
+  "Against enemy groups your symbols hit the FRONT enemy. When it falls, the next one steps up.",
+  "Death keeps everything you collected: skulls and dropped symbols are permanent. Die, upgrade, come back stronger.",
+  "Smelt spare copies into skulls at the Anvil. You must always keep at least 3 different symbol types.",
+  "Clearing a level for the FIRST time unlocks fixed symbols. The wall levels pay Yellow Gems.",
+  "Clearing a level does not end the run: you carry your full inventory into the next one, and you heal to full after every won fight."
+ ],
+ "exam": {
+  "Poison": "It poisons you: bring a cleanse or a heal that removes poison (Cure, Bandage).",
+  "Stun": "It stuns you and takes your whole turn: bring stun resistance (Anchor Boots).",
+  "Chill": "It freezes your reels: bring something that cleanses chill (Torch, Frost Flask) or an extra reel.",
+  "Burn": "It sets you burning and the clock keeps ticking: bring healing or regeneration and play fast.",
+  "Theft": "It steals your gold: bring theft protection (Golden Padlock) and spend your gold before the fight.",
+  "SelfHeal": "It heals itself every turn: bring burst damage or an execute and finish it fast.",
+  "Armor": "Its armor eats physical hits: bring magic or piercing symbols.",
+  "MultiHit": "It hits several times a turn: bring thorns to punish every hit, or shield to absorb them.",
+  "Magic": "It hits with magic, which goes straight through shield: bring magic resistance.",
+  "Phys": "It hits hard and physical: bring shield and physical resistance."
+ }
+}

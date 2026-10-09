@@ -422,3 +422,258 @@ main {
     flex-basis: auto;
   }
 }
+
+/* Wiki (/slots-and-skulls/wiki/): same column, labels and greys as the rest of
+   the site; entries are separated by hairlines, never boxed. */
+.wiki-crumbs ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 0;
+  padding: 0 !important;
+  margin-bottom: 28px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.wiki-crumbs li + li::before {
+  content: '/';
+  margin: 0 10px;
+  color: #333;
+}
+
+.wiki-crumbs a {
+  color: #888;
+  border-bottom: 0;
+}
+
+.wiki-crumbs a:hover {
+  color: #fff;
+}
+
+.wiki .prose-table,
+.wiki .specs {
+  margin: 12px 0 8px;
+}
+
+.wiki .specs th {
+  width: auto;
+}
+
+.wiki .specs td.num,
+.wiki .specs th.num {
+  text-align: right;
+  padding-left: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.wiki .specs thead th {
+  color: #555;
+  border-bottom-color: #222;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.wiki ol {
+  padding-left: 1.4em;
+}
+
+.wiki .wiki-crumbs ol {
+  padding-left: 0;
+}
+
+.wiki-toc {
+  list-style: none;
+  padding: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin: 8px 0 0;
+}
+
+.wiki-toc li {
+  font-size: 13px;
+}
+
+.wiki-entry {
+  padding: 22px 0;
+  border-bottom: 1px solid #161616;
+  scroll-margin-top: 24px;
+}
+
+.wiki-entry:target .wiki-entry-head h2,
+.wiki-entry:target .wiki-entry-head h3 {
+  text-decoration: underline;
+  text-decoration-color: #555;
+  text-underline-offset: 4px;
+}
+
+.wiki-entry-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.wiki-entry-head h2,
+.wiki-entry-head h3 {
+  margin: 0;
+}
+
+.wiki-entry-head h2 {
+  font-size: 18px;
+}
+
+.wiki-sub {
+  font-size: 12px !important;
+  line-height: 1.6 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #666 !important;
+  margin-top: 2px !important;
+}
+
+.wiki-fx {
+  color: #fff !important;
+}
+
+.wiki-icon {
+  flex: 0 0 auto;
+  display: block;
+  image-rendering: pixelated;
+}
+
+.wiki-icon--none {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #222;
+  border-radius: 3px;
+}
+
+.wiki-hero {
+  display: flex;
+  align-items: flex-end;
+  min-height: 96px;
+  margin: 8px 0 24px;
+}
+
+.wiki-meta {
+  margin-top: 10px;
+}
+
+.wiki-meta .k {
+  flex-basis: 120px;
+}
+
+.wiki details {
+  margin-top: 10px;
+}
+
+.wiki summary {
+  cursor: pointer;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.wiki summary:hover {
+  color: #fff;
+}
+
+.wiki-quote {
+  border-left: 1px solid #333;
+  padding-left: 14px;
+  margin: 14px 0;
+}
+
+.wiki-quote p {
+  color: #888 !important;
+}
+
+.wiki-filter {
+  margin: 24px 0 0;
+}
+
+.wiki-filter input {
+  width: 100%;
+  font: inherit;
+  font-size: 14px;
+  color: #fff;
+  background: #000;
+  border: 1px solid #222;
+  border-radius: 3px;
+  padding: 10px 12px;
+}
+
+.wiki-filter input:focus {
+  outline: 1px dashed #fff;
+  outline-offset: 2px;
+}
+
+.wiki-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 56px;
+  font-size: 14px;
+}
+
+.wiki-pager a {
+  text-decoration: none;
+  border-bottom: 0 !important;
+}
+
+.wiki-pager .k {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.wiki-pager a[rel='next'] {
+  text-align: right;
+  margin-left: auto;
+}
+
+.wiki-sections {
+  margin-top: 64px;
+  padding-top: 28px;
+  border-top: 1px solid #161616;
+}
+
+.wiki-sections .label {
+  margin-bottom: 16px;
+}
+
+.wiki-sections ul {
+  list-style: none;
+  padding: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+}
+
+.wiki-sections a {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #888;
+  border-bottom: 0 !important;
+}
+
+.wiki-sections a:hover,
+.wiki-sections a[aria-current='page'] {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .wiki-meta div {
+    flex-direction: column;
+    gap: 0;
+  }
+}

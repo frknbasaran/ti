@@ -1,0 +1,1412 @@
+{
+ "challenges": [
+  {
+   "id": "ch_hat_trick",
+   "slug": "ch-hat-trick",
+   "name": "Hat Trick",
+   "text": "Win 3 fights with the first spin in one run.",
+   "kind": "OneSpinKillsInRun",
+   "target": 3,
+   "param": "",
+   "minHeat": 0,
+   "tier": "bronze",
+   "endless": false,
+   "sortOrder": 1,
+   "reward": {
+    "kind": "Skulls",
+    "amount": 120
+   }
+  },
+  {
+   "id": "ch_jackpot_run",
+   "slug": "ch-jackpot-run",
+   "name": "Jackpot Run",
+   "text": "Land 10 all-match crits in one run.",
+   "kind": "AllMatchCritsInRun",
+   "target": 10,
+   "param": "",
+   "minHeat": 0,
+   "tier": "bronze",
+   "endless": false,
+   "sortOrder": 2,
+   "reward": {
+    "kind": "Skulls",
+    "amount": 150
+   }
+  },
+  {
+   "id": "ch_shield_wall",
+   "slug": "ch-shield-wall",
+   "name": "Shield Wall",
+   "text": "Absorb 1500 damage with your shield in one run.",
+   "kind": "ShieldAbsorbedInRun",
+   "target": 1500,
+   "param": "",
+   "minHeat": 0,
+   "tier": "bronze",
+   "endless": false,
+   "sortOrder": 3,
+   "reward": {
+    "kind": "Skulls",
+    "amount": 150
+   }
+  },
+  {
+   "id": "ch_iron_purse",
+   "slug": "ch-iron-purse",
+   "name": "Iron Purse",
+   "text": "ENDLESS: survive 5 fights in a row without buying anything.",
+   "kind": "EndlessNoPurchaseStreak",
+   "target": 5,
+   "param": "",
+   "minHeat": 0,
+   "tier": "bronze",
+   "endless": true,
+   "sortOrder": 4,
+   "reward": {
+    "kind": "Skulls",
+    "amount": 150
+   }
+  },
+  {
+   "id": "ch_untouchable",
+   "slug": "ch-untouchable",
+   "name": "Untouchable",
+   "text": "Clear level 3 or later without losing a single point of HP. Your shield may absorb.",
+   "kind": "ClearLevelWithoutHpLoss",
+   "target": 1,
+   "param": "3",
+   "minHeat": 0,
+   "tier": "silver",
+   "endless": false,
+   "sortOrder": 5,
+   "reward": {
+    "kind": "GemGreen",
+    "amount": 1
+   }
+  },
+  {
+   "id": "ch_boss_blitz",
+   "slug": "ch-boss-blitz",
+   "name": "Boss Blitz",
+   "text": "Kill a boss within 2 spins.",
+   "kind": "BossKillWithinSpins",
+   "target": 1,
+   "param": "2",
+   "minHeat": 0,
+   "tier": "silver",
+   "endless": false,
+   "sortOrder": 6,
+   "reward": {
+    "kind": "GemGreen",
+    "amount": 1
+   }
+  },
+  {
+   "id": "ch_slow_death",
+   "slug": "ch-slow-death",
+   "name": "Slow Death",
+   "text": "Finish 15 enemies with poison or burn ticks in one run.",
+   "kind": "DotKillsInRun",
+   "target": 15,
+   "param": "",
+   "minHeat": 0,
+   "tier": "silver",
+   "endless": false,
+   "sortOrder": 7,
+   "reward": {
+    "kind": "GemGreen",
+    "amount": 1
+   }
+  },
+  {
+   "id": "ch_hot_streak",
+   "slug": "ch-hot-streak",
+   "name": "Hot Streak",
+   "text": "Upgrade the same symbol 5 times in a row without a single failure.",
+   "kind": "AnvilSuccessStreak",
+   "target": 5,
+   "param": "",
+   "minHeat": 0,
+   "tier": "silver",
+   "endless": false,
+   "sortOrder": 8,
+   "reward": {
+    "kind": "GemGreen",
+    "amount": 2
+   }
+  },
+  {
+   "id": "ch_bare_steel",
+   "slug": "ch-bare-steel",
+   "name": "Bare Steel",
+   "text": "Clear level 5 with every symbol on your reels at +0. No upgraded picks, no shop upgrades.",
+   "kind": "ClearLevelAllPlusZero",
+   "target": 1,
+   "param": "5",
+   "minHeat": 0,
+   "tier": "gold",
+   "endless": false,
+   "sortOrder": 9,
+   "reward": {
+    "kind": "GemBlue",
+    "amount": 1
+   }
+  },
+  {
+   "id": "ch_no_steel",
+   "slug": "ch-no-steel",
+   "name": "No Steel",
+   "text": "Clear 5 levels in one run with no physical-damage symbol on the reels.",
+   "kind": "LevelsClearedNoDamageType",
+   "target": 5,
+   "param": "physical",
+   "minHeat": 0,
+   "tier": "gold",
+   "endless": false,
+   "sortOrder": 10,
+   "reward": {
+    "kind": "GemBlue",
+    "amount": 1
+   }
+  },
+  {
+   "id": "ch_no_spells",
+   "slug": "ch-no-spells",
+   "name": "No Spells",
+   "text": "Clear 5 levels in one run with no magic-damage symbol on the reels.",
+   "kind": "LevelsClearedNoDamageType",
+   "target": 5,
+   "param": "magical",
+   "minHeat": 0,
+   "tier": "gold",
+   "endless": false,
+   "sortOrder": 11,
+   "reward": {
+    "kind": "GemBlue",
+    "amount": 1
+   }
+  },
+  {
+   "id": "ch_bare_hands",
+   "slug": "ch-bare-hands",
+   "name": "Bare Hands",
+   "text": "ENDLESS: survive 15 fights in a row owning no powerup.",
+   "kind": "EndlessNoPowerupStreak",
+   "target": 15,
+   "param": "",
+   "minHeat": 0,
+   "tier": "gold",
+   "endless": true,
+   "sortOrder": 12,
+   "reward": {
+    "kind": "GemBlue",
+    "amount": 1
+   }
+  },
+  {
+   "id": "ch_misers_march",
+   "slug": "ch-misers-march",
+   "name": "Miser's March",
+   "text": "ENDLESS: survive 10 fights in a row without buying anything.",
+   "kind": "EndlessNoPurchaseStreak",
+   "target": 10,
+   "param": "",
+   "minHeat": 0,
+   "tier": "gold",
+   "endless": true,
+   "sortOrder": 13,
+   "reward": {
+    "kind": "GemBlue",
+    "amount": 1
+   }
+  },
+  {
+   "id": "ch_deep_breath",
+   "slug": "ch-deep-breath",
+   "name": "Deep Breath",
+   "text": "ENDLESS: reach fight 25.",
+   "kind": "EndlessFightsSurvived",
+   "target": 25,
+   "param": "",
+   "minHeat": 0,
+   "tier": "gold",
+   "endless": true,
+   "sortOrder": 14,
+   "reward": {
+    "kind": "GemBlue",
+    "amount": 1
+   }
+  },
+  {
+   "id": "ch_three_is_enough",
+   "slug": "ch-three-is-enough",
+   "name": "Three Is Enough",
+   "text": "Clear 5 levels in one run with never more than 3 symbols on the reels.",
+   "kind": "LevelsClearedPoolAtMost",
+   "target": 5,
+   "param": "3",
+   "minHeat": 0,
+   "tier": "legend",
+   "endless": false,
+   "sortOrder": 15,
+   "reward": {
+    "kind": "GemYellow",
+    "amount": 1
+   }
+  },
+  {
+   "id": "ch_glass_crown",
+   "slug": "ch-glass-crown",
+   "name": "Glass Crown",
+   "text": "Beat the final boss with Biber (Glass Cannon) at your side.",
+   "kind": "CampaignVictoryWithPact",
+   "target": 1,
+   "param": "pact_glass_cannon",
+   "minHeat": 0,
+   "tier": "legend",
+   "endless": false,
+   "sortOrder": 16,
+   "reward": {
+    "kind": "GemYellow",
+    "amount": 1
+   }
+  },
+  {
+   "id": "ch_dead_mans_crown",
+   "slug": "ch-dead-mans-crown",
+   "name": "Dead Man's Crown",
+   "text": "Beat the final boss with Pati (Dead Man Walking) at your side.",
+   "kind": "CampaignVictoryWithPact",
+   "target": 1,
+   "param": "pact_dead_man",
+   "minHeat": 0,
+   "tier": "legend",
+   "endless": false,
+   "sortOrder": 17,
+   "reward": {
+    "kind": "GemYellow",
+    "amount": 1
+   }
+  },
+  {
+   "id": "ch_one_breath",
+   "slug": "ch-one-breath",
+   "name": "One Breath",
+   "text": "Start at level 1 and beat the final boss in one run without a revive or a Last Word.",
+   "kind": "ChainFromLevelOneNoRevive",
+   "target": 1,
+   "param": "",
+   "minHeat": 0,
+   "tier": "legend",
+   "endless": false,
+   "sortOrder": 18,
+   "reward": {
+    "kind": "GemYellow",
+    "amount": 1
+   }
+  },
+  {
+   "id": "ch_three_crowns",
+   "slug": "ch-three-crowns",
+   "name": "The Crown",
+   "text": "Own a symbol at +10.",
+   "kind": "OwnPlusTenTypes",
+   "target": 1,
+   "param": "",
+   "minHeat": 0,
+   "tier": "legend",
+   "endless": false,
+   "sortOrder": 19,
+   "reward": {
+    "kind": "GemYellow",
+    "amount": 1
+   }
+  },
+  {
+   "id": "ch_long_night",
+   "slug": "ch-long-night",
+   "name": "The Long Night",
+   "text": "ENDLESS: reach fight 50.",
+   "kind": "EndlessFightsSurvived",
+   "target": 50,
+   "param": "",
+   "minHeat": 0,
+   "tier": "legend",
+   "endless": true,
+   "sortOrder": 20,
+   "reward": {
+    "kind": "GemYellow",
+    "amount": 1
+   }
+  },
+  {
+   "id": "ch_forge_master",
+   "slug": "ch-forge-master",
+   "name": "Forge Master",
+   "text": "Beat the final boss at HEAT 5.",
+   "kind": "CampaignVictoryAtHeat",
+   "target": 1,
+   "param": "5",
+   "minHeat": 0,
+   "tier": "legend",
+   "endless": false,
+   "sortOrder": 21,
+   "reward": {
+    "kind": "Symbol",
+    "amount": 1,
+    "symbol": "pandemic"
+   }
+  },
+  {
+   "id": "ch_immortal",
+   "slug": "ch-immortal",
+   "name": "Immortal",
+   "text": "ENDLESS: reach fight 100.",
+   "kind": "EndlessFightsSurvived",
+   "target": 100,
+   "param": "",
+   "minHeat": 0,
+   "tier": "legend",
+   "endless": true,
+   "sortOrder": 22,
+   "reward": {
+    "kind": "Symbol",
+    "amount": 1,
+    "symbol": "midas_hand"
+   }
+  },
+  {
+   "id": "ch_glass_crown_2",
+   "slug": "ch-glass-crown-2",
+   "name": "Glass Crown II",
+   "text": "Beat the final boss with Biber at HEAT 3 or higher.",
+   "kind": "CampaignVictoryWithPact",
+   "target": 1,
+   "param": "pact_glass_cannon",
+   "minHeat": 3,
+   "tier": "legend",
+   "endless": false,
+   "sortOrder": 23,
+   "reward": {
+    "kind": "RingStyle",
+    "amount": 1,
+    "style": "ember",
+    "styleName": "Ember"
+   }
+  },
+  {
+   "id": "ch_dead_mans_crown_2",
+   "slug": "ch-dead-mans-crown-2",
+   "name": "Dead Man's Crown II",
+   "text": "Beat the final boss with Pati at HEAT 3 or higher.",
+   "kind": "CampaignVictoryWithPact",
+   "target": 1,
+   "param": "pact_dead_man",
+   "minHeat": 3,
+   "tier": "legend",
+   "endless": false,
+   "sortOrder": 24,
+   "reward": {
+    "kind": "RingStyle",
+    "amount": 1,
+    "style": "ice",
+    "styleName": "Ice"
+   }
+  },
+  {
+   "id": "ch_one_breath_2",
+   "slug": "ch-one-breath-2",
+   "name": "One Breath II",
+   "text": "Level 1 to the final boss in one run at HEAT 3 or higher, no revive, no Last Word.",
+   "kind": "ChainFromLevelOneNoRevive",
+   "target": 1,
+   "param": "",
+   "minHeat": 3,
+   "tier": "legend",
+   "endless": false,
+   "sortOrder": 25,
+   "reward": {
+    "kind": "RingStyle",
+    "amount": 1,
+    "style": "venom",
+    "styleName": "Venom"
+   }
+  },
+  {
+   "id": "ch_immortal_2",
+   "slug": "ch-immortal-2",
+   "name": "Immortal II",
+   "text": "ENDLESS: reach fight 150.",
+   "kind": "EndlessFightsSurvived",
+   "target": 150,
+   "param": "",
+   "minHeat": 0,
+   "tier": "legend",
+   "endless": true,
+   "sortOrder": 26,
+   "reward": {
+    "kind": "RingStyle",
+    "amount": 1,
+    "style": "void",
+    "styleName": "Void"
+   }
+  }
+ ],
+ "symbolTasks": [
+  {
+   "id": "ch_sym_rusty_dagger",
+   "symbol": "rusty_dagger",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 15,
+   "text": "Deal 300 damage with Rusty Dagger."
+  },
+  {
+   "id": "ch_sym_wooden_shield",
+   "symbol": "wooden_shield",
+   "metric": "shield",
+   "target": 300,
+   "rewardSkulls": 15,
+   "text": "Gain 300 shield with Wooden Shield."
+  },
+  {
+   "id": "ch_sym_coin",
+   "symbol": "coin",
+   "metric": "gold",
+   "target": 40,
+   "rewardSkulls": 15,
+   "text": "Earn 40 gold with Coin."
+  },
+  {
+   "id": "ch_sym_massive_blade",
+   "symbol": "massive_blade",
+   "metric": "damage",
+   "target": 1000,
+   "rewardSkulls": 23,
+   "text": "Deal 1000 damage with Massive Blade."
+  },
+  {
+   "id": "ch_sym_blood_spell",
+   "symbol": "blood_spell",
+   "metric": "damage",
+   "target": 350,
+   "rewardSkulls": 23,
+   "text": "Deal 350 damage with Blood Spell."
+  },
+  {
+   "id": "ch_sym_ancestral_axe",
+   "symbol": "ancestral_axe",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 33,
+   "text": "Deal 100 damage with Ancestral Axe."
+  },
+  {
+   "id": "ch_sym_hammer",
+   "symbol": "hammer",
+   "metric": "damage",
+   "target": 700,
+   "rewardSkulls": 23,
+   "text": "Deal 700 damage with Hammer."
+  },
+  {
+   "id": "ch_sym_poison_blade",
+   "symbol": "poison_blade",
+   "metric": "damage",
+   "target": 400,
+   "rewardSkulls": 33,
+   "text": "Deal 400 damage with Poison Blade."
+  },
+  {
+   "id": "ch_sym_warriors_draught",
+   "symbol": "warriors_draught",
+   "metric": "heal",
+   "target": 400,
+   "rewardSkulls": 15,
+   "text": "Heal 400 HP with Warrior's Draught."
+  },
+  {
+   "id": "ch_sym_wizards_shield",
+   "symbol": "wizards_shield",
+   "metric": "shield",
+   "target": 500,
+   "rewardSkulls": 33,
+   "text": "Gain 500 shield with Wizard's Shield."
+  },
+  {
+   "id": "ch_sym_wood_staff",
+   "symbol": "wood_staff",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 15,
+   "text": "Deal 300 damage with Wood Staff."
+  },
+  {
+   "id": "ch_sym_twin_fangs",
+   "symbol": "twin_fangs",
+   "metric": "damage",
+   "target": 400,
+   "rewardSkulls": 23,
+   "text": "Deal 400 damage with Twin Fangs."
+  },
+  {
+   "id": "ch_sym_spiked_bulwark",
+   "symbol": "spiked_bulwark",
+   "metric": "shield",
+   "target": 260,
+   "rewardSkulls": 23,
+   "text": "Gain 260 shield with Spiked Bulwark."
+  },
+  {
+   "id": "ch_sym_venom_vial",
+   "symbol": "venom_vial",
+   "metric": "status",
+   "target": 225,
+   "rewardSkulls": 23,
+   "text": "Apply 225 status stacks with Venom Vial."
+  },
+  {
+   "id": "ch_sym_war_horn",
+   "symbol": "war_horn",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 23,
+   "text": "Land War Horn 30 times."
+  },
+  {
+   "id": "ch_sym_soul_ember",
+   "symbol": "soul_ember",
+   "metric": "damage",
+   "target": 400,
+   "rewardSkulls": 33,
+   "text": "Deal 400 damage with Soul Ember."
+  },
+  {
+   "id": "ch_sym_plague_fang",
+   "symbol": "plague_fang",
+   "metric": "damage",
+   "target": 700,
+   "rewardSkulls": 33,
+   "text": "Deal 700 damage with Plague Fang."
+  },
+  {
+   "id": "ch_sym_tithe",
+   "symbol": "tithe",
+   "metric": "gold",
+   "target": 300,
+   "rewardSkulls": 33,
+   "text": "Earn 300 gold with Tithe."
+  },
+  {
+   "id": "ch_sym_executioner",
+   "symbol": "executioner",
+   "metric": "damage",
+   "target": 700,
+   "rewardSkulls": 45,
+   "text": "Deal 700 damage with Executioner."
+  },
+  {
+   "id": "ch_sym_chain_lightning",
+   "symbol": "chain_lightning",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 45,
+   "text": "Deal 300 damage with Chain Lightning."
+  },
+  {
+   "id": "ch_sym_mirror_ward",
+   "symbol": "mirror_ward",
+   "metric": "shield",
+   "target": 600,
+   "rewardSkulls": 45,
+   "text": "Gain 600 shield with Mirror Ward."
+  },
+  {
+   "id": "ch_sym_pandemic",
+   "symbol": "pandemic",
+   "metric": "status",
+   "target": 180,
+   "rewardSkulls": 45,
+   "text": "Apply 180 status stacks with Pandemic."
+  },
+  {
+   "id": "ch_sym_midas_hand",
+   "symbol": "midas_hand",
+   "metric": "damage",
+   "target": 400,
+   "rewardSkulls": 45,
+   "text": "Deal 400 damage with Midas Hand."
+  },
+  {
+   "id": "ch_sym_lucky_doll",
+   "symbol": "lucky_doll",
+   "metric": "gold",
+   "target": 200,
+   "rewardSkulls": 23,
+   "text": "Earn 200 gold with Lucky Doll."
+  },
+  {
+   "id": "ch_sym_ember_heart",
+   "symbol": "ember_heart",
+   "metric": "heal",
+   "target": 300,
+   "rewardSkulls": 33,
+   "text": "Heal 300 HP with Ember Heart."
+  },
+  {
+   "id": "ch_sym_duelists_edge",
+   "symbol": "duelists_edge",
+   "metric": "damage",
+   "target": 900,
+   "rewardSkulls": 33,
+   "text": "Deal 900 damage with Duelist's Edge."
+  },
+  {
+   "id": "ch_sym_bastion",
+   "symbol": "bastion",
+   "metric": "shield",
+   "target": 500,
+   "rewardSkulls": 33,
+   "text": "Gain 500 shield with Bastion."
+  },
+  {
+   "id": "ch_sym_torch",
+   "symbol": "torch",
+   "metric": "damage",
+   "target": 400,
+   "rewardSkulls": 15,
+   "text": "Deal 400 damage with Torch."
+  },
+  {
+   "id": "ch_sym_pike",
+   "symbol": "pike",
+   "metric": "damage",
+   "target": 450,
+   "rewardSkulls": 23,
+   "text": "Deal 450 damage with Pike."
+  },
+  {
+   "id": "ch_sym_warding_sigil",
+   "symbol": "warding_sigil",
+   "metric": "shield",
+   "target": 300,
+   "rewardSkulls": 23,
+   "text": "Gain 300 shield with Warding Sigil."
+  },
+  {
+   "id": "ch_sym_executioners_coin",
+   "symbol": "executioners_coin",
+   "metric": "gold",
+   "target": 100,
+   "rewardSkulls": 23,
+   "text": "Earn 100 gold with Executioner's Coin."
+  },
+  {
+   "id": "ch_sym_thorn_mail",
+   "symbol": "thorn_mail",
+   "metric": "shield",
+   "target": 200,
+   "rewardSkulls": 33,
+   "text": "Gain 200 shield with Thorn Mail."
+  },
+  {
+   "id": "ch_sym_erenion",
+   "symbol": "erenion",
+   "metric": "damage",
+   "target": 500,
+   "rewardSkulls": 23,
+   "text": "Deal 500 damage with Erenion."
+  },
+  {
+   "id": "ch_sym_war_banner",
+   "symbol": "war_banner",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 33,
+   "text": "Deal 100 damage with War Banner."
+  },
+  {
+   "id": "ch_sym_fester",
+   "symbol": "fester",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 33,
+   "text": "Deal 100 damage with Fester."
+  },
+  {
+   "id": "ch_sym_sellsword",
+   "symbol": "sellsword",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 33,
+   "text": "Deal 100 damage with Sellsword."
+  },
+  {
+   "id": "ch_sym_shard",
+   "symbol": "shard",
+   "metric": "damage",
+   "target": 700,
+   "rewardSkulls": 33,
+   "text": "Deal 700 damage with Shard."
+  },
+  {
+   "id": "ch_sym_apprentice_notes",
+   "symbol": "apprentice_notes",
+   "metric": "damage",
+   "target": 500,
+   "rewardSkulls": 23,
+   "text": "Deal 500 damage with Apprentice's Notes."
+  },
+  {
+   "id": "ch_sym_stone_skin",
+   "symbol": "stone_skin",
+   "metric": "shield",
+   "target": 400,
+   "rewardSkulls": 33,
+   "text": "Gain 400 shield with Stone Skin."
+  },
+  {
+   "id": "ch_sym_gilded_ledger",
+   "symbol": "gilded_ledger",
+   "metric": "gold",
+   "target": 200,
+   "rewardSkulls": 33,
+   "text": "Earn 200 gold with Gilded Ledger."
+  },
+  {
+   "id": "ch_sym_martyrs_vow",
+   "symbol": "martyrs_vow",
+   "metric": "heal",
+   "target": 400,
+   "rewardSkulls": 33,
+   "text": "Heal 400 HP with Martyr's Vow."
+  },
+  {
+   "id": "ch_sym_treasure_map",
+   "symbol": "treasure_map",
+   "metric": "gold",
+   "target": 100,
+   "rewardSkulls": 23,
+   "text": "Earn 100 gold with Treasure Map."
+  },
+  {
+   "id": "ch_sym_focus_lens",
+   "symbol": "focus_lens",
+   "metric": "damage",
+   "target": 1000,
+   "rewardSkulls": 33,
+   "text": "Deal 1000 damage with Focus Lens."
+  },
+  {
+   "id": "ch_sym_parry",
+   "symbol": "parry",
+   "metric": "shield",
+   "target": 1000,
+   "rewardSkulls": 23,
+   "text": "Gain 1000 shield with Parry."
+  },
+  {
+   "id": "ch_sym_field_dressing",
+   "symbol": "field_dressing",
+   "metric": "heal",
+   "target": 1000,
+   "rewardSkulls": 33,
+   "text": "Heal 1000 HP with Field Dressing."
+  },
+  {
+   "id": "ch_sym_hail_of_blades",
+   "symbol": "hail_of_blades",
+   "metric": "damage",
+   "target": 200,
+   "rewardSkulls": 33,
+   "text": "Deal 200 damage with Hail of Blades."
+  },
+  {
+   "id": "ch_sym_arc_bolt",
+   "symbol": "arc_bolt",
+   "metric": "damage",
+   "target": 200,
+   "rewardSkulls": 23,
+   "text": "Deal 200 damage with Arc Bolt."
+  },
+  {
+   "id": "ch_sym_bandit_knife",
+   "symbol": "bandit_knife",
+   "metric": "damage",
+   "target": 400,
+   "rewardSkulls": 23,
+   "text": "Deal 400 damage with Bandit's Knife."
+  },
+  {
+   "id": "ch_sym_serpent_kiss",
+   "symbol": "serpent_kiss",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 23,
+   "text": "Deal 250 damage with Serpent's Kiss."
+  },
+  {
+   "id": "ch_sym_wretched_toxin",
+   "symbol": "wretched_toxin",
+   "metric": "status",
+   "target": 150,
+   "rewardSkulls": 33,
+   "text": "Apply 150 status stacks with Wretched Toxin."
+  },
+  {
+   "id": "ch_sym_pickpocket",
+   "symbol": "pickpocket",
+   "metric": "damage",
+   "target": 200,
+   "rewardSkulls": 23,
+   "text": "Deal 200 damage with Pickpocket."
+  },
+  {
+   "id": "ch_sym_second_wind",
+   "symbol": "second_wind",
+   "metric": "heal",
+   "target": 500,
+   "rewardSkulls": 15,
+   "text": "Heal 500 HP with Second Wind."
+  },
+  {
+   "id": "ch_sym_zealots_chant",
+   "symbol": "zealots_chant",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 23,
+   "text": "Land Zealot's Chant 30 times."
+  },
+  {
+   "id": "ch_sym_blood_bargain",
+   "symbol": "blood_bargain",
+   "metric": "damage",
+   "target": 900,
+   "rewardSkulls": 23,
+   "text": "Deal 900 damage with Blood Bargain."
+  },
+  {
+   "id": "ch_sym_bribe",
+   "symbol": "bribe",
+   "metric": "damage",
+   "target": 900,
+   "rewardSkulls": 15,
+   "text": "Deal 900 damage with Bribe."
+  },
+  {
+   "id": "ch_sym_bulwark_breaker",
+   "symbol": "bulwark_breaker",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 33,
+   "text": "Deal 100 damage with Bulwark Breaker."
+  },
+  {
+   "id": "ch_sym_sacrifice",
+   "symbol": "sacrifice",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 33,
+   "text": "Land Sacrifice 30 times."
+  },
+  {
+   "id": "ch_sym_pawnbroker",
+   "symbol": "pawnbroker",
+   "metric": "shield",
+   "target": 1000,
+   "rewardSkulls": 23,
+   "text": "Gain 1000 shield with Pawnbroker."
+  },
+  {
+   "id": "ch_sym_detonate",
+   "symbol": "detonate",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 33,
+   "text": "Land Detonate 30 times."
+  },
+  {
+   "id": "ch_sym_gravekeeper",
+   "symbol": "gravekeeper",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 33,
+   "text": "Deal 150 damage with Gravekeeper."
+  },
+  {
+   "id": "ch_sym_flanker",
+   "symbol": "flanker",
+   "metric": "damage",
+   "target": 500,
+   "rewardSkulls": 15,
+   "text": "Deal 500 damage with Flanker."
+  },
+  {
+   "id": "ch_sym_keystone",
+   "symbol": "keystone",
+   "metric": "shield",
+   "target": 320,
+   "rewardSkulls": 23,
+   "text": "Gain 320 shield with Keystone."
+  },
+  {
+   "id": "ch_sym_vanguard",
+   "symbol": "vanguard",
+   "metric": "damage",
+   "target": 200,
+   "rewardSkulls": 33,
+   "text": "Deal 200 damage with Vanguard."
+  },
+  {
+   "id": "ch_sym_conduit",
+   "symbol": "conduit",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 23,
+   "text": "Deal 150 damage with Conduit."
+  },
+  {
+   "id": "ch_sym_echo",
+   "symbol": "echo",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 45,
+   "text": "Land Echo 30 times."
+  },
+  {
+   "id": "ch_sym_swarm",
+   "symbol": "swarm",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 15,
+   "text": "Deal 100 damage with Swarm."
+  },
+  {
+   "id": "ch_sym_choir",
+   "symbol": "choir",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 23,
+   "text": "Deal 150 damage with Choir."
+  },
+  {
+   "id": "ch_sym_jackpot_bell",
+   "symbol": "jackpot_bell",
+   "metric": "gold",
+   "target": 40,
+   "rewardSkulls": 33,
+   "text": "Earn 40 gold with Jackpot Bell."
+  },
+  {
+   "id": "ch_sym_can_opener",
+   "symbol": "can_opener",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 23,
+   "text": "Deal 100 damage with Can Opener."
+  },
+  {
+   "id": "ch_sym_coup",
+   "symbol": "coup",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 33,
+   "text": "Deal 250 damage with Coup de Grace."
+  },
+  {
+   "id": "ch_sym_giant_slayer",
+   "symbol": "giant_slayer",
+   "metric": "damage",
+   "target": 350,
+   "rewardSkulls": 33,
+   "text": "Deal 350 damage with Giant Slayer."
+  },
+  {
+   "id": "ch_sym_momentum",
+   "symbol": "momentum",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 23,
+   "text": "Deal 100 damage with Momentum."
+  },
+  {
+   "id": "ch_sym_patience",
+   "symbol": "patience",
+   "metric": "shield",
+   "target": 100,
+   "rewardSkulls": 33,
+   "text": "Gain 100 shield with Patience."
+  },
+  {
+   "id": "ch_sym_icebreaker",
+   "symbol": "icebreaker",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 23,
+   "text": "Deal 250 damage with Icebreaker."
+  },
+  {
+   "id": "ch_sym_snake_oil",
+   "symbol": "snake_oil",
+   "metric": "status",
+   "target": 240,
+   "rewardSkulls": 23,
+   "text": "Apply 240 status stacks with Snake Oil."
+  },
+  {
+   "id": "ch_sym_iron_nail",
+   "symbol": "iron_nail",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 15,
+   "text": "Deal 250 damage with Iron Nail."
+  },
+  {
+   "id": "ch_sym_sling_stones",
+   "symbol": "sling_stones",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 15,
+   "text": "Deal 150 damage with Sling Stones."
+  },
+  {
+   "id": "ch_sym_candle",
+   "symbol": "candle",
+   "metric": "damage",
+   "target": 200,
+   "rewardSkulls": 15,
+   "text": "Deal 200 damage with Candle."
+  },
+  {
+   "id": "ch_sym_bandage",
+   "symbol": "bandage",
+   "metric": "heal",
+   "target": 240,
+   "rewardSkulls": 15,
+   "text": "Heal 240 HP with Bandage."
+  },
+  {
+   "id": "ch_sym_buckler",
+   "symbol": "buckler",
+   "metric": "shield",
+   "target": 200,
+   "rewardSkulls": 15,
+   "text": "Gain 200 shield with Buckler."
+  },
+  {
+   "id": "ch_sym_tin_coin",
+   "symbol": "tin_coin",
+   "metric": "gold",
+   "target": 40,
+   "rewardSkulls": 15,
+   "text": "Earn 40 gold with Tin Coin."
+  },
+  {
+   "id": "ch_sym_splinter",
+   "symbol": "splinter",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 15,
+   "text": "Deal 100 damage with Splinter."
+  },
+  {
+   "id": "ch_sym_war_paint",
+   "symbol": "war_paint",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 15,
+   "text": "Land War Paint 30 times."
+  },
+  {
+   "id": "ch_sym_oil_flask",
+   "symbol": "oil_flask",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 15,
+   "text": "Deal 150 damage with Oil Flask."
+  },
+  {
+   "id": "ch_sym_kindling",
+   "symbol": "kindling",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 15,
+   "text": "Deal 150 damage with Kindling."
+  },
+  {
+   "id": "ch_sym_dragon_lance",
+   "symbol": "dragon_lance",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 23,
+   "text": "Deal 250 damage with Dragon Lance."
+  },
+  {
+   "id": "ch_sym_rust_bomb",
+   "symbol": "rust_bomb",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 23,
+   "text": "Deal 150 damage with Rust Bomb."
+  },
+  {
+   "id": "ch_sym_pillar",
+   "symbol": "pillar",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 23,
+   "text": "Deal 250 damage with Pillar."
+  },
+  {
+   "id": "ch_sym_outrider",
+   "symbol": "outrider",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 23,
+   "text": "Deal 300 damage with Outrider."
+  },
+  {
+   "id": "ch_sym_phalanx",
+   "symbol": "phalanx",
+   "metric": "shield",
+   "target": 50,
+   "rewardSkulls": 33,
+   "text": "Gain 50 shield with Phalanx."
+  },
+  {
+   "id": "ch_sym_plague_doctor",
+   "symbol": "plague_doctor",
+   "metric": "heal",
+   "target": 50,
+   "rewardSkulls": 33,
+   "text": "Heal 50 HP with Plague Doctor."
+  },
+  {
+   "id": "ch_sym_vulture",
+   "symbol": "vulture",
+   "metric": "gold",
+   "target": 40,
+   "rewardSkulls": 33,
+   "text": "Earn 40 gold with Vulture."
+  },
+  {
+   "id": "ch_sym_blight",
+   "symbol": "blight",
+   "metric": "status",
+   "target": 150,
+   "rewardSkulls": 33,
+   "text": "Apply 150 status stacks with Blight."
+  },
+  {
+   "id": "ch_sym_desperado",
+   "symbol": "desperado",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 23,
+   "text": "Deal 250 damage with Desperado."
+  },
+  {
+   "id": "ch_sym_last_stand",
+   "symbol": "last_stand",
+   "metric": "shield",
+   "target": 400,
+   "rewardSkulls": 33,
+   "text": "Gain 400 shield with Last Stand."
+  },
+  {
+   "id": "ch_sym_opening_gambit",
+   "symbol": "opening_gambit",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 23,
+   "text": "Deal 300 damage with Opening Gambit."
+  },
+  {
+   "id": "ch_sym_turtle",
+   "symbol": "turtle",
+   "metric": "damage",
+   "target": 200,
+   "rewardSkulls": 23,
+   "text": "Deal 200 damage with Turtle."
+  },
+  {
+   "id": "ch_sym_berserker",
+   "symbol": "berserker",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 33,
+   "text": "Deal 300 damage with Berserker."
+  },
+  {
+   "id": "ch_sym_riposte",
+   "symbol": "riposte",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 23,
+   "text": "Land Riposte 30 times."
+  },
+  {
+   "id": "ch_sym_brace",
+   "symbol": "brace",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 15,
+   "text": "Land Brace 30 times."
+  },
+  {
+   "id": "ch_sym_ward",
+   "symbol": "ward",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 15,
+   "text": "Land Ward 30 times."
+  },
+  {
+   "id": "ch_sym_hush",
+   "symbol": "hush",
+   "metric": "damage",
+   "target": 1000,
+   "rewardSkulls": 33,
+   "text": "Deal 1000 damage with Hush."
+  },
+  {
+   "id": "ch_sym_shackle",
+   "symbol": "shackle",
+   "metric": "damage",
+   "target": 500,
+   "rewardSkulls": 45,
+   "text": "Deal 500 damage with Shackle."
+  },
+  {
+   "id": "ch_sym_duelists_code",
+   "symbol": "duelists_code",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 33,
+   "text": "Deal 150 damage with Duelist's Code."
+  },
+  {
+   "id": "ch_sym_hoarder",
+   "symbol": "hoarder",
+   "metric": "gold",
+   "target": 20,
+   "rewardSkulls": 33,
+   "text": "Earn 20 gold with Hoarder."
+  },
+  {
+   "id": "ch_sym_sniper",
+   "symbol": "sniper",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 23,
+   "text": "Deal 300 damage with Sniper."
+  },
+  {
+   "id": "ch_sym_spread_shot",
+   "symbol": "spread_shot",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 33,
+   "text": "Deal 300 damage with Spread Shot."
+  },
+  {
+   "id": "ch_sym_heirloom",
+   "symbol": "heirloom",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 33,
+   "text": "Deal 250 damage with Heirloom."
+  },
+  {
+   "id": "ch_sym_ledger_of_deeds",
+   "symbol": "ledger_of_deeds",
+   "metric": "gold",
+   "target": 20,
+   "rewardSkulls": 33,
+   "text": "Earn 20 gold with Ledger of Deeds."
+  },
+  {
+   "id": "ch_sym_armor_breaker",
+   "symbol": "armor_breaker",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 23,
+   "text": "Deal 300 damage with Armor Breaker."
+  }
+ ],
+ "tierNames": {
+  "bronze": "Bronze",
+  "silver": "Silver",
+  "gold": "Gold",
+  "legend": "Legend"
+ },
+ "taskCycleGrowth": 0.5,
+ "taskCycleGrowthCap": 4.0,
+ "maxTracked": 2,
+ "achievements": [
+  {
+   "id": "ach_first_win",
+   "name": "First Blood",
+   "text": "Win your first fight.",
+   "group": "FIRST STEPS",
+   "inDemo": true
+  },
+  {
+   "id": "ach_first_cat",
+   "name": "You're My Friend Now",
+   "text": "Adopt your first cat.",
+   "group": "FIRST STEPS",
+   "inDemo": false
+  },
+  {
+   "id": "ach_first_pact",
+   "name": "Signed in Blood",
+   "text": "Start a run under a pact.",
+   "group": "FIRST STEPS",
+   "inDemo": false
+  },
+  {
+   "id": "ach_first_forge",
+   "name": "Sparks Fly",
+   "text": "Upgrade a symbol at the anvil.",
+   "group": "THE FORGE",
+   "inDemo": true
+  },
+  {
+   "id": "ach_first_burn",
+   "name": "Ashes",
+   "text": "Lose a symbol to a failed upgrade.",
+   "group": "THE FORGE",
+   "inDemo": false
+  },
+  {
+   "id": "ach_one_spin_kill",
+   "name": "One Spin One Kill",
+   "text": "Win a fight with your first spin.",
+   "group": "BATTLE",
+   "inDemo": false
+  },
+  {
+   "id": "ach_first_perfect",
+   "name": "Perfect",
+   "text": "Land a PERFECT skill check.",
+   "group": "BATTLE",
+   "inDemo": false
+  },
+  {
+   "id": "ach_heat5_clear",
+   "name": "Heat Master",
+   "text": "Beat the final boss at Heat 5.",
+   "group": "BATTLE",
+   "inDemo": false
+  },
+  {
+   "id": "ach_all_cats",
+   "name": "Crazy Cat Person",
+   "text": "Adopt every cat.",
+   "group": "COLLECTION",
+   "inDemo": false
+  }
+ ]
+}

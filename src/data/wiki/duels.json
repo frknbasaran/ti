@@ -1,0 +1,178 @@
+{
+ "ranks": [
+  {
+   "rank": 1,
+   "tier": "Bronze",
+   "step": "I",
+   "scoreFloor": 0.0,
+   "winsFloor": 0
+  },
+  {
+   "rank": 2,
+   "tier": "Bronze",
+   "step": "II",
+   "scoreFloor": 0.15,
+   "winsFloor": 1
+  },
+  {
+   "rank": 3,
+   "tier": "Bronze",
+   "step": "III",
+   "scoreFloor": 0.25,
+   "winsFloor": 2
+  },
+  {
+   "rank": 4,
+   "tier": "Bronze",
+   "step": "IV",
+   "scoreFloor": 0.35,
+   "winsFloor": 3
+  },
+  {
+   "rank": 5,
+   "tier": "Silver",
+   "step": "I",
+   "scoreFloor": 0.42,
+   "winsFloor": 5
+  },
+  {
+   "rank": 6,
+   "tier": "Silver",
+   "step": "II",
+   "scoreFloor": 0.5,
+   "winsFloor": 8
+  },
+  {
+   "rank": 7,
+   "tier": "Silver",
+   "step": "III",
+   "scoreFloor": 0.57,
+   "winsFloor": 12
+  },
+  {
+   "rank": 8,
+   "tier": "Silver",
+   "step": "IV",
+   "scoreFloor": 0.63,
+   "winsFloor": 16
+  },
+  {
+   "rank": 9,
+   "tier": "Gold",
+   "step": "I",
+   "scoreFloor": 0.68,
+   "winsFloor": 22
+  },
+  {
+   "rank": 10,
+   "tier": "Gold",
+   "step": "II",
+   "scoreFloor": 0.73,
+   "winsFloor": 30
+  },
+  {
+   "rank": 11,
+   "tier": "Gold",
+   "step": "III",
+   "scoreFloor": 0.78,
+   "winsFloor": 40
+  },
+  {
+   "rank": 12,
+   "tier": "Gold",
+   "step": "IV",
+   "scoreFloor": 0.82,
+   "winsFloor": 55
+  },
+  {
+   "rank": 13,
+   "tier": "Obsidian",
+   "step": "I",
+   "scoreFloor": 0.86,
+   "winsFloor": 75
+  },
+  {
+   "rank": 14,
+   "tier": "Obsidian",
+   "step": "II",
+   "scoreFloor": 0.89,
+   "winsFloor": 100
+  },
+  {
+   "rank": 15,
+   "tier": "Obsidian",
+   "step": "III",
+   "scoreFloor": 0.92,
+   "winsFloor": 140
+  },
+  {
+   "rank": 16,
+   "tier": "Obsidian",
+   "step": "IV",
+   "scoreFloor": 0.94,
+   "winsFloor": 190
+  }
+ ],
+ "rules": {
+  "placementDuels": 3,
+  "z": 1.28,
+  "hpStep": {
+   "3": 350,
+   "4": 500,
+   "5": 750
+  },
+  "maxShield": 250,
+  "duelHealScale": 0.5,
+  "maxRegenPerTurn": 0.06,
+  "farmSkullMultiplier": 5.0,
+  "classicRoundGold": 150,
+  "classicRoundSkulls": 75,
+  "duelOnlyRoundGold": 300,
+  "duelOnlyRoundSkulls": 60,
+  "roundSkullMultipliers": [
+   1.0,
+   1.5,
+   2.5,
+   4.0,
+   6.0
+  ],
+  "breakSuccessBonus": 0.05,
+  "breakOptions": [
+   60,
+   90,
+   120,
+   240,
+   360
+  ],
+  "maxPassivePowerups": 4,
+  "maxActivePowerups": 4,
+  "gemGreenPrice": 25,
+  "gemBluePrice": 50,
+  "duelWinYellowGems": 1,
+  "pausesPerPlayer": 2,
+  "draftPickSeconds": 30,
+  "duelTurnSeconds": 25,
+  "demoMaxRoundsToWin": 2,
+  "demoDraftSymbols": [
+   "rusty_dagger",
+   "twin_fangs",
+   "massive_blade",
+   "wooden_shield",
+   "spiked_bulwark",
+   "torch",
+   "blood_spell",
+   "venom_vial",
+   "coin",
+   "ember_heart"
+  ]
+ },
+ "texts": {
+  "tut.pvp_lobby": "1v1\nInvite a Steam friend and both press READY. A match is best of rounds; ROUNDS TO WIN sets how many. The host also picks the MODE: CLASSIC (farm enemies, then duel) or DUEL ONLY (every round is a duel).",
+  "tut.pvp_mode": "MATCH MODE\nCLASSIC MODE: each round you both fight the same enemies on your own, buy in the shop, then duel; both are paid the same after the duel. DUEL ONLY MODE: no enemies, no waiting; every round is a duel between you two, best of ROUNDS TO WIN. Your skulls go to the anvil between rounds in both modes.",
+  "tut.pvp_draft": "DRAFT\nPick your reel symbols in turns. Every pick is exclusive: what you take, the opponent cannot. You take turns, one pick each. The opponent's cursor shows where they are looking.",
+  "tut.pvp_farm": "THE FARM\nFight these enemies on your own. Kills pay gold, the shop between fights sells symbols and powerups. When you both finish, the duel begins.",
+  "tut.pvp_duel": "THE DUEL\nTurns alternate. Your reels hit the opponent, theirs hit you: you see what they drew before it lands. Whoever falls loses the round.",
+  "tut.pvp_break": "ROUND BREAK\nThis is the anvil: spend the skulls you earned this round on upgrades. A failed upgrade still destroys the symbol. Press I'M READY when you are done; the next round starts when both of you are.",
+  "tut.pvp_rank": "DUEL RANK\nOnly the duels you play in 1v1 matches move your rank. The fights against enemies before the duel do not count. There are four tiers, Bronze, Silver, Gold and Obsidian, with four ranks in each. Your first rank comes after your first 3 duels, and it grows as you keep playing."
+ }
+}

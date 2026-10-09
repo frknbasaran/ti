@@ -1,0 +1,74 @@
+---
+import WikiPage from '../../../../components/wiki/WikiPage.astro';
+import WikiIcon from '../../../../components/wiki/WikiIcon.astro';
+import Meta from '../../../../components/wiki/Meta.astro';
+import { cats, challenges, paths, a, type Cat } from '../../../../lib/wiki';
+import { pactTerms } from './_pact';
+
+export function getStaticPaths() {
+  return cats.map((c, i) => ({ params: { slug: c.slug }, props: { c, prev: cats[i - 1], next: cats[i + 1] } }));
+}
+
+interface Props {
+  c: Cat;
+  prev?: Cat;
+  next?: Cat;
+}
+
+const { c, prev, next } = Astro.props;
+const path = paths.cat(c.slug);
+const before = cats[c.ladderIndex - 1];
+const tied = challenges.challenges.filter((ch) => c.challenges.includes(ch.id));
+const description = `${c.name} is a cat in Slots & Skulls who offers the ${c.pact.name} pact: ${c.pact.text} Unlocks for ${c.cost} skulls.`;
+---
+
+<WikiPage
+  title={`${c.name} (${c.pact.name}) | Slots & Skulls Wiki`}
+  description={description}
+  path={path}
+  section="cats"
+  crumbs={[{ name: 'Cats and abilities', href: paths.cats }, { name: c.name, href: path }]}
+  prev={prev && { name: prev.name, href: paths.cat(prev.slug) }}
+  next={next && { name: next.name, href: paths.cat(next.slug) }}
+>
+  <div class="wiki-hero">
+    <WikiIcon icon={c.icon} alt={`${c.name}, a pixel art cat`} max={96} eager />
+  </div>
+  <h1 class="page-title">{c.name}</h1>
+  <p class="lead">{c.flavor}</p>
+
+  <h2 id="pact">Pact: {c.pact.name}</h2>
+  <p class="wiki-fx">{c.pact.text}</p>
+  <ul>
+    {pactTerms(c).map((t) => <li>{t}</li>)}
+  </ul>
+
+  <Meta
+    rows={[
+      ['Unlock', `${c.cost} skulls`],
+      ['Order', before ? `Cat ${c.ladderIndex + 1} of ${cats.length}. Unlocks after ${a(paths.cat(before.slug), before.name)}.` : `Cat 1 of ${cats.length}. The first one on offer.`],
+      ['Demo', c.inDemo ? 'Available in the demo' : 'Full game only'],
+    ]}
+  />
+
+  <h2 id="how">How cats work</h2>
+  <p>
+    Cats are bought on the run setup screen with skulls, one rung at a time: only the next cat on the ladder is for sale.
+    Take one before a run and its pact holds from the first fight to the last. You can also start a run without one.
+  </p>
+
+  {
+    tied.length > 0 && (
+      <>
+        <h2 id="challenges">Challenges</h2>
+        <ul>
+          {tied.map((ch) => (
+            <li>
+              <a href={`${paths.challenges}#${ch.slug}`}>{ch.name}</a>: {ch.text}
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+</WikiPage>

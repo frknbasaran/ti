@@ -1,0 +1,584 @@
+{
+ "passives": [
+  {
+   "id": "mod_phys_resist",
+   "slug": "mod-phys-resist",
+   "name": "Iron Skin",
+   "text": "+5% resistance to physical attacks per level.",
+   "icon": null,
+   "maxLevel": 4,
+   "levelCosts": [
+    63,
+    125,
+    250,
+    500
+   ],
+   "totalCost": 938,
+   "statsPerLevel": [
+    {
+     "stat": "PhysicalResist",
+     "op": "Flat",
+     "value": 0.05
+    }
+   ],
+   "special": "None",
+   "demoMaxLevel": 1
+  },
+  {
+   "id": "mod_magic_resist",
+   "slug": "mod-magic-resist",
+   "name": "Warded Cloak",
+   "text": "+10% resistance to magical attacks per level.",
+   "icon": null,
+   "maxLevel": 4,
+   "levelCosts": [
+    63,
+    125,
+    250,
+    500
+   ],
+   "totalCost": 938,
+   "statsPerLevel": [
+    {
+     "stat": "MagicalResist",
+     "op": "Flat",
+     "value": 0.1
+    }
+   ],
+   "special": "None",
+   "demoMaxLevel": 1
+  },
+  {
+   "id": "mod_regen",
+   "slug": "mod-regen",
+   "name": "Troll Blood",
+   "text": "Heal 4% of max health every turn per level.",
+   "icon": null,
+   "maxLevel": 4,
+   "levelCosts": [
+    63,
+    125,
+    250,
+    500
+   ],
+   "totalCost": 938,
+   "statsPerLevel": [
+    {
+     "stat": "HPRegenPerTurn",
+     "op": "Flat",
+     "value": 0.04
+    }
+   ],
+   "special": "None",
+   "demoMaxLevel": 1
+  },
+  {
+   "id": "mod_phys_attack",
+   "slug": "mod-phys-attack",
+   "name": "Sharpened Edge",
+   "text": "+25% physical damage per level.",
+   "icon": null,
+   "maxLevel": 4,
+   "levelCosts": [
+    63,
+    125,
+    250,
+    500
+   ],
+   "totalCost": 938,
+   "statsPerLevel": [
+    {
+     "stat": "PhysicalDamageDealt",
+     "op": "PercentAdd",
+     "value": 0.25
+    }
+   ],
+   "special": "None",
+   "demoMaxLevel": 1
+  },
+  {
+   "id": "mod_powerup_cost",
+   "slug": "mod-powerup-cost",
+   "name": "Efficient Fuses",
+   "text": "Using powerups costs 10% less gold per level.",
+   "icon": null,
+   "maxLevel": 4,
+   "levelCosts": [
+    63,
+    125,
+    250,
+    500
+   ],
+   "totalCost": 938,
+   "statsPerLevel": [
+    {
+     "stat": "PowerupUseCost",
+     "op": "Flat",
+     "value": -0.1
+    }
+   ],
+   "special": "None",
+   "demoMaxLevel": 1
+  },
+  {
+   "id": "mod_gold_gain",
+   "slug": "mod-gold-gain",
+   "name": "Golden Touch",
+   "text": "Gain 20% more gold per level.",
+   "icon": null,
+   "maxLevel": 4,
+   "levelCosts": [
+    63,
+    125,
+    250,
+    500
+   ],
+   "totalCost": 938,
+   "statsPerLevel": [
+    {
+     "stat": "GoldGain",
+     "op": "Flat",
+     "value": 0.2
+    }
+   ],
+   "special": "None",
+   "demoMaxLevel": 1
+  },
+  {
+   "id": "mod_shop_discount",
+   "slug": "mod-shop-discount",
+   "name": "Haggler",
+   "text": "Shop prices are 10% lower per level.",
+   "icon": null,
+   "maxLevel": 4,
+   "levelCosts": [
+    63,
+    125,
+    250,
+    500
+   ],
+   "totalCost": 938,
+   "statsPerLevel": [
+    {
+     "stat": "ShopPrice",
+     "op": "Flat",
+     "value": -0.1
+    }
+   ],
+   "special": "None",
+   "demoMaxLevel": 1
+  },
+  {
+   "id": "mod_crit_chance",
+   "slug": "mod-crit-chance",
+   "name": "Killer Instinct",
+   "text": "+5% chance to roll critical hits per level.",
+   "icon": null,
+   "maxLevel": 4,
+   "levelCosts": [
+    63,
+    125,
+    250,
+    500
+   ],
+   "totalCost": 938,
+   "statsPerLevel": [
+    {
+     "stat": "CritChance",
+     "op": "Flat",
+     "value": 0.05
+    }
+   ],
+   "special": "None",
+   "demoMaxLevel": 1
+  },
+  {
+   "id": "mod_magic_attack",
+   "slug": "mod-magic-attack",
+   "name": "Arcane Focus",
+   "text": "+25% magical damage per level.",
+   "icon": null,
+   "maxLevel": 4,
+   "levelCosts": [
+    63,
+    125,
+    250,
+    500
+   ],
+   "totalCost": 938,
+   "statsPerLevel": [
+    {
+     "stat": "MagicalDamageDealt",
+     "op": "PercentAdd",
+     "value": 0.25
+    }
+   ],
+   "special": "None",
+   "demoMaxLevel": 1
+  },
+  {
+   "id": "mod_starting_hp",
+   "slug": "mod-starting-hp",
+   "name": "Vitality",
+   "text": "+25 starting max health per level.",
+   "icon": null,
+   "maxLevel": 4,
+   "levelCosts": [
+    63,
+    125,
+    250,
+    500
+   ],
+   "totalCost": 938,
+   "statsPerLevel": [
+    {
+     "stat": "MaxHP",
+     "op": "Flat",
+     "value": 25.0
+    }
+   ],
+   "special": "None",
+   "demoMaxLevel": 1
+  },
+  {
+   "id": "mod_revive",
+   "slug": "mod-revive",
+   "name": "Phoenix Ember",
+   "text": "Revives you once per run at half health when you die.",
+   "icon": null,
+   "maxLevel": 1,
+   "levelCosts": [
+    375
+   ],
+   "totalCost": 375,
+   "statsPerLevel": [],
+   "special": "Revive",
+   "demoMaxLevel": 0
+  },
+  {
+   "id": "mod_extra_reel",
+   "slug": "mod-extra-reel",
+   "name": "Extra Wheel",
+   "text": "Start with 1 additional slot wheel per level (max 2).",
+   "icon": null,
+   "maxLevel": 2,
+   "levelCosts": [
+    2000,
+    4000
+   ],
+   "totalCost": 6000,
+   "statsPerLevel": [],
+   "special": "ExtraReel",
+   "demoMaxLevel": 0
+  },
+  {
+   "id": "mod_max_shield",
+   "slug": "mod-max-shield",
+   "name": "Bulwark",
+   "text": "+25 max shield per level.",
+   "icon": null,
+   "maxLevel": 4,
+   "levelCosts": [
+    63,
+    125,
+    250,
+    500
+   ],
+   "totalCost": 938,
+   "statsPerLevel": [
+    {
+     "stat": "MaxShield",
+     "op": "Flat",
+     "value": 25.0
+    }
+   ],
+   "special": "None",
+   "demoMaxLevel": 1
+  },
+  {
+   "id": "mod_quick_fingers",
+   "slug": "mod-quick-fingers",
+   "name": "Quick Fingers",
+   "text": "Skillcheck perfect zone is 20% wider per level.",
+   "icon": null,
+   "maxLevel": 2,
+   "levelCosts": [
+    188,
+    375
+   ],
+   "totalCost": 563,
+   "statsPerLevel": [
+    {
+     "stat": "SkillCheckZone",
+     "op": "Flat",
+     "value": 0.2
+    }
+   ],
+   "special": "None",
+   "demoMaxLevel": 0
+  },
+  {
+   "id": "mod_scavenger",
+   "slug": "mod-scavenger",
+   "name": "Scavenger",
+   "text": "Each kill drops 1 extra Skull per level.",
+   "icon": null,
+   "maxLevel": 2,
+   "levelCosts": [
+    250,
+    500
+   ],
+   "totalCost": 750,
+   "statsPerLevel": [],
+   "special": "Scavenger",
+   "demoMaxLevel": 0
+  },
+  {
+   "id": "mod_treasure_hunter",
+   "slug": "mod-treasure-hunter",
+   "name": "Treasure Hunter",
+   "text": "All drop chances are 10% higher per level.",
+   "icon": null,
+   "maxLevel": 2,
+   "levelCosts": [
+    375,
+    750
+   ],
+   "totalCost": 1125,
+   "statsPerLevel": [],
+   "special": "TreasureHunter",
+   "demoMaxLevel": 0
+  },
+  {
+   "id": "mod_anvil_blessing",
+   "slug": "mod-anvil-blessing",
+   "name": "Anvil Blessing",
+   "text": "Anvil upgrade success is 2% higher per level.",
+   "icon": null,
+   "maxLevel": 2,
+   "levelCosts": [
+    500,
+    1000
+   ],
+   "totalCost": 1500,
+   "statsPerLevel": [],
+   "special": "AnvilBlessing",
+   "demoMaxLevel": 0
+  },
+  {
+   "id": "mod_last_word",
+   "slug": "mod-last-word",
+   "name": "Last Word",
+   "text": "Once per run lethal damage grants one more spin instead. Kill everything with it and you survive.",
+   "icon": null,
+   "maxLevel": 1,
+   "levelCosts": [
+    438
+   ],
+   "totalCost": 438,
+   "statsPerLevel": [],
+   "special": "LastWord",
+   "demoMaxLevel": 0
+  },
+  {
+   "id": "mod_momentum",
+   "slug": "mod-momentum",
+   "name": "Momentum",
+   "text": "Each consecutive perfect skill check adds 15% to all damage. Max stacks equal the level.",
+   "icon": null,
+   "maxLevel": 3,
+   "levelCosts": [
+    188,
+    375,
+    750
+   ],
+   "totalCost": 1313,
+   "statsPerLevel": [],
+   "special": "Momentum",
+   "demoMaxLevel": 0
+  },
+  {
+   "id": "mod_salvage_rights",
+   "slug": "mod-salvage-rights",
+   "name": "Salvage Rights",
+   "text": "A burned instance leaves a green gem 25% of the time per level.",
+   "icon": null,
+   "maxLevel": 4,
+   "levelCosts": [
+    125,
+    250,
+    438,
+    750
+   ],
+   "totalCost": 1563,
+   "statsPerLevel": [],
+   "special": "SalvageRights",
+   "demoMaxLevel": 0
+  },
+  {
+   "id": "mod_blood_money",
+   "slug": "mod-blood-money",
+   "name": "Blood Money",
+   "text": "When you die, 25% of your gold per level is exchanged for skulls (4 gold = 1 skull).",
+   "icon": null,
+   "maxLevel": 2,
+   "levelCosts": [
+    250,
+    500
+   ],
+   "totalCost": 750,
+   "statsPerLevel": [],
+   "special": "BloodMoney",
+   "demoMaxLevel": 0
+  }
+ ],
+ "abilities": [
+  {
+   "id": "ab_nudge",
+   "slug": "ab-nudge",
+   "name": "Nudge",
+   "text": "Shift one landed reel a single step: the symbol above or below takes the win row. Once per fight.",
+   "icon": null,
+   "ability": "Nudge",
+   "cost": 150,
+   "ladderIndex": 0,
+   "phase": "after-stop",
+   "inDemo": true
+  },
+  {
+   "id": "ab_mirror",
+   "slug": "ab-mirror",
+   "name": "Mirror",
+   "text": "The enemy next attack deals nothing to you and hits them instead. Once per fight.",
+   "icon": null,
+   "ability": "Mirror",
+   "cost": 200,
+   "ladderIndex": 1,
+   "phase": "during-spin",
+   "inDemo": false
+  },
+  {
+   "id": "ab_double_down",
+   "slug": "ab-double-down",
+   "name": "Double Down",
+   "text": "Skip this spin and let the enemy strike. The next spin is worth double. Once per fight.",
+   "icon": null,
+   "ability": "DoubleDown",
+   "cost": 250,
+   "ladderIndex": 2,
+   "phase": "during-spin",
+   "inDemo": false
+  },
+  {
+   "id": "ab_encore",
+   "slug": "ab-encore",
+   "name": "Encore",
+   "text": "One landed symbol acts a second time. Once per fight.",
+   "icon": null,
+   "ability": "Encore",
+   "cost": 300,
+   "ladderIndex": 3,
+   "phase": "after-stop",
+   "inDemo": false
+  },
+  {
+   "id": "ab_hold",
+   "slug": "ab-hold",
+   "name": "Hold",
+   "text": "Keep one landed reel and send the rest back into the spin. Once per fight.",
+   "icon": null,
+   "ability": "Hold",
+   "cost": 350,
+   "ladderIndex": 4,
+   "phase": "after-stop",
+   "inDemo": false
+  },
+  {
+   "id": "ab_joker",
+   "slug": "ab-joker",
+   "name": "Joker",
+   "text": "One landed reel counts as wild, so the others only have to match each other. Once per fight.",
+   "icon": null,
+   "ability": "Joker",
+   "cost": 400,
+   "ladderIndex": 5,
+   "phase": "after-stop",
+   "inDemo": false
+  }
+ ],
+ "pacts": [
+  {
+   "id": "pact_glass_cannon",
+   "slug": "pact-glass-cannon",
+   "name": "Glass Cannon",
+   "text": "Damage dealt +75%. Max health cut by 40%.",
+   "icon": null,
+   "rule": "None",
+   "cost": 200,
+   "stats": [
+    {
+     "stat": "PhysicalDamageDealt",
+     "op": "PercentAdd",
+     "value": 0.75
+    },
+    {
+     "stat": "MagicalDamageDealt",
+     "op": "PercentAdd",
+     "value": 0.75
+    },
+    {
+     "stat": "MaxHP",
+     "op": "PercentAdd",
+     "value": -0.4
+    }
+   ],
+   "skullMultiplier": 1.0,
+   "params": {}
+  },
+  {
+   "id": "pact_blood",
+   "slug": "pact-blood",
+   "name": "Blood Pact",
+   "text": "Every spin burns 5 health. Every symbol acts as if it were +2.",
+   "icon": null,
+   "rule": "BloodPact",
+   "cost": 200,
+   "stats": [],
+   "skullMultiplier": 1.0,
+   "params": {
+    "hpPerSpin": 5,
+    "forgeBonus": 2
+   }
+  },
+  {
+   "id": "pact_usurer",
+   "slug": "pact-usurer",
+   "name": "Usurer",
+   "text": "Your gold earns 5% interest after every fight. Every enemy steals gold.",
+   "icon": null,
+   "rule": "Usury",
+   "cost": 250,
+   "stats": [],
+   "skullMultiplier": 1.0,
+   "params": {
+    "interestRate": 0.05,
+    "interestCap": 0,
+    "stealChance": 0.15,
+    "stealPercent": 0.05,
+    "stealMinimum": 6
+   }
+  },
+  {
+   "id": "pact_dead_man",
+   "slug": "pact-dead-man",
+   "name": "Dead Man Walking",
+   "text": "No healing between fights. Skull rewards are doubled.",
+   "icon": null,
+   "rule": "NoHeal",
+   "cost": 250,
+   "stats": [],
+   "skullMultiplier": 2.0,
+   "params": {}
+  }
+ ]
+}

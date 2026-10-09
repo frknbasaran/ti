@@ -111,6 +111,13 @@ const shotUrls = (
         <div>
           <span class="k">{text.demo}</span> <a href={game.demoUrl} rel="noopener">{text.demoText}</a>
         </div>
+        {
+          lang === 'en' && (
+            <div>
+              <span class="k">Wiki</span> <a href="/slots-and-skulls/wiki/">Symbols, enemies and rules</a>
+            </div>
+          )
+        }
         <div><span class="k">{s.pressKit}</span> <a href="/presskit/">{s.pressKit}</a></div>
         <div><span class="k">X</span> <a href={studio.x} rel="noopener">{studio.xHandle}</a></div>
       </div>

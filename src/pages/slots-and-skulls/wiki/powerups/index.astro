@@ -1,0 +1,54 @@
+---
+import WikiPage from '../../../../components/wiki/WikiPage.astro';
+import Entry from '../../../../components/wiki/Entry.astro';
+import Meta from '../../../../components/wiki/Meta.astro';
+import { itemListLd, paths, powerups, rules, esc } from '../../../../lib/wiki';
+
+const actives = powerups.filter((p) => p.kind === 'active');
+const passives = powerups.filter((p) => p.kind === 'passive');
+const eco = rules.economy;
+const groups = [
+  { id: 'active', title: 'Active powerups', items: actives },
+  { id: 'passive', title: 'Passive powerups', items: passives },
+];
+const description = `All ${powerups.length} Slots & Skulls powerups: ${actives.length} actives you fire during a spin and ${passives.length} passives that are always on, with prices, use costs and what each one counters.`;
+---
+
+<WikiPage
+  title="Powerups | Slots & Skulls Wiki"
+  description={description}
+  path={paths.powerups}
+  section="powerups"
+  crumbs={[{ name: 'Powerups', href: paths.powerups }]}
+  jsonLd={[itemListLd('Slots & Skulls powerups', powerups.map((p) => ({ name: p.name, href: paths.powerup(p.slug) })))]}
+>
+  <h1 class="page-title">Powerups</h1>
+  <p class="lead">
+    Powerups are bought in the shop between fights with gold and last for the rest of the run. Actives are fired from the
+    d-pad while the reels spin and cost gold on every use. Passives are always on.
+  </p>
+  <p>
+    Each shop shows {eco.shopPowerupOffers} powerups. A powerup you already own is never offered again. While the
+    current level's boss has a threat that an unowned powerup answers, one of the two slots always holds one of those
+    answers.
+  </p>
+
+  {
+    groups.map((g) => (
+      <section aria-labelledby={g.id}>
+        <h2 id={g.id}>{g.title}</h2>
+        {g.items.map((p) => (
+          <Entry id={p.slug} name={p.name} href={paths.powerup(p.slug)} icon={p.icon} sub={`${p.kind} · ${p.shopPrice} gold`}>
+            <p class="wiki-fx">{p.text}</p>
+            <Meta
+              rows={[
+                ['Use cost', p.kind === 'active' ? esc(`${p.goldCostPerUse} gold, ${p.usesPerTurn} use per turn`) : null],
+                ['Cost growth', p.costGrowthPerUse ? `+${Math.round(p.costGrowthPerUse * 100)}% per use, back to base every fight` : null],
+              ]}
+            />
+          </Entry>
+        ))}
+      </section>
+    ))
+  }
+</WikiPage>

@@ -1,0 +1,115 @@
+---
+import WikiPage from '../../../../components/wiki/WikiPage.astro';
+import Entry from '../../../../components/wiki/Entry.astro';
+import Meta from '../../../../components/wiki/Meta.astro';
+import { challenges, itemListLd, metricName, paths, rules, symbolById, symbolLink } from '../../../../lib/wiki';
+
+const c = challenges;
+const gems = rules.anvil.gems as Record<string, { name: string }>;
+const tiers = Object.keys(c.tierNames) as (keyof typeof c.tierNames)[];
+const tasks = [...c.symbolTasks].sort((x, y) =>
+  (symbolById.get(x.symbol)?.name ?? '').localeCompare(symbolById.get(y.symbol)?.name ?? ''),
+);
+
+function reward(r: (typeof c.challenges)[number]['reward']): string {
+  switch (r.kind) {
+    case 'Skulls':
+      return `${r.amount} skulls`;
+    case 'GemGreen':
+      return `${r.amount} x ${gems.green.name}`;
+    case 'GemBlue':
+      return `${r.amount} x ${gems.blue.name}`;
+    case 'GemYellow':
+      return `${r.amount} x ${gems.yellow.name}`;
+    case 'Symbol':
+      return `The ${symbolLink((r as { symbol: string }).symbol)} symbol`;
+    case 'RingStyle':
+      return `${(r as { styleName: string }).styleName} ring light for the anvil and the reels`;
+    default:
+      return r.kind;
+  }
+}
+
+const description = `All ${c.challenges.length} challenges, the ${c.symbolTasks.length} repeatable symbol tasks and the Steam achievements of Slots & Skulls, with targets and rewards.`;
+---
+
+<WikiPage
+  title="Challenges and achievements | Slots & Skulls Wiki"
+  description={description}
+  path={paths.challenges}
+  section="challenges"
+  crumbs={[{ name: 'Challenges', href: paths.challenges }]}
+  jsonLd={[itemListLd('Slots & Skulls challenges', c.challenges.map((ch) => ({ name: ch.name, href: `${paths.challenges}#${ch.slug}` })))]}
+>
+  <h1 class="page-title">Challenges and achievements</h1>
+  <p class="lead">
+    Challenges are goals with a reward: skulls, gems, a symbol or a ring light for the anvil. They count in every run on
+    their own. You can track {c.maxTracked} at a time to see their progress during a fight. Challenges count in the full
+    game only; the demo lets you browse them.
+  </p>
+
+  <nav aria-label="On this page">
+    <ul class="wiki-toc">
+      {tiers.map((t) => <li><a href={`#tier-${t}`}>{c.tierNames[t]}</a></li>)}
+      <li><a href="#symbol-tasks">Symbol tasks</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+    </ul>
+  </nav>
+
+  {
+    tiers.map((t) => (
+      <section aria-labelledby={`tier-${t}`}>
+        <h2 id={`tier-${t}`}>{c.tierNames[t]}</h2>
+        {c.challenges
+          .filter((ch) => ch.tier === t)
+          .map((ch) => (
+            <Entry id={ch.slug} name={ch.name} sub={`${c.tierNames[t]}${ch.endless ? ' · Endless' : ''}${ch.minHeat ? ` · Heat ${ch.minHeat}+` : ''}`}>
+              <p class="wiki-fx">{ch.text}</p>
+              <Meta rows={[['Reward', reward(ch.reward)]]} />
+            </Entry>
+          ))}
+      </section>
+    ))
+  }
+
+  <h2 id="symbol-tasks">Symbol tasks</h2>
+  <p>
+    Every symbol has its own task. It needs no tracking and counts in campaign and endless runs alike. Finishing it pays a
+    fresh +0 copy of the symbol and a few skulls, then the task starts again with a target {Math.round(c.taskCycleGrowth * 100)}%
+    higher per completion, up to {c.taskCycleGrowthCap} times the first target.
+  </p>
+  <div class="table-scroll">
+    <table class="specs">
+      <thead>
+        <tr>
+          <th scope="col">Symbol</th>
+          <th scope="col">First target</th>
+          <th scope="col" class="num">Skulls</th>
+        </tr>
+      </thead>
+      <tbody>
+        {tasks.map((t) => (
+          <tr>
+            <th scope="row" set:html={symbolLink(t.symbol)} />
+            <td>{t.text}</td>
+            <td class="num">{t.rewardSkulls}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="muted">Task types: {[...new Set(tasks.map((t) => metricName[t.metric] ?? t.metric))].join(', ')}.</p>
+
+  <h2 id="achievements">Steam achievements</h2>
+  <p>Achievements that are hidden in the game are not listed here.</p>
+  <table class="specs">
+    <tbody>
+      {c.achievements.map((ach) => (
+        <tr id={ach.id.replace(/_/g, '-')}>
+          <th scope="row">{ach.name}</th>
+          <td>{ach.text}{ach.inDemo ? ' Also in the demo.' : ''}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</WikiPage>

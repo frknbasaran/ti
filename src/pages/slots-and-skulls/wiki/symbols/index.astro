@@ -1,0 +1,132 @@
+---
+import WikiPage from '../../../../components/wiki/WikiPage.astro';
+import Entry from '../../../../components/wiki/Entry.astro';
+import Meta from '../../../../components/wiki/Meta.astro';
+import {
+  challenges, groupName, itemListLd, levelLink, metricName, mult, paths, rarityName, rules, symbols,
+  threatName, esc, a,
+} from '../../../../lib/wiki';
+
+const rarityOrder = rules.rarity.order;
+const groupOrder = Object.keys(rules.groups);
+const sorted = [...symbols].sort(
+  (x, y) =>
+    groupOrder.indexOf(x.group) - groupOrder.indexOf(y.group) ||
+    rarityOrder.indexOf(x.rarity) - rarityOrder.indexOf(y.rarity) ||
+    x.name.localeCompare(y.name),
+);
+const groups = groupOrder
+  .map((g) => ({ key: g, name: groupName(g), items: sorted.filter((s) => s.group === g) }))
+  .filter((g) => g.items.length);
+const counts = rarityOrder.map((r) => `${symbols.filter((s) => s.rarity === r).length} ${rarityName(r).toLowerCase()}`);
+const demoCount = symbols.filter((s) => s.inDemo).length;
+const maxPlus = rules.anvil.maxPlus;
+const critBonus = rules.anvil.critBonusAtMax;
+const challengeName = new Map(challenges.challenges.map((c) => [c.id, c.name]));
+
+function rows(s: (typeof symbols)[number]) {
+  const shop = s.shopPrice ? `${s.shopPrice} gold` : 'Not sold. Kill boxes and rewards only.';
+  const crit = `${mult(s.critMultiplier)}, ${mult(s.critMultiplier + critBonus)} at +${maxPlus}`;
+  const from: string[] = [];
+  if (s.starter) from.push('Owned from the start');
+  for (const l of s.firstClearOfLevels) from.push(`First clear of ${levelLink(l)}`);
+  for (const id of s.rewardOf) from.push(`Reward of the ${a(paths.challenges + '#' + id.replace(/_/g, '-'), challengeName.get(id) ?? id)} challenge`);
+  const task = s.task
+    ? `${esc(s.task.text)} Pays the symbol and ${s.task.rewardSkulls} skulls, then repeats with a bigger target.`
+    : null;
+  return [
+    [`At +${maxPlus}`, esc(s.textByPlus[maxPlus])],
+    ['Shop price', esc(shop)],
+    ['Crit', crit],
+    ['Damage', s.damageTypes.length ? s.damageTypes.join(', ') : null],
+    ['Skill check', s.skillCheck ? 'Yes. A full catch pays the printed value.' : null],
+    ['Counters', s.answers.length ? s.answers.map((t) => threatName[t] ?? t).join(', ') : null],
+    ['How to get', from.length ? from.join('. ') : null],
+    ['Task', task],
+    ['Demo', s.inDemo ? 'In the demo' : 'Full game only'],
+  ] as [string, string | null][];
+}
+
+const title = 'Symbols | Slots & Skulls Wiki';
+const description = `All ${symbols.length} symbols in Slots & Skulls with rarity, shop price, crit multiplier and the exact effect at every forge level from +0 to +${maxPlus}.`;
+---
+
+<WikiPage
+  title={title}
+  description={description}
+  path={paths.symbols}
+  section="symbols"
+  crumbs={[{ name: 'Symbols', href: paths.symbols }]}
+  jsonLd={[itemListLd('Slots & Skulls symbols', sorted.map((s) => ({ name: s.name, href: paths.symbol(s.slug) })))]}
+>
+  <h1 class="page-title">Symbols</h1>
+  <p class="lead">
+    Symbols are what your reels land on. You pick the ones that go on the machine, and each landed symbol acts once per
+    spin. There are {symbols.length} of them: {counts.join(', ')}. {demoCount} are in the demo.
+  </p>
+  <p>
+    The effect text is the card text from the game at +0, with the numbers worked out for every forge level. Symbols are
+    grouped the way the game's own symbol board groups them, then sorted by rarity.
+    See <a href="/slots-and-skulls/wiki/#anvil">the anvil</a> for how forge levels grow a symbol.
+  </p>
+
+  <nav aria-label="Symbol groups">
+    <ul class="wiki-toc">
+      {groups.map((g) => <li><a href={`#group-${g.key}`}>{g.name} ({g.items.length})</a></li>)}
+    </ul>
+  </nav>
+
+  <div class="wiki-filter" data-filter hidden>
+    <label class="label" for="symbol-filter">Filter</label>
+    <input id="symbol-filter" type="search" placeholder="Name or effect, e.g. poison" autocomplete="off" />
+  </div>
+
+  {
+    groups.map((g) => (
+      <section aria-labelledby={`group-${g.key}`} data-group>
+        <h2 id={`group-${g.key}`}>{g.name}</h2>
+        {g.items.map((s) => (
+          <Entry
+            id={s.slug}
+            name={s.name}
+            sub={`${rarityName(s.rarity)} · ${g.name}${s.starter ? ' · Starter' : ''}`}
+            icon={s.icon}
+            search={`${s.name} ${s.text} ${s.rarity}`.toLowerCase()}
+          >
+            <p class="wiki-fx">{s.text}</p>
+            <Meta rows={rows(s)} />
+            <details>
+              <summary>Every forge level</summary>
+              <table class="specs">
+                <tbody>
+                  {s.textByPlus.map((t, i) => (
+                    <tr>
+                      <th scope="row">+{i}</th>
+                      <td>{t}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </details>
+          </Entry>
+        ))}
+      </section>
+    ))
+  }
+</WikiPage>
+
+<script>
+  // Optional filter. Without JS the box stays hidden and every symbol is listed.
+  const box = document.querySelector<HTMLElement>('[data-filter]');
+  const input = box?.querySelector('input');
+  if (box && input) {
+    box.hidden = false;
+    const entries = [...document.querySelectorAll<HTMLElement>('[data-search]')];
+    const groups = [...document.querySelectorAll<HTMLElement>('[data-group]')];
+    input.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      for (const e of entries) e.hidden = q !== '' && !(e.dataset.search ?? '').includes(q);
+      for (const g of groups) g.hidden = !g.querySelector('[data-search]:not([hidden])');
+    });
+  }
+</script>

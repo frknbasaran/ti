@@ -1,0 +1,19 @@
+---
+/** Key/value rows in the site's .game-meta pattern. Empty values are skipped. */
+interface Props {
+  rows: [string, string | null | undefined | false][];
+}
+const { rows } = Astro.props;
+---
+
+<div class="game-meta wiki-meta">
+  {
+    rows
+      .filter(([, v]) => v)
+      .map(([k, v]) => (
+        <div>
+          <span class="k">{k}</span> <span set:html={v as string} />
+        </div>
+      ))
+  }
+</div>

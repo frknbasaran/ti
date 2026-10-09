@@ -1,0 +1,78 @@
+---
+import WikiPage from '../../../../components/wiki/WikiPage.astro';
+import { duels, paths, pct, symbolLink } from '../../../../lib/wiki';
+
+const d = duels.rules;
+const t = duels.texts as Record<string, string>;
+const body = (k: string) => (t[k] ?? '').split('\n').slice(1).join(' ');
+const description = `How 1v1 duels work in Slots & Skulls: the Classic and Duel Only modes, the draft, round pay, the break anvil and all ${duels.ranks.length} duel ranks with the record each one needs.`;
+---
+
+<WikiPage
+  title="1v1 duels and duel ranks | Slots & Skulls Wiki"
+  description={description}
+  path={paths.duels}
+  section="duels"
+  crumbs={[{ name: '1v1 duels', href: paths.duels }]}
+>
+  <h1 class="page-title">1v1 duels</h1>
+  <p class="lead">{body('tut.pvp_lobby')}</p>
+
+  <h2 id="modes">Modes</h2>
+  <p>{body('tut.pvp_mode')}</p>
+
+  <h2 id="match">A match, step by step</h2>
+  <h3>Draft</h3>
+  <p>{body('tut.pvp_draft')}</p>
+  <h3>Farm (Classic only)</h3>
+  <p>{body('tut.pvp_farm')}</p>
+  <h3>Duel</h3>
+  <p>{body('tut.pvp_duel')}</p>
+  <h3>Break</h3>
+  <p>{body('tut.pvp_break')}</p>
+
+  <h2 id="numbers">Match rules</h2>
+  <table class="specs">
+    <tbody>
+      <tr><th scope="row">Max health</th><td>Starts at {d.hpStep['3']} with 3 reels, {d.hpStep['4']} with 4 and {d.hpStep['5']} with 5. Every finished duel adds the same amount again for both players.</td></tr>
+      <tr><th scope="row">Shield</th><td>Both start every fight at 0 shield, up to {d.maxShield}.</td></tr>
+      <tr><th scope="row">Healing</th><td>Against a player, heals, regen and life steal work at {pct(d.duelHealScale, 0)}. Regen is capped at {pct(d.maxRegenPerTurn, 0)} of max health per turn.</td></tr>
+      <tr><th scope="row">Round pay</th><td>Classic: {d.classicRoundGold} gold and {d.classicRoundSkulls} skulls to both players. Duel Only: {d.duelOnlyRoundGold} gold and {d.duelOnlyRoundSkulls} skulls to both. Skulls grow by round: {d.roundSkullMultipliers.map((m) => `x${m}`).join(', ')}.</td></tr>
+      <tr><th scope="row">Farm kills</th><td>Pay x{d.farmSkullMultiplier} skulls.</td></tr>
+      <tr><th scope="row">Break anvil</th><td>The first break uses the normal odds. Each later break adds {Math.round(d.breakSuccessBonus * 100)} percentage points to every upgrade's success chance. A failed upgrade still destroys the symbol.</td></tr>
+      <tr><th scope="row">Powerups</th><td>At most {d.maxActivePowerups} active and {d.maxPassivePowerups} passive.</td></tr>
+      <tr><th scope="row">Gems</th><td>Each match shop deals one gem card: green for {d.gemGreenPrice} gold or blue for {d.gemBluePrice}. The duel's winner gets {d.duelWinYellowGems} yellow gem.</td></tr>
+      <tr><th scope="row">Timers</th><td>{d.draftPickSeconds} seconds per draft pick, {d.duelTurnSeconds} seconds per duel turn. Breaks last {d.breakOptions.join(', ')} seconds, chosen by the host. Each player can pause {d.pausesPerPlayer} times.</td></tr>
+      <tr><th scope="row">Demo</th><td>Best of {d.demoMaxRoundsToWin * 2 - 1}, 3 reels, and a draft of these symbols: <span set:html={d.demoDraftSymbols.map(symbolLink).join(', ')} />.</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="ranks">Duel ranks</h2>
+  <p>{body('tut.pvp_rank')}</p>
+  <p>
+    The rank is not your raw win rate. The game takes a cautious estimate of it that is low for short records and grows as
+    you play more (the lower bound of its confidence interval, z = {d.z}). Each rank asks for that
+    score and a number of duels won. A loss can only lower your
+    rank, a win can only raise it.
+  </p>
+  <div class="table-scroll">
+    <table class="specs">
+      <thead>
+        <tr>
+          <th scope="col">Rank</th>
+          <th scope="col" class="num">Score</th>
+          <th scope="col" class="num">Duels won</th>
+        </tr>
+      </thead>
+      <tbody>
+        {duels.ranks.map((r) => (
+          <tr id={`rank-${r.rank}`}>
+            <th scope="row">{r.tier} {r.step}</th>
+            <td class="num">{r.scoreFloor.toFixed(2)}</td>
+            <td class="num">{r.winsFloor}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</WikiPage>

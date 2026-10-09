@@ -1,0 +1,374 @@
+---
+import Hint from '../../../components/wiki/Hint.astro';
+import WikiPage from '../../../components/wiki/WikiPage.astro';
+import WikiIcon from '../../../components/wiki/WikiIcon.astro';
+import {
+  cats, levels, modifiers, paths, pct, rarityName, rules, sections, symbols, symbolLink, itemListLd,
+} from '../../../lib/wiki';
+
+const r = rules;
+const t = r.texts as Record<string, string>;
+/** An in-game hint without its all-caps title line. */
+const hint = (key: string) => (t[key] ?? '').split('\n').slice(1).join(' ');
+const starters = symbols.filter((s) => s.starter);
+const extraWheel = modifiers.passives.find((m) => m.special === 'ExtraReel');
+const maxReels = r.player.reels + (extraWheel?.maxLevel ?? 0);
+const firstCat = cats.find((c) => c.inDemo);
+const firstAbility = modifiers.abilities.find((a) => a.inDemo);
+const demoSymbols = symbols.filter((s) => s.inDemo).length;
+const fullOnlyMods = modifiers.passives.filter((m) => m.demoMaxLevel === 0).map((m) => m.name);
+const weights = r.rarity.weights as Record<string, number>;
+const weightTotal = Object.values(weights).reduce((x, y) => x + y, 0);
+const gate = r.rarity.unlockLevel as Record<string, number>;
+const growth = r.rarity.shopPriceGrowth as Record<string, number>;
+const salvage = r.rarity.salvage as Record<string, number>;
+const gain = r.anvil.gainPerPlusByRarity as Record<string, number>;
+const boxMult = r.economy.boxTierMultiplier as Record<string, number>;
+const gems = r.anvil.gems;
+const legendaryUnsold = symbols.filter((x) => x.rarity === 'legendary').every((x) => !x.shopPrice);
+
+const description =
+  'The Slots & Skulls wiki: how a run works, the rules for spins, damage, shields, crits, statuses, the shop, kill boxes and the anvil, and every symbol, powerup, cat, enemy and level, from the game data.';
+---
+
+<WikiPage
+  title="Slots & Skulls Wiki | Trina Interactive"
+  description={description}
+  path={paths.hub}
+  jsonLd={[itemListLd('Slots & Skulls Wiki sections', sections.map((s) => ({ name: s.title, href: s.href })))]}
+>
+  <h1 class="page-title">Slots &amp; Skulls Wiki</h1>
+  <p class="lead">
+    Every symbol, powerup, cat, enemy and rule in Slots &amp; Skulls. The numbers and card texts on these pages are read
+    straight from the game's data, so they match the current build. Things that only exist in the full game are marked.
+  </p>
+  <p>
+    Two things are left out on purpose: the final boss, and achievements the game keeps hidden until you earn them.
+  </p>
+
+  <h2 id="contents">Contents</h2>
+  <table class="specs">
+    <tbody>
+      {
+        sections.map((s) => (
+          <tr>
+            <th scope="row">
+              <a href={s.href}>{s.title}</a>
+            </th>
+            <td class="num">{s.count}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+  <p class="muted">On this page: <a href="#run">How a run works</a>, <a href="#spin">Spinning</a>, <a href="#chance">Where chance comes in</a>, <a href="#order">Resolve order</a>, <a href="#damage">Damage and shields</a>, <a href="#crits">Crits</a>, <a href="#skill">Skill checks</a>, <a href="#statuses">Statuses</a>, <a href="#rarity">Rarity</a>, <a href="#shop">Gold, skulls and the shop</a>, <a href="#boxes">Kill boxes</a>, <a href="#anvil">The anvil</a>, <a href="#demo">Demo and full game</a>.</p>
+
+  <h2 id="run">How a run works</h2>
+  <ol>
+    <li>
+      Pick a level you have unlocked and choose your symbols. You start with {r.player.reels} reels, so you pick {r.player.reels}. The Extra Wheel modifier adds up to {(extraWheel?.maxLevel ?? 0)} more, for {maxReels}. Every
+      collection starts with <span set:html={starters.map((s) => symbolLink(s.id)).join(', ')} />.
+    </li>
+    <li>Take a <a href={paths.cats}>cat and an ability</a> if you want them. Both are optional.</li>
+    <li>
+      Fight. Each turn the reels spin and you stop them. The symbols that land act, then every living enemy attacks.
+      You have {r.player.maxHP} health and {r.player.maxShield} max shield before modifiers.
+    </li>
+    <li>
+      Win the fight and you get gold and skulls, maybe a kill box, a full heal and a visit to the shop.
+    </li>
+    <li>
+      A level is {r.player.fightsPerLevel} fights and the last one is its boss. Clearing a level rolls the run straight
+      into the next one with everything you carry.
+    </li>
+    <li>
+      If you die, the run ends. Skulls and symbols from boxes are yours to keep. The run also pays {r.economy.runEndBonusPerKill} skulls per kill and {r.economy.runEndVictoryBonus} per level cleared. Spend skulls on
+      <a href={paths.modifiers}>modifiers</a>, cats, abilities and the <a href="#anvil">anvil</a>, then go again.
+    </li>
+  </ol>
+
+  <h2 id="spin">Spinning and stopping</h2>
+  <Hint text={hint('tut.stop_reel')} />
+  <p>
+    The cell a reel lands on follows the moment you press. A reel you leave alone stops by itself after {r.combat.reelAutoStopSeconds} seconds. Active <a href={paths.powerups}>powerups</a> are used from the d-pad while the
+    reels are still spinning. Auto modes can stop the reels for you; skill checks and powerups stay in your hands.
+  </p>
+  <p>
+    The pool is every symbol you put on the machine, and each reel lands one of them. Several symbols care where they land:
+    the two outer reels, the middle reel, or the symbols next to them.
+  </p>
+
+  <h2 id="chance">Where chance comes in</h2>
+  <p>Your timing decides where the reels stop. These are rolled:</p>
+  <ul>
+    <li>
+      <strong>Crits.</strong> A spin can crit from your crit chance, which is capped at {pct(r.combat.maxCritChance, 0)}.
+      Landing the same symbol on every reel always crits.
+    </li>
+    <li><strong>The anvil.</strong> Every upgrade is a roll against the odds in the <a href="#anvil">anvil table</a>.</li>
+    <li>
+      <strong>Kill boxes.</strong> Whether a kill drops a box and its tier come from the level's odds, which the level select
+      screen shows. What is inside comes from the enemy's table. See <a href="#boxes">kill boxes</a>.
+    </li>
+    <li>
+      <strong>Shop offers.</strong> Drawn by rarity weight, leaning toward symbols that work with your pool and toward
+      answers to the current level's boss.
+    </li>
+    <li>
+      <strong>Enemy attack effects.</strong> Stun, burn, chill, poison and gold theft each have a chance per hit. Each
+      enemy's chances are on the <a href={paths.enemies}>enemies page</a>.
+    </li>
+    <li><strong>Stun chances on your own symbols</strong>, printed on the card.</li>
+  </ul>
+
+  <h2 id="order">Resolve order</h2>
+  <p>Within one spin the landed symbols act in this order, left to right inside each step:</p>
+  <ol>
+    <li>Damage buffs for this turn.</li>
+    <li>Shield gains.</li>
+    <li>Support: healing, gold, statuses, cleanses and other buffs.</li>
+    <li>Damage.</li>
+    <li>Symbols that consume the enemy's poison, after every poison has landed.</li>
+    <li>Executes.</li>
+    <li>Symbols that turn damage into gold, after all the turn's damage is in.</li>
+  </ol>
+
+  <h2 id="damage">Damage, shield and armor</h2>
+  <Hint text={hint('tut.vitals')} />
+  <ul>
+    <li>There are two damage types, physical and magical.</li>
+    <li>Your shield absorbs physical damage before your health. Magic ignores it.</li>
+    <li>Enemy armor works the same way against you: it soaks up physical hits. Magic and symbols that pierce armor go past it.</li>
+    <li>Resistances cut incoming damage of their type. They stack, up to {pct(r.combat.maxResist, 0)}.</li>
+    <li>Damage buffs of the same type multiply with each other instead of adding up.</li>
+    <li>Poison and burn ignore shield and resistances.</li>
+    <li>Health regeneration is capped at {pct(r.combat.maxRegenPerTurn, 0)} of your max health per turn.</li>
+    <li>
+      Against groups your symbols hit the front enemy unless the card says otherwise. Every living enemy attacks on its
+      turn.
+    </li>
+  </ul>
+
+  <h2 id="crits">Crits</h2>
+  <Hint text={hint('tut.crit')} />
+  <ul>
+    <li>
+      Each symbol has its own crit multiplier, listed on the <a href={paths.symbols}>symbols page</a>. At
+      +{r.anvil.maxPlus} it goes up by {r.anvil.critBonusAtMax}.
+    </li>
+    <li>
+      A healing crit while your health is full raises your max health by {r.combat.critRaise} for the rest of the run and
+      fills it. A shield crit raises your max shield by {r.combat.critRaise} and fills the bar. Each happens once per turn,
+      and each can happen at most {r.combat.critRaisesPerRun} times per run.
+    </li>
+  </ul>
+
+  <h2 id="skill">Skill checks</h2>
+  <p>
+    Catching the top {pct(r.combat.perfectZone, 0)} of the bar is a PERFECT and pays the full value. Below that the payout
+    falls in a straight line, down to {pct(r.combat.skillMinMultiplier, 0)} at an empty bar. Some symbols use a draining
+    bar or ask for two catches. Quick Fingers and Steady Hands widen the perfect zone.
+  </p>
+
+  <h2 id="statuses">Statuses</h2>
+  <table class="specs">
+    <tbody>
+      <tr>
+        <th scope="row">Poison</th>
+        <td>
+          {hint('tut.status_poison')} Your poison cannot land while an enemy's armor is up: break the armor first.
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Burn</th>
+        <td>{hint('tut.status_burn')} Each tick deals at least {r.combat.burnMinTick}, and the stacks halve after every tick.</td>
+      </tr>
+      <tr>
+        <th scope="row">Chill</th>
+        <td>{hint('tut.status_chill')}</td>
+      </tr>
+      <tr>
+        <th scope="row">Stun</th>
+        <td>{hint('tut.status_stun_player')} {hint('tut.stun_fatigue').split('. ')[0]}.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="rarity">Rarity</h2>
+  <p>
+    Symbols come in four rarities. Rarer symbols are drawn less often by the shop and by kill boxes, and they only start to
+    drop once you have unlocked a deep enough level.
+  </p>
+  <table class="specs">
+    <thead>
+      <tr>
+        <th scope="col">Rarity</th>
+        <th scope="col" class="num">Draw weight</th>
+        <th scope="col" class="num">Needs</th>
+        <th scope="col" class="num">Forge gain</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        r.rarity.order.map((k) => (
+          <tr>
+            <th scope="row">{rarityName(k)}</th>
+            <td class="num">{weights[k]} ({pct(weights[k] / weightTotal, 0)})</td>
+            <td class="num">{gate[k] ? `level ${gate[k]}` : 'start'}</td>
+            <td class="num">+{pct(gain[k], 0)} per +1</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+  {legendaryUnsold && <p>Legendary symbols are never sold in the shop. They come from kill boxes and rewards.</p>}
+
+  <h2 id="shop">Gold, skulls and the shop</h2>
+  <Hint text={hint('tut.shards')} />
+  <p>
+    Gold belongs to the run: it buys symbols and powerups in the shop and is gone when the run ends. Skulls are permanent.
+  </p>
+  <ul>
+    <li>
+      Each shop shows {r.economy.shopSymbolOffers} symbols and {r.economy.shopPowerupOffers} powerups. Symbols already on
+      your reels are not offered as new copies; they can come back as an upgrade offer one forge level higher, at {r.economy.upgradeOfferMultiplier} times the list price of that level.
+    </li>
+    <li>
+      A symbol's price grows with the best forge level you own it at: x{growth.common} per level for common,
+      x{growth.rare} rare, x{growth.epic} epic, x{growth.legendary} legendary.
+    </li>
+    <li>
+      Reroll costs {r.economy.rerollBase} gold, then {r.economy.rerollIncrement} more each time in the same shop. Locking
+      an offer costs {r.economy.lockCost} gold and keeps it through rerolls and into the next shop.
+    </li>
+    <li>
+      Removing a symbol from your reels costs {r.economy.removePrice} gold. You must keep at least as many symbols as you
+      have reels.
+    </li>
+    <li>Discounts stack up to {pct(r.economy.maxShopDiscount, 0)}.</li>
+    <li>
+      Ending a fight on its first turn pays up to {pct(r.combat.earlyKillFirst, 0)} more gold and skulls. The earlier the
+      killing symbol acts in that spin, the bigger the bonus.
+    </li>
+    <li>
+      Thieves take {pct(r.economy.stealPercent, 0)} of your gold per successful steal, at least {r.economy.stealMinimum}.
+    </li>
+  </ul>
+
+  <h2 id="boxes">Kill boxes</h2>
+  <p>
+    A kill can drop a box. The level decides how often and which tier: see the <a href={paths.levels}>levels page</a>. Each
+    box holds exactly one prize, picked from the killed enemy's table: a symbol, gold, skulls or a gem. Symbols and gems from
+    boxes are permanent.
+  </p>
+  <ul>
+    <li>
+      A symbol prize matches the box's tier {pct(r.economy.boxSymbolTierShare, 0)} of the time. The rest of the time it is
+      another unlocked rarity.
+    </li>
+    <li>
+      Gold prizes are {r.economy.boxGold[0]} to {r.economy.boxGold[1]} and skull prizes {r.economy.boxSkulls[0]} to {r.economy.boxSkulls[1]} before multipliers. A rare box pays x{boxMult.rare}, epic x{boxMult.epic}, legendary
+      x{boxMult.legendary}.
+    </li>
+    <li>
+      A symbol from a box is yours for good. You can also add it to the current run's reels, where it enters at +0.
+    </li>
+  </ul>
+
+  <h2 id="anvil">The anvil</h2>
+  <Hint text={hint('tut.anvil')} />
+  <p>
+    Every upgrade costs skulls and is a roll. A failed upgrade destroys the symbol. Each +1 grows every number on the symbol
+    by its rarity's forge gain, and any whole number grows by at least 1 per level. At +{r.anvil.effectArtFromPlus} the
+    symbol changes its art if it has an alternate one.
+  </p>
+  <div class="table-scroll">
+    <table class="specs">
+      <thead>
+        <tr>
+          <th scope="col">Upgrade</th>
+          <th scope="col" class="num">Success</th>
+          <th scope="col" class="num">Skulls</th>
+          <th scope="col" class="num">Reach from +0</th>
+          <th scope="col" class="num">Bonus if it burns</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          r.anvil.steps.map((s) => (
+            <tr>
+              <th scope="row">+{s.from} to +{s.to}</th>
+              <td class="num">{pct(s.success, 0)}</td>
+              <td class="num">{s.skulls}</td>
+              <td class="num">{pct(s.reachFromZero, 2)}</td>
+              <td class="num">{s.from > 0 ? `+${pct(s.burnPity, 0)}` : '-'}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+  <p>
+    "Reach from +0" is the chance of going from +0 to that level in one streak without gems. When a symbol burns, the next
+    upgrade gets the bonus in the last column. Bonuses add up to {pct(r.anvil.burnPityMax, 0)} and reset on the next
+    success.
+  </p>
+  <Hint text={hint('tut.burn_pity')} />
+
+  <h3 id="gems">Gems</h3>
+  <table class="specs">
+    <tbody>
+      {
+        (['green', 'blue', 'yellow'] as const).map((g) => (
+          <tr>
+            <th scope="row">
+              <span style="display: inline-flex; gap: 8px; align-items: center;">
+                <WikiIcon icon={gems[g].icon} alt={gems[g].name} max={18} />
+                {gems[g].name}
+              </span>
+            </th>
+            <td>{gems[g].text}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+  <p>
+    Bosses can also drop a yellow gem at heat {r.anvil.gemYellowHeatMinimum} or higher ({pct(r.anvil.gemYellowHeatBossChance, 0)} chance).
+  </p>
+
+  <h3 id="smelt">Smelting</h3>
+  <p>
+    Smelting turns a symbol into skulls: {r.rarity.order.map((k) => `${salvage[k]} for ${rarityName(k).toLowerCase()}`).join(', ')},
+    plus {r.anvil.salvagePerPlus} per forge level.
+  </p>
+
+  <h2 id="pacts">Cats, abilities and modifiers</h2>
+  <p>
+    <a href={paths.cats}>Cats</a> offer a pact for the whole run: a bonus with a price. Abilities are one move per fight,
+    such as holding a reel or making one wild. <a href={paths.modifiers}>Modifiers</a> are permanent upgrades bought with
+    skulls. <a href={`${paths.levels}#heat`}>Heat</a> replays cleared levels harder for bigger rewards.
+    <a href={paths.endless}>Endless mode</a> opens after the campaign, and <a href={paths.duels}>1v1 duels</a> are played
+    against a Steam friend.
+  </p>
+
+  <h2 id="demo">Demo and full game</h2>
+  <p>The free demo has the whole loop with a smaller ladder:</p>
+  <ul>
+    <li>Levels 1 to {r.demo.maxLevel} of {levels.length}.</li>
+    <li>{demoSymbols} of the {symbols.length} symbols can show up in the shop and in boxes.</li>
+    <li>{r.player.reels} reels. The anvil goes up to +{r.demo.maxPlus}.</li>
+    <li>
+      Modifiers up to level {r.demo.maxModifierLevel}. Full game only: {fullOnlyMods.join(', ')}.
+    </li>
+    <li>
+      One cat ({firstCat?.name}) and one ability ({firstAbility?.name}).
+    </li>
+    <li>Kill boxes pay green gems only. No heat, no endless mode, and challenges can be browsed but do not count.</li>
+    <li>What you earn in the demo carries over to the full game, with skulls capped at {r.meta.demoImportSkullCap}.</li>
+  </ul>
+
+  <p class="muted" style="margin-top: 36px;">
+    Numbers can change with game updates. This wiki is rebuilt from the game data when they do.
+  </p>
+</WikiPage>

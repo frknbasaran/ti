@@ -1,0 +1,480 @@
+[
+ {
+  "id": "level_1",
+  "slug": "level-1",
+  "index": 1,
+  "name": "The Foothills",
+  "fights": [
+   [
+    "skeleton"
+   ],
+   [
+    "slime"
+   ],
+   [
+    "skeleton_mage"
+   ],
+   [
+    "skeleton_archer"
+   ],
+   [
+    "skeleton_leader"
+   ]
+  ],
+  "boss": "skeleton_leader",
+  "bossHidden": false,
+  "hpMultiplier": 1.0,
+  "damageMultiplier": 1.0,
+  "goldMultiplier": 1.0,
+  "skullMultiplier": 1.0,
+  "boxChance": {
+   "common": 0.125,
+   "rare": 0.05,
+   "epic": 0.025,
+   "legendary": 0.0
+  },
+  "boxChanceTotal": 0.2,
+  "firstClearSymbols": [
+   "wood_staff",
+   "warriors_draught",
+   "second_wind"
+  ],
+  "firstClearGems": [],
+  "inDemo": true,
+  "bossExam": [
+   "MultiHit"
+  ]
+ },
+ {
+  "id": "level_2",
+  "slug": "level-2",
+  "index": 2,
+  "name": "Ashen Mines",
+  "fights": [
+   [
+    "skeleton_bomber"
+   ],
+   [
+    "armored_skeleton"
+   ],
+   [
+    "skeleton_archer_leader"
+   ],
+   [
+    "armored_skeleton_leader"
+   ],
+   [
+    "ogre"
+   ]
+  ],
+  "boss": "ogre",
+  "bossHidden": false,
+  "hpMultiplier": 1.0,
+  "damageMultiplier": 1.0,
+  "goldMultiplier": 1.2,
+  "skullMultiplier": 1.25,
+  "boxChance": {
+   "common": 0.14,
+   "rare": 0.06,
+   "epic": 0.03,
+   "legendary": 0.0
+  },
+  "boxChanceTotal": 0.23,
+  "firstClearSymbols": [
+   "poison_blade",
+   "torch",
+   "war_horn"
+  ],
+  "firstClearGems": [],
+  "inDemo": true,
+  "bossExam": [
+   "Stun"
+  ]
+ },
+ {
+  "id": "level_3",
+  "slug": "level-3",
+  "index": 3,
+  "name": "Bog Hollow",
+  "fights": [
+   [
+    "ice_skeleton_mage"
+   ],
+   [
+    "armored_ice_skeleton"
+   ],
+   [
+    "ice_skeleton_archer"
+   ],
+   [
+    "ice_skeleton_archer_leader"
+   ],
+   [
+    "ghost"
+   ]
+  ],
+  "boss": "ghost",
+  "bossHidden": false,
+  "hpMultiplier": 1.0,
+  "damageMultiplier": 1.0,
+  "goldMultiplier": 1.4,
+  "skullMultiplier": 1.5,
+  "boxChance": {
+   "common": 0.15,
+   "rare": 0.07,
+   "epic": 0.035,
+   "legendary": 0.005
+  },
+  "boxChanceTotal": 0.26,
+  "firstClearSymbols": [
+   "twin_fangs",
+   "spiked_bulwark",
+   "bandage"
+  ],
+  "firstClearGems": [],
+  "inDemo": true,
+  "bossExam": [
+   "Theft",
+   "SelfHeal"
+  ]
+ },
+ {
+  "id": "level_4",
+  "slug": "level-4",
+  "index": 4,
+  "name": "Broken Watch",
+  "fights": [
+   [
+    "armored_skeleton"
+   ],
+   [
+    "ice_skeleton_archer"
+   ],
+   [
+    "armored_ice_skeleton"
+   ],
+   [
+    "skeleton_bomber",
+    "skeleton_archer"
+   ],
+   [
+    "archer"
+   ]
+  ],
+  "boss": "archer",
+  "bossHidden": false,
+  "hpMultiplier": 1.25,
+  "damageMultiplier": 1.15,
+  "goldMultiplier": 1.6,
+  "skullMultiplier": 1.75,
+  "boxChance": {
+   "common": 0.16,
+   "rare": 0.075,
+   "epic": 0.04,
+   "legendary": 0.01
+  },
+  "boxChanceTotal": 0.285,
+  "firstClearSymbols": [
+   "venom_vial",
+   "thorn_mail",
+   "riposte"
+  ],
+  "firstClearGems": [],
+  "inDemo": false,
+  "bossExam": [
+   "Poison"
+  ]
+ },
+ {
+  "id": "level_5",
+  "slug": "level-5",
+  "index": 5,
+  "name": "Ember Caves",
+  "fights": [
+   [
+    "fire_skeleton"
+   ],
+   [
+    "fire_skeleton_archer"
+   ],
+   [
+    "fire_skeleton_mage"
+   ],
+   [
+    "armored_fire_skeleton"
+   ],
+   [
+    "warrior"
+   ]
+  ],
+  "boss": "warrior",
+  "bossHidden": false,
+  "hpMultiplier": 4.5,
+  "damageMultiplier": 1.8,
+  "goldMultiplier": 1.8,
+  "skullMultiplier": 2.0,
+  "boxChance": {
+   "common": 0.17,
+   "rare": 0.08,
+   "epic": 0.045,
+   "legendary": 0.015
+  },
+  "boxChanceTotal": 0.31,
+  "firstClearSymbols": [
+   "blood_spell",
+   "hammer",
+   "warding_sigil",
+   "ember_heart"
+  ],
+  "firstClearGems": [
+   "yellow"
+  ],
+  "inDemo": false,
+  "bossExam": [
+   "MultiHit"
+  ]
+ },
+ {
+  "id": "level_6",
+  "slug": "level-6",
+  "index": 6,
+  "name": "Ruined Bastion",
+  "fights": [
+   [
+    "fire_skeleton",
+    "fire_skeleton"
+   ],
+   [
+    "ice_skeleton_mage"
+   ],
+   [
+    "armored_fire_skeleton"
+   ],
+   [
+    "fire_skeleton_mage_leader"
+   ],
+   [
+    "witch"
+   ]
+  ],
+  "boss": "witch",
+  "bossHidden": false,
+  "hpMultiplier": 4.7,
+  "damageMultiplier": 2.05,
+  "goldMultiplier": 2.0,
+  "skullMultiplier": 2.25,
+  "boxChance": {
+   "common": 0.18,
+   "rare": 0.09,
+   "epic": 0.05,
+   "legendary": 0.02
+  },
+  "boxChanceTotal": 0.34,
+  "firstClearSymbols": [
+   "massive_blade",
+   "wizards_shield",
+   "ward",
+   "executioners_coin"
+  ],
+  "firstClearGems": [],
+  "inDemo": false,
+  "bossExam": [
+   "Burn",
+   "SelfHeal",
+   "MultiHit"
+  ]
+ },
+ {
+  "id": "level_7",
+  "slug": "level-7",
+  "index": 7,
+  "name": "Void Gate",
+  "fights": [
+   [
+    "armored_skeleton"
+   ],
+   [
+    "slime"
+   ],
+   [
+    "skeleton_mage_leader"
+   ],
+   [
+    "armored_fire_skeleton_leader"
+   ],
+   [
+    "skeleton_highmage"
+   ]
+  ],
+  "boss": "skeleton_highmage",
+  "bossHidden": false,
+  "hpMultiplier": 4.7,
+  "damageMultiplier": 2.05,
+  "goldMultiplier": 2.2,
+  "skullMultiplier": 2.5,
+  "boxChance": {
+   "common": 0.19,
+   "rare": 0.1,
+   "epic": 0.055,
+   "legendary": 0.025
+  },
+  "boxChanceTotal": 0.37,
+  "firstClearSymbols": [
+   "soul_ember",
+   "bastion",
+   "ancestral_axe",
+   "executioner"
+  ],
+  "firstClearGems": [],
+  "inDemo": false,
+  "bossExam": [
+   "Stun"
+  ]
+ },
+ {
+  "id": "level_8",
+  "slug": "level-8",
+  "index": 8,
+  "name": "Molten Depths",
+  "fights": [
+   [
+    "fire_skeleton_leader"
+   ],
+   [
+    "skeleton_mage_leader"
+   ],
+   [
+    "fire_skeleton_mage_leader"
+   ],
+   [
+    "fire_skeleton_archer_leader"
+   ],
+   [
+    "elden_mage"
+   ]
+  ],
+  "boss": "elden_mage",
+  "bossHidden": false,
+  "hpMultiplier": 5.6,
+  "damageMultiplier": 1.95,
+  "goldMultiplier": 2.4,
+  "skullMultiplier": 2.75,
+  "boxChance": {
+   "common": 0.2,
+   "rare": 0.11,
+   "epic": 0.06,
+   "legendary": 0.03
+  },
+  "boxChanceTotal": 0.4,
+  "firstClearSymbols": [
+   "duelists_edge",
+   "plague_fang",
+   "pike",
+   "iron_nail",
+   "armor_breaker",
+   "shard"
+  ],
+  "firstClearGems": [
+   "yellow"
+  ],
+  "inDemo": false,
+  "bossExam": [
+   "Stun",
+   "SelfHeal"
+  ]
+ },
+ {
+  "id": "level_9",
+  "slug": "level-9",
+  "index": 9,
+  "name": "Tyrant's Approach",
+  "fights": [
+   [
+    "skeleton_archer_leader"
+   ],
+   [
+    "armored_ice_skeleton_leader"
+   ],
+   [
+    "ice_skeleton_archer_leader"
+   ],
+   [
+    "armored_fire_skeleton_leader"
+   ],
+   [
+    "knight"
+   ]
+  ],
+  "boss": "knight",
+  "bossHidden": false,
+  "hpMultiplier": 2.25,
+  "damageMultiplier": 1.75,
+  "goldMultiplier": 2.6,
+  "skullMultiplier": 3.0,
+  "boxChance": {
+   "common": 0.21,
+   "rare": 0.12,
+   "epic": 0.07,
+   "legendary": 0.04
+  },
+  "boxChanceTotal": 0.44,
+  "firstClearSymbols": [
+   "tithe",
+   "chain_lightning",
+   "martyrs_vow",
+   "candle"
+  ],
+  "firstClearGems": [],
+  "inDemo": false,
+  "bossExam": [
+   "Armor"
+  ]
+ },
+ {
+  "id": "level_10",
+  "slug": "level-10",
+  "index": 10,
+  "name": "The Black Forge",
+  "fights": [
+   [
+    "fire_skeleton_leader"
+   ],
+   [
+    "skeleton_mage_leader"
+   ],
+   [
+    "armored_skeleton_leader"
+   ],
+   [
+    "ice_skeleton_mage_leader"
+   ],
+   [
+    null
+   ]
+  ],
+  "boss": null,
+  "bossHidden": true,
+  "hpMultiplier": 2.5,
+  "damageMultiplier": 1.8,
+  "goldMultiplier": 2.8,
+  "skullMultiplier": 3.25,
+  "boxChance": {
+   "common": 0.225,
+   "rare": 0.13,
+   "epic": 0.075,
+   "legendary": 0.05
+  },
+  "boxChanceTotal": 0.48,
+  "firstClearSymbols": [
+   "mirror_ward",
+   "pandemic",
+   "midas_hand"
+  ],
+  "firstClearGems": [
+   "yellow",
+   "yellow"
+  ],
+  "inDemo": false,
+  "bossExam": []
+ }
+]

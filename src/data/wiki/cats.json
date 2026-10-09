@@ -1,0 +1,141 @@
+[
+ {
+  "id": "pillow",
+  "slug": "pillow",
+  "name": "Pillow",
+  "flavor": "Sleeps on the hoard and purrs while it grows. Never minds who else comes sniffing.",
+  "cost": 150,
+  "ladderIndex": 0,
+  "inDemo": true,
+  "pact": {
+   "id": "pact_usurer",
+   "slug": "pact-usurer",
+   "name": "Usurer",
+   "text": "Your gold earns 5% interest after every fight. Every enemy steals gold.",
+   "icon": null,
+   "rule": "Usury",
+   "cost": 250,
+   "stats": [],
+   "skullMultiplier": 1.0,
+   "params": {
+    "interestRate": 0.05,
+    "interestCap": 0,
+    "stealChance": 0.15,
+    "stealPercent": 0.05,
+    "stealMinimum": 6
+   }
+  },
+  "icon": {
+   "src": "/wiki/icons/cats/pillow.png",
+   "width": 23,
+   "height": 17
+  },
+  "challenges": []
+ },
+ {
+  "id": "pati",
+  "slug": "pati",
+  "name": "Pati",
+  "flavor": "Never sits down. Between fights, neither will you.",
+  "cost": 200,
+  "ladderIndex": 1,
+  "inDemo": false,
+  "pact": {
+   "id": "pact_dead_man",
+   "slug": "pact-dead-man",
+   "name": "Dead Man Walking",
+   "text": "No healing between fights. Skull rewards are doubled.",
+   "icon": null,
+   "rule": "NoHeal",
+   "cost": 250,
+   "stats": [],
+   "skullMultiplier": 2.0,
+   "params": {}
+  },
+  "icon": {
+   "src": "/wiki/icons/cats/pati.png",
+   "width": 21,
+   "height": 17
+  },
+  "challenges": [
+   "ch_dead_mans_crown",
+   "ch_dead_mans_crown_2"
+  ]
+ },
+ {
+  "id": "biber",
+  "slug": "biber",
+  "name": "Biber",
+  "flavor": "All claws and no caution. Hits like a landslide and breaks like one.",
+  "cost": 250,
+  "ladderIndex": 2,
+  "inDemo": false,
+  "pact": {
+   "id": "pact_glass_cannon",
+   "slug": "pact-glass-cannon",
+   "name": "Glass Cannon",
+   "text": "Damage dealt +75%. Max health cut by 40%.",
+   "icon": null,
+   "rule": "None",
+   "cost": 200,
+   "stats": [
+    {
+     "stat": "PhysicalDamageDealt",
+     "op": "PercentAdd",
+     "value": 0.75
+    },
+    {
+     "stat": "MagicalDamageDealt",
+     "op": "PercentAdd",
+     "value": 0.75
+    },
+    {
+     "stat": "MaxHP",
+     "op": "PercentAdd",
+     "value": -0.4
+    }
+   ],
+   "skullMultiplier": 1.0,
+   "params": {}
+  },
+  "icon": {
+   "src": "/wiki/icons/cats/biber.png",
+   "width": 21,
+   "height": 17
+  },
+  "challenges": [
+   "ch_glass_crown",
+   "ch_glass_crown_2"
+  ]
+ },
+ {
+  "id": "severus",
+  "slug": "severus",
+  "name": "Severus",
+  "flavor": "Keeps the accounts in blood. Every spin is a small payment, and none are forgotten.",
+  "cost": 300,
+  "ladderIndex": 3,
+  "inDemo": false,
+  "pact": {
+   "id": "pact_blood",
+   "slug": "pact-blood",
+   "name": "Blood Pact",
+   "text": "Every spin burns 5 health. Every symbol acts as if it were +2.",
+   "icon": null,
+   "rule": "BloodPact",
+   "cost": 200,
+   "stats": [],
+   "skullMultiplier": 1.0,
+   "params": {
+    "hpPerSpin": 5,
+    "forgeBonus": 2
+   }
+  },
+  "icon": {
+   "src": "/wiki/icons/cats/severus.png",
+   "width": 21,
+   "height": 17
+  },
+  "challenges": []
+ }
+]

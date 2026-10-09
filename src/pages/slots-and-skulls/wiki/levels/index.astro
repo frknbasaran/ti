@@ -1,0 +1,110 @@
+---
+import WikiPage from '../../../../components/wiki/WikiPage.astro';
+import Meta from '../../../../components/wiki/Meta.astro';
+import {
+  enemyById, enemyLink, itemListLd, levels, paths, pct, rarityName, rules, symbolLink, threatName,
+} from '../../../../lib/wiki';
+
+const r = rules;
+const gemName: Record<string, string> = Object.fromEntries(
+  Object.entries(r.anvil.gems).map(([k, g]) => [k, g.name]),
+);
+const gate = r.rarity.unlockLevel as Record<string, number>;
+const tiers = r.rarity.order;
+const description = `All ${levels.length} levels of Slots & Skulls: every fight in order, the boss, enemy multipliers, kill box odds and the symbols and gems each level gives on its first clear.`;
+---
+
+<WikiPage
+  title="Levels | Slots & Skulls Wiki"
+  description={description}
+  path={paths.levels}
+  section="levels"
+  crumbs={[{ name: 'Levels', href: paths.levels }]}
+  jsonLd={[itemListLd('Slots & Skulls levels', levels.map((l) => ({ name: `Level ${l.index}: ${l.name}`, href: paths.level(l.index) })))]}
+>
+  <h1 class="page-title">Levels</h1>
+  <p class="lead">
+    The campaign has {levels.length} levels of {r.player.fightsPerLevel} fights each. The fights are fixed: every level
+    is the same script every time, and the last fight is its boss. Clearing a level rolls the run straight into the next
+    one with everything you carry.
+  </p>
+  <p>
+    The demo ends after level {r.demo.maxLevel}. New rarities start dropping as you unlock deeper levels: {tiers.filter((t) => gate[t]).map((t, i) => <>{i > 0 && ', '}{rarityName(t).toLowerCase()} from level {gate[t]}</>)}.
+  </p>
+
+  <nav aria-label="Levels">
+    <ul class="wiki-toc">
+      {levels.map((l) => <li><a href={`#level-${l.index}`}>{l.index}. {l.name}</a></li>)}
+    </ul>
+  </nav>
+
+  {
+    levels.map((l) => {
+      const boss = l.boss ? enemyById.get(l.boss) : undefined;
+      return (
+        <section class="wiki-entry" id={`level-${l.index}`} aria-labelledby={`level-${l.index}-title`}>
+          <h2 id={`level-${l.index}-title`}>Level {l.index}: {l.name}</h2>
+          <p class="wiki-sub">{l.inDemo ? 'In the demo' : 'Full game only'}</p>
+          <ol>
+            {l.fights.map((group, i) => (
+              <li>
+                {group.map((id, j) => (
+                  <>
+                    {j > 0 && ' and '}
+                    {id ? <span set:html={enemyLink(id)} /> : <span>The final boss, left out to avoid spoilers</span>}
+                  </>
+                ))}
+                {i === l.fights.length - 1 && !l.bossHidden && ' (boss)'}
+              </li>
+            ))}
+          </ol>
+          <Meta
+            rows={[
+              ['Enemies', `Health x${l.hpMultiplier}, damage x${l.damageMultiplier}`],
+              ['Rewards', `Gold x${l.goldMultiplier}, skulls x${l.skullMultiplier}`],
+              ['Kill boxes', `${pct(l.boxChanceTotal)} of kills: ${tiers.filter((t) => (l.boxChance as Record<string, number>)[t] > 0).map((t) => `${rarityName(t).toLowerCase()} ${pct((l.boxChance as Record<string, number>)[t])}`).join(', ')}`],
+              ['Boss tests', boss && l.bossExam.length ? l.bossExam.map((t) => threatName[t] ?? t).join(', ') : null],
+              ['First clear', [
+                ...l.firstClearSymbols.map(symbolLink),
+                ...[...new Set(l.firstClearGems)].map((g) => {
+                  const n = l.firstClearGems.filter((x) => x === g).length;
+                  return n > 1 ? `${n} x ${gemName[g] ?? g}` : gemName[g] ?? g;
+                }),
+              ].join(', ') || null],
+            ]}
+          />
+        </section>
+      );
+    })
+  }
+
+  <h2 id="heat">Heat</h2>
+  <p>
+    A cleared level can be replayed at a higher heat. Enemies get stronger and rewards get bigger. There are {r.heat.max} tiers,
+    and a tier opens once every level is cleared at the tier below. Heat is a full game feature.
+  </p>
+  <table class="specs">
+    <thead>
+      <tr>
+        <th scope="col">Heat</th>
+        <th scope="col" class="num">Enemy health and damage</th>
+        <th scope="col" class="num">Gold and skulls</th>
+      </tr>
+    </thead>
+    <tbody>
+      {r.heat.enemyMultiplier.map((m, i) => (
+        <tr>
+          <th scope="row">{i + 1}</th>
+          <td class="num">x{m}</td>
+          <td class="num">+{pct(r.heat.rewardBonus[i], 0)}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+  <ul>
+    <li>Each heat tier makes kill boxes {pct(r.heat.dropBonusPerHeat, 0)} more likely and shifts symbol drops toward higher rarities.</li>
+    <li>From heat 3, enemy attack effects (stun, burn, chill, poison, theft) trigger x{r.heat.riderChanceFromHeat3} as often.</li>
+    <li>From heat 4, enemy damage ramps x{r.heat.rampFromHeat4} as fast.</li>
+    <li>At heat 5, every enemy starts with armor equal to {pct(r.heat.armorAtHeat5, 0)} of its health.</li>
+  </ul>
+</WikiPage>

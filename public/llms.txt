@@ -9,6 +9,7 @@ Facts on this site come from the Steam store page and the studio's press kit. Co
 - [Slots & Skulls](https://trinainteractive.com/slots-and-skulls/): A turn-based roguelite built on a slot machine. Stop the machine to attack, win fights for chests, and upgrade what drops at the forge (if you dare). Or invite a friend and fight them. Steam lists the release date as November 4, 2026. A free demo is available on Steam.
 - [Slots & Skulls on Steam](https://store.steampowered.com/app/4428910/Slots__Skulls/): store page (app 4428910), Windows, macOS, Linux.
 - [Slots & Skulls Demo on Steam](https://store.steampowered.com/app/4988090/Slots__Skulls_Demo/): free demo.
+- [Slots & Skulls Wiki](https://trinainteractive.com/slots-and-skulls/wiki/): reference for every symbol, powerup, cat, modifier, enemy, boss, level and challenge, plus the rules (damage types, shields, crits, statuses, shop, kill boxes, anvil odds, duels). Generated from the game's own data.
 
 ## Key facts about Slots & Skulls
 

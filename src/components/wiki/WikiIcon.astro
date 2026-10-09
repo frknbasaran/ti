@@ -1,0 +1,34 @@
+---
+/**
+ * An entity's pixel art at a whole-pixel scale, or a neutral placeholder when the
+ * game uses third-party art for it (those files are not republished here).
+ */
+import type { WikiIcon } from '../../lib/wiki';
+
+interface Props {
+  icon: WikiIcon;
+  alt: string;
+  /** Largest edge in CSS pixels; the art is scaled by a whole factor to fit. */
+  max?: number;
+  eager?: boolean;
+}
+
+const { icon, alt, max = 64, eager = false } = Astro.props;
+const scale = icon ? Math.max(1, Math.floor(max / Math.max(icon.width, icon.height))) : 1;
+---
+
+{
+  icon ? (
+    <img
+      class="wiki-icon"
+      src={icon.src}
+      width={icon.width * scale}
+      height={icon.height * scale}
+      alt={alt}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+    />
+  ) : (
+    <span class="wiki-icon wiki-icon--none" aria-hidden="true" />
+  )
+}

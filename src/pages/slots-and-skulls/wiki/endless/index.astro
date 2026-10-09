@@ -1,0 +1,62 @@
+---
+import Hint from '../../../../components/wiki/Hint.astro';
+import WikiPage from '../../../../components/wiki/WikiPage.astro';
+import Entry from '../../../../components/wiki/Entry.astro';
+import Meta from '../../../../components/wiki/Meta.astro';
+import { challenges, itemListLd, paths, pct, reinforcements, rules, statName } from '../../../../lib/wiki';
+
+const e = rules.endless;
+const texts = rules.texts as Record<string, string>;
+const pool = e.poolSize;
+const endlessChallenges = challenges.challenges.filter((c) => c.endless);
+const description = `How Endless Mode works in Slots & Skulls: how enemies scale, gold per kill, duo fights, and all ${reinforcements.length} reinforcements sold in the endless shop.`;
+---
+
+<WikiPage
+  title="Endless mode and reinforcements | Slots & Skulls Wiki"
+  description={description}
+  path={paths.endless}
+  section="endless"
+  crumbs={[{ name: 'Endless mode', href: paths.endless }]}
+  jsonLd={[itemListLd('Slots & Skulls reinforcements', reinforcements.map((r) => ({ name: r.name, href: `${paths.endless}#${r.slug}` })))]}
+>
+  <h1 class="page-title">Endless mode</h1>
+  <p class="lead">
+    Endless mode opens after you beat the final boss of the campaign. It is a full game feature.
+  </p>
+  <Hint text={texts['tut.endless_mode'].split('\n').slice(1).join(' ')} />
+
+  <h2 id="rules">How it differs from the campaign</h2>
+  <ul>
+    <li>Fights are drawn from a pool of {pool} enemies instead of a fixed script. An enemy that fought in the last {e.freshnessWindow} fights does not come back right away.</li>
+    <li>Every enemy is resized to the fight number, so who you draw no longer decides how hard the fight is. From fight {e.calibrationStartFight} the game also starts sizing enemies against your own build, at full strength from fight {e.calibrationFullFight}.</li>
+    <li>From fight {e.duoStartFight}, two enemies can come at once: {pct(e.duoChance, 0)} at first, {pct(e.duoChanceRamp, 0)} more each fight, up to {pct(e.duoChanceMax, 0)}.</li>
+    <li>Each kill pays a flat {e.goldPerKill} gold, plus {e.goldPerKillGrowth} per fight.</li>
+    <li>Kill boxes use the last level's table at {pct(e.boxChanceScale, 0)} of its chance.</li>
+    <li>Skull rewards grow {pct(e.rewardGrowth, 0)} per fight, up to x{e.rewardCap}.</li>
+    <li>The shop sells {e.reinforcementOffers} reinforcement in place of one symbol.</li>
+  </ul>
+
+  <h2 id="reinforcements">Reinforcements</h2>
+  <p>
+    A reinforcement is a stat bought for the rest of the run. It does not touch your reels. They never run out: each copy
+    of the same reinforcement is worth {pct(e.reinforcementGrowth, 0)} of the base value more than the last, and costs {pct(e.reinforcementPriceGrowth, 0)} more. The price shown here is the price at fight 1; it grows with the mode's gold.
+  </p>
+  {
+    reinforcements.map((r) => (
+      <Entry id={r.slug} name={r.name} icon={r.icon} sub={`Reinforcement · ${statName(r.stat)}`}>
+        <p class="wiki-fx">{r.text}</p>
+        <Meta rows={[['Price', `${r.basePrice} gold at fight 1`]]} />
+      </Entry>
+    ))
+  }
+
+  <h2 id="challenges">Endless challenges</h2>
+  <ul>
+    {endlessChallenges.map((c) => (
+      <li>
+        <a href={`${paths.challenges}#${c.slug}`}>{c.name}</a>: {c.text}
+      </li>
+    ))}
+  </ul>
+</WikiPage>

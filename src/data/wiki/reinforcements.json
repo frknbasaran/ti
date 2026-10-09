@@ -1,0 +1,90 @@
+[
+ {
+  "id": "reinforce_hp",
+  "slug": "reinforce-hp",
+  "name": "Max HP",
+  "stat": "MaxHP",
+  "op": "Flat",
+  "value": 5.0,
+  "text": "+5 max HP for the rest of the run",
+  "basePrice": 20,
+  "icon": null
+ },
+ {
+  "id": "reinforce_shield",
+  "slug": "reinforce-shield",
+  "name": "Max Shield",
+  "stat": "MaxShield",
+  "op": "Flat",
+  "value": 5.0,
+  "text": "+5 max shield for the rest of the run",
+  "basePrice": 20,
+  "icon": null
+ },
+ {
+  "id": "reinforce_phys",
+  "slug": "reinforce-phys",
+  "name": "Physical Damage",
+  "stat": "PhysicalDamageDealt",
+  "op": "PercentAdd",
+  "value": 0.04,
+  "text": "+4% physical damage for the rest of the run",
+  "basePrice": 30,
+  "icon": null
+ },
+ {
+  "id": "reinforce_magic",
+  "slug": "reinforce-magic",
+  "name": "Magical Damage",
+  "stat": "MagicalDamageDealt",
+  "op": "PercentAdd",
+  "value": 0.04,
+  "text": "+4% magical damage for the rest of the run",
+  "basePrice": 30,
+  "icon": null
+ },
+ {
+  "id": "reinforce_crit",
+  "slug": "reinforce-crit",
+  "name": "Crit Chance",
+  "stat": "CritChance",
+  "op": "PercentAdd",
+  "value": 0.02,
+  "text": "+2% crit chance for the rest of the run",
+  "basePrice": 30,
+  "icon": null
+ },
+ {
+  "id": "reinforce_physres",
+  "slug": "reinforce-physres",
+  "name": "Physical Resist",
+  "stat": "PhysicalResist",
+  "op": "PercentAdd",
+  "value": 0.04,
+  "text": "+4% physical resist for the rest of the run",
+  "basePrice": 25,
+  "icon": null
+ },
+ {
+  "id": "reinforce_magicres",
+  "slug": "reinforce-magicres",
+  "name": "Magical Resist",
+  "stat": "MagicalResist",
+  "op": "PercentAdd",
+  "value": 0.04,
+  "text": "+4% magical resist for the rest of the run",
+  "basePrice": 25,
+  "icon": null
+ },
+ {
+  "id": "reinforce_regen",
+  "slug": "reinforce-regen",
+  "name": "HP Regen",
+  "stat": "HPRegenPerTurn",
+  "op": "PercentAdd",
+  "value": 0.01,
+  "text": "+1% HP regen for the rest of the run",
+  "basePrice": 25,
+  "icon": null
+ }
+]

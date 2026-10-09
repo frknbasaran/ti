@@ -1,0 +1,80 @@
+---
+/**
+ * Frame for every wiki page: breadcrumbs, the page itself, prev/next and the
+ * section list. English only, so no hreflang alternates.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { baseCrumbs, breadcrumbLd, sections, type Crumb, type SectionKey } from '../../lib/wiki';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  /** Crumbs after "Slots & Skulls / Wiki"; the last one is this page. */
+  crumbs?: Crumb[];
+  section?: SectionKey;
+  jsonLd?: Record<string, unknown>[];
+  prev?: { name: string; href: string };
+  next?: { name: string; href: string };
+}
+
+const { title, description, path, crumbs = [], section, jsonLd = [], prev, next } = Astro.props;
+const trail: Crumb[] = crumbs.length ? [...baseCrumbs, ...crumbs] : [baseCrumbs[0], { name: 'Wiki', href: path }];
+---
+
+<BaseLayout lang="en" title={title} description={description} path={path} jsonLd={[breadcrumbLd(trail), ...jsonLd]}>
+  <article class="section prose wiki">
+    <nav class="wiki-crumbs" aria-label="Breadcrumb">
+      <ol>
+        {
+          trail.map((c, i) =>
+            i === trail.length - 1 ? (
+              <li aria-current="page">{c.name}</li>
+            ) : (
+              <li>
+                <a href={c.href}>{c.name}</a>
+              </li>
+            ),
+          )
+        }
+      </ol>
+    </nav>
+
+    <slot />
+
+    {
+      (prev || next) && (
+        <nav class="wiki-pager" aria-label="Previous and next">
+          {prev ? (
+            <a href={prev.href} rel="prev">
+              <span class="k">Previous</span> {prev.name}
+            </a>
+          ) : (
+            <span />
+          )}
+          {next && (
+            <a href={next.href} rel="next">
+              <span class="k">Next</span> {next.name}
+            </a>
+          )}
+        </nav>
+      )
+    }
+
+    <nav class="wiki-sections" aria-label="Wiki sections">
+      <p class="label">Wiki</p>
+      <ul>
+        <li><a href={trail[1].href} aria-current={!section ? 'page' : undefined}>Overview and rules</a></li>
+        {
+          sections.map((s) => (
+            <li>
+              <a href={s.href} aria-current={section === s.key && crumbs.length === 1 ? 'page' : undefined}>
+                {s.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </article>
+</BaseLayout>

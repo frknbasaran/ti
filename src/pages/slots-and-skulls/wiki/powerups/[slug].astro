@@ -1,0 +1,115 @@
+---
+import WikiPage from '../../../../components/wiki/WikiPage.astro';
+import WikiIcon from '../../../../components/wiki/WikiIcon.astro';
+import Meta from '../../../../components/wiki/Meta.astro';
+import {
+  duels, enemyById, enemyLink, esc, join, paths, powerups, rules, statPhrase, threatName, type Powerup,
+} from '../../../../lib/wiki';
+
+export function getStaticPaths() {
+  return powerups.map((p, i) => ({
+    params: { slug: p.slug },
+    props: { p, prev: powerups[i - 1], next: powerups[i + 1] },
+  }));
+}
+
+interface Props {
+  p: Powerup;
+  prev?: Powerup;
+  next?: Powerup;
+}
+
+const { p, prev, next } = Astro.props;
+const path = paths.powerup(p.slug);
+const active = p.kind === 'active';
+const bosses = p.answersBosses.map((id) => enemyById.get(id)).filter((e) => e !== undefined);
+const exam = rules.exam as Record<string, string>;
+const threats = p.answers;
+const description = `${p.name} is ${active ? 'an active' : 'a passive'} powerup in Slots & Skulls. ${p.text} Shop price ${p.shopPrice} gold.`;
+---
+
+<WikiPage
+  title={`${p.name} (powerup) | Slots & Skulls Wiki`}
+  description={description}
+  path={path}
+  section="powerups"
+  crumbs={[{ name: 'Powerups', href: paths.powerups }, { name: p.name, href: path }]}
+  prev={prev && { name: prev.name, href: paths.powerup(prev.slug) }}
+  next={next && { name: next.name, href: paths.powerup(next.slug) }}
+>
+  <div class="wiki-entry-head">
+    <WikiIcon icon={p.icon} alt={p.name} eager />
+    <div>
+      <h1 class="page-title" style="margin-bottom: 4px;">{p.name}</h1>
+      <p class="wiki-sub">{active ? 'Active powerup' : 'Passive powerup'}</p>
+    </div>
+  </div>
+
+  <p class="lead wiki-fx">{p.text}</p>
+
+  <Meta
+    rows={[
+      ['Type', active ? 'Active. Fire it from the d-pad while the reels spin.' : 'Passive. Always on once bought.'],
+      ['Shop price', `${p.shopPrice} gold`],
+      ['Use cost', active ? `${p.goldCostPerUse} gold` : null],
+      ['Uses', active ? `${p.usesPerTurn} per turn` : null],
+      ['Cost growth', p.costGrowthPerUse ? `Each use raises the next one by ${Math.round(p.costGrowthPerUse * 100)}%. The price goes back to the base at the start of every fight.` : null],
+      ['Skill check', p.skillCheck ? 'Yes. The damage depends on the catch.' : null],
+      ['Stats', p.passive.length ? esc(p.passive.map((m) => statPhrase(m)).join(', ')) : null],
+      ['In a 1v1', p.duelDamageFraction ? `Damage is set to ${Math.round(p.duelDamageFraction * 100)}% of the rival's max health on a full catch` : null],
+    ]}
+  />
+
+  {
+    active && p.costGrowthPerUse > 0 && (
+      <section aria-labelledby="costs">
+        <h2 id="costs">Use cost by use</h2>
+        <p>Within one fight, before discounts such as the Efficient Fuses modifier. Every fight starts again from the first row.</p>
+        <table class="specs">
+          <thead>
+            <tr>
+              <th scope="col">Use</th>
+              <th scope="col" class="num">Gold</th>
+            </tr>
+          </thead>
+          <tbody>
+            {p.costByUse.map((c, i) => (
+              <tr>
+                <th scope="row">{i + 1}</th>
+                <td class="num">{c}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
+    )
+  }
+
+  {
+    threats.length > 0 && (
+      <section aria-labelledby="counters">
+        <h2 id="counters">What it counters</h2>
+        <p>
+          The game reads this powerup as an answer to {join(threats.map((t) => (threatName[t] ?? t).toLowerCase()))}. The
+          shop offers answers to the current level's boss more often.
+        </p>
+        {bosses.length > 0 && (
+          <>
+            <h3>Bosses it answers</h3>
+            <ul>
+              {bosses.map((e) => (
+                <li>
+                  <span set:html={enemyLink(e!.id)} />: {e!.exam.filter((t) => p.answers.includes(t)).map((t) => exam[t]).join(' ')}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </section>
+    )
+  }
+
+  <p class="muted" style="margin-top: 28px;">
+    In a 1v1 match a player can carry at most {duels.rules.maxActivePowerups} active and {duels.rules.maxPassivePowerups} passive powerups.
+  </p>
+</WikiPage>

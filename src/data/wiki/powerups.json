@@ -1,0 +1,504 @@
+[
+ {
+  "id": "explosion",
+  "slug": "explosion",
+  "name": "Explosion",
+  "kind": "active",
+  "text": "Up to 150 physical + 150 magical damage (skillcheck). 1 use per turn. Consumes 80 gold per use. In a 1v1: up to 15% of the rival's max health instead. Each use raises the next cost by 25%. The price resets every fight.",
+  "shopPrice": 100,
+  "usesPerTurn": 1,
+  "goldCostPerUse": 80,
+  "costGrowthPerUse": 0.25,
+  "costByUse": [
+   80,
+   100,
+   125,
+   156,
+   195
+  ],
+  "skillCheck": true,
+  "duelDamageFraction": 0.15,
+  "passive": [],
+  "answers": [
+   "Armor"
+  ],
+  "icon": null,
+  "answersBosses": [
+   "knight"
+  ]
+ },
+ {
+  "id": "iron_ration",
+  "slug": "iron-ration",
+  "name": "Iron Ration",
+  "kind": "passive",
+  "text": "+50 max shield. Always active.",
+  "shopPrice": 60,
+  "usesPerTurn": null,
+  "goldCostPerUse": null,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [
+   {
+    "stat": "MaxShield",
+    "op": "Flat",
+    "value": 50.0
+   }
+  ],
+  "answers": [],
+  "icon": null,
+  "answersBosses": []
+ },
+ {
+  "id": "loaded_dice",
+  "slug": "loaded-dice",
+  "name": "Loaded Dice",
+  "kind": "passive",
+  "text": "+10% critical hit chance. Always active.",
+  "shopPrice": 45,
+  "usesPerTurn": null,
+  "goldCostPerUse": null,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [
+   {
+    "stat": "CritChance",
+    "op": "Flat",
+    "value": 0.1
+   }
+  ],
+  "answers": [],
+  "icon": null,
+  "answersBosses": []
+ },
+ {
+  "id": "whetstone_kit",
+  "slug": "whetstone-kit",
+  "name": "Whetstone Kit",
+  "kind": "passive",
+  "text": "+25% physical damage. Always active.",
+  "shopPrice": 40,
+  "usesPerTurn": null,
+  "goldCostPerUse": null,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [
+   {
+    "stat": "PhysicalDamageDealt",
+    "op": "PercentAdd",
+    "value": 0.25
+   }
+  ],
+  "answers": [
+   "SelfHeal"
+  ],
+  "icon": null,
+  "answersBosses": [
+   "ghost",
+   "witch",
+   "elden_mage"
+  ]
+ },
+ {
+  "id": "grimoire_page",
+  "slug": "grimoire-page",
+  "name": "Grimoire Page",
+  "kind": "passive",
+  "text": "+25% magical damage. Always active.",
+  "shopPrice": 40,
+  "usesPerTurn": null,
+  "goldCostPerUse": null,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [
+   {
+    "stat": "MagicalDamageDealt",
+    "op": "PercentAdd",
+    "value": 0.25
+   }
+  ],
+  "answers": [
+   "SelfHeal"
+  ],
+  "icon": null,
+  "answersBosses": [
+   "ghost",
+   "witch",
+   "elden_mage"
+  ]
+ },
+ {
+  "id": "merchants_seal",
+  "slug": "merchants-seal",
+  "name": "Merchant's Seal",
+  "kind": "passive",
+  "text": "+50% gold gain. Always active.",
+  "shopPrice": 35,
+  "usesPerTurn": null,
+  "goldCostPerUse": null,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [
+   {
+    "stat": "GoldGain",
+    "op": "Flat",
+    "value": 0.5
+   }
+  ],
+  "answers": [],
+  "icon": null,
+  "answersBosses": []
+ },
+ {
+  "id": "war_drum",
+  "slug": "war-drum",
+  "name": "War Drum",
+  "kind": "active",
+  "text": "+100% physical and magical damage this turn. 1 use per turn. Consumes 30 gold per use.",
+  "shopPrice": 50,
+  "usesPerTurn": 1,
+  "goldCostPerUse": 30,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [
+   30,
+   30,
+   30,
+   30,
+   30
+  ],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [],
+  "answers": [
+   "SelfHeal"
+  ],
+  "icon": null,
+  "answersBosses": [
+   "ghost",
+   "witch",
+   "elden_mage"
+  ]
+ },
+ {
+  "id": "adrenaline",
+  "slug": "adrenaline",
+  "name": "Adrenaline",
+  "kind": "active",
+  "text": "Heal 50, gain 50 shield and +50% physical damage this turn. 1 use per turn. Consumes 20 gold per use.",
+  "shopPrice": 30,
+  "usesPerTurn": 1,
+  "goldCostPerUse": 20,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [
+   20,
+   20,
+   20,
+   20,
+   20
+  ],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [],
+  "answers": [
+   "Burn",
+   "SelfHeal",
+   "MultiHit",
+   "Phys"
+  ],
+  "icon": null,
+  "answersBosses": [
+   "skeleton_leader",
+   "ghost",
+   "warrior",
+   "witch",
+   "elden_mage"
+  ]
+ },
+ {
+  "id": "life_elixir",
+  "slug": "life-elixir",
+  "name": "Life Elixir",
+  "kind": "passive",
+  "text": "A hearty crimson brew that thickens the blood. +25% max health. Always active.",
+  "shopPrice": 60,
+  "usesPerTurn": null,
+  "goldCostPerUse": null,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [
+   {
+    "stat": "MaxHP",
+    "op": "PercentAdd",
+    "value": 0.25
+   }
+  ],
+  "answers": [],
+  "icon": null,
+  "answersBosses": []
+ },
+ {
+  "id": "healing_potion",
+  "slug": "healing-potion",
+  "name": "Healing Potion",
+  "kind": "active",
+  "text": "A swig of red restoration. Heals 15% of your max health. 1 use per turn. Consumes 20 gold per use.",
+  "shopPrice": 25,
+  "usesPerTurn": 1,
+  "goldCostPerUse": 20,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [
+   20,
+   20,
+   20,
+   20,
+   20
+  ],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [],
+  "answers": [
+   "Burn"
+  ],
+  "icon": null,
+  "answersBosses": [
+   "witch"
+  ]
+ },
+ {
+  "id": "steady_hands",
+  "slug": "steady-hands",
+  "name": "Steady Hands",
+  "kind": "passive",
+  "text": "Skillcheck perfect zone 25% wider. Always active.",
+  "shopPrice": 45,
+  "usesPerTurn": null,
+  "goldCostPerUse": null,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [
+   {
+    "stat": "SkillCheckZone",
+    "op": "Flat",
+    "value": 0.25
+   }
+  ],
+  "answers": [],
+  "icon": null,
+  "answersBosses": []
+ },
+ {
+  "id": "runed_bracers",
+  "slug": "runed-bracers",
+  "name": "Runed Bracers",
+  "kind": "passive",
+  "text": "+25% resistance to both damage types. Always active.",
+  "shopPrice": 40,
+  "usesPerTurn": null,
+  "goldCostPerUse": null,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [
+   {
+    "stat": "PhysicalResist",
+    "op": "Flat",
+    "value": 0.25
+   },
+   {
+    "stat": "MagicalResist",
+    "op": "Flat",
+    "value": 0.25
+   }
+  ],
+  "answers": [
+   "Magic",
+   "Phys"
+  ],
+  "icon": null,
+  "answersBosses": []
+ },
+ {
+  "id": "cure",
+  "slug": "cure",
+  "name": "Cure",
+  "kind": "active",
+  "text": "Cleanses burn, poison and chill. 1 use per turn. Consumes 30 gold per use. Each use raises the next cost by 25%. The price resets every fight.",
+  "shopPrice": 60,
+  "usesPerTurn": 1,
+  "goldCostPerUse": 30,
+  "costGrowthPerUse": 0.25,
+  "costByUse": [
+   30,
+   38,
+   47,
+   59,
+   73
+  ],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [],
+  "answers": [
+   "Poison",
+   "Chill",
+   "Burn"
+  ],
+  "icon": null,
+  "answersBosses": [
+   "archer",
+   "witch"
+  ]
+ },
+ {
+  "id": "grounding_rod",
+  "slug": "grounding-rod",
+  "name": "Grounding Rod",
+  "kind": "passive",
+  "text": "+25% magic resistance. Always active.",
+  "shopPrice": 45,
+  "usesPerTurn": null,
+  "goldCostPerUse": null,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [
+   {
+    "stat": "MagicalResist",
+    "op": "Flat",
+    "value": 0.25
+   }
+  ],
+  "answers": [
+   "Magic"
+  ],
+  "icon": null,
+  "answersBosses": []
+ },
+ {
+  "id": "troll_salve",
+  "slug": "troll-salve",
+  "name": "Troll Salve",
+  "kind": "passive",
+  "text": "Regenerate 2% max HP at the start of your turn. Always active.",
+  "shopPrice": 40,
+  "usesPerTurn": null,
+  "goldCostPerUse": null,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [
+   {
+    "stat": "HPRegenPerTurn",
+    "op": "Flat",
+    "value": 0.02
+   }
+  ],
+  "answers": [
+   "Burn"
+  ],
+  "icon": null,
+  "answersBosses": [
+   "witch"
+  ]
+ },
+ {
+  "id": "anchor_boots",
+  "slug": "anchor-boots",
+  "name": "Anchor Boots",
+  "kind": "passive",
+  "text": "25% stun resistance. Always active.",
+  "shopPrice": 45,
+  "usesPerTurn": null,
+  "goldCostPerUse": null,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [
+   {
+    "stat": "StunResist",
+    "op": "Flat",
+    "value": 0.25
+   }
+  ],
+  "answers": [
+   "Stun"
+  ],
+  "icon": null,
+  "answersBosses": [
+   "skeleton_highmage",
+   "ogre",
+   "elden_mage"
+  ]
+ },
+ {
+  "id": "frost_flask",
+  "slug": "frost-flask",
+  "name": "Frost Flask",
+  "kind": "active",
+  "text": "Thaws a frozen reel: cleanses chill. 1 use per turn. Consumes 10 gold per use.",
+  "shopPrice": 30,
+  "usesPerTurn": 1,
+  "goldCostPerUse": 10,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [
+   10,
+   10,
+   10,
+   10,
+   10
+  ],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [],
+  "answers": [
+   "Chill"
+  ],
+  "icon": null,
+  "answersBosses": []
+ },
+ {
+  "id": "golden_padlock",
+  "slug": "golden-padlock",
+  "name": "Golden Padlock",
+  "kind": "passive",
+  "text": "Thieves cannot steal your gold. Always active.",
+  "shopPrice": 35,
+  "usesPerTurn": null,
+  "goldCostPerUse": null,
+  "costGrowthPerUse": 0.0,
+  "costByUse": [],
+  "skillCheck": false,
+  "duelDamageFraction": 0.0,
+  "passive": [
+   {
+    "stat": "GoldTheftResist",
+    "op": "Flat",
+    "value": 1.0
+   }
+  ],
+  "answers": [
+   "Theft"
+  ],
+  "icon": null,
+  "answersBosses": [
+   "ghost"
+  ]
+ }
+]

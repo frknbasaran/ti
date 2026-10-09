@@ -1,0 +1,66 @@
+---
+import Hint from '../../../../components/wiki/Hint.astro';
+import WikiPage from '../../../../components/wiki/WikiPage.astro';
+import Entry from '../../../../components/wiki/Entry.astro';
+import Meta from '../../../../components/wiki/Meta.astro';
+import { itemListLd, modifiers, paths, rules, statPhrase, esc } from '../../../../lib/wiki';
+
+const passives = modifiers.passives;
+const texts = rules.texts as Record<string, string>;
+const description = `All ${passives.length} Slots & Skulls modifiers: permanent upgrades bought with skulls, with every level's effect, its skull cost and the demo limits.`;
+---
+
+<WikiPage
+  title="Modifiers | Slots & Skulls Wiki"
+  description={description}
+  path={paths.modifiers}
+  section="modifiers"
+  crumbs={[{ name: 'Modifiers', href: paths.modifiers }]}
+  jsonLd={[itemListLd('Slots & Skulls modifiers', passives.map((m) => ({ name: m.name, href: paths.modifier(m.slug) })))]}
+>
+  <h1 class="page-title">Modifiers</h1>
+  <p class="lead">
+    Modifiers are permanent upgrades bought with skulls in the main menu. They apply to every run after you buy them, and
+    most of them have several levels.
+  </p>
+  <Hint text={texts['tut.modifiers'].split('\n').slice(1).join(' ')} />
+  <p>
+    In the demo most modifiers stop at level {rules.demo.maxModifierLevel}, and the ones marked "full game only" cannot be
+    bought at all.
+  </p>
+
+  {
+    passives.map((m) => (
+      <Entry id={m.slug} name={m.name} icon={m.icon} sub={`Modifier · ${m.maxLevel} ${m.maxLevel === 1 ? 'level' : 'levels'}`}>
+        <p class="wiki-fx">{m.text}</p>
+        {m.statsPerLevel.length > 0 && (
+          <table class="specs">
+            <thead>
+              <tr>
+                <th scope="col">Level</th>
+                <th scope="col">Effect</th>
+                <th scope="col" class="num">Skulls</th>
+              </tr>
+            </thead>
+            <tbody>
+              {m.levelCosts.map((cost, i) => (
+                <tr>
+                  <th scope="row">{i + 1}</th>
+                  <td>{m.statsPerLevel.map((s) => statPhrase(s, i + 1)).join(', ')}</td>
+                  <td class="num">{cost}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+        <Meta
+          rows={[
+            ['Skull cost', m.statsPerLevel.length ? null : esc(m.levelCosts.map((c, i) => `level ${i + 1}: ${c}`).join(', '))],
+            ['All levels', `${m.totalCost} skulls`],
+            ['Demo', m.demoMaxLevel === 0 ? 'Full game only' : m.demoMaxLevel < m.maxLevel ? `Up to level ${m.demoMaxLevel}` : 'In the demo'],
+          ]}
+        />
+      </Entry>
+    ))
+  }
+</WikiPage>

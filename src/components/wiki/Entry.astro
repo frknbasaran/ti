@@ -1,0 +1,30 @@
+---
+/** One anchored entry on a category page: icon, name, a sub line, then the slot. */
+import WikiIcon from './WikiIcon.astro';
+import type { WikiIcon as Icon } from '../../lib/wiki';
+
+interface Props {
+  id: string;
+  name: string;
+  sub?: string;
+  icon?: Icon;
+  iconAlt?: string;
+  href?: string;
+  level?: 2 | 3;
+  search?: string;
+}
+
+const { id, name, sub, icon = null, iconAlt, href, level = 3, search } = Astro.props;
+const H = level === 2 ? 'h2' : 'h3';
+---
+
+<section class="wiki-entry" id={id} data-search={search}>
+  <div class="wiki-entry-head">
+    <WikiIcon icon={icon} alt={iconAlt ?? name} />
+    <div>
+      <H>{href ? <a href={href}>{name}</a> : name}</H>
+      {sub && <p class="wiki-sub">{sub}</p>}
+    </div>
+  </div>
+  <slot />
+</section>

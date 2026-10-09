@@ -1,0 +1,4760 @@
+[
+ {
+  "id": "rusty_dagger",
+  "slug": "rusty-dagger",
+  "name": "Rusty Dagger",
+  "group": "physical",
+  "rarity": "common",
+  "text": "15 physical damage.",
+  "textByPlus": [
+   "15 physical damage.",
+   "18 physical damage.",
+   "20 physical damage.",
+   "23 physical damage.",
+   "26 physical damage.",
+   "29 physical damage.",
+   "31 physical damage.",
+   "34 physical damage.",
+   "37 physical damage.",
+   "39 physical damage.",
+   "42 physical damage."
+  ],
+  "shopPrice": 15,
+  "starter": true,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 1.5,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_rusty_dagger",
+   "symbol": "rusty_dagger",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 15,
+   "text": "Deal 300 damage with Rusty Dagger."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "wooden_shield",
+  "slug": "wooden-shield",
+  "name": "Wooden Shield",
+  "group": "shield",
+  "rarity": "common",
+  "text": "15 shield.",
+  "textByPlus": [
+   "15 shield.",
+   "18 shield.",
+   "20 shield.",
+   "23 shield.",
+   "26 shield.",
+   "29 shield.",
+   "31 shield.",
+   "34 shield.",
+   "37 shield.",
+   "39 shield.",
+   "42 shield."
+  ],
+  "shopPrice": 15,
+  "starter": true,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 1.5,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "MultiHit",
+   "Phys"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_wooden_shield",
+   "symbol": "wooden_shield",
+   "metric": "shield",
+   "target": 300,
+   "rewardSkulls": 15,
+   "text": "Gain 300 shield with Wooden Shield."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "coin",
+  "slug": "coin",
+  "name": "Coin",
+  "group": "gold",
+  "rarity": "common",
+  "text": "Gain 2 gold.",
+  "textByPlus": [
+   "Gain 2 gold.",
+   "Gain 3 gold.",
+   "Gain 4 gold.",
+   "Gain 5 gold.",
+   "Gain 6 gold.",
+   "Gain 7 gold.",
+   "Gain 8 gold.",
+   "Gain 9 gold.",
+   "Gain 10 gold.",
+   "Gain 11 gold.",
+   "Gain 12 gold."
+  ],
+  "shopPrice": 10,
+  "starter": true,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 2.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_coin",
+   "symbol": "coin",
+   "metric": "gold",
+   "target": 40,
+   "rewardSkulls": 15,
+   "text": "Earn 40 gold with Coin."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "massive_blade",
+  "slug": "massive-blade",
+  "name": "Massive Blade",
+  "group": "physical",
+  "rarity": "rare",
+  "text": "Up to 50 physical damage (skillcheck).",
+  "textByPlus": [
+   "Up to 50 physical damage (skillcheck).",
+   "Up to 59 physical damage (skillcheck).",
+   "Up to 68 physical damage (skillcheck).",
+   "Up to 77 physical damage (skillcheck).",
+   "Up to 86 physical damage (skillcheck).",
+   "Up to 95 physical damage (skillcheck).",
+   "Up to 104 physical damage (skillcheck).",
+   "Up to 113 physical damage (skillcheck).",
+   "Up to 122 physical damage (skillcheck).",
+   "Up to 131 physical damage (skillcheck).",
+   "Up to 140 physical damage (skillcheck)."
+  ],
+  "shopPrice": 55,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 3.0,
+  "skillCheck": true,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [
+   6
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_massive_blade",
+   "symbol": "massive_blade",
+   "metric": "damage",
+   "target": 1000,
+   "rewardSkulls": 23,
+   "text": "Deal 1000 damage with Massive Blade."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "blood_spell",
+  "slug": "blood-spell",
+  "name": "Blood Spell",
+  "group": "magical",
+  "rarity": "rare",
+  "text": "18 magical damage. 10% life steal.",
+  "textByPlus": [
+   "18 magical damage. 10% life steal.",
+   "21 magical damage. 12% life steal.",
+   "24 magical damage. 14% life steal.",
+   "28 magical damage. 15% life steal.",
+   "31 magical damage. 17% life steal.",
+   "34 magical damage. 19% life steal.",
+   "37 magical damage. 21% life steal.",
+   "41 magical damage. 23% life steal.",
+   "44 magical damage. 24% life steal.",
+   "47 magical damage. 26% life steal.",
+   "50 magical damage. 28% life steal."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [
+   5
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_blood_spell",
+   "symbol": "blood_spell",
+   "metric": "damage",
+   "target": 350,
+   "rewardSkulls": 23,
+   "text": "Deal 350 damage with Blood Spell."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "ancestral_axe",
+  "slug": "ancestral-axe",
+  "name": "Ancestral Axe",
+  "group": "physical",
+  "rarity": "epic",
+  "text": "0.9 physical damage per current shield. Pierces armor. 15 physical damage.",
+  "textByPlus": [
+   "0.9 physical damage per current shield. Pierces armor. 15 physical damage.",
+   "1.07 physical damage per current shield. Pierces armor. 18 physical damage.",
+   "1.24 physical damage per current shield. Pierces armor. 21 physical damage.",
+   "1.41 physical damage per current shield. Pierces armor. 24 physical damage.",
+   "1.58 physical damage per current shield. Pierces armor. 26 physical damage.",
+   "1.76 physical damage per current shield. Pierces armor. 29 physical damage.",
+   "1.93 physical damage per current shield. Pierces armor. 32 physical damage.",
+   "2.1 physical damage per current shield. Pierces armor. 35 physical damage.",
+   "2.27 physical damage per current shield. Pierces armor. 38 physical damage.",
+   "2.44 physical damage per current shield. Pierces armor. 41 physical damage.",
+   "2.61 physical damage per current shield. Pierces armor. 44 physical damage."
+  ],
+  "shopPrice": 45,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [
+   7
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_ancestral_axe",
+   "symbol": "ancestral_axe",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 33,
+   "text": "Deal 100 damage with Ancestral Axe."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "hammer",
+  "slug": "hammer",
+  "name": "Hammer",
+  "group": "physical",
+  "rarity": "rare",
+  "text": "35 physical damage. 10% stun chance.",
+  "textByPlus": [
+   "35 physical damage. 10% stun chance.",
+   "41 physical damage. 12% stun chance.",
+   "48 physical damage. 14% stun chance.",
+   "54 physical damage. 15% stun chance.",
+   "60 physical damage. 17% stun chance.",
+   "67 physical damage. 19% stun chance.",
+   "73 physical damage. 21% stun chance.",
+   "79 physical damage. 23% stun chance.",
+   "85 physical damage. 24% stun chance.",
+   "92 physical damage. 26% stun chance.",
+   "98 physical damage. 28% stun chance."
+  ],
+  "shopPrice": 45,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [
+   5
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_hammer",
+   "symbol": "hammer",
+   "metric": "damage",
+   "target": 700,
+   "rewardSkulls": 23,
+   "text": "Deal 700 damage with Hammer."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "poison_blade",
+  "slug": "poison-blade",
+  "name": "Poison Blade",
+  "group": "rot",
+  "rarity": "epic",
+  "text": "20 physical damage. Applies 10 poison.",
+  "textByPlus": [
+   "20 physical damage. Applies 10 poison.",
+   "24 physical damage. Applies 12 poison.",
+   "28 physical damage. Applies 14 poison.",
+   "31 physical damage. Applies 16 poison.",
+   "35 physical damage. Applies 18 poison.",
+   "39 physical damage. Applies 20 poison.",
+   "43 physical damage. Applies 21 poison.",
+   "47 physical damage. Applies 23 poison.",
+   "50 physical damage. Applies 25 poison.",
+   "54 physical damage. Applies 27 poison.",
+   "58 physical damage. Applies 29 poison."
+  ],
+  "shopPrice": 55,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [
+   2
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_poison_blade",
+   "symbol": "poison_blade",
+   "metric": "damage",
+   "target": 400,
+   "rewardSkulls": 33,
+   "text": "Deal 400 damage with Poison Blade."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "warriors_draught",
+  "slug": "warriors-draught",
+  "name": "Warrior's Draught",
+  "group": "heal",
+  "rarity": "common",
+  "text": "Heal 20. +7.5% physical damage this turn.",
+  "textByPlus": [
+   "Heal 20. +7.5% physical damage this turn.",
+   "Heal 24. +8.9% physical damage this turn.",
+   "Heal 27. +10% physical damage this turn.",
+   "Heal 31. +12% physical damage this turn.",
+   "Heal 34. +13% physical damage this turn.",
+   "Heal 38. +14% physical damage this turn.",
+   "Heal 42. +16% physical damage this turn.",
+   "Heal 45. +17% physical damage this turn.",
+   "Heal 49. +18% physical damage this turn.",
+   "Heal 52. +20% physical damage this turn.",
+   "Heal 56. +21% physical damage this turn."
+  ],
+  "shopPrice": 20,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "Burn",
+   "SelfHeal"
+  ],
+  "firstClearOfLevels": [
+   1
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_warriors_draught",
+   "symbol": "warriors_draught",
+   "metric": "heal",
+   "target": 400,
+   "rewardSkulls": 15,
+   "text": "Heal 400 HP with Warrior's Draught."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "wizards_shield",
+  "slug": "wizards-shield",
+  "name": "Wizard's Shield",
+  "group": "shield",
+  "rarity": "epic",
+  "text": "25 shield. +10% magical resist this fight.",
+  "textByPlus": [
+   "25 shield. +10% magical resist this fight.",
+   "30 shield. +12% magical resist this fight.",
+   "35 shield. +14% magical resist this fight.",
+   "39 shield. +16% magical resist this fight.",
+   "44 shield. +18% magical resist this fight.",
+   "49 shield. +20% magical resist this fight.",
+   "53 shield. +21% magical resist this fight.",
+   "58 shield. +23% magical resist this fight.",
+   "63 shield. +25% magical resist this fight.",
+   "68 shield. +27% magical resist this fight.",
+   "73 shield. +29% magical resist this fight."
+  ],
+  "shopPrice": 55,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "MultiHit",
+   "Magic",
+   "Phys"
+  ],
+  "firstClearOfLevels": [
+   6
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_wizards_shield",
+   "symbol": "wizards_shield",
+   "metric": "shield",
+   "target": 500,
+   "rewardSkulls": 33,
+   "text": "Gain 500 shield with Wizard's Shield."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "wood_staff",
+  "slug": "wood-staff",
+  "name": "Wood Staff",
+  "group": "magical",
+  "rarity": "common",
+  "text": "15 magical damage. 6% stun chance.",
+  "textByPlus": [
+   "15 magical damage. 6% stun chance.",
+   "18 magical damage. 7% stun chance.",
+   "20 magical damage. 8% stun chance.",
+   "23 magical damage. 9% stun chance.",
+   "26 magical damage. 10% stun chance.",
+   "29 magical damage. 11% stun chance.",
+   "31 magical damage. 12% stun chance.",
+   "34 magical damage. 14% stun chance.",
+   "37 magical damage. 15% stun chance.",
+   "39 magical damage. 16% stun chance.",
+   "42 magical damage. 17% stun chance."
+  ],
+  "shopPrice": 15,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [
+   1
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_wood_staff",
+   "symbol": "wood_staff",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 15,
+   "text": "Deal 300 damage with Wood Staff."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "twin_fangs",
+  "slug": "twin-fangs",
+  "name": "Twin Fangs",
+  "group": "physical",
+  "rarity": "rare",
+  "text": "20 physical damage, 2 times.",
+  "textByPlus": [
+   "20 physical damage, 2 times.",
+   "24 physical damage, 2 times.",
+   "27 physical damage, 2 times.",
+   "31 physical damage, 2 times.",
+   "34 physical damage, 2 times.",
+   "38 physical damage, 2 times.",
+   "42 physical damage, 2 times.",
+   "45 physical damage, 2 times.",
+   "49 physical damage, 2 times.",
+   "52 physical damage, 2 times.",
+   "56 physical damage, 2 times."
+  ],
+  "shopPrice": 38,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [
+   3
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_twin_fangs",
+   "symbol": "twin_fangs",
+   "metric": "damage",
+   "target": 400,
+   "rewardSkulls": 23,
+   "text": "Deal 400 damage with Twin Fangs."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "spiked_bulwark",
+  "slug": "spiked-bulwark",
+  "name": "Spiked Bulwark",
+  "group": "physical",
+  "rarity": "rare",
+  "text": "13 shield. 13 physical damage.",
+  "textByPlus": [
+   "13 shield. 13 physical damage.",
+   "15 shield. 15 physical damage.",
+   "18 shield. 18 physical damage.",
+   "20 shield. 20 physical damage.",
+   "22 shield. 22 physical damage.",
+   "25 shield. 25 physical damage.",
+   "27 shield. 27 physical damage.",
+   "29 shield. 29 physical damage.",
+   "32 shield. 32 physical damage.",
+   "34 shield. 34 physical damage.",
+   "36 shield. 36 physical damage."
+  ],
+  "shopPrice": 40,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [
+   "MultiHit",
+   "Phys"
+  ],
+  "firstClearOfLevels": [
+   3
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_spiked_bulwark",
+   "symbol": "spiked_bulwark",
+   "metric": "shield",
+   "target": 260,
+   "rewardSkulls": 23,
+   "text": "Gain 260 shield with Spiked Bulwark."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "venom_vial",
+  "slug": "venom-vial",
+  "name": "Venom Vial",
+  "group": "rot",
+  "rarity": "rare",
+  "text": "Applies 15 poison.",
+  "textByPlus": [
+   "Applies 15 poison.",
+   "Applies 18 poison.",
+   "Applies 20 poison.",
+   "Applies 23 poison.",
+   "Applies 26 poison.",
+   "Applies 29 poison.",
+   "Applies 31 poison.",
+   "Applies 34 poison.",
+   "Applies 37 poison.",
+   "Applies 39 poison.",
+   "Applies 42 poison."
+  ],
+  "shopPrice": 25,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [
+   4
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_venom_vial",
+   "symbol": "venom_vial",
+   "metric": "status",
+   "target": 225,
+   "rewardSkulls": 23,
+   "text": "Apply 225 status stacks with Venom Vial."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "war_horn",
+  "slug": "war-horn",
+  "name": "War Horn",
+  "group": "support",
+  "rarity": "rare",
+  "text": "+15% physical damage this turn. +15% magical damage this turn.",
+  "textByPlus": [
+   "+15% physical damage this turn. +15% magical damage this turn.",
+   "+18% physical damage this turn. +18% magical damage this turn.",
+   "+20% physical damage this turn. +20% magical damage this turn.",
+   "+23% physical damage this turn. +23% magical damage this turn.",
+   "+26% physical damage this turn. +26% magical damage this turn.",
+   "+29% physical damage this turn. +29% magical damage this turn.",
+   "+31% physical damage this turn. +31% magical damage this turn.",
+   "+34% physical damage this turn. +34% magical damage this turn.",
+   "+37% physical damage this turn. +37% magical damage this turn.",
+   "+39% physical damage this turn. +39% magical damage this turn.",
+   "+42% physical damage this turn. +42% magical damage this turn."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 5.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "SelfHeal"
+  ],
+  "firstClearOfLevels": [
+   2
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_war_horn",
+   "symbol": "war_horn",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 23,
+   "text": "Land War Horn 30 times."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "soul_ember",
+  "slug": "soul-ember",
+  "name": "Soul Ember",
+  "group": "magical",
+  "rarity": "epic",
+  "text": "20 magical damage. +10% magical damage this fight.",
+  "textByPlus": [
+   "20 magical damage. +10% magical damage this fight.",
+   "24 magical damage. +12% magical damage this fight.",
+   "28 magical damage. +14% magical damage this fight.",
+   "31 magical damage. +16% magical damage this fight.",
+   "35 magical damage. +18% magical damage this fight.",
+   "39 magical damage. +20% magical damage this fight.",
+   "43 magical damage. +21% magical damage this fight.",
+   "47 magical damage. +23% magical damage this fight.",
+   "50 magical damage. +25% magical damage this fight.",
+   "54 magical damage. +27% magical damage this fight.",
+   "58 magical damage. +29% magical damage this fight."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "SelfHeal",
+   "Armor"
+  ],
+  "firstClearOfLevels": [
+   7
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_soul_ember",
+   "symbol": "soul_ember",
+   "metric": "damage",
+   "target": 400,
+   "rewardSkulls": 33,
+   "text": "Deal 400 damage with Soul Ember."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "plague_fang",
+  "slug": "plague-fang",
+  "name": "Plague Fang",
+  "group": "rot",
+  "rarity": "epic",
+  "text": "35 physical damage. Applies 15 poison.",
+  "textByPlus": [
+   "35 physical damage. Applies 15 poison.",
+   "42 physical damage. Applies 18 poison.",
+   "48 physical damage. Applies 21 poison.",
+   "55 physical damage. Applies 24 poison.",
+   "62 physical damage. Applies 26 poison.",
+   "68 physical damage. Applies 29 poison.",
+   "75 physical damage. Applies 32 poison.",
+   "82 physical damage. Applies 35 poison.",
+   "88 physical damage. Applies 38 poison.",
+   "95 physical damage. Applies 41 poison.",
+   "102 physical damage. Applies 44 poison."
+  ],
+  "shopPrice": 45,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [
+   8
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_plague_fang",
+   "symbol": "plague_fang",
+   "metric": "damage",
+   "target": 700,
+   "rewardSkulls": 33,
+   "text": "Deal 700 damage with Plague Fang."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "tithe",
+  "slug": "tithe",
+  "name": "Tithe",
+  "group": "gold",
+  "rarity": "epic",
+  "text": "Up to 15 gold (skillcheck).",
+  "textByPlus": [
+   "Up to 15 gold (skillcheck).",
+   "Up to 18 gold (skillcheck).",
+   "Up to 21 gold (skillcheck).",
+   "Up to 24 gold (skillcheck).",
+   "Up to 26 gold (skillcheck).",
+   "Up to 29 gold (skillcheck).",
+   "Up to 32 gold (skillcheck).",
+   "Up to 35 gold (skillcheck).",
+   "Up to 38 gold (skillcheck).",
+   "Up to 41 gold (skillcheck).",
+   "Up to 44 gold (skillcheck)."
+  ],
+  "shopPrice": 45,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 6.0,
+  "skillCheck": true,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [
+   9
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_tithe",
+   "symbol": "tithe",
+   "metric": "gold",
+   "target": 300,
+   "rewardSkulls": 33,
+   "text": "Earn 300 gold with Tithe."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "executioner",
+  "slug": "executioner",
+  "name": "Executioner",
+  "group": "physical",
+  "rarity": "legendary",
+  "text": "35 physical damage. x3 below 35% HP.",
+  "textByPlus": [
+   "35 physical damage. x3 below 35% HP.",
+   "42 physical damage. x3 below 35% HP.",
+   "49 physical damage. x3 below 35% HP.",
+   "56 physical damage. x3 below 35% HP.",
+   "63 physical damage. x3 below 35% HP.",
+   "70 physical damage. x3 below 35% HP.",
+   "77 physical damage. x3 below 35% HP.",
+   "84 physical damage. x3 below 35% HP.",
+   "91 physical damage. x3 below 35% HP.",
+   "98 physical damage. x3 below 35% HP.",
+   "105 physical damage. x3 below 35% HP."
+  ],
+  "shopPrice": null,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [
+   "SelfHeal"
+  ],
+  "firstClearOfLevels": [
+   7
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_executioner",
+   "symbol": "executioner",
+   "metric": "damage",
+   "target": 700,
+   "rewardSkulls": 45,
+   "text": "Deal 700 damage with Executioner."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "chain_lightning",
+  "slug": "chain-lightning",
+  "name": "Chain Lightning",
+  "group": "magical",
+  "rarity": "legendary",
+  "text": "15 magical damage, 3 times.",
+  "textByPlus": [
+   "15 magical damage, 3 times.",
+   "18 magical damage, 3 times.",
+   "21 magical damage, 3 times.",
+   "24 magical damage, 3 times.",
+   "27 magical damage, 3 times.",
+   "30 magical damage, 3 times.",
+   "33 magical damage, 3 times.",
+   "36 magical damage, 3 times.",
+   "39 magical damage, 3 times.",
+   "42 magical damage, 3 times.",
+   "45 magical damage, 3 times."
+  ],
+  "shopPrice": null,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [
+   9
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_chain_lightning",
+   "symbol": "chain_lightning",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 45,
+   "text": "Deal 300 damage with Chain Lightning."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "mirror_ward",
+  "slug": "mirror-ward",
+  "name": "Mirror Ward",
+  "group": "magical",
+  "rarity": "legendary",
+  "text": "30 shield. 1.25 magical damage per current shield.",
+  "textByPlus": [
+   "30 shield. 1.25 magical damage per current shield.",
+   "36 shield. 1.5 magical damage per current shield.",
+   "42 shield. 1.75 magical damage per current shield.",
+   "48 shield. 2 magical damage per current shield.",
+   "54 shield. 2.25 magical damage per current shield.",
+   "60 shield. 2.5 magical damage per current shield.",
+   "66 shield. 2.75 magical damage per current shield.",
+   "72 shield. 3 magical damage per current shield.",
+   "78 shield. 3.25 magical damage per current shield.",
+   "84 shield. 3.5 magical damage per current shield.",
+   "90 shield. 3.75 magical damage per current shield."
+  ],
+  "shopPrice": null,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 5.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor",
+   "MultiHit",
+   "Phys"
+  ],
+  "firstClearOfLevels": [
+   10
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_mirror_ward",
+   "symbol": "mirror_ward",
+   "metric": "shield",
+   "target": 600,
+   "rewardSkulls": 45,
+   "text": "Gain 600 shield with Mirror Ward."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "pandemic",
+  "slug": "pandemic",
+  "name": "Pandemic",
+  "group": "rot",
+  "rarity": "legendary",
+  "text": "Applies 12 poison (never decays).",
+  "textByPlus": [
+   "Applies 12 poison (never decays).",
+   "Applies 14 poison (never decays).",
+   "Applies 17 poison (never decays).",
+   "Applies 19 poison (never decays).",
+   "Applies 22 poison (never decays).",
+   "Applies 24 poison (never decays).",
+   "Applies 26 poison (never decays).",
+   "Applies 29 poison (never decays).",
+   "Applies 31 poison (never decays).",
+   "Applies 34 poison (never decays).",
+   "Applies 36 poison (never decays)."
+  ],
+  "shopPrice": null,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [
+   10
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_pandemic",
+   "symbol": "pandemic",
+   "metric": "status",
+   "target": 180,
+   "rewardSkulls": 45,
+   "text": "Apply 180 status stacks with Pandemic."
+  },
+  "rewardOf": [
+   "ch_forge_master"
+  ]
+ },
+ {
+  "id": "midas_hand",
+  "slug": "midas-hand",
+  "name": "Midas Hand",
+  "group": "gold",
+  "rarity": "legendary",
+  "text": "20 physical damage. 18% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+  "textByPlus": [
+   "20 physical damage. 18% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "24 physical damage. 22% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "28 physical damage. 25% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "32 physical damage. 29% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "36 physical damage. 32% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "40 physical damage. 36% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "44 physical damage. 40% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "48 physical damage. 43% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "52 physical damage. 47% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "56 physical damage. 50% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "60 physical damage. 54% of all damage dealt since your last spin becomes gold (max 100 gold per spin)."
+  ],
+  "shopPrice": null,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [
+   10
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_midas_hand",
+   "symbol": "midas_hand",
+   "metric": "damage",
+   "target": 400,
+   "rewardSkulls": 45,
+   "text": "Deal 400 damage with Midas Hand."
+  },
+  "rewardOf": [
+   "ch_immortal"
+  ]
+ },
+ {
+  "id": "lucky_doll",
+  "slug": "lucky-doll",
+  "name": "Lucky Doll",
+  "group": "gold",
+  "rarity": "rare",
+  "text": "Gain 10 gold.",
+  "textByPlus": [
+   "Gain 10 gold.",
+   "Gain 12 gold.",
+   "Gain 14 gold.",
+   "Gain 15 gold.",
+   "Gain 17 gold.",
+   "Gain 19 gold.",
+   "Gain 21 gold.",
+   "Gain 23 gold.",
+   "Gain 24 gold.",
+   "Gain 26 gold.",
+   "Gain 28 gold."
+  ],
+  "shopPrice": 30,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 5.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_lucky_doll",
+   "symbol": "lucky_doll",
+   "metric": "gold",
+   "target": 200,
+   "rewardSkulls": 23,
+   "text": "Earn 200 gold with Lucky Doll."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "ember_heart",
+  "slug": "ember-heart",
+  "name": "Ember Heart",
+  "group": "heal",
+  "rarity": "epic",
+  "text": "Heal 15. +1% HP regen this fight.",
+  "textByPlus": [
+   "Heal 15. +1% HP regen this fight.",
+   "Heal 18. +2% HP regen this fight.",
+   "Heal 21. +3% HP regen this fight.",
+   "Heal 24. +4% HP regen this fight.",
+   "Heal 26. +5% HP regen this fight.",
+   "Heal 29. +6% HP regen this fight.",
+   "Heal 32. +7% HP regen this fight.",
+   "Heal 35. +8% HP regen this fight.",
+   "Heal 38. +9% HP regen this fight.",
+   "Heal 41. +10% HP regen this fight.",
+   "Heal 44. +11% HP regen this fight."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "Burn"
+  ],
+  "firstClearOfLevels": [
+   5
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_ember_heart",
+   "symbol": "ember_heart",
+   "metric": "heal",
+   "target": 300,
+   "rewardSkulls": 33,
+   "text": "Heal 300 HP with Ember Heart."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "duelists_edge",
+  "slug": "duelists-edge",
+  "name": "Duelist's Edge",
+  "group": "physical",
+  "rarity": "epic",
+  "text": "45 physical damage. +2.5% crit chance this fight.",
+  "textByPlus": [
+   "45 physical damage. +2.5% crit chance this fight.",
+   "54 physical damage. +3% crit chance this fight.",
+   "62 physical damage. +3.4% crit chance this fight.",
+   "71 physical damage. +3.9% crit chance this fight.",
+   "79 physical damage. +4.4% crit chance this fight.",
+   "88 physical damage. +4.9% crit chance this fight.",
+   "96 physical damage. +5.3% crit chance this fight.",
+   "105 physical damage. +5.8% crit chance this fight.",
+   "113 physical damage. +6.3% crit chance this fight.",
+   "122 physical damage. +6.8% crit chance this fight.",
+   "131 physical damage. +7.3% crit chance this fight."
+  ],
+  "shopPrice": 55,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [
+   8
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_duelists_edge",
+   "symbol": "duelists_edge",
+   "metric": "damage",
+   "target": 900,
+   "rewardSkulls": 33,
+   "text": "Deal 900 damage with Duelist's Edge."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "bastion",
+  "slug": "bastion",
+  "name": "Bastion",
+  "group": "shield",
+  "rarity": "epic",
+  "text": "25 shield. +2.5% physical resist this fight.",
+  "textByPlus": [
+   "25 shield. +2.5% physical resist this fight.",
+   "30 shield. +3% physical resist this fight.",
+   "35 shield. +3.4% physical resist this fight.",
+   "39 shield. +3.9% physical resist this fight.",
+   "44 shield. +4.4% physical resist this fight.",
+   "49 shield. +4.9% physical resist this fight.",
+   "53 shield. +5.3% physical resist this fight.",
+   "58 shield. +5.8% physical resist this fight.",
+   "63 shield. +6.3% physical resist this fight.",
+   "68 shield. +6.8% physical resist this fight.",
+   "73 shield. +7.3% physical resist this fight."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "MultiHit",
+   "Phys"
+  ],
+  "firstClearOfLevels": [
+   7
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_bastion",
+   "symbol": "bastion",
+   "metric": "shield",
+   "target": 500,
+   "rewardSkulls": 33,
+   "text": "Gain 500 shield with Bastion."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "torch",
+  "slug": "torch",
+  "name": "Torch",
+  "group": "magical",
+  "rarity": "common",
+  "text": "20 magical damage. Cleanses chill.",
+  "textByPlus": [
+   "20 magical damage. Cleanses chill.",
+   "24 magical damage. Cleanses chill.",
+   "27 magical damage. Cleanses chill.",
+   "31 magical damage. Cleanses chill.",
+   "34 magical damage. Cleanses chill.",
+   "38 magical damage. Cleanses chill.",
+   "42 magical damage. Cleanses chill.",
+   "45 magical damage. Cleanses chill.",
+   "49 magical damage. Cleanses chill.",
+   "52 magical damage. Cleanses chill.",
+   "56 magical damage. Cleanses chill."
+  ],
+  "shopPrice": 15,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Chill",
+   "Armor"
+  ],
+  "firstClearOfLevels": [
+   2
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_torch",
+   "symbol": "torch",
+   "metric": "damage",
+   "target": 400,
+   "rewardSkulls": 15,
+   "text": "Deal 400 damage with Torch."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "pike",
+  "slug": "pike",
+  "name": "Pike",
+  "group": "physical",
+  "rarity": "rare",
+  "text": "22 physical damage, 2 times. Pierces armor.",
+  "textByPlus": [
+   "22 physical damage, 2 times. Pierces armor.",
+   "26 physical damage, 2 times. Pierces armor.",
+   "30 physical damage, 2 times. Pierces armor.",
+   "34 physical damage, 2 times. Pierces armor.",
+   "38 physical damage, 2 times. Pierces armor.",
+   "42 physical damage, 2 times. Pierces armor.",
+   "46 physical damage, 2 times. Pierces armor.",
+   "50 physical damage, 2 times. Pierces armor.",
+   "54 physical damage, 2 times. Pierces armor.",
+   "58 physical damage, 2 times. Pierces armor.",
+   "62 physical damage, 2 times. Pierces armor."
+  ],
+  "shopPrice": 100,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [
+   8
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_pike",
+   "symbol": "pike",
+   "metric": "damage",
+   "target": 450,
+   "rewardSkulls": 23,
+   "text": "Deal 450 damage with Pike."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "warding_sigil",
+  "slug": "warding-sigil",
+  "name": "Warding Sigil",
+  "group": "shield",
+  "rarity": "rare",
+  "text": "15 shield. +2.5% magical resist this fight.",
+  "textByPlus": [
+   "15 shield. +2.5% magical resist this fight.",
+   "18 shield. +3% magical resist this fight.",
+   "20 shield. +3.4% magical resist this fight.",
+   "23 shield. +3.9% magical resist this fight.",
+   "26 shield. +4.3% magical resist this fight.",
+   "29 shield. +4.8% magical resist this fight.",
+   "31 shield. +5.2% magical resist this fight.",
+   "34 shield. +5.7% magical resist this fight.",
+   "37 shield. +6.1% magical resist this fight.",
+   "39 shield. +6.5% magical resist this fight.",
+   "42 shield. +7% magical resist this fight."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "MultiHit",
+   "Magic",
+   "Phys"
+  ],
+  "firstClearOfLevels": [
+   5
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_warding_sigil",
+   "symbol": "warding_sigil",
+   "metric": "shield",
+   "target": 300,
+   "rewardSkulls": 23,
+   "text": "Gain 300 shield with Warding Sigil."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "executioners_coin",
+  "slug": "executioners-coin",
+  "name": "Executioner's Coin",
+  "group": "gold",
+  "rarity": "rare",
+  "text": "Gain 5 gold. x3 below 50% HP.",
+  "textByPlus": [
+   "Gain 5 gold. x3 below 50% HP.",
+   "Gain 6 gold. x3 below 50% HP.",
+   "Gain 7 gold. x3 below 50% HP.",
+   "Gain 8 gold. x3 below 50% HP.",
+   "Gain 9 gold. x3 below 50% HP.",
+   "Gain 10 gold. x3 below 50% HP.",
+   "Gain 11 gold. x3 below 50% HP.",
+   "Gain 12 gold. x3 below 50% HP.",
+   "Gain 13 gold. x3 below 50% HP.",
+   "Gain 14 gold. x3 below 50% HP.",
+   "Gain 15 gold. x3 below 50% HP."
+  ],
+  "shopPrice": 30,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 5.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [
+   6
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_executioners_coin",
+   "symbol": "executioners_coin",
+   "metric": "gold",
+   "target": 100,
+   "rewardSkulls": 23,
+   "text": "Earn 100 gold with Executioner's Coin."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "thorn_mail",
+  "slug": "thorn-mail",
+  "name": "Thorn Mail",
+  "group": "shield",
+  "rarity": "epic",
+  "text": "10 shield. +5% thorns this fight.",
+  "textByPlus": [
+   "10 shield. +5% thorns this fight.",
+   "12 shield. +6% thorns this fight.",
+   "14 shield. +7% thorns this fight.",
+   "16 shield. +8% thorns this fight.",
+   "18 shield. +9% thorns this fight.",
+   "20 shield. +10% thorns this fight.",
+   "21 shield. +11% thorns this fight.",
+   "23 shield. +12% thorns this fight.",
+   "25 shield. +13% thorns this fight.",
+   "27 shield. +14% thorns this fight.",
+   "29 shield. +15% thorns this fight."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": true,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "MultiHit",
+   "Phys"
+  ],
+  "firstClearOfLevels": [
+   4
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_thorn_mail",
+   "symbol": "thorn_mail",
+   "metric": "shield",
+   "target": 200,
+   "rewardSkulls": 33,
+   "text": "Gain 200 shield with Thorn Mail."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "erenion",
+  "slug": "erenion",
+  "name": "Erenion",
+  "group": "magical",
+  "rarity": "rare",
+  "text": "25 magical damage. 10% stun chance. Bounces once to the other enemy.",
+  "textByPlus": [
+   "25 magical damage. 10% stun chance. Bounces once to the other enemy.",
+   "30 magical damage. 12% stun chance. Bounces once to the other enemy.",
+   "34 magical damage. 14% stun chance. Bounces once to the other enemy.",
+   "38 magical damage. 15% stun chance. Bounces once to the other enemy.",
+   "43 magical damage. 17% stun chance. Bounces once to the other enemy.",
+   "48 magical damage. 19% stun chance. Bounces once to the other enemy.",
+   "52 magical damage. 21% stun chance. Bounces once to the other enemy.",
+   "57 magical damage. 23% stun chance. Bounces once to the other enemy.",
+   "61 magical damage. 24% stun chance. Bounces once to the other enemy.",
+   "66 magical damage. 26% stun chance. Bounces once to the other enemy.",
+   "70 magical damage. 28% stun chance. Bounces once to the other enemy."
+  ],
+  "shopPrice": 85,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_erenion",
+   "symbol": "erenion",
+   "metric": "damage",
+   "target": 500,
+   "rewardSkulls": 23,
+   "text": "Deal 500 damage with Erenion."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "war_banner",
+  "slug": "war-banner",
+  "name": "War Banner",
+  "group": "physical",
+  "rarity": "epic",
+  "text": "20 physical damage per physical symbol landed this spin (itself included).",
+  "textByPlus": [
+   "20 physical damage per physical symbol landed this spin (itself included).",
+   "24 physical damage per physical symbol landed this spin (itself included).",
+   "28 physical damage per physical symbol landed this spin (itself included).",
+   "31 physical damage per physical symbol landed this spin (itself included).",
+   "35 physical damage per physical symbol landed this spin (itself included).",
+   "39 physical damage per physical symbol landed this spin (itself included).",
+   "43 physical damage per physical symbol landed this spin (itself included).",
+   "47 physical damage per physical symbol landed this spin (itself included).",
+   "50 physical damage per physical symbol landed this spin (itself included).",
+   "54 physical damage per physical symbol landed this spin (itself included).",
+   "58 physical damage per physical symbol landed this spin (itself included)."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_war_banner",
+   "symbol": "war_banner",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 33,
+   "text": "Deal 100 damage with War Banner."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "fester",
+  "slug": "fester",
+  "name": "Fester",
+  "group": "magical",
+  "rarity": "epic",
+  "text": "0.8 magical damage per poison stack on the target.",
+  "textByPlus": [
+   "0.8 magical damage per poison stack on the target.",
+   "0.95 magical damage per poison stack on the target.",
+   "1.1 magical damage per poison stack on the target.",
+   "1.26 magical damage per poison stack on the target.",
+   "1.41 magical damage per poison stack on the target.",
+   "1.56 magical damage per poison stack on the target.",
+   "1.71 magical damage per poison stack on the target.",
+   "1.86 magical damage per poison stack on the target.",
+   "2.02 magical damage per poison stack on the target.",
+   "2.17 magical damage per poison stack on the target.",
+   "2.32 magical damage per poison stack on the target."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_fester",
+   "symbol": "fester",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 33,
+   "text": "Deal 100 damage with Fester."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "sellsword",
+  "slug": "sellsword",
+  "name": "Sellsword",
+  "group": "magical",
+  "rarity": "epic",
+  "text": "Magical damage equal to 15% of your gold (counts up to 300 gold).",
+  "textByPlus": [
+   "Magical damage equal to 15% of your gold (counts up to 300 gold).",
+   "Magical damage equal to 18% of your gold (counts up to 300 gold).",
+   "Magical damage equal to 21% of your gold (counts up to 300 gold).",
+   "Magical damage equal to 24% of your gold (counts up to 300 gold).",
+   "Magical damage equal to 26% of your gold (counts up to 300 gold).",
+   "Magical damage equal to 29% of your gold (counts up to 300 gold).",
+   "Magical damage equal to 32% of your gold (counts up to 300 gold).",
+   "Magical damage equal to 35% of your gold (counts up to 300 gold).",
+   "Magical damage equal to 38% of your gold (counts up to 300 gold).",
+   "Magical damage equal to 41% of your gold (counts up to 300 gold).",
+   "Magical damage equal to 44% of your gold (counts up to 300 gold)."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_sellsword",
+   "symbol": "sellsword",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 33,
+   "text": "Deal 100 damage with Sellsword."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "shard",
+  "slug": "shard",
+  "name": "Shard",
+  "group": "physical",
+  "rarity": "epic",
+  "text": "35 physical damage. Pierces armor.",
+  "textByPlus": [
+   "35 physical damage. Pierces armor.",
+   "42 physical damage. Pierces armor.",
+   "48 physical damage. Pierces armor.",
+   "55 physical damage. Pierces armor.",
+   "62 physical damage. Pierces armor.",
+   "68 physical damage. Pierces armor.",
+   "75 physical damage. Pierces armor.",
+   "82 physical damage. Pierces armor.",
+   "88 physical damage. Pierces armor.",
+   "95 physical damage. Pierces armor.",
+   "102 physical damage. Pierces armor."
+  ],
+  "shopPrice": 90,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [
+   8
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_shard",
+   "symbol": "shard",
+   "metric": "damage",
+   "target": 700,
+   "rewardSkulls": 33,
+   "text": "Deal 700 damage with Shard."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "apprentice_notes",
+  "slug": "apprentice-notes",
+  "name": "Apprentice's Notes",
+  "group": "magical",
+  "rarity": "rare",
+  "text": "24 magical damage. +7.5% magical damage this fight.",
+  "textByPlus": [
+   "24 magical damage. +7.5% magical damage this fight.",
+   "28 magical damage. +8.9% magical damage this fight.",
+   "33 magical damage. +10% magical damage this fight.",
+   "37 magical damage. +12% magical damage this fight.",
+   "41 magical damage. +13% magical damage this fight.",
+   "46 magical damage. +14% magical damage this fight.",
+   "50 magical damage. +16% magical damage this fight.",
+   "54 magical damage. +17% magical damage this fight.",
+   "59 magical damage. +18% magical damage this fight.",
+   "63 magical damage. +20% magical damage this fight.",
+   "67 magical damage. +21% magical damage this fight."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "SelfHeal",
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_apprentice_notes",
+   "symbol": "apprentice_notes",
+   "metric": "damage",
+   "target": 500,
+   "rewardSkulls": 23,
+   "text": "Deal 500 damage with Apprentice's Notes."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "stone_skin",
+  "slug": "stone-skin",
+  "name": "Stone Skin",
+  "group": "shield",
+  "rarity": "epic",
+  "text": "20 shield. +3% physical resist this fight.",
+  "textByPlus": [
+   "20 shield. +3% physical resist this fight.",
+   "24 shield. +4% physical resist this fight.",
+   "28 shield. +5% physical resist this fight.",
+   "31 shield. +6% physical resist this fight.",
+   "35 shield. +7% physical resist this fight.",
+   "39 shield. +8% physical resist this fight.",
+   "43 shield. +9% physical resist this fight.",
+   "47 shield. +10% physical resist this fight.",
+   "50 shield. +11% physical resist this fight.",
+   "54 shield. +12% physical resist this fight.",
+   "58 shield. +13% physical resist this fight."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "MultiHit",
+   "Phys"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_stone_skin",
+   "symbol": "stone_skin",
+   "metric": "shield",
+   "target": 400,
+   "rewardSkulls": 33,
+   "text": "Gain 400 shield with Stone Skin."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "gilded_ledger",
+  "slug": "gilded-ledger",
+  "name": "Gilded Ledger",
+  "group": "gold",
+  "rarity": "epic",
+  "text": "Gain 10 gold. +2.5% gold gain for the rest of the run (stacks up to 25 times).",
+  "textByPlus": [
+   "Gain 10 gold. +2.5% gold gain for the rest of the run (stacks up to 25 times).",
+   "Gain 12 gold. +3% gold gain for the rest of the run (stacks up to 25 times).",
+   "Gain 14 gold. +3.4% gold gain for the rest of the run (stacks up to 25 times).",
+   "Gain 16 gold. +3.9% gold gain for the rest of the run (stacks up to 25 times).",
+   "Gain 18 gold. +4.4% gold gain for the rest of the run (stacks up to 25 times).",
+   "Gain 20 gold. +4.9% gold gain for the rest of the run (stacks up to 25 times).",
+   "Gain 21 gold. +5.3% gold gain for the rest of the run (stacks up to 25 times).",
+   "Gain 23 gold. +5.8% gold gain for the rest of the run (stacks up to 25 times).",
+   "Gain 25 gold. +6.3% gold gain for the rest of the run (stacks up to 25 times).",
+   "Gain 27 gold. +6.8% gold gain for the rest of the run (stacks up to 25 times).",
+   "Gain 29 gold. +7.3% gold gain for the rest of the run (stacks up to 25 times)."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 5.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_gilded_ledger",
+   "symbol": "gilded_ledger",
+   "metric": "gold",
+   "target": 200,
+   "rewardSkulls": 33,
+   "text": "Earn 200 gold with Gilded Ledger."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "martyrs_vow",
+  "slug": "martyrs-vow",
+  "name": "Martyr's Vow",
+  "group": "heal",
+  "rarity": "epic",
+  "text": "Heal 20. +2.5% HP regen this fight.",
+  "textByPlus": [
+   "Heal 20. +2.5% HP regen this fight.",
+   "Heal 24. +3% HP regen this fight.",
+   "Heal 28. +3.4% HP regen this fight.",
+   "Heal 31. +3.9% HP regen this fight.",
+   "Heal 35. +4.4% HP regen this fight.",
+   "Heal 39. +4.9% HP regen this fight.",
+   "Heal 43. +5.3% HP regen this fight.",
+   "Heal 47. +5.8% HP regen this fight.",
+   "Heal 50. +6.3% HP regen this fight.",
+   "Heal 54. +6.8% HP regen this fight.",
+   "Heal 58. +7.3% HP regen this fight."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "Burn"
+  ],
+  "firstClearOfLevels": [
+   9
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_martyrs_vow",
+   "symbol": "martyrs_vow",
+   "metric": "heal",
+   "target": 400,
+   "rewardSkulls": 33,
+   "text": "Heal 400 HP with Martyr's Vow."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "treasure_map",
+  "slug": "treasure-map",
+  "name": "Treasure Map",
+  "group": "gold",
+  "rarity": "rare",
+  "text": "Gain 5 gold. -5% shop prices for the rest of the run (stacks up to 25 times).",
+  "textByPlus": [
+   "Gain 5 gold. -5% shop prices for the rest of the run (stacks up to 25 times).",
+   "Gain 6 gold. -6% shop prices for the rest of the run (stacks up to 25 times).",
+   "Gain 7 gold. -7% shop prices for the rest of the run (stacks up to 25 times).",
+   "Gain 8 gold. -8% shop prices for the rest of the run (stacks up to 25 times).",
+   "Gain 9 gold. -9% shop prices for the rest of the run (stacks up to 25 times).",
+   "Gain 10 gold. -10% shop prices for the rest of the run (stacks up to 25 times).",
+   "Gain 11 gold. -11% shop prices for the rest of the run (stacks up to 25 times).",
+   "Gain 12 gold. -12% shop prices for the rest of the run (stacks up to 25 times).",
+   "Gain 13 gold. -13% shop prices for the rest of the run (stacks up to 25 times).",
+   "Gain 14 gold. -14% shop prices for the rest of the run (stacks up to 25 times).",
+   "Gain 15 gold. -15% shop prices for the rest of the run (stacks up to 25 times)."
+  ],
+  "shopPrice": 40,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_treasure_map",
+   "symbol": "treasure_map",
+   "metric": "gold",
+   "target": 100,
+   "rewardSkulls": 23,
+   "text": "Earn 100 gold with Treasure Map."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "focus_lens",
+  "slug": "focus-lens",
+  "name": "Focus Lens",
+  "group": "magical",
+  "rarity": "epic",
+  "text": "Up to 50 magical damage (skillcheck).",
+  "textByPlus": [
+   "Up to 50 magical damage (skillcheck).",
+   "Up to 60 magical damage (skillcheck).",
+   "Up to 69 magical damage (skillcheck).",
+   "Up to 78 magical damage (skillcheck).",
+   "Up to 88 magical damage (skillcheck).",
+   "Up to 98 magical damage (skillcheck).",
+   "Up to 107 magical damage (skillcheck).",
+   "Up to 117 magical damage (skillcheck).",
+   "Up to 126 magical damage (skillcheck).",
+   "Up to 136 magical damage (skillcheck).",
+   "Up to 145 magical damage (skillcheck)."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": true,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_focus_lens",
+   "symbol": "focus_lens",
+   "metric": "damage",
+   "target": 1000,
+   "rewardSkulls": 33,
+   "text": "Deal 1000 damage with Focus Lens."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "parry",
+  "slug": "parry",
+  "name": "Parry",
+  "group": "shield",
+  "rarity": "rare",
+  "text": "Up to 50 shield (skillcheck).",
+  "textByPlus": [
+   "Up to 50 shield (skillcheck).",
+   "Up to 59 shield (skillcheck).",
+   "Up to 68 shield (skillcheck).",
+   "Up to 77 shield (skillcheck).",
+   "Up to 86 shield (skillcheck).",
+   "Up to 95 shield (skillcheck).",
+   "Up to 104 shield (skillcheck).",
+   "Up to 113 shield (skillcheck).",
+   "Up to 122 shield (skillcheck).",
+   "Up to 131 shield (skillcheck).",
+   "Up to 140 shield (skillcheck)."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": true,
+  "damageTypes": [],
+  "answers": [
+   "MultiHit",
+   "Phys"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_parry",
+   "symbol": "parry",
+   "metric": "shield",
+   "target": 1000,
+   "rewardSkulls": 23,
+   "text": "Gain 1000 shield with Parry."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "field_dressing",
+  "slug": "field-dressing",
+  "name": "Field Dressing",
+  "group": "heal",
+  "rarity": "epic",
+  "text": "Heals up to 50 (skillcheck).",
+  "textByPlus": [
+   "Heals up to 50 (skillcheck).",
+   "Heals up to 60 (skillcheck).",
+   "Heals up to 69 (skillcheck).",
+   "Heals up to 78 (skillcheck).",
+   "Heals up to 88 (skillcheck).",
+   "Heals up to 98 (skillcheck).",
+   "Heals up to 107 (skillcheck).",
+   "Heals up to 117 (skillcheck).",
+   "Heals up to 126 (skillcheck).",
+   "Heals up to 136 (skillcheck).",
+   "Heals up to 145 (skillcheck)."
+  ],
+  "shopPrice": 20,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": true,
+  "damageTypes": [],
+  "answers": [
+   "Burn"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_field_dressing",
+   "symbol": "field_dressing",
+   "metric": "heal",
+   "target": 1000,
+   "rewardSkulls": 33,
+   "text": "Heal 1000 HP with Field Dressing."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "hail_of_blades",
+  "slug": "hail-of-blades",
+  "name": "Hail of Blades",
+  "group": "physical",
+  "rarity": "epic",
+  "text": "10 physical damage, 4 times.",
+  "textByPlus": [
+   "10 physical damage, 4 times.",
+   "12 physical damage, 4 times.",
+   "14 physical damage, 4 times.",
+   "16 physical damage, 4 times.",
+   "18 physical damage, 4 times.",
+   "20 physical damage, 4 times.",
+   "21 physical damage, 4 times.",
+   "23 physical damage, 4 times.",
+   "25 physical damage, 4 times.",
+   "27 physical damage, 4 times.",
+   "29 physical damage, 4 times."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_hail_of_blades",
+   "symbol": "hail_of_blades",
+   "metric": "damage",
+   "target": 200,
+   "rewardSkulls": 33,
+   "text": "Deal 200 damage with Hail of Blades."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "arc_bolt",
+  "slug": "arc-bolt",
+  "name": "Arc Bolt",
+  "group": "magical",
+  "rarity": "rare",
+  "text": "10 magical damage, 2 times. Bounces once to the other enemy.",
+  "textByPlus": [
+   "10 magical damage, 2 times. Bounces once to the other enemy.",
+   "12 magical damage, 2 times. Bounces once to the other enemy.",
+   "14 magical damage, 2 times. Bounces once to the other enemy.",
+   "15 magical damage, 2 times. Bounces once to the other enemy.",
+   "17 magical damage, 2 times. Bounces once to the other enemy.",
+   "19 magical damage, 2 times. Bounces once to the other enemy.",
+   "21 magical damage, 2 times. Bounces once to the other enemy.",
+   "23 magical damage, 2 times. Bounces once to the other enemy.",
+   "24 magical damage, 2 times. Bounces once to the other enemy.",
+   "26 magical damage, 2 times. Bounces once to the other enemy.",
+   "28 magical damage, 2 times. Bounces once to the other enemy."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_arc_bolt",
+   "symbol": "arc_bolt",
+   "metric": "damage",
+   "target": 200,
+   "rewardSkulls": 23,
+   "text": "Deal 200 damage with Arc Bolt."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "bandit_knife",
+  "slug": "bandit-knife",
+  "name": "Bandit's Knife",
+  "group": "physical",
+  "rarity": "rare",
+  "text": "20 physical damage. 15% life steal.",
+  "textByPlus": [
+   "20 physical damage. 15% life steal.",
+   "24 physical damage. 18% life steal.",
+   "27 physical damage. 20% life steal.",
+   "31 physical damage. 23% life steal.",
+   "34 physical damage. 26% life steal.",
+   "38 physical damage. 29% life steal.",
+   "42 physical damage. 31% life steal.",
+   "45 physical damage. 34% life steal.",
+   "49 physical damage. 37% life steal.",
+   "52 physical damage. 39% life steal.",
+   "56 physical damage. 42% life steal."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_bandit_knife",
+   "symbol": "bandit_knife",
+   "metric": "damage",
+   "target": 400,
+   "rewardSkulls": 23,
+   "text": "Deal 400 damage with Bandit's Knife."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "serpent_kiss",
+  "slug": "serpent-kiss",
+  "name": "Serpent's Kiss",
+  "group": "rot",
+  "rarity": "rare",
+  "text": "12 magical damage. 25% life steal. Applies 10 poison.",
+  "textByPlus": [
+   "12 magical damage. 25% life steal. Applies 10 poison.",
+   "14 magical damage. 30% life steal. Applies 12 poison.",
+   "16 magical damage. 34% life steal. Applies 14 poison.",
+   "18 magical damage. 38% life steal. Applies 15 poison.",
+   "21 magical damage. 43% life steal. Applies 17 poison.",
+   "23 magical damage. 48% life steal. Applies 19 poison.",
+   "25 magical damage. 52% life steal. Applies 21 poison.",
+   "27 magical damage. 57% life steal. Applies 23 poison.",
+   "29 magical damage. 61% life steal. Applies 24 poison.",
+   "31 magical damage. 66% life steal. Applies 26 poison.",
+   "34 magical damage. 70% life steal. Applies 28 poison."
+  ],
+  "shopPrice": 40,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_serpent_kiss",
+   "symbol": "serpent_kiss",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 23,
+   "text": "Deal 250 damage with Serpent's Kiss."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "wretched_toxin",
+  "slug": "wretched-toxin",
+  "name": "Wretched Toxin",
+  "group": "rot",
+  "rarity": "epic",
+  "text": "Applies 10 poison. Increases the target's poison by 10%.",
+  "textByPlus": [
+   "Applies 10 poison. Increases the target's poison by 10%.",
+   "Applies 12 poison. Increases the target's poison by 12%.",
+   "Applies 14 poison. Increases the target's poison by 14%.",
+   "Applies 16 poison. Increases the target's poison by 16%.",
+   "Applies 18 poison. Increases the target's poison by 18%.",
+   "Applies 20 poison. Increases the target's poison by 20%.",
+   "Applies 21 poison. Increases the target's poison by 21%.",
+   "Applies 23 poison. Increases the target's poison by 23%.",
+   "Applies 25 poison. Increases the target's poison by 25%.",
+   "Applies 27 poison. Increases the target's poison by 27%.",
+   "Applies 29 poison. Increases the target's poison by 29%."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_wretched_toxin",
+   "symbol": "wretched_toxin",
+   "metric": "status",
+   "target": 150,
+   "rewardSkulls": 33,
+   "text": "Apply 150 status stacks with Wretched Toxin."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "pickpocket",
+  "slug": "pickpocket",
+  "name": "Pickpocket",
+  "group": "gold",
+  "rarity": "rare",
+  "text": "10 physical damage. 15% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+  "textByPlus": [
+   "10 physical damage. 15% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "12 physical damage. 18% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "14 physical damage. 20% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "15 physical damage. 23% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "17 physical damage. 26% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "19 physical damage. 29% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "21 physical damage. 31% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "23 physical damage. 34% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "24 physical damage. 37% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "26 physical damage. 39% of all damage dealt since your last spin becomes gold (max 100 gold per spin).",
+   "28 physical damage. 42% of all damage dealt since your last spin becomes gold (max 100 gold per spin)."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_pickpocket",
+   "symbol": "pickpocket",
+   "metric": "damage",
+   "target": 200,
+   "rewardSkulls": 23,
+   "text": "Deal 200 damage with Pickpocket."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "second_wind",
+  "slug": "second-wind",
+  "name": "Second Wind",
+  "group": "shield",
+  "rarity": "common",
+  "text": "Heal 25. 20 shield.",
+  "textByPlus": [
+   "Heal 25. 20 shield.",
+   "Heal 30. 24 shield.",
+   "Heal 34. 27 shield.",
+   "Heal 38. 31 shield.",
+   "Heal 43. 34 shield.",
+   "Heal 48. 38 shield.",
+   "Heal 52. 42 shield.",
+   "Heal 57. 45 shield.",
+   "Heal 61. 49 shield.",
+   "Heal 66. 52 shield.",
+   "Heal 70. 56 shield."
+  ],
+  "shopPrice": 20,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "Burn",
+   "MultiHit",
+   "Phys"
+  ],
+  "firstClearOfLevels": [
+   1
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_second_wind",
+   "symbol": "second_wind",
+   "metric": "heal",
+   "target": 500,
+   "rewardSkulls": 15,
+   "text": "Heal 500 HP with Second Wind."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "zealots_chant",
+  "slug": "zealots-chant",
+  "name": "Zealot's Chant",
+  "group": "support",
+  "rarity": "rare",
+  "text": "+20% physical damage this turn. +5% crit chance this fight.",
+  "textByPlus": [
+   "+20% physical damage this turn. +5% crit chance this fight.",
+   "+24% physical damage this turn. +6% crit chance this fight.",
+   "+27% physical damage this turn. +7% crit chance this fight.",
+   "+31% physical damage this turn. +8% crit chance this fight.",
+   "+34% physical damage this turn. +9% crit chance this fight.",
+   "+38% physical damage this turn. +10% crit chance this fight.",
+   "+42% physical damage this turn. +11% crit chance this fight.",
+   "+45% physical damage this turn. +12% crit chance this fight.",
+   "+49% physical damage this turn. +13% crit chance this fight.",
+   "+52% physical damage this turn. +14% crit chance this fight.",
+   "+56% physical damage this turn. +15% crit chance this fight."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 5.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "SelfHeal"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_zealots_chant",
+   "symbol": "zealots_chant",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 23,
+   "text": "Land Zealot's Chant 30 times."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "blood_bargain",
+  "slug": "blood-bargain",
+  "name": "Blood Bargain",
+  "group": "magical",
+  "rarity": "rare",
+  "text": "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 45 magical damage.",
+  "textByPlus": [
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 45 magical damage.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 53 magical damage.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 61 magical damage.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 69 magical damage.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 77 magical damage.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 86 magical damage.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 94 magical damage.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 102 magical damage.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 110 magical damage.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 118 magical damage.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 126 magical damage."
+  ],
+  "shopPrice": 40,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_blood_bargain",
+   "symbol": "blood_bargain",
+   "metric": "damage",
+   "target": 900,
+   "rewardSkulls": 23,
+   "text": "Deal 900 damage with Blood Bargain."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "bribe",
+  "slug": "bribe",
+  "name": "Bribe",
+  "group": "physical",
+  "rarity": "common",
+  "text": "Costs 15 gold; skipped when you cannot pay. 45 physical damage.",
+  "textByPlus": [
+   "Costs 15 gold; skipped when you cannot pay. 45 physical damage.",
+   "Costs 15 gold; skipped when you cannot pay. 53 physical damage.",
+   "Costs 15 gold; skipped when you cannot pay. 61 physical damage.",
+   "Costs 15 gold; skipped when you cannot pay. 69 physical damage.",
+   "Costs 15 gold; skipped when you cannot pay. 77 physical damage.",
+   "Costs 15 gold; skipped when you cannot pay. 86 physical damage.",
+   "Costs 15 gold; skipped when you cannot pay. 94 physical damage.",
+   "Costs 15 gold; skipped when you cannot pay. 102 physical damage.",
+   "Costs 15 gold; skipped when you cannot pay. 110 physical damage.",
+   "Costs 15 gold; skipped when you cannot pay. 118 physical damage.",
+   "Costs 15 gold; skipped when you cannot pay. 126 physical damage."
+  ],
+  "shopPrice": 20,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_bribe",
+   "symbol": "bribe",
+   "metric": "damage",
+   "target": 900,
+   "rewardSkulls": 15,
+   "text": "Deal 900 damage with Bribe."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "bulwark_breaker",
+  "slug": "bulwark-breaker",
+  "name": "Bulwark Breaker",
+  "group": "physical",
+  "rarity": "epic",
+  "text": "Spends your whole shield: 2.5 physical damage per point.",
+  "textByPlus": [
+   "Spends your whole shield: 2.5 physical damage per point.",
+   "Spends your whole shield: 2.98 physical damage per point.",
+   "Spends your whole shield: 3.45 physical damage per point.",
+   "Spends your whole shield: 3.92 physical damage per point.",
+   "Spends your whole shield: 4.4 physical damage per point.",
+   "Spends your whole shield: 4.88 physical damage per point.",
+   "Spends your whole shield: 5.35 physical damage per point.",
+   "Spends your whole shield: 5.83 physical damage per point.",
+   "Spends your whole shield: 6.3 physical damage per point.",
+   "Spends your whole shield: 6.78 physical damage per point.",
+   "Spends your whole shield: 7.25 physical damage per point."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_bulwark_breaker",
+   "symbol": "bulwark_breaker",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 33,
+   "text": "Deal 100 damage with Bulwark Breaker."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "sacrifice",
+  "slug": "sacrifice",
+  "name": "Sacrifice",
+  "group": "support",
+  "rarity": "epic",
+  "text": "Costs 50 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. +10% physical damage this fight. +10% magical damage this fight.",
+  "textByPlus": [
+   "Costs 50 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. +10% physical damage this fight. +10% magical damage this fight.",
+   "Costs 50 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. +12% physical damage this fight. +12% magical damage this fight.",
+   "Costs 50 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. +14% physical damage this fight. +14% magical damage this fight.",
+   "Costs 50 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. +16% physical damage this fight. +16% magical damage this fight.",
+   "Costs 50 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. +18% physical damage this fight. +18% magical damage this fight.",
+   "Costs 50 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. +20% physical damage this fight. +20% magical damage this fight.",
+   "Costs 50 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. +21% physical damage this fight. +21% magical damage this fight.",
+   "Costs 50 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. +23% physical damage this fight. +23% magical damage this fight.",
+   "Costs 50 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. +25% physical damage this fight. +25% magical damage this fight.",
+   "Costs 50 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. +27% physical damage this fight. +27% magical damage this fight.",
+   "Costs 50 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. +29% physical damage this fight. +29% magical damage this fight."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "SelfHeal"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_sacrifice",
+   "symbol": "sacrifice",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 33,
+   "text": "Land Sacrifice 30 times."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "pawnbroker",
+  "slug": "pawnbroker",
+  "name": "Pawnbroker",
+  "group": "shield",
+  "rarity": "rare",
+  "text": "Costs 50 gold; skipped when you cannot pay. 75 shield. Heal 75.",
+  "textByPlus": [
+   "Costs 50 gold; skipped when you cannot pay. 75 shield. Heal 75.",
+   "Costs 50 gold; skipped when you cannot pay. 89 shield. Heal 89.",
+   "Costs 50 gold; skipped when you cannot pay. 102 shield. Heal 102.",
+   "Costs 50 gold; skipped when you cannot pay. 115 shield. Heal 115.",
+   "Costs 50 gold; skipped when you cannot pay. 129 shield. Heal 129.",
+   "Costs 50 gold; skipped when you cannot pay. 143 shield. Heal 143.",
+   "Costs 50 gold; skipped when you cannot pay. 156 shield. Heal 156.",
+   "Costs 50 gold; skipped when you cannot pay. 170 shield. Heal 170.",
+   "Costs 50 gold; skipped when you cannot pay. 183 shield. Heal 183.",
+   "Costs 50 gold; skipped when you cannot pay. 197 shield. Heal 197.",
+   "Costs 50 gold; skipped when you cannot pay. 210 shield. Heal 210."
+  ],
+  "shopPrice": 30,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "Burn",
+   "MultiHit",
+   "Phys"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_pawnbroker",
+   "symbol": "pawnbroker",
+   "metric": "shield",
+   "target": 1000,
+   "rewardSkulls": 23,
+   "text": "Gain 1000 shield with Pawnbroker."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "detonate",
+  "slug": "detonate",
+  "name": "Detonate",
+  "group": "physical",
+  "rarity": "epic",
+  "text": "Consumes the enemy's poison stacks, 0.75 physical damage per stack.",
+  "textByPlus": [
+   "Consumes the enemy's poison stacks, 0.75 physical damage per stack.",
+   "Consumes the enemy's poison stacks, 0.89 physical damage per stack.",
+   "Consumes the enemy's poison stacks, 1.04 physical damage per stack.",
+   "Consumes the enemy's poison stacks, 1.18 physical damage per stack.",
+   "Consumes the enemy's poison stacks, 1.32 physical damage per stack.",
+   "Consumes the enemy's poison stacks, 1.46 physical damage per stack.",
+   "Consumes the enemy's poison stacks, 1.6 physical damage per stack.",
+   "Consumes the enemy's poison stacks, 1.75 physical damage per stack.",
+   "Consumes the enemy's poison stacks, 1.89 physical damage per stack.",
+   "Consumes the enemy's poison stacks, 2.03 physical damage per stack.",
+   "Consumes the enemy's poison stacks, 2.18 physical damage per stack."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_detonate",
+   "symbol": "detonate",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 33,
+   "text": "Land Detonate 30 times."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "gravekeeper",
+  "slug": "gravekeeper",
+  "name": "Gravekeeper",
+  "group": "physical",
+  "rarity": "epic",
+  "text": "8 physical damage. Consumes the enemy's poison stacks, heals 2 per stack.",
+  "textByPlus": [
+   "8 physical damage. Consumes the enemy's poison stacks, heals 2 per stack.",
+   "10 physical damage. Consumes the enemy's poison stacks, heals 3 per stack.",
+   "11 physical damage. Consumes the enemy's poison stacks, heals 4 per stack.",
+   "13 physical damage. Consumes the enemy's poison stacks, heals 5 per stack.",
+   "14 physical damage. Consumes the enemy's poison stacks, heals 6 per stack.",
+   "16 physical damage. Consumes the enemy's poison stacks, heals 7 per stack.",
+   "17 physical damage. Consumes the enemy's poison stacks, heals 8 per stack.",
+   "19 physical damage. Consumes the enemy's poison stacks, heals 9 per stack.",
+   "20 physical damage. Consumes the enemy's poison stacks, heals 10 per stack.",
+   "22 physical damage. Consumes the enemy's poison stacks, heals 11 per stack.",
+   "23 physical damage. Consumes the enemy's poison stacks, heals 12 per stack."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_gravekeeper",
+   "symbol": "gravekeeper",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 33,
+   "text": "Deal 150 damage with Gravekeeper."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "flanker",
+  "slug": "flanker",
+  "name": "Flanker",
+  "group": "physical",
+  "rarity": "common",
+  "text": "25 physical damage. x2 on the outer reels.",
+  "textByPlus": [
+   "25 physical damage. x2 on the outer reels.",
+   "30 physical damage. x2 on the outer reels.",
+   "34 physical damage. x2 on the outer reels.",
+   "38 physical damage. x2 on the outer reels.",
+   "43 physical damage. x2 on the outer reels.",
+   "48 physical damage. x2 on the outer reels.",
+   "52 physical damage. x2 on the outer reels.",
+   "57 physical damage. x2 on the outer reels.",
+   "61 physical damage. x2 on the outer reels.",
+   "66 physical damage. x2 on the outer reels.",
+   "70 physical damage. x2 on the outer reels."
+  ],
+  "shopPrice": 15,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_flanker",
+   "symbol": "flanker",
+   "metric": "damage",
+   "target": 500,
+   "rewardSkulls": 15,
+   "text": "Deal 500 damage with Flanker."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "keystone",
+  "slug": "keystone",
+  "name": "Keystone",
+  "group": "shield",
+  "rarity": "rare",
+  "text": "16 shield. x2 on the middle reel (a 4-reel board has no middle).",
+  "textByPlus": [
+   "16 shield. x2 on the middle reel (a 4-reel board has no middle).",
+   "19 shield. x2 on the middle reel (a 4-reel board has no middle).",
+   "22 shield. x2 on the middle reel (a 4-reel board has no middle).",
+   "25 shield. x2 on the middle reel (a 4-reel board has no middle).",
+   "28 shield. x2 on the middle reel (a 4-reel board has no middle).",
+   "30 shield. x2 on the middle reel (a 4-reel board has no middle).",
+   "33 shield. x2 on the middle reel (a 4-reel board has no middle).",
+   "36 shield. x2 on the middle reel (a 4-reel board has no middle).",
+   "39 shield. x2 on the middle reel (a 4-reel board has no middle).",
+   "42 shield. x2 on the middle reel (a 4-reel board has no middle).",
+   "45 shield. x2 on the middle reel (a 4-reel board has no middle)."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "MultiHit",
+   "Phys"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_keystone",
+   "symbol": "keystone",
+   "metric": "shield",
+   "target": 320,
+   "rewardSkulls": 23,
+   "text": "Gain 320 shield with Keystone."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "vanguard",
+  "slug": "vanguard",
+  "name": "Vanguard",
+  "group": "physical",
+  "rarity": "epic",
+  "text": "9 physical damage, plus 9 per neighbouring symbol dealing physical damage.",
+  "textByPlus": [
+   "9 physical damage, plus 9 per neighbouring symbol dealing physical damage.",
+   "11 physical damage, plus 11 per neighbouring symbol dealing physical damage.",
+   "12 physical damage, plus 12 per neighbouring symbol dealing physical damage.",
+   "14 physical damage, plus 14 per neighbouring symbol dealing physical damage.",
+   "16 physical damage, plus 16 per neighbouring symbol dealing physical damage.",
+   "18 physical damage, plus 18 per neighbouring symbol dealing physical damage.",
+   "19 physical damage, plus 19 per neighbouring symbol dealing physical damage.",
+   "21 physical damage, plus 21 per neighbouring symbol dealing physical damage.",
+   "23 physical damage, plus 23 per neighbouring symbol dealing physical damage.",
+   "24 physical damage, plus 24 per neighbouring symbol dealing physical damage.",
+   "26 physical damage, plus 26 per neighbouring symbol dealing physical damage."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_vanguard",
+   "symbol": "vanguard",
+   "metric": "damage",
+   "target": 200,
+   "rewardSkulls": 33,
+   "text": "Deal 200 damage with Vanguard."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "conduit",
+  "slug": "conduit",
+  "name": "Conduit",
+  "group": "magical",
+  "rarity": "rare",
+  "text": "7 magical damage, plus 8 per neighbouring symbol dealing magical damage.",
+  "textByPlus": [
+   "7 magical damage, plus 8 per neighbouring symbol dealing magical damage.",
+   "8 magical damage, plus 9 per neighbouring symbol dealing magical damage.",
+   "10 magical damage, plus 11 per neighbouring symbol dealing magical damage.",
+   "11 magical damage, plus 12 per neighbouring symbol dealing magical damage.",
+   "12 magical damage, plus 14 per neighbouring symbol dealing magical damage.",
+   "13 magical damage, plus 15 per neighbouring symbol dealing magical damage.",
+   "15 magical damage, plus 17 per neighbouring symbol dealing magical damage.",
+   "16 magical damage, plus 18 per neighbouring symbol dealing magical damage.",
+   "17 magical damage, plus 20 per neighbouring symbol dealing magical damage.",
+   "18 magical damage, plus 21 per neighbouring symbol dealing magical damage.",
+   "20 magical damage, plus 22 per neighbouring symbol dealing magical damage."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_conduit",
+   "symbol": "conduit",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 23,
+   "text": "Deal 150 damage with Conduit."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "echo",
+  "slug": "echo",
+  "name": "Echo",
+  "group": "support",
+  "rarity": "legendary",
+  "text": "Repeats the symbol to its left at 35% value. On the leftmost reel it copies the rightmost one; never copies another Echo; costs are not paid again.",
+  "textByPlus": [
+   "Repeats the symbol to its left at 35% value. On the leftmost reel it copies the rightmost one; never copies another Echo; costs are not paid again.",
+   "Repeats the symbol to its left at 42% value. On the leftmost reel it copies the rightmost one; never copies another Echo; costs are not paid again.",
+   "Repeats the symbol to its left at 49% value. On the leftmost reel it copies the rightmost one; never copies another Echo; costs are not paid again.",
+   "Repeats the symbol to its left at 56% value. On the leftmost reel it copies the rightmost one; never copies another Echo; costs are not paid again.",
+   "Repeats the symbol to its left at 63% value. On the leftmost reel it copies the rightmost one; never copies another Echo; costs are not paid again.",
+   "Repeats the symbol to its left at 70% value. On the leftmost reel it copies the rightmost one; never copies another Echo; costs are not paid again.",
+   "Repeats the symbol to its left at 77% value. On the leftmost reel it copies the rightmost one; never copies another Echo; costs are not paid again.",
+   "Repeats the symbol to its left at 84% value. On the leftmost reel it copies the rightmost one; never copies another Echo; costs are not paid again.",
+   "Repeats the symbol to its left at 91% value. On the leftmost reel it copies the rightmost one; never copies another Echo; costs are not paid again.",
+   "Repeats the symbol to its left at 98% value. On the leftmost reel it copies the rightmost one; never copies another Echo; costs are not paid again.",
+   "Repeats the symbol to its left at 100% value. On the leftmost reel it copies the rightmost one; never copies another Echo; costs are not paid again."
+  ],
+  "shopPrice": null,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_echo",
+   "symbol": "echo",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 45,
+   "text": "Land Echo 30 times."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "swarm",
+  "slug": "swarm",
+  "name": "Swarm",
+  "group": "physical",
+  "rarity": "common",
+  "text": "6 physical damage, plus 6 per copy of it landed (itself included).",
+  "textByPlus": [
+   "6 physical damage, plus 6 per copy of it landed (itself included).",
+   "7 physical damage, plus 7 per copy of it landed (itself included).",
+   "8 physical damage, plus 8 per copy of it landed (itself included).",
+   "9 physical damage, plus 9 per copy of it landed (itself included).",
+   "10 physical damage, plus 10 per copy of it landed (itself included).",
+   "11 physical damage, plus 11 per copy of it landed (itself included).",
+   "12 physical damage, plus 12 per copy of it landed (itself included).",
+   "14 physical damage, plus 14 per copy of it landed (itself included).",
+   "15 physical damage, plus 15 per copy of it landed (itself included).",
+   "16 physical damage, plus 16 per copy of it landed (itself included).",
+   "17 physical damage, plus 17 per copy of it landed (itself included)."
+  ],
+  "shopPrice": 18,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_swarm",
+   "symbol": "swarm",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 15,
+   "text": "Deal 100 damage with Swarm."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "choir",
+  "slug": "choir",
+  "name": "Choir",
+  "group": "magical",
+  "rarity": "rare",
+  "text": "7 magical damage, plus 7 per copy of it landed (itself included).",
+  "textByPlus": [
+   "7 magical damage, plus 7 per copy of it landed (itself included).",
+   "8 magical damage, plus 8 per copy of it landed (itself included).",
+   "10 magical damage, plus 10 per copy of it landed (itself included).",
+   "11 magical damage, plus 11 per copy of it landed (itself included).",
+   "12 magical damage, plus 12 per copy of it landed (itself included).",
+   "13 magical damage, plus 13 per copy of it landed (itself included).",
+   "15 magical damage, plus 15 per copy of it landed (itself included).",
+   "16 magical damage, plus 16 per copy of it landed (itself included).",
+   "17 magical damage, plus 17 per copy of it landed (itself included).",
+   "18 magical damage, plus 18 per copy of it landed (itself included).",
+   "20 magical damage, plus 20 per copy of it landed (itself included)."
+  ],
+  "shopPrice": 32,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_choir",
+   "symbol": "choir",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 23,
+   "text": "Deal 150 damage with Choir."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "jackpot_bell",
+  "slug": "jackpot-bell",
+  "name": "Jackpot Bell",
+  "group": "gold",
+  "rarity": "epic",
+  "text": "Gain 2 gold, plus 3 per copy of it landed (itself included).",
+  "textByPlus": [
+   "Gain 2 gold, plus 3 per copy of it landed (itself included).",
+   "Gain 3 gold, plus 4 per copy of it landed (itself included).",
+   "Gain 4 gold, plus 5 per copy of it landed (itself included).",
+   "Gain 5 gold, plus 6 per copy of it landed (itself included).",
+   "Gain 6 gold, plus 7 per copy of it landed (itself included).",
+   "Gain 7 gold, plus 8 per copy of it landed (itself included).",
+   "Gain 8 gold, plus 9 per copy of it landed (itself included).",
+   "Gain 9 gold, plus 10 per copy of it landed (itself included).",
+   "Gain 10 gold, plus 11 per copy of it landed (itself included).",
+   "Gain 11 gold, plus 12 per copy of it landed (itself included).",
+   "Gain 12 gold, plus 13 per copy of it landed (itself included)."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 6.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_jackpot_bell",
+   "symbol": "jackpot_bell",
+   "metric": "gold",
+   "target": 40,
+   "rewardSkulls": 33,
+   "text": "Earn 40 gold with Jackpot Bell."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "can_opener",
+  "slug": "can-opener",
+  "name": "Can Opener",
+  "group": "physical",
+  "rarity": "rare",
+  "text": "6 physical damage, plus 0.6 per point of enemy armor. Pierces armor.",
+  "textByPlus": [
+   "6 physical damage, plus 0.6 per point of enemy armor. Pierces armor.",
+   "7 physical damage, plus 0.71 per point of enemy armor. Pierces armor.",
+   "8 physical damage, plus 0.82 per point of enemy armor. Pierces armor.",
+   "9 physical damage, plus 0.92 per point of enemy armor. Pierces armor.",
+   "10 physical damage, plus 1.03 per point of enemy armor. Pierces armor.",
+   "11 physical damage, plus 1.14 per point of enemy armor. Pierces armor.",
+   "12 physical damage, plus 1.25 per point of enemy armor. Pierces armor.",
+   "14 physical damage, plus 1.36 per point of enemy armor. Pierces armor.",
+   "15 physical damage, plus 1.46 per point of enemy armor. Pierces armor.",
+   "16 physical damage, plus 1.57 per point of enemy armor. Pierces armor.",
+   "17 physical damage, plus 1.68 per point of enemy armor. Pierces armor."
+  ],
+  "shopPrice": 32,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_can_opener",
+   "symbol": "can_opener",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 23,
+   "text": "Deal 100 damage with Can Opener."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "coup",
+  "slug": "coup",
+  "name": "Coup de Grace",
+  "group": "physical",
+  "rarity": "epic",
+  "text": "12 physical damage, plus 0.08 per point of missing enemy HP (counts up to 1000 missing HP).",
+  "textByPlus": [
+   "12 physical damage, plus 0.08 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "14 physical damage, plus 0.1 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "17 physical damage, plus 0.11 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "19 physical damage, plus 0.13 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "21 physical damage, plus 0.14 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "23 physical damage, plus 0.16 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "26 physical damage, plus 0.17 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "28 physical damage, plus 0.19 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "30 physical damage, plus 0.2 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "33 physical damage, plus 0.22 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "35 physical damage, plus 0.23 per point of missing enemy HP (counts up to 1000 missing HP)."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_coup",
+   "symbol": "coup",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 33,
+   "text": "Deal 250 damage with Coup de Grace."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "giant_slayer",
+  "slug": "giant-slayer",
+  "name": "Giant Slayer",
+  "group": "physical",
+  "rarity": "epic",
+  "text": "18 physical damage. x2 against a boss.",
+  "textByPlus": [
+   "18 physical damage. x2 against a boss.",
+   "21 physical damage. x2 against a boss.",
+   "25 physical damage. x2 against a boss.",
+   "28 physical damage. x2 against a boss.",
+   "32 physical damage. x2 against a boss.",
+   "35 physical damage. x2 against a boss.",
+   "39 physical damage. x2 against a boss.",
+   "42 physical damage. x2 against a boss.",
+   "45 physical damage. x2 against a boss.",
+   "49 physical damage. x2 against a boss.",
+   "52 physical damage. x2 against a boss."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_giant_slayer",
+   "symbol": "giant_slayer",
+   "metric": "damage",
+   "target": 350,
+   "rewardSkulls": 33,
+   "text": "Deal 350 damage with Giant Slayer."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "momentum",
+  "slug": "momentum",
+  "name": "Momentum",
+  "group": "physical",
+  "rarity": "rare",
+  "text": "10 physical damage, plus 5 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+  "textByPlus": [
+   "10 physical damage, plus 5 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "12 physical damage, plus 6 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "14 physical damage, plus 7 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "15 physical damage, plus 8 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "17 physical damage, plus 9 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "19 physical damage, plus 10 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "21 physical damage, plus 11 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "23 physical damage, plus 12 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "24 physical damage, plus 13 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "26 physical damage, plus 14 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "28 physical damage, plus 15 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn."
+  ],
+  "shopPrice": 40,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_momentum",
+   "symbol": "momentum",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 23,
+   "text": "Deal 100 damage with Momentum."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "patience",
+  "slug": "patience",
+  "name": "Patience",
+  "group": "shield",
+  "rarity": "epic",
+  "text": "5 shield, plus 5 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+  "textByPlus": [
+   "5 shield, plus 5 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "6 shield, plus 6 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "7 shield, plus 7 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "8 shield, plus 8 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "9 shield, plus 9 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "10 shield, plus 10 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "11 shield, plus 11 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "12 shield, plus 12 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "13 shield, plus 13 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "14 shield, plus 14 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn.",
+   "15 shield, plus 15 per turn of this fight (the current one included). Each earlier copy in the same spin counts as one more turn."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "MultiHit",
+   "Phys"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_patience",
+   "symbol": "patience",
+   "metric": "shield",
+   "target": 100,
+   "rewardSkulls": 33,
+   "text": "Gain 100 shield with Patience."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "icebreaker",
+  "slug": "icebreaker",
+  "name": "Icebreaker",
+  "group": "magical",
+  "rarity": "rare",
+  "text": "12 magical damage, plus 14 per frozen reel. Cleanses chill.",
+  "textByPlus": [
+   "12 magical damage, plus 14 per frozen reel. Cleanses chill.",
+   "14 magical damage, plus 17 per frozen reel. Cleanses chill.",
+   "16 magical damage, plus 19 per frozen reel. Cleanses chill.",
+   "18 magical damage, plus 22 per frozen reel. Cleanses chill.",
+   "21 magical damage, plus 24 per frozen reel. Cleanses chill.",
+   "23 magical damage, plus 27 per frozen reel. Cleanses chill.",
+   "25 magical damage, plus 29 per frozen reel. Cleanses chill.",
+   "27 magical damage, plus 32 per frozen reel. Cleanses chill.",
+   "29 magical damage, plus 34 per frozen reel. Cleanses chill.",
+   "31 magical damage, plus 37 per frozen reel. Cleanses chill.",
+   "34 magical damage, plus 39 per frozen reel. Cleanses chill."
+  ],
+  "shopPrice": 30,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Chill",
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_icebreaker",
+   "symbol": "icebreaker",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 23,
+   "text": "Deal 250 damage with Icebreaker."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "snake_oil",
+  "slug": "snake-oil",
+  "name": "Snake Oil",
+  "group": "rot",
+  "rarity": "rare",
+  "text": "Applies up to 16 poison (skillcheck).",
+  "textByPlus": [
+   "Applies up to 16 poison (skillcheck).",
+   "Applies up to 19 poison (skillcheck).",
+   "Applies up to 22 poison (skillcheck).",
+   "Applies up to 25 poison (skillcheck).",
+   "Applies up to 28 poison (skillcheck).",
+   "Applies up to 30 poison (skillcheck).",
+   "Applies up to 33 poison (skillcheck).",
+   "Applies up to 36 poison (skillcheck).",
+   "Applies up to 39 poison (skillcheck).",
+   "Applies up to 42 poison (skillcheck).",
+   "Applies up to 45 poison (skillcheck)."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": true,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_snake_oil",
+   "symbol": "snake_oil",
+   "metric": "status",
+   "target": 240,
+   "rewardSkulls": 23,
+   "text": "Apply 240 status stacks with Snake Oil."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "iron_nail",
+  "slug": "iron-nail",
+  "name": "Iron Nail",
+  "group": "physical",
+  "rarity": "common",
+  "text": "12 physical damage. Pierces armor.",
+  "textByPlus": [
+   "12 physical damage. Pierces armor.",
+   "14 physical damage. Pierces armor.",
+   "16 physical damage. Pierces armor.",
+   "18 physical damage. Pierces armor.",
+   "21 physical damage. Pierces armor.",
+   "23 physical damage. Pierces armor.",
+   "25 physical damage. Pierces armor.",
+   "27 physical damage. Pierces armor.",
+   "29 physical damage. Pierces armor.",
+   "31 physical damage. Pierces armor.",
+   "34 physical damage. Pierces armor."
+  ],
+  "shopPrice": 15,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [
+   8
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_iron_nail",
+   "symbol": "iron_nail",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 15,
+   "text": "Deal 250 damage with Iron Nail."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "sling_stones",
+  "slug": "sling-stones",
+  "name": "Sling Stones",
+  "group": "physical",
+  "rarity": "common",
+  "text": "7 physical damage, 2 times.",
+  "textByPlus": [
+   "7 physical damage, 2 times.",
+   "8 physical damage, 2 times.",
+   "10 physical damage, 2 times.",
+   "11 physical damage, 2 times.",
+   "12 physical damage, 2 times.",
+   "13 physical damage, 2 times.",
+   "15 physical damage, 2 times.",
+   "16 physical damage, 2 times.",
+   "17 physical damage, 2 times.",
+   "18 physical damage, 2 times.",
+   "20 physical damage, 2 times."
+  ],
+  "shopPrice": 15,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_sling_stones",
+   "symbol": "sling_stones",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 15,
+   "text": "Deal 150 damage with Sling Stones."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "candle",
+  "slug": "candle",
+  "name": "Candle",
+  "group": "magical",
+  "rarity": "common",
+  "text": "10 magical damage. +2% magical damage for the rest of the run (stacks up to 25 times).",
+  "textByPlus": [
+   "10 magical damage. +2% magical damage for the rest of the run (stacks up to 25 times).",
+   "12 magical damage. +3% magical damage for the rest of the run (stacks up to 25 times).",
+   "14 magical damage. +4% magical damage for the rest of the run (stacks up to 25 times).",
+   "15 magical damage. +5% magical damage for the rest of the run (stacks up to 25 times).",
+   "17 magical damage. +6% magical damage for the rest of the run (stacks up to 25 times).",
+   "19 magical damage. +7% magical damage for the rest of the run (stacks up to 25 times).",
+   "21 magical damage. +8% magical damage for the rest of the run (stacks up to 25 times).",
+   "23 magical damage. +9% magical damage for the rest of the run (stacks up to 25 times).",
+   "24 magical damage. +10% magical damage for the rest of the run (stacks up to 25 times).",
+   "26 magical damage. +11% magical damage for the rest of the run (stacks up to 25 times).",
+   "28 magical damage. +12% magical damage for the rest of the run (stacks up to 25 times)."
+  ],
+  "shopPrice": 18,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "SelfHeal",
+   "Armor"
+  ],
+  "firstClearOfLevels": [
+   9
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_candle",
+   "symbol": "candle",
+   "metric": "damage",
+   "target": 200,
+   "rewardSkulls": 15,
+   "text": "Deal 200 damage with Candle."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "bandage",
+  "slug": "bandage",
+  "name": "Bandage",
+  "group": "heal",
+  "rarity": "common",
+  "text": "Heal 12. Cleanses poison.",
+  "textByPlus": [
+   "Heal 12. Cleanses poison.",
+   "Heal 14. Cleanses poison.",
+   "Heal 16. Cleanses poison.",
+   "Heal 18. Cleanses poison.",
+   "Heal 21. Cleanses poison.",
+   "Heal 23. Cleanses poison.",
+   "Heal 25. Cleanses poison.",
+   "Heal 27. Cleanses poison.",
+   "Heal 29. Cleanses poison.",
+   "Heal 31. Cleanses poison.",
+   "Heal 34. Cleanses poison."
+  ],
+  "shopPrice": 15,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "Poison",
+   "Burn"
+  ],
+  "firstClearOfLevels": [
+   3
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_bandage",
+   "symbol": "bandage",
+   "metric": "heal",
+   "target": 240,
+   "rewardSkulls": 15,
+   "text": "Heal 240 HP with Bandage."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "buckler",
+  "slug": "buckler",
+  "name": "Buckler",
+  "group": "shield",
+  "rarity": "common",
+  "text": "10 shield. x2 on the outer reels.",
+  "textByPlus": [
+   "10 shield. x2 on the outer reels.",
+   "12 shield. x2 on the outer reels.",
+   "14 shield. x2 on the outer reels.",
+   "15 shield. x2 on the outer reels.",
+   "17 shield. x2 on the outer reels.",
+   "19 shield. x2 on the outer reels.",
+   "21 shield. x2 on the outer reels.",
+   "23 shield. x2 on the outer reels.",
+   "24 shield. x2 on the outer reels.",
+   "26 shield. x2 on the outer reels.",
+   "28 shield. x2 on the outer reels."
+  ],
+  "shopPrice": 15,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "MultiHit",
+   "Phys"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_buckler",
+   "symbol": "buckler",
+   "metric": "shield",
+   "target": 200,
+   "rewardSkulls": 15,
+   "text": "Gain 200 shield with Buckler."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "tin_coin",
+  "slug": "tin-coin",
+  "name": "Tin Coin",
+  "group": "gold",
+  "rarity": "common",
+  "text": "Gain 2 gold, plus 1.5 per copy of it landed (itself included).",
+  "textByPlus": [
+   "Gain 2 gold, plus 1.5 per copy of it landed (itself included).",
+   "Gain 3 gold, plus 1.77 per copy of it landed (itself included).",
+   "Gain 4 gold, plus 2.04 per copy of it landed (itself included).",
+   "Gain 5 gold, plus 2.31 per copy of it landed (itself included).",
+   "Gain 6 gold, plus 2.58 per copy of it landed (itself included).",
+   "Gain 7 gold, plus 2.85 per copy of it landed (itself included).",
+   "Gain 8 gold, plus 3.12 per copy of it landed (itself included).",
+   "Gain 9 gold, plus 3.39 per copy of it landed (itself included).",
+   "Gain 10 gold, plus 3.66 per copy of it landed (itself included).",
+   "Gain 11 gold, plus 3.93 per copy of it landed (itself included).",
+   "Gain 12 gold, plus 4.2 per copy of it landed (itself included)."
+  ],
+  "shopPrice": 20,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_tin_coin",
+   "symbol": "tin_coin",
+   "metric": "gold",
+   "target": 40,
+   "rewardSkulls": 15,
+   "text": "Earn 40 gold with Tin Coin."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "splinter",
+  "slug": "splinter",
+  "name": "Splinter",
+  "group": "rot",
+  "rarity": "common",
+  "text": "6 physical damage. Applies 6 poison.",
+  "textByPlus": [
+   "6 physical damage. Applies 6 poison.",
+   "7 physical damage. Applies 7 poison.",
+   "8 physical damage. Applies 8 poison.",
+   "9 physical damage. Applies 9 poison.",
+   "10 physical damage. Applies 10 poison.",
+   "11 physical damage. Applies 11 poison.",
+   "12 physical damage. Applies 12 poison.",
+   "14 physical damage. Applies 14 poison.",
+   "15 physical damage. Applies 15 poison.",
+   "16 physical damage. Applies 16 poison.",
+   "17 physical damage. Applies 17 poison."
+  ],
+  "shopPrice": 18,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_splinter",
+   "symbol": "splinter",
+   "metric": "damage",
+   "target": 100,
+   "rewardSkulls": 15,
+   "text": "Deal 100 damage with Splinter."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "war_paint",
+  "slug": "war-paint",
+  "name": "War Paint",
+  "group": "support",
+  "rarity": "common",
+  "text": "+40% physical damage this turn.",
+  "textByPlus": [
+   "+40% physical damage this turn.",
+   "+47% physical damage this turn.",
+   "+54% physical damage this turn.",
+   "+62% physical damage this turn.",
+   "+69% physical damage this turn.",
+   "+76% physical damage this turn.",
+   "+83% physical damage this turn.",
+   "+90% physical damage this turn.",
+   "+98% physical damage this turn.",
+   "+105% physical damage this turn.",
+   "+112% physical damage this turn."
+  ],
+  "shopPrice": 15,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 5.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "SelfHeal"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_war_paint",
+   "symbol": "war_paint",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 15,
+   "text": "Land War Paint 30 times."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "oil_flask",
+  "slug": "oil-flask",
+  "name": "Oil Flask",
+  "group": "rot",
+  "rarity": "common",
+  "text": "8 magical damage. Increases the target's poison by 10%.",
+  "textByPlus": [
+   "8 magical damage. Increases the target's poison by 10%.",
+   "9 magical damage. Increases the target's poison by 12%.",
+   "11 magical damage. Increases the target's poison by 14%.",
+   "12 magical damage. Increases the target's poison by 15%.",
+   "14 magical damage. Increases the target's poison by 17%.",
+   "15 magical damage. Increases the target's poison by 19%.",
+   "17 magical damage. Increases the target's poison by 21%.",
+   "18 magical damage. Increases the target's poison by 23%.",
+   "20 magical damage. Increases the target's poison by 24%.",
+   "21 magical damage. Increases the target's poison by 26%.",
+   "22 magical damage. Increases the target's poison by 28%."
+  ],
+  "shopPrice": 15,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_oil_flask",
+   "symbol": "oil_flask",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 15,
+   "text": "Deal 150 damage with Oil Flask."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "kindling",
+  "slug": "kindling",
+  "name": "Kindling",
+  "group": "magical",
+  "rarity": "common",
+  "text": "8 magical damage, plus 6 per frozen reel.",
+  "textByPlus": [
+   "8 magical damage, plus 6 per frozen reel.",
+   "9 magical damage, plus 7 per frozen reel.",
+   "11 magical damage, plus 8 per frozen reel.",
+   "12 magical damage, plus 9 per frozen reel.",
+   "14 magical damage, plus 10 per frozen reel.",
+   "15 magical damage, plus 11 per frozen reel.",
+   "17 magical damage, plus 12 per frozen reel.",
+   "18 magical damage, plus 14 per frozen reel.",
+   "20 magical damage, plus 15 per frozen reel.",
+   "21 magical damage, plus 16 per frozen reel.",
+   "22 magical damage, plus 17 per frozen reel."
+  ],
+  "shopPrice": 15,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_kindling",
+   "symbol": "kindling",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 15,
+   "text": "Deal 150 damage with Kindling."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "dragon_lance",
+  "slug": "dragon-lance",
+  "name": "Dragon Lance",
+  "group": "physical",
+  "rarity": "rare",
+  "text": "13 physical damage. Pierces armor. x2.5 against a boss.",
+  "textByPlus": [
+   "13 physical damage. Pierces armor. x2.5 against a boss.",
+   "15 physical damage. Pierces armor. x2.5 against a boss.",
+   "18 physical damage. Pierces armor. x2.5 against a boss.",
+   "20 physical damage. Pierces armor. x2.5 against a boss.",
+   "22 physical damage. Pierces armor. x2.5 against a boss.",
+   "25 physical damage. Pierces armor. x2.5 against a boss.",
+   "27 physical damage. Pierces armor. x2.5 against a boss.",
+   "29 physical damage. Pierces armor. x2.5 against a boss.",
+   "32 physical damage. Pierces armor. x2.5 against a boss.",
+   "34 physical damage. Pierces armor. x2.5 against a boss.",
+   "36 physical damage. Pierces armor. x2.5 against a boss."
+  ],
+  "shopPrice": 32,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_dragon_lance",
+   "symbol": "dragon_lance",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 23,
+   "text": "Deal 250 damage with Dragon Lance."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "rust_bomb",
+  "slug": "rust-bomb",
+  "name": "Rust Bomb",
+  "group": "magical",
+  "rarity": "rare",
+  "text": "7 magical damage, plus 0.5 per point of enemy armor.",
+  "textByPlus": [
+   "7 magical damage, plus 0.5 per point of enemy armor.",
+   "8 magical damage, plus 0.59 per point of enemy armor.",
+   "10 magical damage, plus 0.68 per point of enemy armor.",
+   "11 magical damage, plus 0.77 per point of enemy armor.",
+   "12 magical damage, plus 0.86 per point of enemy armor.",
+   "13 magical damage, plus 0.95 per point of enemy armor.",
+   "15 magical damage, plus 1.04 per point of enemy armor.",
+   "16 magical damage, plus 1.13 per point of enemy armor.",
+   "17 magical damage, plus 1.22 per point of enemy armor.",
+   "18 magical damage, plus 1.31 per point of enemy armor.",
+   "20 magical damage, plus 1.4 per point of enemy armor."
+  ],
+  "shopPrice": 30,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_rust_bomb",
+   "symbol": "rust_bomb",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 23,
+   "text": "Deal 150 damage with Rust Bomb."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "pillar",
+  "slug": "pillar",
+  "name": "Pillar",
+  "group": "physical",
+  "rarity": "rare",
+  "text": "12 physical damage. x2.5 on the middle reel (a 4-reel board has no middle).",
+  "textByPlus": [
+   "12 physical damage. x2.5 on the middle reel (a 4-reel board has no middle).",
+   "14 physical damage. x2.5 on the middle reel (a 4-reel board has no middle).",
+   "16 physical damage. x2.5 on the middle reel (a 4-reel board has no middle).",
+   "18 physical damage. x2.5 on the middle reel (a 4-reel board has no middle).",
+   "21 physical damage. x2.5 on the middle reel (a 4-reel board has no middle).",
+   "23 physical damage. x2.5 on the middle reel (a 4-reel board has no middle).",
+   "25 physical damage. x2.5 on the middle reel (a 4-reel board has no middle).",
+   "27 physical damage. x2.5 on the middle reel (a 4-reel board has no middle).",
+   "29 physical damage. x2.5 on the middle reel (a 4-reel board has no middle).",
+   "31 physical damage. x2.5 on the middle reel (a 4-reel board has no middle).",
+   "34 physical damage. x2.5 on the middle reel (a 4-reel board has no middle)."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_pillar",
+   "symbol": "pillar",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 23,
+   "text": "Deal 250 damage with Pillar."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "outrider",
+  "slug": "outrider",
+  "name": "Outrider",
+  "group": "magical",
+  "rarity": "rare",
+  "text": "14 magical damage. x2 on the outer reels.",
+  "textByPlus": [
+   "14 magical damage. x2 on the outer reels.",
+   "17 magical damage. x2 on the outer reels.",
+   "19 magical damage. x2 on the outer reels.",
+   "22 magical damage. x2 on the outer reels.",
+   "24 magical damage. x2 on the outer reels.",
+   "27 magical damage. x2 on the outer reels.",
+   "29 magical damage. x2 on the outer reels.",
+   "32 magical damage. x2 on the outer reels.",
+   "34 magical damage. x2 on the outer reels.",
+   "37 magical damage. x2 on the outer reels.",
+   "39 magical damage. x2 on the outer reels."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_outrider",
+   "symbol": "outrider",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 23,
+   "text": "Deal 300 damage with Outrider."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "phalanx",
+  "slug": "phalanx",
+  "name": "Phalanx",
+  "group": "shield",
+  "rarity": "epic",
+  "text": "12 shield per symbol dealing physical damage landed this spin.",
+  "textByPlus": [
+   "12 shield per symbol dealing physical damage landed this spin.",
+   "14 shield per symbol dealing physical damage landed this spin.",
+   "17 shield per symbol dealing physical damage landed this spin.",
+   "19 shield per symbol dealing physical damage landed this spin.",
+   "21 shield per symbol dealing physical damage landed this spin.",
+   "23 shield per symbol dealing physical damage landed this spin.",
+   "26 shield per symbol dealing physical damage landed this spin.",
+   "28 shield per symbol dealing physical damage landed this spin.",
+   "30 shield per symbol dealing physical damage landed this spin.",
+   "33 shield per symbol dealing physical damage landed this spin.",
+   "35 shield per symbol dealing physical damage landed this spin."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "MultiHit",
+   "Phys"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_phalanx",
+   "symbol": "phalanx",
+   "metric": "shield",
+   "target": 50,
+   "rewardSkulls": 33,
+   "text": "Gain 50 shield with Phalanx."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "plague_doctor",
+  "slug": "plague-doctor",
+  "name": "Plague Doctor",
+  "group": "heal",
+  "rarity": "epic",
+  "text": "Heals 2 per poison stack on the target.",
+  "textByPlus": [
+   "Heals 2 per poison stack on the target.",
+   "Heals 3 per poison stack on the target.",
+   "Heals 4 per poison stack on the target.",
+   "Heals 5 per poison stack on the target.",
+   "Heals 6 per poison stack on the target.",
+   "Heals 7 per poison stack on the target.",
+   "Heals 8 per poison stack on the target.",
+   "Heals 9 per poison stack on the target.",
+   "Heals 10 per poison stack on the target.",
+   "Heals 11 per poison stack on the target.",
+   "Heals 12 per poison stack on the target."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "Burn"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_plague_doctor",
+   "symbol": "plague_doctor",
+   "metric": "heal",
+   "target": 50,
+   "rewardSkulls": 33,
+   "text": "Heal 50 HP with Plague Doctor."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "vulture",
+  "slug": "vulture",
+  "name": "Vulture",
+  "group": "gold",
+  "rarity": "epic",
+  "text": "Gain 2 gold, plus 0.04 per point of missing enemy HP (counts up to 1000 missing HP).",
+  "textByPlus": [
+   "Gain 2 gold, plus 0.04 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "Gain 3 gold, plus 0.05 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "Gain 4 gold, plus 0.06 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "Gain 5 gold, plus 0.06 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "Gain 6 gold, plus 0.07 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "Gain 7 gold, plus 0.08 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "Gain 8 gold, plus 0.09 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "Gain 9 gold, plus 0.09 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "Gain 10 gold, plus 0.1 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "Gain 11 gold, plus 0.11 per point of missing enemy HP (counts up to 1000 missing HP).",
+   "Gain 12 gold, plus 0.12 per point of missing enemy HP (counts up to 1000 missing HP)."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 5.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_vulture",
+   "symbol": "vulture",
+   "metric": "gold",
+   "target": 40,
+   "rewardSkulls": 33,
+   "text": "Earn 40 gold with Vulture."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "blight",
+  "slug": "blight",
+  "name": "Blight",
+  "group": "rot",
+  "rarity": "epic",
+  "text": "Applies 10 poison.",
+  "textByPlus": [
+   "Applies 10 poison.",
+   "Applies 12 poison.",
+   "Applies 14 poison.",
+   "Applies 16 poison.",
+   "Applies 18 poison.",
+   "Applies 20 poison.",
+   "Applies 21 poison.",
+   "Applies 23 poison.",
+   "Applies 25 poison.",
+   "Applies 27 poison.",
+   "Applies 29 poison."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_blight",
+   "symbol": "blight",
+   "metric": "status",
+   "target": 150,
+   "rewardSkulls": 33,
+   "text": "Apply 150 status stacks with Blight."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "desperado",
+  "slug": "desperado",
+  "name": "Desperado",
+  "group": "physical",
+  "rarity": "rare",
+  "text": "12 physical damage. x2.5 at half health or less.",
+  "textByPlus": [
+   "12 physical damage. x2.5 at half health or less.",
+   "14 physical damage. x2.5 at half health or less.",
+   "16 physical damage. x2.5 at half health or less.",
+   "18 physical damage. x2.5 at half health or less.",
+   "21 physical damage. x2.5 at half health or less.",
+   "23 physical damage. x2.5 at half health or less.",
+   "25 physical damage. x2.5 at half health or less.",
+   "27 physical damage. x2.5 at half health or less.",
+   "29 physical damage. x2.5 at half health or less.",
+   "31 physical damage. x2.5 at half health or less.",
+   "34 physical damage. x2.5 at half health or less."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_desperado",
+   "symbol": "desperado",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 23,
+   "text": "Deal 250 damage with Desperado."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "last_stand",
+  "slug": "last-stand",
+  "name": "Last Stand",
+  "group": "shield",
+  "rarity": "epic",
+  "text": "20 shield. x3 at half health or less.",
+  "textByPlus": [
+   "20 shield. x3 at half health or less.",
+   "24 shield. x3 at half health or less.",
+   "28 shield. x3 at half health or less.",
+   "31 shield. x3 at half health or less.",
+   "35 shield. x3 at half health or less.",
+   "39 shield. x3 at half health or less.",
+   "43 shield. x3 at half health or less.",
+   "47 shield. x3 at half health or less.",
+   "50 shield. x3 at half health or less.",
+   "54 shield. x3 at half health or less.",
+   "58 shield. x3 at half health or less."
+  ],
+  "shopPrice": 45,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "MultiHit",
+   "Phys"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_last_stand",
+   "symbol": "last_stand",
+   "metric": "shield",
+   "target": 400,
+   "rewardSkulls": 33,
+   "text": "Gain 400 shield with Last Stand."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "opening_gambit",
+  "slug": "opening-gambit",
+  "name": "Opening Gambit",
+  "group": "physical",
+  "rarity": "rare",
+  "text": "14 physical damage. x2 at full health.",
+  "textByPlus": [
+   "14 physical damage. x2 at full health.",
+   "17 physical damage. x2 at full health.",
+   "19 physical damage. x2 at full health.",
+   "22 physical damage. x2 at full health.",
+   "24 physical damage. x2 at full health.",
+   "27 physical damage. x2 at full health.",
+   "29 physical damage. x2 at full health.",
+   "32 physical damage. x2 at full health.",
+   "34 physical damage. x2 at full health.",
+   "37 physical damage. x2 at full health.",
+   "39 physical damage. x2 at full health."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_opening_gambit",
+   "symbol": "opening_gambit",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 23,
+   "text": "Deal 300 damage with Opening Gambit."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "turtle",
+  "slug": "turtle",
+  "name": "Turtle",
+  "group": "physical",
+  "rarity": "rare",
+  "text": "11 physical damage. x2.5 while your shield holds.",
+  "textByPlus": [
+   "11 physical damage. x2.5 while your shield holds.",
+   "13 physical damage. x2.5 while your shield holds.",
+   "15 physical damage. x2.5 while your shield holds.",
+   "17 physical damage. x2.5 while your shield holds.",
+   "19 physical damage. x2.5 while your shield holds.",
+   "21 physical damage. x2.5 while your shield holds.",
+   "23 physical damage. x2.5 while your shield holds.",
+   "25 physical damage. x2.5 while your shield holds.",
+   "27 physical damage. x2.5 while your shield holds.",
+   "29 physical damage. x2.5 while your shield holds.",
+   "31 physical damage. x2.5 while your shield holds."
+  ],
+  "shopPrice": 30,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_turtle",
+   "symbol": "turtle",
+   "metric": "damage",
+   "target": 200,
+   "rewardSkulls": 23,
+   "text": "Deal 200 damage with Turtle."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "berserker",
+  "slug": "berserker",
+  "name": "Berserker",
+  "group": "physical",
+  "rarity": "epic",
+  "text": "14 physical damage. x2.5 while you have no shield.",
+  "textByPlus": [
+   "14 physical damage. x2.5 while you have no shield.",
+   "17 physical damage. x2.5 while you have no shield.",
+   "19 physical damage. x2.5 while you have no shield.",
+   "22 physical damage. x2.5 while you have no shield.",
+   "25 physical damage. x2.5 while you have no shield.",
+   "27 physical damage. x2.5 while you have no shield.",
+   "30 physical damage. x2.5 while you have no shield.",
+   "33 physical damage. x2.5 while you have no shield.",
+   "35 physical damage. x2.5 while you have no shield.",
+   "38 physical damage. x2.5 while you have no shield.",
+   "41 physical damage. x2.5 while you have no shield."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_berserker",
+   "symbol": "berserker",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 33,
+   "text": "Deal 300 damage with Berserker."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "riposte",
+  "slug": "riposte",
+  "name": "Riposte",
+  "group": "support",
+  "rarity": "rare",
+  "text": "+20% thorns this turn.",
+  "textByPlus": [
+   "+20% thorns this turn.",
+   "+24% thorns this turn.",
+   "+27% thorns this turn.",
+   "+31% thorns this turn.",
+   "+34% thorns this turn.",
+   "+38% thorns this turn.",
+   "+42% thorns this turn.",
+   "+45% thorns this turn.",
+   "+49% thorns this turn.",
+   "+52% thorns this turn.",
+   "+56% thorns this turn."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "MultiHit"
+  ],
+  "firstClearOfLevels": [
+   4
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_riposte",
+   "symbol": "riposte",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 23,
+   "text": "Land Riposte 30 times."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "brace",
+  "slug": "brace",
+  "name": "Brace",
+  "group": "support",
+  "rarity": "common",
+  "text": "+45% physical resist this turn.",
+  "textByPlus": [
+   "+45% physical resist this turn.",
+   "+53% physical resist this turn.",
+   "+61% physical resist this turn.",
+   "+69% physical resist this turn.",
+   "+77% physical resist this turn.",
+   "+86% physical resist this turn.",
+   "+94% physical resist this turn.",
+   "+102% physical resist this turn.",
+   "+110% physical resist this turn.",
+   "+118% physical resist this turn.",
+   "+126% physical resist this turn."
+  ],
+  "shopPrice": 15,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "Phys"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_brace",
+   "symbol": "brace",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 15,
+   "text": "Land Brace 30 times."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "ward",
+  "slug": "ward",
+  "name": "Ward",
+  "group": "support",
+  "rarity": "common",
+  "text": "+45% magical resist this turn.",
+  "textByPlus": [
+   "+45% magical resist this turn.",
+   "+53% magical resist this turn.",
+   "+61% magical resist this turn.",
+   "+69% magical resist this turn.",
+   "+77% magical resist this turn.",
+   "+86% magical resist this turn.",
+   "+94% magical resist this turn.",
+   "+102% magical resist this turn.",
+   "+110% magical resist this turn.",
+   "+118% magical resist this turn.",
+   "+126% magical resist this turn."
+  ],
+  "shopPrice": 15,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [
+   "Magic"
+  ],
+  "firstClearOfLevels": [
+   6
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_ward",
+   "symbol": "ward",
+   "metric": "landings",
+   "target": 30,
+   "rewardSkulls": 15,
+   "text": "Land Ward 30 times."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "hush",
+  "slug": "hush",
+  "name": "Hush",
+  "group": "magical",
+  "rarity": "epic",
+  "text": "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 50 magical damage. 1% stun chance.",
+  "textByPlus": [
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 50 magical damage. 1% stun chance.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 60 magical damage. 2% stun chance.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 69 magical damage. 3% stun chance.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 78 magical damage. 4% stun chance.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 88 magical damage. 5% stun chance.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 98 magical damage. 6% stun chance.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 107 magical damage. 7% stun chance.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 117 magical damage. 8% stun chance.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 126 magical damage. 9% stun chance.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 136 magical damage. 10% stun chance.",
+   "Costs 25 HP; skipped when you cannot spare it. 2 copies halve it, 3 copies or a crit waive it. 145 magical damage. 11% stun chance."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_hush",
+   "symbol": "hush",
+   "metric": "damage",
+   "target": 1000,
+   "rewardSkulls": 33,
+   "text": "Deal 1000 damage with Hush."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "shackle",
+  "slug": "shackle",
+  "name": "Shackle",
+  "group": "physical",
+  "rarity": "legendary",
+  "text": "25 physical damage. 2.5% stun chance.",
+  "textByPlus": [
+   "25 physical damage. 2.5% stun chance.",
+   "30 physical damage. 3% stun chance.",
+   "35 physical damage. 3.5% stun chance.",
+   "40 physical damage. 4% stun chance.",
+   "45 physical damage. 4.5% stun chance.",
+   "50 physical damage. 5% stun chance.",
+   "55 physical damage. 5.5% stun chance.",
+   "60 physical damage. 6% stun chance.",
+   "65 physical damage. 6.5% stun chance.",
+   "70 physical damage. 7% stun chance.",
+   "75 physical damage. 7.5% stun chance."
+  ],
+  "shopPrice": null,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 4.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_shackle",
+   "symbol": "shackle",
+   "metric": "damage",
+   "target": 500,
+   "rewardSkulls": 45,
+   "text": "Deal 500 damage with Shackle."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "duelists_code",
+  "slug": "duelists-code",
+  "name": "Duelist's Code",
+  "group": "physical",
+  "rarity": "epic",
+  "text": "8 physical damage, plus 6 for every symbol your pool is under eight.",
+  "textByPlus": [
+   "8 physical damage, plus 6 for every symbol your pool is under eight.",
+   "10 physical damage, plus 7 for every symbol your pool is under eight.",
+   "11 physical damage, plus 8 for every symbol your pool is under eight.",
+   "13 physical damage, plus 9 for every symbol your pool is under eight.",
+   "14 physical damage, plus 11 for every symbol your pool is under eight.",
+   "16 physical damage, plus 12 for every symbol your pool is under eight.",
+   "17 physical damage, plus 13 for every symbol your pool is under eight.",
+   "19 physical damage, plus 14 for every symbol your pool is under eight.",
+   "20 physical damage, plus 15 for every symbol your pool is under eight.",
+   "22 physical damage, plus 16 for every symbol your pool is under eight.",
+   "23 physical damage, plus 17 for every symbol your pool is under eight."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_duelists_code",
+   "symbol": "duelists_code",
+   "metric": "damage",
+   "target": 150,
+   "rewardSkulls": 33,
+   "text": "Deal 150 damage with Duelist's Code."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "hoarder",
+  "slug": "hoarder",
+  "name": "Hoarder",
+  "group": "gold",
+  "rarity": "epic",
+  "text": "Gain 1 gold, plus 1 per symbol in your pool.",
+  "textByPlus": [
+   "Gain 1 gold, plus 1 per symbol in your pool.",
+   "Gain 2 gold, plus 2 per symbol in your pool.",
+   "Gain 3 gold, plus 3 per symbol in your pool.",
+   "Gain 4 gold, plus 4 per symbol in your pool.",
+   "Gain 5 gold, plus 5 per symbol in your pool.",
+   "Gain 6 gold, plus 6 per symbol in your pool.",
+   "Gain 7 gold, plus 7 per symbol in your pool.",
+   "Gain 8 gold, plus 8 per symbol in your pool.",
+   "Gain 9 gold, plus 9 per symbol in your pool.",
+   "Gain 10 gold, plus 10 per symbol in your pool.",
+   "Gain 11 gold, plus 11 per symbol in your pool."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 5.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_hoarder",
+   "symbol": "hoarder",
+   "metric": "gold",
+   "target": 20,
+   "rewardSkulls": 33,
+   "text": "Earn 20 gold with Hoarder."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "sniper",
+  "slug": "sniper",
+  "name": "Sniper",
+  "group": "physical",
+  "rarity": "rare",
+  "text": "16 physical damage. Hits the enemy behind the front one (the front one if it stands alone).",
+  "textByPlus": [
+   "16 physical damage. Hits the enemy behind the front one (the front one if it stands alone).",
+   "19 physical damage. Hits the enemy behind the front one (the front one if it stands alone).",
+   "22 physical damage. Hits the enemy behind the front one (the front one if it stands alone).",
+   "25 physical damage. Hits the enemy behind the front one (the front one if it stands alone).",
+   "28 physical damage. Hits the enemy behind the front one (the front one if it stands alone).",
+   "30 physical damage. Hits the enemy behind the front one (the front one if it stands alone).",
+   "33 physical damage. Hits the enemy behind the front one (the front one if it stands alone).",
+   "36 physical damage. Hits the enemy behind the front one (the front one if it stands alone).",
+   "39 physical damage. Hits the enemy behind the front one (the front one if it stands alone).",
+   "42 physical damage. Hits the enemy behind the front one (the front one if it stands alone).",
+   "45 physical damage. Hits the enemy behind the front one (the front one if it stands alone)."
+  ],
+  "shopPrice": 32,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_sniper",
+   "symbol": "sniper",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 23,
+   "text": "Deal 300 damage with Sniper."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "spread_shot",
+  "slug": "spread-shot",
+  "name": "Spread Shot",
+  "group": "magical",
+  "rarity": "epic",
+  "text": "14 magical damage. 10% stun chance. Hits every enemy.",
+  "textByPlus": [
+   "14 magical damage. 10% stun chance. Hits every enemy.",
+   "17 magical damage. 12% stun chance. Hits every enemy.",
+   "19 magical damage. 14% stun chance. Hits every enemy.",
+   "22 magical damage. 16% stun chance. Hits every enemy.",
+   "25 magical damage. 18% stun chance. Hits every enemy.",
+   "27 magical damage. 20% stun chance. Hits every enemy.",
+   "30 magical damage. 21% stun chance. Hits every enemy.",
+   "33 magical damage. 23% stun chance. Hits every enemy.",
+   "35 magical damage. 25% stun chance. Hits every enemy.",
+   "38 magical damage. 27% stun chance. Hits every enemy.",
+   "41 magical damage. 29% stun chance. Hits every enemy."
+  ],
+  "shopPrice": 55,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "magical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_spread_shot",
+   "symbol": "spread_shot",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 33,
+   "text": "Deal 300 damage with Spread Shot."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "heirloom",
+  "slug": "heirloom",
+  "name": "Heirloom",
+  "group": "physical",
+  "rarity": "epic",
+  "text": "12 physical damage, plus 1.5 for every time it has landed this run (counts at most 40 times).",
+  "textByPlus": [
+   "12 physical damage, plus 1.5 for every time it has landed this run (counts at most 40 times).",
+   "14 physical damage, plus 1.79 for every time it has landed this run (counts at most 40 times).",
+   "17 physical damage, plus 2.07 for every time it has landed this run (counts at most 40 times).",
+   "19 physical damage, plus 2.36 for every time it has landed this run (counts at most 40 times).",
+   "21 physical damage, plus 2.64 for every time it has landed this run (counts at most 40 times).",
+   "23 physical damage, plus 2.93 for every time it has landed this run (counts at most 40 times).",
+   "26 physical damage, plus 3.21 for every time it has landed this run (counts at most 40 times).",
+   "28 physical damage, plus 3.5 for every time it has landed this run (counts at most 40 times).",
+   "30 physical damage, plus 3.78 for every time it has landed this run (counts at most 40 times).",
+   "33 physical damage, plus 4.07 for every time it has landed this run (counts at most 40 times).",
+   "35 physical damage, plus 4.35 for every time it has landed this run (counts at most 40 times)."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_heirloom",
+   "symbol": "heirloom",
+   "metric": "damage",
+   "target": 250,
+   "rewardSkulls": 33,
+   "text": "Deal 250 damage with Heirloom."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "ledger_of_deeds",
+  "slug": "ledger-of-deeds",
+  "name": "Ledger of Deeds",
+  "group": "gold",
+  "rarity": "epic",
+  "text": "Gain 1 gold, plus 0.7 for every time it has landed this run (counts at most 40 times).",
+  "textByPlus": [
+   "Gain 1 gold, plus 0.7 for every time it has landed this run (counts at most 40 times).",
+   "Gain 2 gold, plus 0.83 for every time it has landed this run (counts at most 40 times).",
+   "Gain 3 gold, plus 0.97 for every time it has landed this run (counts at most 40 times).",
+   "Gain 4 gold, plus 1.1 for every time it has landed this run (counts at most 40 times).",
+   "Gain 5 gold, plus 1.23 for every time it has landed this run (counts at most 40 times).",
+   "Gain 6 gold, plus 1.37 for every time it has landed this run (counts at most 40 times).",
+   "Gain 7 gold, plus 1.5 for every time it has landed this run (counts at most 40 times).",
+   "Gain 8 gold, plus 1.63 for every time it has landed this run (counts at most 40 times).",
+   "Gain 9 gold, plus 1.76 for every time it has landed this run (counts at most 40 times).",
+   "Gain 10 gold, plus 1.9 for every time it has landed this run (counts at most 40 times).",
+   "Gain 11 gold, plus 2.03 for every time it has landed this run (counts at most 40 times)."
+  ],
+  "shopPrice": 50,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 5.0,
+  "skillCheck": false,
+  "damageTypes": [],
+  "answers": [],
+  "firstClearOfLevels": [],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_ledger_of_deeds",
+   "symbol": "ledger_of_deeds",
+   "metric": "gold",
+   "target": 20,
+   "rewardSkulls": 33,
+   "text": "Earn 20 gold with Ledger of Deeds."
+  },
+  "rewardOf": []
+ },
+ {
+  "id": "armor_breaker",
+  "slug": "armor-breaker",
+  "name": "Armor Breaker",
+  "group": "physical",
+  "rarity": "rare",
+  "text": "14 physical damage. x2 against armor.",
+  "textByPlus": [
+   "14 physical damage. x2 against armor.",
+   "17 physical damage. x2 against armor.",
+   "19 physical damage. x2 against armor.",
+   "22 physical damage. x2 against armor.",
+   "24 physical damage. x2 against armor.",
+   "27 physical damage. x2 against armor.",
+   "29 physical damage. x2 against armor.",
+   "32 physical damage. x2 against armor.",
+   "34 physical damage. x2 against armor.",
+   "37 physical damage. x2 against armor.",
+   "39 physical damage. x2 against armor."
+  ],
+  "shopPrice": 35,
+  "starter": false,
+  "forgeable": true,
+  "inDemo": false,
+  "critMultiplier": 3.0,
+  "skillCheck": false,
+  "damageTypes": [
+   "physical"
+  ],
+  "answers": [
+   "Armor"
+  ],
+  "firstClearOfLevels": [
+   8
+  ],
+  "icon": null,
+  "task": {
+   "id": "ch_sym_armor_breaker",
+   "symbol": "armor_breaker",
+   "metric": "damage",
+   "target": 300,
+   "rewardSkulls": 23,
+   "text": "Deal 300 damage with Armor Breaker."
+  },
+  "rewardOf": []
+ }
+]

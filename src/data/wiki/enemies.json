@@ -1,0 +1,3480 @@
+[
+ {
+  "id": "skeleton",
+  "slug": "skeleton",
+  "name": "Skeleton",
+  "hp": 83,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 10,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 16,
+  "rampPercent": 0.3,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 30,
+  "skulls": 1,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.12,
+    "share": 0.75
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.04,
+    "share": 0.25
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "FirstDamageDealt",
+    "text": "hope that didn't hurt, lol"
+   },
+   {
+    "trigger": "Enter",
+    "text": "nervous yet?"
+   },
+   {
+    "trigger": "BeforeDeath",
+    "text": "don't think I've got no one, they'll come for you"
+   }
+  ],
+  "threats": [
+   "MultiHit",
+   "Phys"
+  ],
+  "exam": [
+   "MultiHit"
+  ],
+  "appearances": [
+   {
+    "level": 1,
+    "fight": 1,
+    "group": [
+     "skeleton"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": true,
+  "icon": {
+   "src": "/wiki/icons/enemies/skeleton.png",
+   "width": 23,
+   "height": 52
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 1,
+    "hp": 83,
+    "armor": 0,
+    "firstAttack": [
+     10
+    ]
+   }
+  ]
+ },
+ {
+  "id": "armored_skeleton",
+  "slug": "armored-skeleton",
+  "name": "Armored Skeleton",
+  "hp": 150,
+  "armor": 150,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 15,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.25,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 30,
+  "skulls": 1,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.12,
+    "share": 0.75
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.04,
+    "share": 0.25
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "FirstDamageTaken",
+    "text": "did you hit me? didn't feel a thing."
+   }
+  ],
+  "threats": [
+   "Armor",
+   "Phys"
+  ],
+  "exam": [
+   "Armor"
+  ],
+  "appearances": [
+   {
+    "level": 2,
+    "fight": 2,
+    "group": [
+     "armored_skeleton"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 4,
+    "fight": 1,
+    "group": [
+     "armored_skeleton"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 7,
+    "fight": 1,
+    "group": [
+     "armored_skeleton"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": true,
+  "icon": {
+   "src": "/wiki/icons/enemies/armored-skeleton.png",
+   "width": 29,
+   "height": 52
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 2,
+    "hp": 150,
+    "armor": 150,
+    "firstAttack": [
+     15
+    ]
+   },
+   {
+    "level": 4,
+    "hp": 188,
+    "armor": 188,
+    "firstAttack": [
+     17
+    ]
+   },
+   {
+    "level": 7,
+    "hp": 705,
+    "armor": 705,
+    "firstAttack": [
+     31
+    ]
+   }
+  ]
+ },
+ {
+  "id": "skeleton_mage",
+  "slug": "skeleton-mage",
+  "name": "Skeleton Mage",
+  "hp": 130,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 0,
+    "magical": 7,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.2,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 30,
+  "skulls": 1,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.12,
+    "share": 0.75
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.04,
+    "share": 0.25
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "Enter",
+    "text": "charms written, spirits banished, cheap rates"
+   },
+   {
+    "trigger": "BeforeDeath",
+    "text": "ugh..."
+   }
+  ],
+  "threats": [
+   "Magic"
+  ],
+  "exam": [
+   "Magic"
+  ],
+  "appearances": [
+   {
+    "level": 1,
+    "fight": 3,
+    "group": [
+     "skeleton_mage"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": true,
+  "icon": {
+   "src": "/wiki/icons/enemies/skeleton-mage.png",
+   "width": 29,
+   "height": 52
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 1,
+    "hp": 130,
+    "armor": 0,
+    "firstAttack": [
+     7
+    ]
+   }
+  ]
+ },
+ {
+  "id": "skeleton_leader",
+  "slug": "skeleton-leader",
+  "name": "Skeleton Leader",
+  "hp": 275,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 13,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 16,
+  "rampPercent": 0.3,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 80,
+  "skulls": 4,
+  "isBoss": true,
+  "bossOfLevels": [
+   1
+  ],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.6,
+    "share": 0.6667
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.2,
+    "share": 0.2222
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.1,
+    "share": 0.1111
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "Enter",
+    "text": "straighten up when you stand before me. and raise that shield, my swing is honest steel"
+   }
+  ],
+  "threats": [
+   "MultiHit",
+   "Phys"
+  ],
+  "exam": [
+   "MultiHit"
+  ],
+  "appearances": [
+   {
+    "level": 1,
+    "fight": 5,
+    "group": [
+     "skeleton_leader"
+    ],
+    "isBossFight": true
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": true,
+  "icon": {
+   "src": "/wiki/icons/enemies/skeleton-leader.png",
+   "width": 23,
+   "height": 55
+  },
+  "answeredBySymbols": [
+   "wooden_shield",
+   "wizards_shield",
+   "spiked_bulwark",
+   "mirror_ward",
+   "bastion",
+   "warding_sigil",
+   "thorn_mail",
+   "stone_skin",
+   "parry",
+   "second_wind",
+   "pawnbroker",
+   "keystone",
+   "patience",
+   "buckler",
+   "phalanx",
+   "last_stand",
+   "riposte"
+  ],
+  "answeredByPowerups": [
+   "adrenaline"
+  ],
+  "levelStats": [
+   {
+    "level": 1,
+    "hp": 275,
+    "armor": 0,
+    "firstAttack": [
+     13
+    ]
+   }
+  ]
+ },
+ {
+  "id": "skeleton_highmage",
+  "slug": "skeleton-highmage",
+  "name": "Skeleton Highmage",
+  "hp": 450,
+  "armor": 0,
+  "magicResist": 0.2,
+  "attacks": [
+   {
+    "physical": 0,
+    "magical": 35,
+    "hits": 1,
+    "stunChance": 0.45,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.3,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 80,
+  "skulls": 4,
+  "isBoss": true,
+  "bossOfLevels": [
+   7
+  ],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.6,
+    "share": 0.6667
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.2,
+    "share": 0.2222
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.1,
+    "share": 0.1111
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "Enter",
+    "text": "and where did you crawl out from? stand still a moment. my spells tend to leave people standing still"
+   },
+   {
+    "trigger": "FirstDamageTaken",
+    "text": "insolent"
+   },
+   {
+    "trigger": "FirstDamageDealt",
+    "text": "don't tire me, just die already, die"
+   },
+   {
+    "trigger": "KilledPlayer",
+    "text": "ez"
+   }
+  ],
+  "threats": [
+   "Stun",
+   "Magic"
+  ],
+  "exam": [
+   "Stun"
+  ],
+  "appearances": [
+   {
+    "level": 7,
+    "fight": 5,
+    "group": [
+     "skeleton_highmage"
+    ],
+    "isBossFight": true
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/skeleton-highmage.png",
+   "width": 34,
+   "height": 55
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [
+   "anchor_boots"
+  ],
+  "levelStats": [
+   {
+    "level": 7,
+    "hp": 2115,
+    "armor": 0,
+    "firstAttack": [
+     72
+    ]
+   }
+  ]
+ },
+ {
+  "id": "skeleton_bomber",
+  "slug": "skeleton-bomber",
+  "name": "Mülayim the Bomber",
+  "hp": 300,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 6,
+    "magical": 0,
+    "hits": 3,
+    "stunChance": 0.0,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.3,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 30,
+  "skulls": 1,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.12,
+    "share": 0.75
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.04,
+    "share": 0.25
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "KilledPlayer",
+    "text": "told you I'd bomb you. easy."
+   },
+   {
+    "trigger": "FirstDamageDealt",
+    "text": "boom! boom! booom!"
+   },
+   {
+    "trigger": "BeforeDeath",
+    "text": "this isn't over"
+   },
+   {
+    "trigger": "FirstDamageTaken",
+    "text": "stop hitting me, I'll drop the bomb"
+   }
+  ],
+  "threats": [
+   "MultiHit",
+   "Phys"
+  ],
+  "exam": [
+   "MultiHit"
+  ],
+  "appearances": [
+   {
+    "level": 2,
+    "fight": 1,
+    "group": [
+     "skeleton_bomber"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 4,
+    "fight": 4,
+    "group": [
+     "skeleton_bomber",
+     "skeleton_archer"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": true,
+  "icon": {
+   "src": "/wiki/icons/enemies/skeleton-bomber.png",
+   "width": 28,
+   "height": 52
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 2,
+    "hp": 300,
+    "armor": 0,
+    "firstAttack": [
+     18
+    ]
+   },
+   {
+    "level": 4,
+    "hp": 375,
+    "armor": 0,
+    "firstAttack": [
+     21
+    ]
+   }
+  ]
+ },
+ {
+  "id": "skeleton_archer",
+  "slug": "skeleton-archer",
+  "name": "Skeleton Archer",
+  "hp": 130,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 12,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.075,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.15,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 30,
+  "skulls": 1,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.12,
+    "share": 0.75
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.04,
+    "share": 0.25
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "Enter",
+    "text": "I can drop a bird in flight from 500 meters"
+   },
+   {
+    "trigger": "FirstDamageTaken",
+    "text": "I was a sharpshooter in the army, damn it"
+   }
+  ],
+  "threats": [
+   "Stun",
+   "Phys"
+  ],
+  "exam": [
+   "Stun"
+  ],
+  "appearances": [
+   {
+    "level": 1,
+    "fight": 4,
+    "group": [
+     "skeleton_archer"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 4,
+    "fight": 4,
+    "group": [
+     "skeleton_bomber",
+     "skeleton_archer"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": true,
+  "icon": {
+   "src": "/wiki/icons/enemies/skeleton-archer.png",
+   "width": 38,
+   "height": 52
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 1,
+    "hp": 130,
+    "armor": 0,
+    "firstAttack": [
+     12
+    ]
+   },
+   {
+    "level": 4,
+    "hp": 162,
+    "armor": 0,
+    "firstAttack": [
+     14
+    ]
+   }
+  ]
+ },
+ {
+  "id": "skeleton_archer_leader",
+  "slug": "skeleton-archer-leader",
+  "name": "Skeleton Archer Leader",
+  "hp": 350,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 25,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.1,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.2,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 50,
+  "skulls": 2,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.2,
+    "share": 0.5714
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.1,
+    "share": 0.2857
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.05,
+    "share": 0.1429
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "Enter",
+    "text": "come on then"
+   },
+   {
+    "trigger": "FirstDamageDealt",
+    "text": "I'll make you cry"
+   },
+   {
+    "trigger": "KilledPlayer",
+    "text": "told you I'd make you cry, sweetheart"
+   },
+   {
+    "trigger": "BeforeDeath",
+    "text": "(couldn't make you cry)"
+   }
+  ],
+  "threats": [
+   "Stun",
+   "Phys"
+  ],
+  "exam": [
+   "Stun"
+  ],
+  "appearances": [
+   {
+    "level": 2,
+    "fight": 3,
+    "group": [
+     "skeleton_archer_leader"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 9,
+    "fight": 1,
+    "group": [
+     "skeleton_archer_leader"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": true,
+  "icon": {
+   "src": "/wiki/icons/enemies/skeleton-archer-leader.png",
+   "width": 38,
+   "height": 55
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 2,
+    "hp": 350,
+    "armor": 0,
+    "firstAttack": [
+     25
+    ]
+   },
+   {
+    "level": 9,
+    "hp": 788,
+    "armor": 0,
+    "firstAttack": [
+     44
+    ]
+   }
+  ]
+ },
+ {
+  "id": "armored_skeleton_leader",
+  "slug": "armored-skeleton-leader",
+  "name": "Armored Skeleton Leader",
+  "hp": 350,
+  "armor": 150,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 20,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.3,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 50,
+  "skulls": 2,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.2,
+    "share": 0.5714
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.1,
+    "share": 0.2857
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.05,
+    "share": 0.1429
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "FirstDamageTaken",
+    "text": "didn't feel that"
+   }
+  ],
+  "threats": [
+   "Armor",
+   "Phys"
+  ],
+  "exam": [
+   "Armor"
+  ],
+  "appearances": [
+   {
+    "level": 2,
+    "fight": 4,
+    "group": [
+     "armored_skeleton_leader"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 10,
+    "fight": 3,
+    "group": [
+     "armored_skeleton_leader"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": true,
+  "icon": {
+   "src": "/wiki/icons/enemies/armored-skeleton-leader.png",
+   "width": 29,
+   "height": 55
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 2,
+    "hp": 350,
+    "armor": 150,
+    "firstAttack": [
+     20
+    ]
+   },
+   {
+    "level": 10,
+    "hp": 875,
+    "armor": 375,
+    "firstAttack": [
+     36
+    ]
+   }
+  ]
+ },
+ {
+  "id": "skeleton_mage_leader",
+  "slug": "skeleton-mage-leader",
+  "name": "Skeleton Mage Leader",
+  "hp": 198,
+  "armor": 0,
+  "magicResist": 0.1,
+  "attacks": [
+   {
+    "physical": 0,
+    "magical": 16,
+    "hits": 1,
+    "stunChance": 0.1,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.3,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 50,
+  "skulls": 2,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.2,
+    "share": 0.5714
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.1,
+    "share": 0.2857
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.05,
+    "share": 0.1429
+   }
+  ],
+  "lines": [],
+  "threats": [
+   "Stun",
+   "Magic"
+  ],
+  "exam": [
+   "Stun"
+  ],
+  "appearances": [
+   {
+    "level": 7,
+    "fight": 3,
+    "group": [
+     "skeleton_mage_leader"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 8,
+    "fight": 2,
+    "group": [
+     "skeleton_mage_leader"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 10,
+    "fight": 2,
+    "group": [
+     "skeleton_mage_leader"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/skeleton-mage-leader.png",
+   "width": 29,
+   "height": 55
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 7,
+    "hp": 931,
+    "armor": 0,
+    "firstAttack": [
+     33
+    ]
+   },
+   {
+    "level": 8,
+    "hp": 1109,
+    "armor": 0,
+    "firstAttack": [
+     31
+    ]
+   },
+   {
+    "level": 10,
+    "hp": 495,
+    "armor": 0,
+    "firstAttack": [
+     29
+    ]
+   }
+  ]
+ },
+ {
+  "id": "knight",
+  "slug": "knight",
+  "name": "Knight of Trina",
+  "hp": 1000,
+  "armor": 1000,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 41,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 60
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.25,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 100,
+  "skulls": 5,
+  "isBoss": true,
+  "bossOfLevels": [
+   9
+  ],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.6,
+    "share": 0.6667
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.2,
+    "share": 0.2222
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.1,
+    "share": 0.1111
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "FirstDamageTaken",
+    "text": "you are feeble"
+   },
+   {
+    "trigger": "FirstDamageDealt",
+    "text": "don't tire me"
+   },
+   {
+    "trigger": "KilledPlayer",
+    "text": "take this one away"
+   }
+  ],
+  "threats": [
+   "Armor",
+   "Phys"
+  ],
+  "exam": [
+   "Armor"
+  ],
+  "appearances": [
+   {
+    "level": 9,
+    "fight": 5,
+    "group": [
+     "knight"
+    ],
+    "isBossFight": true
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/knight.png",
+   "width": 89,
+   "height": 106
+  },
+  "answeredBySymbols": [
+   "blood_spell",
+   "ancestral_axe",
+   "wood_staff",
+   "soul_ember",
+   "chain_lightning",
+   "mirror_ward",
+   "torch",
+   "pike",
+   "erenion",
+   "fester",
+   "sellsword",
+   "shard",
+   "apprentice_notes",
+   "focus_lens",
+   "arc_bolt",
+   "serpent_kiss",
+   "blood_bargain",
+   "conduit",
+   "choir",
+   "can_opener",
+   "icebreaker",
+   "iron_nail",
+   "candle",
+   "oil_flask",
+   "kindling",
+   "dragon_lance",
+   "rust_bomb",
+   "outrider",
+   "hush",
+   "spread_shot",
+   "armor_breaker"
+  ],
+  "answeredByPowerups": [
+   "explosion"
+  ],
+  "levelStats": [
+   {
+    "level": 9,
+    "hp": 2250,
+    "armor": 2250,
+    "firstAttack": [
+     72
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ogre",
+  "slug": "ogre",
+  "name": "Ogre",
+  "hp": 960,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 40,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.4,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.18,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 80,
+  "skulls": 4,
+  "isBoss": true,
+  "bossOfLevels": [
+   2
+  ],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.6,
+    "share": 0.6667
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.2,
+    "share": 0.2222
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.1,
+    "share": 0.1111
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "Enter",
+    "text": "I'm on a diet, I'm cranky, don't push me. one slam and you'll be seeing stars for a whole turn"
+   },
+   {
+    "trigger": "FirstDamageDealt",
+    "text": "don't anger me when I'm hungry, you'll regret it"
+   },
+   {
+    "trigger": "FirstDamageTaken",
+    "text": "don't get on my nerves when I'm hungry"
+   },
+   {
+    "trigger": "KilledPlayer",
+    "text": "go fetch me a kebab or something, quick"
+   },
+   {
+    "trigger": "BeforeDeath",
+    "text": "should've eaten that pancake this morning"
+   }
+  ],
+  "threats": [
+   "Stun",
+   "Phys"
+  ],
+  "exam": [
+   "Stun"
+  ],
+  "appearances": [
+   {
+    "level": 2,
+    "fight": 5,
+    "group": [
+     "ogre"
+    ],
+    "isBossFight": true
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": true,
+  "icon": {
+   "src": "/wiki/icons/enemies/ogre.png",
+   "width": 52,
+   "height": 58
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [
+   "anchor_boots"
+  ],
+  "levelStats": [
+   {
+    "level": 2,
+    "hp": 960,
+    "armor": 0,
+    "firstAttack": [
+     40
+    ]
+   }
+  ]
+ },
+ {
+  "id": "armored_ice_skeleton",
+  "slug": "armored-ice-skeleton",
+  "name": "Armored Ice Skeleton",
+  "hp": 300,
+  "armor": 200,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 15,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.3,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.3,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 30,
+  "skulls": 1,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.12,
+    "share": 0.75
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.04,
+    "share": 0.25
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "Enter",
+    "text": "turn the AC down, bro, my bones are frozen solid"
+   }
+  ],
+  "threats": [
+   "Chill",
+   "Armor",
+   "Phys"
+  ],
+  "exam": [
+   "Chill",
+   "Armor"
+  ],
+  "appearances": [
+   {
+    "level": 3,
+    "fight": 2,
+    "group": [
+     "armored_ice_skeleton"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 4,
+    "fight": 3,
+    "group": [
+     "armored_ice_skeleton"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": true,
+  "icon": {
+   "src": "/wiki/icons/enemies/armored-ice-skeleton.png",
+   "width": 29,
+   "height": 52
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 3,
+    "hp": 300,
+    "armor": 200,
+    "firstAttack": [
+     15
+    ]
+   },
+   {
+    "level": 4,
+    "hp": 375,
+    "armor": 250,
+    "firstAttack": [
+     17
+    ]
+   }
+  ]
+ },
+ {
+  "id": "armored_ice_skeleton_leader",
+  "slug": "armored-ice-skeleton-leader",
+  "name": "Armored Ice Skeleton Leader",
+  "hp": 533,
+  "armor": 150,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 14,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.05,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.3,
+    "chillTurns": 2,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.3,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 80,
+  "skulls": 4,
+  "isBoss": true,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.6,
+    "share": 0.6667
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.2,
+    "share": 0.2222
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.1,
+    "share": 0.1111
+   }
+  ],
+  "lines": [],
+  "threats": [
+   "Stun",
+   "Chill",
+   "Armor",
+   "Phys"
+  ],
+  "exam": [
+   "Stun",
+   "Chill",
+   "Armor"
+  ],
+  "appearances": [
+   {
+    "level": 9,
+    "fight": 2,
+    "group": [
+     "armored_ice_skeleton_leader"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/armored-ice-skeleton-leader.png",
+   "width": 29,
+   "height": 55
+  },
+  "answeredBySymbols": [
+   "blood_spell",
+   "ancestral_axe",
+   "wood_staff",
+   "soul_ember",
+   "chain_lightning",
+   "mirror_ward",
+   "torch",
+   "pike",
+   "erenion",
+   "fester",
+   "sellsword",
+   "shard",
+   "apprentice_notes",
+   "focus_lens",
+   "arc_bolt",
+   "serpent_kiss",
+   "blood_bargain",
+   "conduit",
+   "choir",
+   "can_opener",
+   "icebreaker",
+   "iron_nail",
+   "candle",
+   "oil_flask",
+   "kindling",
+   "dragon_lance",
+   "rust_bomb",
+   "outrider",
+   "hush",
+   "spread_shot",
+   "armor_breaker"
+  ],
+  "answeredByPowerups": [
+   "explosion",
+   "cure",
+   "anchor_boots",
+   "frost_flask"
+  ],
+  "levelStats": [
+   {
+    "level": 9,
+    "hp": 1199,
+    "armor": 338,
+    "firstAttack": [
+     24
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ice_skeleton_archer",
+  "slug": "ice-skeleton-archer",
+  "name": "Ice Skeleton Archer",
+  "hp": 500,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 20,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.15,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.1,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.25,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 30,
+  "skulls": 1,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.12,
+    "share": 0.75
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.04,
+    "share": 0.25
+   }
+  ],
+  "lines": [],
+  "threats": [
+   "Stun",
+   "Chill",
+   "Phys"
+  ],
+  "exam": [
+   "Stun",
+   "Chill"
+  ],
+  "appearances": [
+   {
+    "level": 3,
+    "fight": 3,
+    "group": [
+     "ice_skeleton_archer"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 4,
+    "fight": 2,
+    "group": [
+     "ice_skeleton_archer"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": true,
+  "icon": {
+   "src": "/wiki/icons/enemies/ice-skeleton-archer.png",
+   "width": 38,
+   "height": 52
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 3,
+    "hp": 500,
+    "armor": 0,
+    "firstAttack": [
+     20
+    ]
+   },
+   {
+    "level": 4,
+    "hp": 625,
+    "armor": 0,
+    "firstAttack": [
+     23
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ice_skeleton_archer_leader",
+  "slug": "ice-skeleton-archer-leader",
+  "name": "Ice Skeleton Archer Leader",
+  "hp": 650,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 20,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.2,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.3,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.25,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 50,
+  "skulls": 2,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.2,
+    "share": 0.5714
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.1,
+    "share": 0.2857
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.05,
+    "share": 0.1429
+   }
+  ],
+  "lines": [],
+  "threats": [
+   "Stun",
+   "Chill",
+   "Phys"
+  ],
+  "exam": [
+   "Stun",
+   "Chill"
+  ],
+  "appearances": [
+   {
+    "level": 3,
+    "fight": 4,
+    "group": [
+     "ice_skeleton_archer_leader"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 9,
+    "fight": 3,
+    "group": [
+     "ice_skeleton_archer_leader"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": true,
+  "icon": {
+   "src": "/wiki/icons/enemies/ice-skeleton-archer-leader.png",
+   "width": 38,
+   "height": 55
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 3,
+    "hp": 650,
+    "armor": 0,
+    "firstAttack": [
+     20
+    ]
+   },
+   {
+    "level": 9,
+    "hp": 1462,
+    "armor": 0,
+    "firstAttack": [
+     35
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ice_skeleton_mage",
+  "slug": "ice-skeleton-mage",
+  "name": "Ice Skeleton Mage",
+  "hp": 350,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 0,
+    "magical": 15,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.3,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.3,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 30,
+  "skulls": 1,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.12,
+    "share": 0.75
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.04,
+    "share": 0.25
+   }
+  ],
+  "lines": [],
+  "threats": [
+   "Chill",
+   "Magic"
+  ],
+  "exam": [
+   "Chill"
+  ],
+  "appearances": [
+   {
+    "level": 3,
+    "fight": 1,
+    "group": [
+     "ice_skeleton_mage"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 6,
+    "fight": 2,
+    "group": [
+     "ice_skeleton_mage"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": true,
+  "icon": {
+   "src": "/wiki/icons/enemies/ice-skeleton-mage.png",
+   "width": 29,
+   "height": 52
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 3,
+    "hp": 350,
+    "armor": 0,
+    "firstAttack": [
+     15
+    ]
+   },
+   {
+    "level": 6,
+    "hp": 1645,
+    "armor": 0,
+    "firstAttack": [
+     31
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ice_skeleton_mage_leader",
+  "slug": "ice-skeleton-mage-leader",
+  "name": "Ice Skeleton Mage Leader",
+  "hp": 475,
+  "armor": 0,
+  "magicResist": 0.1,
+  "attacks": [
+   {
+    "physical": 0,
+    "magical": 17,
+    "hits": 1,
+    "stunChance": 0.15,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.3,
+    "chillTurns": 2,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.3,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 80,
+  "skulls": 4,
+  "isBoss": true,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.6,
+    "share": 0.6667
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.2,
+    "share": 0.2222
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.1,
+    "share": 0.1111
+   }
+  ],
+  "lines": [],
+  "threats": [
+   "Stun",
+   "Chill",
+   "Magic"
+  ],
+  "exam": [
+   "Stun",
+   "Chill"
+  ],
+  "appearances": [
+   {
+    "level": 10,
+    "fight": 4,
+    "group": [
+     "ice_skeleton_mage_leader"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/ice-skeleton-mage-leader.png",
+   "width": 29,
+   "height": 55
+  },
+  "answeredBySymbols": [
+   "torch",
+   "icebreaker"
+  ],
+  "answeredByPowerups": [
+   "cure",
+   "anchor_boots",
+   "frost_flask"
+  ],
+  "levelStats": [
+   {
+    "level": 10,
+    "hp": 1188,
+    "armor": 0,
+    "firstAttack": [
+     31
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ghost",
+  "slug": "ghost",
+  "name": "Ghost of London",
+  "hp": 1200,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 25,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.15,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 10,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.3,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 80,
+  "skulls": 4,
+  "isBoss": true,
+  "bossOfLevels": [
+   3
+  ],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.6,
+    "share": 0.6667
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.2,
+    "share": 0.2222
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.1,
+    "share": 0.1111
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "Enter",
+    "text": "don't get me wrong bro, I'm not a beggar. I just take what's in your purse and patch myself up with it"
+   },
+   {
+    "trigger": "FirstDamageDealt",
+    "text": "no lighter? got the time at least?"
+   }
+  ],
+  "threats": [
+   "Theft",
+   "SelfHeal",
+   "Phys"
+  ],
+  "exam": [
+   "Theft",
+   "SelfHeal"
+  ],
+  "appearances": [
+   {
+    "level": 3,
+    "fight": 5,
+    "group": [
+     "ghost"
+    ],
+    "isBossFight": true
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": true,
+  "icon": {
+   "src": "/wiki/icons/enemies/ghost.png",
+   "width": 53,
+   "height": 46
+  },
+  "answeredBySymbols": [
+   "warriors_draught",
+   "war_horn",
+   "soul_ember",
+   "executioner",
+   "apprentice_notes",
+   "zealots_chant",
+   "sacrifice",
+   "candle",
+   "war_paint"
+  ],
+  "answeredByPowerups": [
+   "whetstone_kit",
+   "grimoire_page",
+   "war_drum",
+   "adrenaline",
+   "golden_padlock"
+  ],
+  "levelStats": [
+   {
+    "level": 3,
+    "hp": 1200,
+    "armor": 0,
+    "firstAttack": [
+     25
+    ]
+   }
+  ]
+ },
+ {
+  "id": "slime",
+  "slug": "slime",
+  "name": "Slime",
+  "hp": 100,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 7,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.25,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 30,
+  "skulls": 1,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.12,
+    "share": 0.75
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.04,
+    "share": 0.25
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "Enter",
+    "text": "I'm hungry, maybe I'll eat you?"
+   }
+  ],
+  "threats": [
+   "Phys"
+  ],
+  "exam": [
+   "Phys"
+  ],
+  "appearances": [
+   {
+    "level": 1,
+    "fight": 2,
+    "group": [
+     "slime"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 7,
+    "fight": 2,
+    "group": [
+     "slime"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": true,
+  "icon": {
+   "src": "/wiki/icons/enemies/slime.png",
+   "width": 80,
+   "height": 53
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 1,
+    "hp": 100,
+    "armor": 0,
+    "firstAttack": [
+     7
+    ]
+   },
+   {
+    "level": 7,
+    "hp": 470,
+    "armor": 0,
+    "firstAttack": [
+     14
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fire_skeleton_mage",
+  "slug": "fire-skeleton-mage",
+  "name": "Fire Skeleton Mage",
+  "hp": 84,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 0,
+    "magical": 16,
+    "hits": 1,
+    "stunChance": 0.1,
+    "burnChance": 0.2,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.35,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 30,
+  "skulls": 1,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.12,
+    "share": 0.75
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.04,
+    "share": 0.25
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "FirstDamageDealt",
+    "text": "cold? I can burn this place down for you"
+   }
+  ],
+  "threats": [
+   "Stun",
+   "Burn",
+   "Magic"
+  ],
+  "exam": [
+   "Stun",
+   "Burn"
+  ],
+  "appearances": [
+   {
+    "level": 5,
+    "fight": 3,
+    "group": [
+     "fire_skeleton_mage"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/fire-skeleton-mage.png",
+   "width": 30,
+   "height": 55
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 5,
+    "hp": 378,
+    "armor": 0,
+    "firstAttack": [
+     29
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fire_skeleton_mage_leader",
+  "slug": "fire-skeleton-mage-leader",
+  "name": "Fire Skeleton Mage Leader",
+  "hp": 158,
+  "armor": 0,
+  "magicResist": 0.1,
+  "attacks": [
+   {
+    "physical": 0,
+    "magical": 21,
+    "hits": 1,
+    "stunChance": 0.1,
+    "burnChance": 0.2,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.35,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 50,
+  "skulls": 2,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.2,
+    "share": 0.5714
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.1,
+    "share": 0.2857
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.05,
+    "share": 0.1429
+   }
+  ],
+  "lines": [],
+  "threats": [
+   "Stun",
+   "Burn",
+   "Magic"
+  ],
+  "exam": [
+   "Stun",
+   "Burn"
+  ],
+  "appearances": [
+   {
+    "level": 6,
+    "fight": 4,
+    "group": [
+     "fire_skeleton_mage_leader"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 8,
+    "fight": 3,
+    "group": [
+     "fire_skeleton_mage_leader"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/fire-skeleton-mage-leader.png",
+   "width": 30,
+   "height": 55
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 6,
+    "hp": 743,
+    "armor": 0,
+    "firstAttack": [
+     43
+    ]
+   },
+   {
+    "level": 8,
+    "hp": 885,
+    "armor": 0,
+    "firstAttack": [
+     41
+    ]
+   }
+  ]
+ },
+ {
+  "id": "armored_fire_skeleton",
+  "slug": "armored-fire-skeleton",
+  "name": "Armored Fire Skeleton",
+  "hp": 89,
+  "armor": 28,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 13,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.2,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.35,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 30,
+  "skulls": 1,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.12,
+    "share": 0.75
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.04,
+    "share": 0.25
+   }
+  ],
+  "lines": [],
+  "threats": [
+   "Burn",
+   "Armor",
+   "Phys"
+  ],
+  "exam": [
+   "Burn",
+   "Armor"
+  ],
+  "appearances": [
+   {
+    "level": 5,
+    "fight": 4,
+    "group": [
+     "armored_fire_skeleton"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 6,
+    "fight": 3,
+    "group": [
+     "armored_fire_skeleton"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/armored-fire-skeleton.png",
+   "width": 29,
+   "height": 55
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 5,
+    "hp": 400,
+    "armor": 126,
+    "firstAttack": [
+     23
+    ]
+   },
+   {
+    "level": 6,
+    "hp": 418,
+    "armor": 132,
+    "firstAttack": [
+     27
+    ]
+   }
+  ]
+ },
+ {
+  "id": "armored_fire_skeleton_leader",
+  "slug": "armored-fire-skeleton-leader",
+  "name": "Armored Fire Skeleton Leader",
+  "hp": 171,
+  "armor": 57,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 17,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.2,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.35,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 50,
+  "skulls": 2,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.2,
+    "share": 0.5714
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.1,
+    "share": 0.2857
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.05,
+    "share": 0.1429
+   }
+  ],
+  "lines": [],
+  "threats": [
+   "Burn",
+   "Armor",
+   "Phys"
+  ],
+  "exam": [
+   "Burn",
+   "Armor"
+  ],
+  "appearances": [
+   {
+    "level": 7,
+    "fight": 4,
+    "group": [
+     "armored_fire_skeleton_leader"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 9,
+    "fight": 4,
+    "group": [
+     "armored_fire_skeleton_leader"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/armored-fire-skeleton-leader.png",
+   "width": 29,
+   "height": 55
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 7,
+    "hp": 804,
+    "armor": 268,
+    "firstAttack": [
+     35
+    ]
+   },
+   {
+    "level": 9,
+    "hp": 385,
+    "armor": 128,
+    "firstAttack": [
+     30
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fire_skeleton_archer",
+  "slug": "fire-skeleton-archer",
+  "name": "Fire Skeleton Archer",
+  "hp": 74,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 23,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.1,
+    "burnChance": 0.2,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.3,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 30,
+  "skulls": 1,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.12,
+    "share": 0.75
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.04,
+    "share": 0.25
+   }
+  ],
+  "lines": [],
+  "threats": [
+   "Stun",
+   "Burn",
+   "Phys"
+  ],
+  "exam": [
+   "Stun",
+   "Burn"
+  ],
+  "appearances": [
+   {
+    "level": 5,
+    "fight": 2,
+    "group": [
+     "fire_skeleton_archer"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/fire-skeleton-archer.png",
+   "width": 38,
+   "height": 55
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 5,
+    "hp": 333,
+    "armor": 0,
+    "firstAttack": [
+     41
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fire_skeleton_archer_leader",
+  "slug": "fire-skeleton-archer-leader",
+  "name": "Fire Skeleton Archer Leader",
+  "hp": 140,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 30,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.15,
+    "burnChance": 0.2,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.3,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 50,
+  "skulls": 2,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.2,
+    "share": 0.5714
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.1,
+    "share": 0.2857
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.05,
+    "share": 0.1429
+   }
+  ],
+  "lines": [],
+  "threats": [
+   "Stun",
+   "Burn",
+   "Phys"
+  ],
+  "exam": [
+   "Stun",
+   "Burn"
+  ],
+  "appearances": [
+   {
+    "level": 8,
+    "fight": 4,
+    "group": [
+     "fire_skeleton_archer_leader"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/fire-skeleton-archer-leader.png",
+   "width": 38,
+   "height": 55
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 8,
+    "hp": 784,
+    "armor": 0,
+    "firstAttack": [
+     58
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fire_skeleton",
+  "slug": "fire-skeleton",
+  "name": "Fire Skeleton",
+  "hp": 99,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 13,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.2,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 16,
+  "rampPercent": 0.35,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 30,
+  "skulls": 1,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.12,
+    "share": 0.75
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.04,
+    "share": 0.25
+   }
+  ],
+  "lines": [],
+  "threats": [
+   "Burn",
+   "MultiHit",
+   "Phys"
+  ],
+  "exam": [
+   "Burn",
+   "MultiHit"
+  ],
+  "appearances": [
+   {
+    "level": 5,
+    "fight": 1,
+    "group": [
+     "fire_skeleton"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 6,
+    "fight": 1,
+    "group": [
+     "fire_skeleton",
+     "fire_skeleton"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/fire-skeleton.png",
+   "width": 23,
+   "height": 55
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 5,
+    "hp": 446,
+    "armor": 0,
+    "firstAttack": [
+     23
+    ]
+   },
+   {
+    "level": 6,
+    "hp": 465,
+    "armor": 0,
+    "firstAttack": [
+     27
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fire_skeleton_leader",
+  "slug": "fire-skeleton-leader",
+  "name": "Fire Skeleton Leader",
+  "hp": 189,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 17,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.2,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 16,
+  "rampPercent": 0.35,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 50,
+  "skulls": 2,
+  "isBoss": false,
+  "bossOfLevels": [],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.2,
+    "share": 0.5714
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.1,
+    "share": 0.2857
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.05,
+    "share": 0.1429
+   }
+  ],
+  "lines": [],
+  "threats": [
+   "Burn",
+   "MultiHit",
+   "Phys"
+  ],
+  "exam": [
+   "Burn",
+   "MultiHit"
+  ],
+  "appearances": [
+   {
+    "level": 8,
+    "fight": 1,
+    "group": [
+     "fire_skeleton_leader"
+    ],
+    "isBossFight": false
+   },
+   {
+    "level": 10,
+    "fight": 1,
+    "group": [
+     "fire_skeleton_leader"
+    ],
+    "isBossFight": false
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/fire-skeleton-leader.png",
+   "width": 23,
+   "height": 55
+  },
+  "answeredBySymbols": [],
+  "answeredByPowerups": [],
+  "levelStats": [
+   {
+    "level": 8,
+    "hp": 1058,
+    "armor": 0,
+    "firstAttack": [
+     33
+    ]
+   },
+   {
+    "level": 10,
+    "hp": 472,
+    "armor": 0,
+    "firstAttack": [
+     31
+    ]
+   }
+  ]
+ },
+ {
+  "id": "archer",
+  "slug": "archer",
+  "name": "Koxper the Bastard",
+  "hp": 1233,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 34,
+    "magical": 0,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.6,
+    "poisonStacks": 6,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.3,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 80,
+  "skulls": 4,
+  "isBoss": true,
+  "bossOfLevels": [
+   4
+  ],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.6,
+    "share": 0.6667
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.2,
+    "share": 0.2222
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.1,
+    "share": 0.1111
+   }
+  ],
+  "lines": [],
+  "threats": [
+   "Poison",
+   "Phys"
+  ],
+  "exam": [
+   "Poison"
+  ],
+  "appearances": [
+   {
+    "level": 4,
+    "fight": 5,
+    "group": [
+     "archer"
+    ],
+    "isBossFight": true
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/archer.png",
+   "width": 96,
+   "height": 55
+  },
+  "answeredBySymbols": [
+   "bandage"
+  ],
+  "answeredByPowerups": [
+   "cure"
+  ],
+  "levelStats": [
+   {
+    "level": 4,
+    "hp": 1541,
+    "armor": 0,
+    "firstAttack": [
+     39
+    ]
+   }
+  ]
+ },
+ {
+  "id": "warrior",
+  "slug": "warrior",
+  "name": "Bison the Warrior",
+  "hp": 311,
+  "armor": 0,
+  "magicResist": 0.0,
+  "attacks": [
+   {
+    "physical": 13,
+    "magical": 0,
+    "hits": 3,
+    "stunChance": 0.0,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 0,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 16,
+  "rampPercent": 0.35,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 80,
+  "skulls": 4,
+  "isBoss": true,
+  "bossOfLevels": [
+   5
+  ],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.6,
+    "share": 0.6667
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.2,
+    "share": 0.2222
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.1,
+    "share": 0.1111
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "KilledPlayer",
+    "text": "no spare life, kid? then don't apologize, just say yes sir"
+   }
+  ],
+  "threats": [
+   "MultiHit",
+   "Phys"
+  ],
+  "exam": [
+   "MultiHit"
+  ],
+  "appearances": [
+   {
+    "level": 5,
+    "fight": 5,
+    "group": [
+     "warrior"
+    ],
+    "isBossFight": true
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/warrior.png",
+   "width": 72,
+   "height": 61
+  },
+  "answeredBySymbols": [
+   "wooden_shield",
+   "wizards_shield",
+   "spiked_bulwark",
+   "mirror_ward",
+   "bastion",
+   "warding_sigil",
+   "thorn_mail",
+   "stone_skin",
+   "parry",
+   "second_wind",
+   "pawnbroker",
+   "keystone",
+   "patience",
+   "buckler",
+   "phalanx",
+   "last_stand",
+   "riposte"
+  ],
+  "answeredByPowerups": [
+   "adrenaline"
+  ],
+  "levelStats": [
+   {
+    "level": 5,
+    "hp": 1400,
+    "armor": 0,
+    "firstAttack": [
+     70
+    ]
+   }
+  ]
+ },
+ {
+  "id": "witch",
+  "slug": "witch",
+  "name": "Sila the Witch",
+  "hp": 550,
+  "armor": 0,
+  "magicResist": 0.15,
+  "attacks": [
+   {
+    "physical": 0,
+    "magical": 34,
+    "hits": 1,
+    "stunChance": 0.0,
+    "burnChance": 0.5,
+    "burnStacks": 5,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 35,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 16,
+  "rampPercent": 0.35,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 80,
+  "skulls": 4,
+  "isBoss": true,
+  "bossOfLevels": [
+   6
+  ],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.6,
+    "share": 0.6667
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.2,
+    "share": 0.2222
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.1,
+    "share": 0.1111
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "Enter",
+    "text": "I was supposed to be the main character, they ran out of art budget. anyway, you'll be burning for a while, better keep your health up"
+   },
+   {
+    "trigger": "FirstDamageTaken",
+    "text": "quit hitting me, you brute"
+   },
+   {
+    "trigger": "KilledPlayer",
+    "text": "add me on instagram"
+   }
+  ],
+  "threats": [
+   "Burn",
+   "SelfHeal",
+   "MultiHit",
+   "Magic"
+  ],
+  "exam": [
+   "Burn",
+   "SelfHeal",
+   "MultiHit"
+  ],
+  "appearances": [
+   {
+    "level": 6,
+    "fight": 5,
+    "group": [
+     "witch"
+    ],
+    "isBossFight": true
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/witch.png",
+   "width": 30,
+   "height": 64
+  },
+  "answeredBySymbols": [
+   "wooden_shield",
+   "warriors_draught",
+   "wizards_shield",
+   "spiked_bulwark",
+   "war_horn",
+   "soul_ember",
+   "executioner",
+   "mirror_ward",
+   "ember_heart",
+   "bastion",
+   "warding_sigil",
+   "thorn_mail",
+   "apprentice_notes",
+   "stone_skin",
+   "martyrs_vow",
+   "parry",
+   "field_dressing",
+   "second_wind",
+   "zealots_chant",
+   "sacrifice",
+   "pawnbroker",
+   "keystone",
+   "patience",
+   "candle",
+   "bandage",
+   "buckler",
+   "war_paint",
+   "phalanx",
+   "plague_doctor",
+   "last_stand",
+   "riposte"
+  ],
+  "answeredByPowerups": [
+   "whetstone_kit",
+   "grimoire_page",
+   "war_drum",
+   "adrenaline",
+   "healing_potion",
+   "cure",
+   "troll_salve"
+  ],
+  "levelStats": [
+   {
+    "level": 6,
+    "hp": 2585,
+    "armor": 0,
+    "firstAttack": [
+     70
+    ]
+   }
+  ]
+ },
+ {
+  "id": "elden_mage",
+  "slug": "elden-mage",
+  "name": "Elden Mage",
+  "hp": 600,
+  "armor": 0,
+  "magicResist": 0.2,
+  "attacks": [
+   {
+    "physical": 0,
+    "magical": 38,
+    "hits": 1,
+    "stunChance": 0.1,
+    "burnChance": 0.0,
+    "burnStacks": 3,
+    "chillChance": 0.0,
+    "chillTurns": 1,
+    "poisonChance": 0.0,
+    "poisonStacks": 5,
+    "stealChance": 0.0,
+    "selfHealChance": 0.0,
+    "selfHealAmount": 40,
+    "rearmor": 0
+   }
+  ],
+  "impactFrames": 0,
+  "rampPercent": 0.3,
+  "phases": 1,
+  "startPhase": 1,
+  "gold": 80,
+  "skulls": 4,
+  "isBoss": true,
+  "bossOfLevels": [
+   8
+  ],
+  "drops": [
+   {
+    "kind": "weapon",
+    "weight": 0.6,
+    "share": 0.6667
+   },
+   {
+    "kind": "gemgreen",
+    "weight": 0.2,
+    "share": 0.2222
+   },
+   {
+    "kind": "gemblue",
+    "weight": 0.1,
+    "share": 0.1111
+   }
+  ],
+  "lines": [
+   {
+    "trigger": "Enter",
+    "text": "is it teatime yet, sonny? every sip mends me. you'll have to hit harder than I heal"
+   },
+   {
+    "trigger": "FirstDamageTaken",
+    "text": "don't hit me, my child"
+   },
+   {
+    "trigger": "FirstDamageDealt",
+    "text": "seems it falls to me to teach you manners"
+   }
+  ],
+  "threats": [
+   "Stun",
+   "SelfHeal",
+   "Magic"
+  ],
+  "exam": [
+   "Stun",
+   "SelfHeal"
+  ],
+  "appearances": [
+   {
+    "level": 8,
+    "fight": 5,
+    "group": [
+     "elden_mage"
+    ],
+    "isBossFight": true
+   }
+  ],
+  "endlessPool": true,
+  "inDemo": false,
+  "icon": {
+   "src": "/wiki/icons/enemies/elden-mage.png",
+   "width": 33,
+   "height": 62
+  },
+  "answeredBySymbols": [
+   "warriors_draught",
+   "war_horn",
+   "soul_ember",
+   "executioner",
+   "apprentice_notes",
+   "zealots_chant",
+   "sacrifice",
+   "candle",
+   "war_paint"
+  ],
+  "answeredByPowerups": [
+   "whetstone_kit",
+   "grimoire_page",
+   "war_drum",
+   "adrenaline",
+   "anchor_boots"
+  ],
+  "levelStats": [
+   {
+    "level": 8,
+    "hp": 3360,
+    "armor": 0,
+    "firstAttack": [
+     74
+    ]
+   }
+  ]
+ }
+]

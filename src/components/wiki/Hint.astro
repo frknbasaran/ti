@@ -1,0 +1,16 @@
+---
+/** A hint quoted word for word from the game's own text. */
+interface Props {
+  text: string;
+}
+const { text } = Astro.props;
+---
+
+{
+  text && (
+    <div class="wiki-quote">
+      <p class="wiki-sub">In the game</p>
+      <p>{text}</p>
+    </div>
+  )
+}

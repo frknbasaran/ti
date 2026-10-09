@@ -1,0 +1,63 @@
+---
+import Hint from '../../../../components/wiki/Hint.astro';
+import WikiPage from '../../../../components/wiki/WikiPage.astro';
+import Entry from '../../../../components/wiki/Entry.astro';
+import Meta from '../../../../components/wiki/Meta.astro';
+import { cats, itemListLd, modifiers, paths, rules, esc } from '../../../../lib/wiki';
+import { pactTerms } from './_pact';
+
+const abilities = modifiers.abilities;
+const demo = rules.demo;
+const texts = rules.texts as Record<string, string>;
+const description = `The ${cats.length} cats of Slots & Skulls and the pact each one offers, plus all ${abilities.length} abilities: unlock costs, exact terms and when each ability can be used.`;
+const phase = (p: string) =>
+  p === 'during-spin' ? 'While the reels are still turning, before your last stop press.' : 'After every reel has landed and before the symbols act.';
+---
+
+<WikiPage
+  title="Cats, pacts and abilities | Slots & Skulls Wiki"
+  description={description}
+  path={paths.cats}
+  section="cats"
+  crumbs={[{ name: 'Cats and abilities', href: paths.cats }]}
+  jsonLd={[
+    itemListLd('Slots & Skulls cats', cats.map((c) => ({ name: c.name, href: paths.cat(c.slug) }))),
+  ]}
+>
+  <h1 class="page-title">Cats and abilities</h1>
+  <p class="lead">
+    Before a run you can take one cat and one ability. Both are optional, both are bought once with skulls, and both
+    unlock one rung at a time, in a fixed order.
+  </p>
+  <Hint text={texts['tut.runsetup'].split('\n').slice(1, 2).join(' ')} />
+
+  <h2 id="cats">Cats</h2>
+  <p>Each cat offers one pact. The demo opens only {demo.maxCats === 1 ? 'the first cat' : `the first ${demo.maxCats} cats`} on the ladder.</p>
+  {
+    cats.map((c) => (
+      <Entry id={c.slug} name={c.name} href={paths.cat(c.slug)} icon={c.icon} iconAlt={`${c.name}, a pixel art cat`} sub={`${c.pact.name} · ${c.cost} skulls`}>
+        <p class="wiki-fx">{c.pact.text}</p>
+        <ul>
+          {pactTerms(c).map((t) => <li>{t}</li>)}
+        </ul>
+      </Entry>
+    ))
+  }
+
+  <h2 id="abilities">Abilities</h2>
+  <Hint text={texts['tut.terms_abilities'].split('\n').slice(1).join(' ')} />
+  {
+    abilities.map((ab) => (
+      <Entry id={ab.slug} name={ab.name} icon={ab.icon} sub={`Ability · ${ab.cost} skulls`}>
+        <p class="wiki-fx">{ab.text}</p>
+        <Meta
+          rows={[
+            ['When', esc(phase(ab.phase))],
+            ['Unlock order', `${ab.ladderIndex + 1} of ${abilities.length}`],
+            ['Demo', ab.inDemo ? 'In the demo' : 'Full game only'],
+          ]}
+        />
+      </Entry>
+    ))
+  }
+</WikiPage>

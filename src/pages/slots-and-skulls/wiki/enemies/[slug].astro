@@ -1,0 +1,192 @@
+---
+import WikiPage from '../../../../components/wiki/WikiPage.astro';
+import WikiIcon from '../../../../components/wiki/WikiIcon.astro';
+import Meta from '../../../../components/wiki/Meta.astro';
+import {
+  enemies, enemyLink, hasEnemyPage, levelByIndex, levelLink, paths, pct, powerupLink, rules, symbolById, symbolLink,
+  threatName, type Enemy,
+} from '../../../../lib/wiki';
+import { attackText, dropName, triggerName } from './_parts';
+
+const bosses = enemies.filter(hasEnemyPage).sort((x, y) => (x.appearances[0]?.level ?? 99) - (y.appearances[0]?.level ?? 99));
+
+export function getStaticPaths() {
+  const list = enemies.filter(hasEnemyPage).sort((x, y) => (x.appearances[0]?.level ?? 99) - (y.appearances[0]?.level ?? 99));
+  return list.map((e, i) => ({ params: { slug: e.slug }, props: { e, prev: list[i - 1], next: list[i + 1] } }));
+}
+
+interface Props {
+  e: Enemy;
+  prev?: Enemy;
+  next?: Enemy;
+}
+
+const { e, prev, next } = Astro.props;
+const path = paths.enemy(e);
+const exam = rules.exam as Record<string, string>;
+const heat = rules.heat;
+const levelOf = e.bossOfLevels[0] ?? e.appearances[0]?.level;
+const level = levelOf ? levelByIndex.get(levelOf) : undefined;
+const examList = e.exam;
+const hasArmor = e.levelStats.some((s) => s.armor > 0);
+const demoGems = e.drops.some((d) => d.kind === 'gemblue' || d.kind === 'gemyellow');
+const answerSymbols = e.answeredBySymbols
+  .map((id) => symbolById.get(id))
+  .filter((s) => s !== undefined)
+  .sort((x, y) => x!.name.localeCompare(y!.name));
+const role = e.bossOfLevels.length ? `Boss of Level ${e.bossOfLevels.join(', ')}` : 'Boss';
+const description = `${e.name} is ${e.bossOfLevels.length ? `the boss of level ${e.bossOfLevels.join(' and ')}${level ? ` (${level.name})` : ''}` : 'a boss'} in Slots & Skulls: ${e.hp} base health, attack pattern, what it tests and which symbols and powerups answer it.`;
+---
+
+<WikiPage
+  title={`${e.name} (boss) | Slots & Skulls Wiki`}
+  description={description}
+  path={path}
+  section="enemies"
+  crumbs={[{ name: 'Enemies and bosses', href: paths.enemies }, { name: e.name, href: path }]}
+  prev={prev && { name: prev.name, href: paths.enemy(prev) }}
+  next={next && { name: next.name, href: paths.enemy(next) }}
+>
+  <div class="wiki-hero">
+    <WikiIcon icon={e.icon} alt={`${e.name}, pixel art boss`} max={192} eager />
+  </div>
+  <h1 class="page-title">{e.name}</h1>
+  <p class="wiki-sub">{role}</p>
+
+  <Meta
+    rows={[
+      ['Base health', `${e.hp}`],
+      ['Armor', e.armor ? `${e.armor}. Absorbs physical damage before health.` : null],
+      ['Magic resist', e.magicResist ? `${pct(e.magicResist)} less magical damage taken` : null],
+      ['Ramp', `+${pct(e.rampPercent)} damage after every attack, compounding`],
+      ['Reward', `${e.gold} gold, ${e.skulls} skulls, before level and heat multipliers`],
+      ['Found in', e.appearances.map((a) => `${levelLink(a.level)}, fight ${a.fight}${a.group.length > 1 ? ' (with ' + a.group.filter((x) => x && x !== e.id).map((x) => enemyLink(x!)).join(', ') + ')' : ''}`).join('. ')],
+    ]}
+  />
+
+  <h2 id="attacks">Attacks</h2>
+  <p>It uses these in order, then starts again from the first.</p>
+  <ol>
+    {e.attacks.map((at) => <li>{attackText(at)}</li>)}
+  </ol>
+  {e.impactFrames > 1 && <p>Each swing lands in {e.impactFrames} hits; the damage above is split between them.</p>}
+
+  {
+    e.levelStats.length > 0 && (
+      <>
+        <h2 id="stats">Stats by level</h2>
+        <p>
+          Health{hasArmor ? ' and armor' : ''} after the level multiplier, and the first attack's total damage before any ramp. Heat 1 to {heat.max} multiplies
+          both again by {heat.enemyMultiplier.map((m) => `x${m}`).join(', ')}.
+        </p>
+        <div class="table-scroll">
+          <table class="specs">
+            <thead>
+              <tr>
+                <th scope="col">Level</th>
+                <th scope="col" class="num">Health</th>
+                {hasArmor && <th scope="col" class="num">Armor</th>}
+                <th scope="col" class="num">First attack</th>
+              </tr>
+            </thead>
+            <tbody>
+              {e.levelStats.map((s) => (
+                <tr>
+                  <th scope="row">{s.level}</th>
+                  <td class="num">{s.hp}</td>
+                  {hasArmor && <td class="num">{s.armor}</td>}
+                  <td class="num">{s.firstAttack[0]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </>
+    )
+  }
+
+  {
+    examList.length > 0 && (
+      <>
+        <h2 id="exam">What it tests</h2>
+        <p>The game's own hint for this boss after you fall to it twice:</p>
+        <ul>
+          {examList.map((t) => (
+            <li>
+              <strong>{threatName[t] ?? t}.</strong> {exam[t]}
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+
+  {
+    (e.answeredByPowerups.length > 0 || answerSymbols.length > 0) && (
+      <>
+        <h2 id="answers">Answers</h2>
+        <p>
+          Symbols and powerups the game counts as an answer to at least one of these tests. While this boss's level is your
+          current level, the shop offers answers to it more often.
+        </p>
+        {e.answeredByPowerups.length > 0 && (
+          <>
+            <h3>Powerups</h3>
+            <p set:html={e.answeredByPowerups.map(powerupLink).join(', ')} />
+          </>
+        )}
+        {answerSymbols.length > 0 && (
+          <>
+            <h3>Symbols</h3>
+            <p set:html={answerSymbols.map((s) => symbolLink(s!.id)).join(', ')} />
+          </>
+        )}
+      </>
+    )
+  }
+
+  {
+    e.drops.length > 0 && (
+      <>
+        <h2 id="drops">Kill box contents</h2>
+        <p>
+          If a kill drops a box, it holds one prize. These are the odds for what is inside. Whether a box drops at all is set
+          by the <a href={paths.level(levelOf ?? 1)}>level</a>.
+        </p>
+        <table class="specs">
+          <tbody>
+            {e.drops.map((d) => (
+              <tr>
+                <th scope="row">{dropName[d.kind] ?? d.kind}</th>
+                <td class="num">{pct(d.share)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {demoGems && <p class="muted">In the demo, blue and yellow gems are taken out and the other prizes share their odds.</p>}
+      </>
+    )
+  }
+
+  {
+    e.lines.length > 0 && (
+      <>
+        <h2 id="lines">What it says</h2>
+        <table class="specs">
+          <tbody>
+            {e.lines.map((l) => (
+              <tr>
+                <th scope="row">{triggerName[l.trigger] ?? l.trigger}</th>
+                <td>“{l.text}”</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </>
+    )
+  }
+
+  <p class="muted" style="margin-top: 36px;">
+    All bosses: {bosses.map((b, i) => <>{i > 0 && ', '}<a href={paths.enemy(b)}>{b.name}</a></>)}.
+  </p>
+</WikiPage>

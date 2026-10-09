@@ -1,0 +1,74 @@
+---
+import WikiPage from '../../../../components/wiki/WikiPage.astro';
+import Entry from '../../../../components/wiki/Entry.astro';
+import Meta from '../../../../components/wiki/Meta.astro';
+import { enemies, hasEnemyPage, itemListLd, levelLink, paths, pct, threatName, esc, type Enemy } from '../../../../lib/wiki';
+import { attackText } from './_parts';
+
+const bosses = enemies.filter(hasEnemyPage).sort((x, y) => (x.appearances[0]?.level ?? 99) - (y.appearances[0]?.level ?? 99));
+const regular = enemies.filter((e) => !hasEnemyPage(e)).sort((x, y) => (x.appearances[0]?.level ?? 99) - (y.appearances[0]?.level ?? 99) || x.name.localeCompare(y.name));
+const groups = [
+  { id: 'bosses', title: 'Bosses', items: bosses },
+  { id: 'enemies', title: 'Enemies', items: regular },
+];
+
+function rows(e: Enemy) {
+  const where = [...new Set(e.appearances.map((a) => a.level))].map((l) => levelLink(l));
+  return [
+    ['Health', `${e.hp}${e.armor ? `, ${e.armor} armor` : ''}${e.magicResist ? `, ${pct(e.magicResist)} magic resist` : ''}`],
+    ['Attacks', esc(e.attacks.map(attackText).join(' Then: '))],
+    ['Ramp', `+${pct(e.rampPercent)} damage after every attack`],
+    ['Reward', `${e.gold} gold, ${e.skulls} ${e.skulls === 1 ? 'skull' : 'skulls'}`],
+    ['Tests', e.threats.length ? e.threats.map((t) => threatName[t] ?? t).join(', ') : null],
+    ['Found in', where.length ? where.join(', ') : 'Endless mode only'],
+  ] as [string, string | null][];
+}
+
+const description = `Every enemy and boss in Slots & Skulls: health, armor, attack pattern, status effects, rewards and the levels they appear in.`;
+---
+
+<WikiPage
+  title="Enemies and bosses | Slots & Skulls Wiki"
+  description={description}
+  path={paths.enemies}
+  section="enemies"
+  crumbs={[{ name: 'Enemies and bosses', href: paths.enemies }]}
+  jsonLd={[itemListLd('Slots & Skulls enemies', [...bosses, ...regular].map((e) => ({ name: e.name, href: paths.enemy(e) })))]}
+>
+  <h1 class="page-title">Enemies and bosses</h1>
+  <p class="lead">
+    Numbers here are the enemy's base stats. Each level multiplies health and damage, and heat multiplies them again. The
+    boss pages list the stats in every level the boss appears in.
+  </p>
+  <p>
+    Enemies cycle through their attacks in order. Their damage grows after every attack they make, so a long fight hits
+    harder at the end. The final boss is left out of this wiki on purpose.
+  </p>
+
+  <nav aria-label="On this page">
+    <ul class="wiki-toc">
+      <li><a href="#bosses">Bosses ({bosses.length})</a></li>
+      <li><a href="#enemies">Enemies ({regular.length})</a></li>
+    </ul>
+  </nav>
+
+  {
+    groups.map((g) => (
+      <section aria-labelledby={g.id}>
+        <h2 id={g.id}>{g.title}</h2>
+        {g.items.map((e) => (
+          <Entry
+            id={e.slug}
+            name={e.name}
+            href={hasEnemyPage(e) ? paths.enemy(e) : undefined}
+            icon={e.icon}
+            iconAlt={`${e.name}, pixel art enemy`}
+            sub={hasEnemyPage(e) ? (e.bossOfLevels.length ? `Boss of level ${e.bossOfLevels.join(', ')}` : 'Boss') : 'Enemy'}
+          >
+            <Meta rows={rows(e)} />
+          </Entry>
+        ))}
+      </section>
+    ))
+  }
+</WikiPage>

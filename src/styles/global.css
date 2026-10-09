@@ -46,49 +46,47 @@ main {
 }
 
 /* Brand */
+/* Brand: the splash wordmark (93×40 art px) at a whole-pixel scale --k, with Pati
+   (pati-idle.gif is 68×29 art px drawn at 5×) sitting on it where the animation ends. */
 .brand {
+  --k: 4;
   display: flex;
-  align-items: center;
-  margin-top: 96px;
+  justify-content: center;
+  margin-top: 112px;
   margin-bottom: 120px;
 }
 
-.brand img.gem {
-  height: 90px;
-  width: auto;
+.brand .logo {
+  position: relative;
   display: block;
-  image-rendering: pixelated;
-  margin-right: -112px;
-  margin-top: -48px;
+  font-size: 0;
+  line-height: 0;
+  font-weight: 400;
 }
 
-.brand .name {
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 1;
-  white-space: nowrap;
+.brand img {
+  display: block;
+  image-rendering: pixelated;
+}
+
+.brand .wordmark {
+  width: calc(93px * var(--k));
+  height: calc(40px * var(--k));
+}
+
+.brand .gem {
+  position: absolute;
+  width: calc(68px * var(--k));
+  height: calc(29px * var(--k));
+  left: calc(46px * var(--k));
+  top: calc(-21px * var(--k));
+  pointer-events: none;
 }
 
 .brand--small {
-  margin-top: 56px;
+  --k: 2;
+  margin-top: 72px;
   margin-bottom: 72px;
-}
-
-.brand--small a {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  text-decoration: none;
-}
-
-.brand--small img.gem {
-  height: 54px;
-  margin-right: -67px;
-  margin-top: -29px;
-}
-
-.brand--small .name {
-  font-size: 28px;
 }
 
 /* Content column */
@@ -397,28 +395,14 @@ main {
 
 @media (max-width: 600px) {
   .brand {
-    margin-top: 64px;
+    --k: 3;
+    margin-top: 88px;
     margin-bottom: 80px;
   }
-  .brand img.gem {
-    height: 60px;
-    margin-right: -75px;
-    margin-top: -32px;
-  }
-  .brand .name {
-    font-size: 32px;
-  }
   .brand--small {
-    margin-top: 40px;
+    --k: 2;
+    margin-top: 64px;
     margin-bottom: 56px;
-  }
-  .brand--small img.gem {
-    height: 42px;
-    margin-right: -52px;
-    margin-top: -22px;
-  }
-  .brand--small .name {
-    font-size: 22px;
   }
   .section {
     padding-bottom: 80px;

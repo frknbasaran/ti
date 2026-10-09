@@ -1,5 +1,6 @@
 ---
 import pati from '../assets/brand/pati-idle.gif';
+import logo from '../assets/brand/trina-logo.png';
 import { studio } from '../data/site';
 import { localizePath, t, type Lang } from '../i18n/ui';
 
@@ -10,20 +11,25 @@ interface Props {
 
 const { lang, isHome } = Astro.props;
 const s = t(lang);
-// The animated GIF is served as-is (16 KB); converting it would drop the animation.
+// The wordmark is the first frame of the studio splash animation (the "Logo" tag in
+// Pati's aseprite file), cropped to 93×40 art pixels and scaled up in CSS by whole
+// pixels. Pati sits on it the way the animation ends. Both are served as-is: the GIF
+// keeps its animation and the PNG stays crisp with image-rendering: pixelated.
 ---
 
 {
   isHome ? (
     <header class="brand">
-      <img class="gem" src={pati.src} width={pati.width} height={pati.height} alt={s.logoAlt} />
-      <h1 class="name">{studio.name}</h1>
+      <h1 class="logo">
+        <img class="wordmark" src={logo.src} width={logo.width} height={logo.height} alt={studio.name} />
+        <img class="gem" src={pati.src} width={pati.width} height={pati.height} alt={s.logoAlt} />
+      </h1>
     </header>
   ) : (
     <header class="brand brand--small">
-      <a href={localizePath('/', lang)} title={s.homeLink}>
-        <img class="gem" src={pati.src} width={pati.width} height={pati.height} alt={s.logoAlt} />
-        <span class="name">{studio.name}</span>
+      <a class="logo" href={localizePath('/', lang)} title={s.homeLink}>
+        <img class="wordmark" src={logo.src} width={logo.width} height={logo.height} alt={studio.name} />
+        <img class="gem" src={pati.src} width={pati.width} height={pati.height} alt="" />
       </a>
     </header>
   )

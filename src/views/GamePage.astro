@@ -2,6 +2,7 @@
 import { Image, getImage } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import GameVideo from '../components/GameVideo.astro';
+import DemoReviews from '../components/DemoReviews.astro';
 import { game, gameCopy } from '../data/slots-and-skulls';
 import { screenshots } from '../data/media';
 import { localizePath, t, type Lang } from '../i18n/ui';
@@ -89,6 +90,8 @@ const shotUrls = (
       <a class="button" href={game.steamUrl} rel="noopener">{s.wishlist}</a>
       <a class="button button--ghost" href={game.demoUrl} rel="noopener">{s.playDemo}</a>
     </div>
+
+    <DemoReviews lang={lang} />
 
     <section aria-labelledby="details" class="prose">
       <h2 id="details">{text.details}</h2>

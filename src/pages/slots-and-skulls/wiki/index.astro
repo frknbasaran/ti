@@ -199,28 +199,30 @@ const description =
     Symbols come in four rarities. Rarer symbols are drawn less often by the shop and by kill boxes, and they only start to
     drop once you have unlocked a deep enough level.
   </p>
-  <table class="specs">
-    <thead>
-      <tr>
-        <th scope="col">Rarity</th>
-        <th scope="col" class="num">Draw weight</th>
-        <th scope="col" class="num">Needs</th>
-        <th scope="col" class="num">Forge gain</th>
-      </tr>
-    </thead>
-    <tbody>
-      {
-        r.rarity.order.map((k) => (
-          <tr>
-            <th scope="row">{rarityName(k)}</th>
-            <td class="num">{weights[k]} ({pct(weights[k] / weightTotal, 0)})</td>
-            <td class="num">{gate[k] ? `level ${gate[k]}` : 'start'}</td>
-            <td class="num">+{pct(gain[k], 0)} per +1</td>
-          </tr>
-        ))
-      }
-    </tbody>
-  </table>
+  <div class="table-scroll">
+    <table class="specs">
+      <thead>
+        <tr>
+          <th scope="col">Rarity</th>
+          <th scope="col" class="num">Draw weight</th>
+          <th scope="col" class="num">Needs</th>
+          <th scope="col" class="num">Forge gain</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          r.rarity.order.map((k) => (
+            <tr>
+              <th scope="row">{rarityName(k)}</th>
+              <td class="num">{weights[k]} ({pct(weights[k] / weightTotal, 0)})</td>
+              <td class="num">{gate[k] ? `level ${gate[k]}` : 'start'}</td>
+              <td class="num">+{pct(gain[k], 0)} per +1</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
   {legendaryUnsold && <p>Legendary symbols are never sold in the shop. They come from kill boxes and rewards.</p>}
 
   <h2 id="shop">Gold, skulls and the shop</h2>

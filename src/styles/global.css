@@ -400,11 +400,6 @@ main {
     margin-top: 64px;
     margin-bottom: 56px;
   }
-  .brand--small {
-    --k: 2;
-    margin-top: 64px;
-    margin-bottom: 56px;
-  }
   .section {
     padding-bottom: 80px;
   }
@@ -577,8 +572,11 @@ main {
   margin-top: 10px;
 }
 
-.wiki-meta .k {
-  flex-basis: 120px;
+/* Desktop only: below 601px the rows stack, and a basis would become height. */
+@media (min-width: 601px) {
+  .wiki-meta .k {
+    flex-basis: 120px;
+  }
 }
 
 .wiki details {
@@ -614,7 +612,10 @@ main {
 .wiki-filter input {
   width: 100%;
   font: inherit;
-  font-size: 14px;
+  /* 16px keeps iOS Safari from zooming the page when the field gets focus. */
+  font-size: 16px;
+  -webkit-appearance: none;
+  appearance: none;
   color: #fff;
   background: #000;
   border: 1px solid #222;
@@ -684,12 +685,7 @@ main {
 }
 
 @media (max-width: 600px) {
-  .wiki-meta div {
-    flex-direction: column;
-    gap: 0;
-  }
-  /* In a column the 120px label basis would become 120px of height. */
-  .wiki-meta .k {
-    flex-basis: auto;
+  .wiki-crumbs ol {
+    letter-spacing: 1px;
   }
 }

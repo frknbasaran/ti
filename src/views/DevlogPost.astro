@@ -45,7 +45,7 @@ const articleLd = {
   publishedTime={data.date}
   jsonLd={[articleLd]}
 >
-  <article class="section prose">
+  <article class="section prose devlog-post">
     <h1 class="page-title">{data.title}</h1>
     <p class="muted">
       {ui.published}: <time datetime={data.date.toISOString().slice(0, 10)}>{formatDate(data.date)}</time>

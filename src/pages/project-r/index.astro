@@ -1,6 +1,7 @@
 ---
-import { Image, getImage } from 'astro:assets';
+import { getImage } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectRCover from '../../components/ProjectRCover.astro';
 import { game, gameCopy as copy } from '../../data/project-r';
 import { formatDate, ui } from '../../i18n/ui';
 import { getPublishedPosts, postPath } from '../../lib/devlog';
@@ -20,7 +21,7 @@ const ogImage = { url: og.src, width: 1200, height: 630, alt: copy.imageAlt };
   <section class="section">
     <h1 class="page-title">{game.name}</h1>
     <p class="game-desc">{copy.tagline}</p>
-    <Image src={copy.image} alt={copy.imageAlt} widths={[640, 1280]} sizes="(max-width: 640px) 100vw, 592px" style="margin-bottom: 28px; border-radius: 4px;" />
+    <ProjectRCover />
     <h2 class="label">{ui.devlog}</h2>
     {
       posts.length === 0 ? (

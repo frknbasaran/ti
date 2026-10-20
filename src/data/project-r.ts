@@ -16,4 +16,5 @@ export const gameCopy = {
   releaseLabel: 'Q1 2027',
   image: grayboxImage,
   imageAlt: 'A graybox model from Project R: plain grey blocks of a large stone building with two towers.',
+  coverAlt: 'A large stone building with two towers, shown as a plain graybox, then a detailed graybox, then textured.',
 } as const;

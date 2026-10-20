@@ -1,0 +1,24 @@
+---
+import { gameCopy as copy } from '../data/project-r';
+
+// Graybox → detailed graybox → textured, crossfading in an 8.7 s loop, the textured stage held longest. A muted video, not a GIF: the GIF was
+// 2.8 MB at 800 px against 0.3 MB (WebM) / 0.5 MB (MP4) at 1200 px. Poster = the loop's first frame.
+const poster = '/media/project-r-cover-poster.jpg';
+---
+
+<video
+  class="game-video"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="metadata"
+  poster={poster}
+  width="1200"
+  height="798"
+  style="aspect-ratio: 1200 / 798; background: #a3a6a8;"
+  aria-label={copy.coverAlt}
+>
+  <source src="/media/project-r-cover.webm" type='video/webm; codecs="vp9"' />
+  <source src="/media/project-r-cover.mp4" type='video/mp4; codecs="avc1.640028"' />
+</video>

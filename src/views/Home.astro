@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import GameVideo from '../components/GameVideo.astro';
 import { studio } from '../data/site';
 import { game, gameCopy as copy } from '../data/slots-and-skulls';
-import { Image } from 'astro:assets';
+import ProjectRCover from '../components/ProjectRCover.astro';
 import { game as projectR, gameCopy as projectRCopy } from '../data/project-r';
 import { homeQuote, reviewUrl } from '../data/reviews';
 import { ui } from '../i18n/ui';
@@ -64,7 +64,7 @@ const text = {
       <h3 class="game-title"><a href={`/${projectR.slug}/`}>{projectR.name}</a></h3>
       <p class="game-desc">{projectRCopy.tagline}</p>
       <a href={`/${projectR.slug}/`}>
-        <Image src={projectRCopy.image} alt={projectRCopy.imageAlt} widths={[640, 1280]} sizes="(max-width: 640px) 100vw, 592px" style="border-radius: 4px; margin-bottom: 28px;" />
+        <ProjectRCover />
       </a>
 
       <div class="game-meta">

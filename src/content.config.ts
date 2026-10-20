@@ -17,7 +17,7 @@ const devlog = defineCollection({
       title: z.string().max(70),
       description: z.string().max(170),
       date: z.coerce.date(),
-      game: z.enum(['slots-and-skulls']).optional(),
+      game: z.enum(['slots-and-skulls', 'project-r']).optional(),
       heroImage: image().optional(),
       heroImageAlt: z.string().optional(),
       draft: z.boolean().default(false),

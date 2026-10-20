@@ -1,6 +1,7 @@
 ---
 import { studio } from '../data/site';
 import { game } from '../data/slots-and-skulls';
+import { game as projectR } from '../data/project-r';
 import { ui } from '../i18n/ui';
 import { getPublishedPosts } from '../lib/devlog';
 
@@ -11,6 +12,7 @@ const current = Astro.url.pathname;
 const navItems = [
   { href: `/${game.slug}/`, label: game.name },
   { href: game.wikiPath, label: ui.wiki },
+  { href: `/${projectR.slug}/`, label: projectR.name },
   { href: '/presskit/', label: ui.pressKit },
   ...(hasPosts ? [{ href: '/devlog/', label: ui.devlog }] : []),
 ];

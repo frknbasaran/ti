@@ -22,6 +22,7 @@ export const ui = {
   readMore: 'Read',
   backToDevlog: 'All devlog posts',
   published: 'Published',
+  notAvailable: 'Not available',
 } as const;
 
 export function formatDate(date: Date): string {

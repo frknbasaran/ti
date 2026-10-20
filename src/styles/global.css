@@ -755,3 +755,8 @@ main {
     letter-spacing: 1px;
   }
 }
+
+/* Space between games on the home page. */
+.game + .game {
+  margin-top: 88px;
+}

@@ -5,6 +5,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { DEFAULT_OG_IMAGE, ORG_ID, SITE_URL, studio } from '../data/site';
 import { formatDate, ui } from '../i18n/ui';
 import { postPath, type DevlogPost } from '../lib/devlog';
+import { games } from '../data/games';
 
 interface Props {
   post: DevlogPost;
@@ -14,6 +15,7 @@ const { post } = Astro.props;
 const { data } = post;
 const { Content } = await render(post);
 const path = postPath(post);
+const game = data.game ? games[data.game] : undefined;
 
 const hero = data.heroImage
   ? await getImage({ src: data.heroImage, width: 1200, height: 630, fit: 'cover', format: 'jpg' })
@@ -49,6 +51,7 @@ const articleLd = {
     <h1 class="page-title">{data.title}</h1>
     <p class="muted">
       {ui.published}: <time datetime={data.date.toISOString().slice(0, 10)}>{formatDate(data.date)}</time>
+      {game && <> · {ui.game}: <a href={game.path}>{game.name}</a></>}
     </p>
     {
       data.heroImage && (

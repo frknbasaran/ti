@@ -3,6 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import GameVideo from '../components/GameVideo.astro';
 import { studio } from '../data/site';
 import { game, gameCopy as copy } from '../data/slots-and-skulls';
+import { Image } from 'astro:assets';
+import { game as projectR, gameCopy as projectRCopy } from '../data/project-r';
 import { homeQuote, reviewUrl } from '../data/reviews';
 import { ui } from '../i18n/ui';
 import { organizationLd, websiteLd } from '../lib/jsonld';
@@ -55,6 +57,22 @@ const text = {
         <div><span class="k">{ui.game}</span> <a href={gamePath}>{ui.moreAbout}</a></div>
         <div><span class="k">{ui.wiki}</span> <a href={game.wikiPath}>{ui.wikiText}</a></div>
         <div><span class="k">{ui.pressKit}</span> <a href="/presskit/">{ui.pressKit}</a></div>
+      </div>
+    </article>
+
+    <article class="game">
+      <h3 class="game-title"><a href={`/${projectR.slug}/`}>{projectR.name}</a></h3>
+      <p class="game-desc">{projectRCopy.tagline}</p>
+      <a href={`/${projectR.slug}/`}>
+        <Image src={projectRCopy.image} alt={projectRCopy.imageAlt} widths={[640, 1280]} sizes="(max-width: 640px) 100vw, 592px" style="border-radius: 4px; margin-bottom: 28px;" />
+      </a>
+
+      <div class="game-meta">
+        <div><span class="k">{ui.platforms}</span> <span>{projectRCopy.platforms}</span></div>
+        <div><span class="k">{text.release}</span> <span>{projectRCopy.releaseLabel}</span></div>
+        <div><span class="k">{ui.game}</span> <span>{ui.notAvailable}</span></div>
+        <div><span class="k">{ui.wiki}</span> <span>{ui.notAvailable}</span></div>
+        <div><span class="k">{ui.pressKit}</span> <span>{ui.notAvailable}</span></div>
       </div>
     </article>
   </section>

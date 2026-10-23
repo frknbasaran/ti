@@ -60,21 +60,25 @@ const text = {
       </div>
     </article>
 
-    <article class="game">
-      <h3 class="game-title"><a href={`/${projectR.slug}/`}>{projectR.name}</a></h3>
-      <p class="game-desc">{projectRCopy.tagline}</p>
-      <a href={`/${projectR.slug}/`}>
-        <ProjectRCover />
-      </a>
+    {
+      projectR.listed && (
+        <article class="game">
+          <h3 class="game-title"><a href={`/${projectR.slug}/`}>{projectR.name}</a></h3>
+          <p class="game-desc">{projectRCopy.tagline}</p>
+          <a href={`/${projectR.slug}/`}>
+            <ProjectRCover />
+          </a>
 
-      <div class="game-meta">
-        <div><span class="k">{ui.platforms}</span> <span>{projectRCopy.platforms}</span></div>
-        <div><span class="k">{text.release}</span> <span>{projectRCopy.releaseLabel}</span></div>
-        <div><span class="k">{ui.game}</span> <span>{ui.notAvailable}</span></div>
-        <div><span class="k">{ui.wiki}</span> <span>{ui.notAvailable}</span></div>
-        <div><span class="k">{ui.pressKit}</span> <span>{ui.notAvailable}</span></div>
-      </div>
-    </article>
+          <div class="game-meta">
+            <div><span class="k">{ui.platforms}</span> <span>{projectRCopy.platforms}</span></div>
+            <div><span class="k">{text.release}</span> <span>{projectRCopy.releaseLabel}</span></div>
+            <div><span class="k">{ui.game}</span> <span>{ui.notAvailable}</span></div>
+            <div><span class="k">{ui.wiki}</span> <span>{ui.notAvailable}</span></div>
+            <div><span class="k">{ui.pressKit}</span> <span>{ui.notAvailable}</span></div>
+          </div>
+        </article>
+      )
+    }
   </section>
 
   <section class="section" aria-labelledby="studio-label">

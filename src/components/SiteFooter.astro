@@ -12,7 +12,7 @@ const current = Astro.url.pathname;
 const navItems = [
   { href: `/${game.slug}/`, label: game.name },
   { href: game.wikiPath, label: ui.wiki },
-  { href: `/${projectR.slug}/`, label: projectR.name },
+  ...(projectR.listed ? [{ href: `/${projectR.slug}/`, label: projectR.name }] : []),
   { href: '/presskit/', label: ui.pressKit },
   ...(hasPosts ? [{ href: '/devlog/', label: ui.devlog }] : []),
 ];
